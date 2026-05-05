@@ -1,0 +1,330 @@
+/**
+ * Barre de navigation unifiée (style ExperiencesProfessionnels / parcours-navbar).
+ * Charger après le CSS de la page et après Bootstrap.
+ */
+:root {
+  --nav-global-muted: #9aa6b2;
+  --nav-global-accent: #00b4ff;
+  --nav-global-transition: all 0.3s ease;
+  /* Sous-menu Parcours (desktop) */
+  --nav-dd-surface: rgba(18, 26, 36, 0.98);
+  --nav-dd-surface-top: rgba(26, 36, 48, 0.98);
+  --nav-dd-border: rgba(0, 180, 255, 0.32);
+  --nav-dd-border-soft: rgba(255, 255, 255, 0.1);
+}
+
+.parcours-navbar {
+  --nav-page-accent: var(--accent, var(--nav-global-accent));
+  --nav-page-accent-2: var(--accent-2, var(--nav-page-accent));
+  --nav-page-accent-soft: color-mix(in srgb, var(--nav-page-accent) 14%, transparent);
+  --nav-page-accent-border: color-mix(in srgb, var(--nav-page-accent) 38%, transparent);
+}
+
+/* Structure pill fixée — identique au parcours */
+.navbar.parcours-navbar {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1200px;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(180deg, rgba(20, 25, 30, 0.85), rgba(10, 12, 15, 0.75));
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.35);
+  transition: top 0.3s ease, padding 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Au scroll (ex. Accueil.js ajoute .scrolled sur .navbar) */
+.navbar.parcours-navbar.scrolled {
+  top: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.parcours-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.6rem;
+}
+
+.parcours-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28233, 238, 245, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991.98px) {
+  .parcours-navbar .navbar-collapse {
+    background: rgba(10, 12, 15, 0.98);
+    margin: 0.75rem -1.5rem -0.8rem;
+    padding: 1.5rem 1.5rem 1rem;
+    border-radius: 0 0 50px 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .parcours-navbar .navbar-nav.nav-links {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  .parcours-navbar .navbar-nav.nav-links .nav-link::after {
+    display: none;
+  }
+
+  .parcours-navbar .dropdown-menu.dynamic-menu {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+    display: none;
+  }
+
+  .parcours-navbar .dynamic-dropdown.open .dropdown-menu.dynamic-menu {
+    display: block;
+  }
+
+  /* Pas de « carte » ni flèche en mobile (sous-menu intégré au menu burger) */
+  .parcours-navbar .dynamic-menu::before,
+  .parcours-navbar .dynamic-menu::after {
+    display: none !important;
+  }
+
+  .parcours-navbar .dynamic-menu {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .parcours-navbar .nav-btn {
+    margin-top: 0.75rem;
+    align-self: flex-start;
+  }
+
+  .parcours-navbar .theme-switch-btn {
+    margin-top: 0.75rem;
+    margin-left: 0 !important;
+    align-self: flex-start;
+  }
+}
+
+.parcours-navbar .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.parcours-navbar .logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.parcours-navbar .brand {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.parcours-navbar .navbar-nav.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  align-items: center;
+}
+
+.parcours-navbar .navbar-nav.nav-links .nav-link {
+  color: var(--nav-global-muted) !important;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.35rem 0.5rem;
+  transition: var(--nav-global-transition);
+}
+
+.parcours-navbar .navbar-nav.nav-links .nav-link:hover,
+.parcours-navbar .navbar-nav.nav-links .nav-link.active {
+  color: #fff !important;
+}
+
+.parcours-navbar .nav-btn {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  color: #fff !important;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+  transition: var(--nav-global-transition);
+  white-space: nowrap;
+}
+
+.parcours-navbar .nav-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff !important;
+}
+
+.parcours-navbar .theme-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  color: #dff7ff !important;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 180, 255, 0.32);
+  background: rgba(0, 180, 255, 0.1);
+  box-shadow: 0 0 18px rgba(0, 180, 255, 0.12) inset;
+  transition: var(--nav-global-transition);
+}
+
+.parcours-navbar .theme-switch-btn:hover,
+.parcours-navbar .theme-switch-btn:focus-visible {
+  color: #fff !important;
+  background: rgba(0, 180, 255, 0.18);
+  border-color: rgba(124, 199, 255, 0.55);
+  transform: translateY(-1px);
+}
+
+/* Dropdown Parcours — desktop (survol)
+   Bootstrap met .dropdown-menu en display:none : sans override, le sous-menu
+   ne peut pas apparaître au hover (opacity/visibility seuls ne suffisent pas). */
+@media (min-width: 992px) {
+  .parcours-navbar .dropdown-menu.dynamic-menu {
+    display: block !important;
+    pointer-events: none;
+  }
+
+  .parcours-navbar .dynamic-dropdown:hover .dropdown-menu.dynamic-menu {
+    pointer-events: auto;
+  }
+
+  /* Zone de survol élargie : lien invisible entre « Parcours » et le panneau */
+  .parcours-navbar .dynamic-dropdown::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    width: min(100%, 240px);
+    height: 22px;
+    z-index: 1000;
+  }
+}
+
+.parcours-navbar .dynamic-dropdown {
+  position: relative;
+}
+
+.parcours-navbar .dynamic-menu {
+  position: absolute;
+  /* Collé visuellement au lien : presque pas d’espace « flottant » */
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%) translateY(2px);
+  min-width: 232px;
+  padding: 0.55rem 0 0.65rem;
+  list-style: none;
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--nav-page-accent) 10%, var(--nav-dd-surface-top)) 0%,
+    color-mix(in srgb, var(--nav-page-accent) 6%, var(--nav-dd-surface)) 45%,
+    rgba(10, 14, 20, 0.99) 100%
+  );
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+  border-radius: 14px;
+  border: 1px solid var(--nav-dd-border-soft);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--nav-page-accent) 16%, transparent),
+    0 2px 0 color-mix(in srgb, var(--nav-page-accent) 18%, transparent) inset,
+    0 18px 48px rgba(0, 0, 0, 0.55),
+    0 0 28px color-mix(in srgb, var(--nav-page-accent) 10%, transparent);
+  outline: 1px solid var(--nav-page-accent-border);
+  outline-offset: -2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  z-index: 1001;
+}
+
+/* Double chevron : bordure accent + remplissage = lien clair avec « Parcours » */
+.parcours-navbar .dynamic-menu::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid color-mix(in srgb, var(--nav-page-accent) 48%, transparent);
+  z-index: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 -1px 2px color-mix(in srgb, var(--nav-page-accent) 25%, transparent));
+}
+
+.parcours-navbar .dynamic-menu::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid color-mix(in srgb, var(--nav-page-accent) 10%, var(--nav-dd-surface-top));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.parcours-navbar .dynamic-dropdown:hover .dynamic-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--nav-page-accent) 22%, transparent),
+    0 2px 0 color-mix(in srgb, var(--nav-page-accent) 22%, transparent) inset,
+    0 22px 56px rgba(0, 0, 0, 0.6),
+    0 0 36px color-mix(in srgb, var(--nav-page-accent) 14%, transparent);
+}
+
+.parcours-navbar .dynamic-menu li {
+  margin: 0;
+}
+
+.parcours-navbar .dynamic-menu .dropdown-item {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: var(--nav-global-muted) !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--nav-global-transition);
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.parcours-navbar .dynamic-menu .dropdown-item::after {
+  display: none !important;
+}
+
+.parcours-navbar .dynamic-menu .dropdown-item:hover,
+.parcours-navbar .dynamic-menu .dropdown-item.active {
+  background: var(--nav-page-accent-soft);
+  color: var(--nav-page-accent-2) !important;
+  padding-left: 2rem;
+}

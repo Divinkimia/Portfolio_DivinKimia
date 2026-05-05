@@ -1,0 +1,310 @@
+/**
+ * Certifications ù theme clair premium (catalogue + pages detail).
+ * body.portfolio-light.lt-page-certification
+ */
+
+body.portfolio-light.lt-page-certification #galaxy-container,
+body.portfolio-light.lt-page-certification .cert-webgl-host {
+  display: none !important;
+}
+
+body.portfolio-light.lt-page-certification .lt-main {
+  padding-top: 0;
+}
+
+body.portfolio-light.lt-page-certification.cert-page {
+  --cert-bg: var(--lt-bg);
+  --cert-bg-elevated: var(--lt-surface);
+  --cert-surface: var(--lt-surface-elevated);
+  --cert-border: var(--lt-border);
+  --cert-border-strong: var(--lt-hairline);
+  --cert-text: var(--lt-text);
+  --cert-muted: var(--lt-muted);
+  --cert-accent: var(--lt-cyan);
+  --cert-ice: var(--lt-accent);
+  --cert-gold: var(--lt-accent);
+  --cert-accent-dim: var(--lt-cyan-soft);
+  --cert-font: var(--lt-font-body), system-ui, sans-serif;
+  --cert-display: var(--lt-font-display), system-ui, sans-serif;
+  --cert-shadow: var(--lt-shadow-lg);
+  --accent: var(--cert-accent);
+  --accent-2: var(--cert-ice);
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+/* Hero */
+body.portfolio-light.lt-page-certification .cert-hero {
+  padding-top: calc(var(--lt-header-h) + 2.5rem);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(21, 108, 101, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 85% 12%, rgba(11, 110, 124, 0.1) 0%, transparent 40%),
+    linear-gradient(180deg, var(--lt-bg) 0%, var(--lt-bg-subtle) 100%);
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__title {
+  font-family: var(--lt-font-display), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__title-accent {
+  background: linear-gradient(120deg, var(--lt-accent), var(--lt-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__eyebrow,
+body.portfolio-light.lt-page-certification .cert-hero__panel-label,
+body.portfolio-light.lt-page-certification .cert-hero__panel-list,
+body.portfolio-light.lt-page-certification .cert-hero__panel-foot {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__lead {
+  color: var(--lt-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 52ch;
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__panel-inner {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__panel-list strong {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__panel-bar {
+  background: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-certification .cert-hero__panel-fill {
+  background: linear-gradient(90deg, var(--lt-accent), var(--lt-cyan));
+}
+
+/* Boutons */
+body.portfolio-light.lt-page-certification .cert-btn {
+  font-weight: 600;
+  border-radius: var(--lt-radius-pill);
+  transition:
+    transform var(--lt-duration) var(--lt-ease-out),
+    box-shadow var(--lt-duration) var(--lt-ease-out);
+}
+
+body.portfolio-light.lt-page-certification .cert-btn--primary {
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan));
+  color: #fff;
+  border: none;
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-certification .cert-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-certification .cert-btn--ghost {
+  border-color: var(--lt-border-strong);
+  color: var(--lt-text);
+  background: var(--lt-surface-elevated);
+}
+
+body.portfolio-light.lt-page-certification .cert-btn--ghost:hover {
+  border-color: var(--lt-hairline);
+  background: var(--lt-surface-muted);
+}
+
+/* Bande indicateurs */
+body.portfolio-light.lt-page-certification .cert-strip {
+  background: var(--lt-bg-subtle);
+  border-block: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-certification .cert-strip__item {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-certification .cert-strip__value {
+  color: var(--lt-cyan);
+  font-family: var(--lt-font-display), sans-serif;
+}
+
+body.portfolio-light.lt-page-certification .cert-strip__label {
+  color: var(--lt-muted);
+}
+
+/* Principes */
+body.portfolio-light.lt-page-certification .cert-principles {
+  padding: clamp(2.5rem, 6vw, 3.5rem) 0;
+}
+
+body.portfolio-light.lt-page-certification .cert-principle {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-certification .cert-principle__title {
+  color: var(--lt-text);
+  font-family: var(--lt-font-display), sans-serif;
+}
+
+body.portfolio-light.lt-page-certification .cert-principle__text {
+  color: var(--lt-muted);
+}
+
+/* Catalogue */
+body.portfolio-light.lt-page-certification .cert-catalog {
+  background: linear-gradient(180deg, transparent 0%, rgba(21, 108, 101, 0.04) 45%, transparent 100%);
+}
+
+body.portfolio-light.lt-page-certification .cert-section-head__title {
+  font-family: var(--lt-font-display), sans-serif;
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-certification .cert-section-head__desc {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-certification .cert-filter {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-certification .cert-filter:hover {
+  color: var(--lt-text);
+  border-color: var(--lt-hairline);
+}
+
+body.portfolio-light.lt-page-certification .cert-filter.is-active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan));
+  border-color: transparent;
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-certification .cert-card {
+  background: linear-gradient(155deg, var(--lt-surface-elevated) 0%, var(--lt-surface) 100%);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-certification .cert-card__glow {
+  opacity: 0.45;
+}
+
+body.portfolio-light.lt-page-certification .cert-card:hover {
+  border-color: rgba(21, 108, 101, 0.35);
+  box-shadow: var(--lt-shadow-lg);
+}
+
+body.portfolio-light.lt-page-certification .cert-card__badge {
+  color: var(--lt-cyan);
+  border-color: var(--lt-hairline);
+  background: var(--lt-cyan-soft);
+}
+
+body.portfolio-light.lt-page-certification .cert-card__name {
+  color: var(--lt-text);
+  font-family: var(--lt-font-display), sans-serif;
+}
+
+body.portfolio-light.lt-page-certification .cert-card__full {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-certification .cert-card__scope {
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-certification .cert-card__id {
+  color: var(--lt-muted-soft);
+}
+
+body.portfolio-light.lt-page-certification .cert-card__tags li {
+  background: var(--lt-surface-muted);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-accent-hover);
+}
+
+body.portfolio-light.lt-page-certification .cert-card--pix .cert-card__badge {
+  color: #7c3aed;
+  border-color: rgba(124, 58, 237, 0.35);
+  background: rgba(124, 58, 237, 0.12);
+}
+
+body.portfolio-light.lt-page-certification .cert-card--pix .cert-card__tags li {
+  color: #6d28d9;
+  border-color: rgba(109, 40, 217, 0.28);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Roadmap / timeline */
+body.portfolio-light.lt-page-certification .cert-roadmap {
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+body.portfolio-light.lt-page-certification .cert-timeline__item {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-certification .cert-timeline__year {
+  color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-certification .cert-timeline__title {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-certification .cert-timeline__body p {
+  color: var(--lt-muted);
+}
+
+/* CTA */
+body.portfolio-light.lt-page-certification .cert-cta__box {
+  background: linear-gradient(125deg, var(--lt-surface-elevated) 0%, var(--lt-bg-subtle) 100%);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-certification .cert-cta__title {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-certification .cert-cta__lead {
+  color: var(--lt-muted);
+}
+
+/* Pages detail (CCNA, etc.) */
+body.portfolio-light.lt-page-certification .cert-detail {
+  padding-top: calc(var(--lt-header-h) + 4rem);
+}
+
+body.portfolio-light.lt-page-certification .cert-detail__card {
+  background: var(--lt-surface-elevated) !important;
+  border: 1px solid var(--lt-border) !important;
+  box-shadow: var(--lt-shadow-md);
+}
+
+/* Alias anc (si present dans le HTML) */
+body.portfolio-light.lt-page-certification .cert-principles__title,
+body.portfolio-light.lt-page-certification .cert-catalogue__title {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-certification .cert-principles__text {
+  color: var(--lt-muted);
+}

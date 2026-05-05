@@ -1,0 +1,808 @@
+/**
+ * Page Veilles — parcours type e-learning, palette identique au portfolio (Accueil)
+ * Variables : --bg, --card, --accent, --accent-2, --muted
+ */
+
+:root {
+  --bg: #0b0f14;
+  --card: #0f1620;
+  --glass: rgba(255, 255, 255, 0.04);
+  --accent: #00b4ff;
+  --accent-2: #7cc7ff;
+  --muted: #9aa6b2;
+  --text: #e9eef5;
+  --border-cyan: rgba(0, 180, 255, 0.18);
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --radius: 12px;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --va-sidebar-w: min(100%, 340px);
+  --va-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  /* Sous la navbar + barre cours — ancrage sidebar / sticky */
+  --veille-top-stack: calc(5.5rem + 52px + env(safe-area-inset-top, 0px));
+  --veille-sidebar-fixed-w: 340px;
+  --veille-progress-h: 5.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.veille-page {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Plein écran : navbar du portfolio masquée + offsets recalculés (barre cours seule en haut) */
+body.veille-page.veille-fs-reading {
+  --veille-top-stack: calc(52px + env(safe-area-inset-top, 0px));
+}
+
+body.veille-page.veille-fs-reading .navbar.parcours-navbar {
+  display: none !important;
+}
+
+body.veille-page.veille-fs-reading .veille-app {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+body.veille-page.veille-fs-reading .veille-course-header {
+  top: env(safe-area-inset-top, 0px);
+}
+
+/* Fond étoilé comme l’accueil — contenu au-dessus */
+#galaxy-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.veille-app {
+  position: relative;
+  z-index: auto;
+  padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Une seule barre sous la nav : contexte + titre de leçon + actions (pas de 3e bande) */
+.veille-course-header {
+  position: sticky;
+  top: calc(4.5rem + env(safe-area-inset-top, 0px));
+  z-index: 900;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  padding: 0.5rem 1rem;
+  min-height: 48px;
+  background: linear-gradient(180deg, rgba(15, 22, 32, 0.98), rgba(11, 15, 20, 0.95));
+  border-bottom: 1px solid var(--border-cyan);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.veille-course-header__start {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.veille-course-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.veille-course-brand .brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #0090cc);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.35);
+}
+
+.veille-course-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+  font-size: clamp(0.85rem, 2.2vw, 1.05rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.veille-course-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.veille-icon-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.veille-icon-btn:hover {
+  background: rgba(0, 180, 255, 0.12);
+  color: var(--accent-2);
+}
+
+/* Layout : une colonne mobile ; desktop = marge pour la sidebar fixe */
+.veille-layout {
+  display: block;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .veille-layout {
+    padding-left: var(--veille-sidebar-fixed-w);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--veille-top-stack));
+    overflow: hidden;
+  }
+}
+
+/* Sidebar */
+.veille-sidebar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border-cyan);
+  display: flex;
+  flex-direction: column;
+  max-height: none;
+}
+
+@media (min-width: 992px) {
+  /* Barre latérale fixe : ne défile pas avec la page, hauteur jusqu’au bas du viewport */
+  .veille-sidebar {
+    position: fixed;
+    top: var(--veille-top-stack);
+    left: max(0px, calc((100vw - 1600px) / 2));
+    width: var(--veille-sidebar-fixed-w);
+    height: calc(100dvh - var(--veille-top-stack));
+    max-height: calc(100dvh - var(--veille-top-stack));
+    border-right: 1px solid var(--border-cyan);
+    border-bottom: none;
+    overflow: hidden;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile drawer */
+@media (max-width: 991.98px) {
+  .veille-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(92vw, 360px);
+    height: 100vh;
+    height: 100dvh;
+    z-index: 1100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    border-bottom: none;
+    border-right: 1px solid var(--border-cyan);
+    box-shadow: var(--va-shadow);
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .veille-sidebar.is-open {
+    transform: translateX(0);
+  }
+}
+
+.veille-sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1090;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.veille-sidebar-backdrop.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+.veille-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.veille-tab {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.veille-tab:hover {
+  color: var(--text);
+}
+
+.veille-tab.is-active {
+  color: var(--accent);
+}
+
+.veille-tab.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  right: 12%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 0 12px rgba(0, 180, 255, 0.5);
+}
+
+.veille-sidebar-search {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.veille-sidebar-search-wrap {
+  position: relative;
+}
+
+.veille-sidebar-search-wrap input {
+  width: 100%;
+  padding: 0.65rem 0.75rem 0.65rem 2.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.veille-sidebar-search-wrap input::placeholder {
+  color: var(--muted);
+}
+
+.veille-sidebar-search-wrap input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.15);
+}
+
+.veille-sidebar-search-wrap > svg,
+.veille-sidebar-search-wrap [data-feather] {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.veille-panel {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.veille-panel.is-visible {
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  /* Panneau : padding bas = place pour la progression fixée en bas (plus de « trou » flex) */
+  #panelOverview {
+    position: relative;
+    padding-bottom: 156px; /* Space for the fixed progress block */
+    box-sizing: border-box;
+  }
+
+  /* Ressources : pas de bloc progression dans ce panneau — pas de padding fantôme */
+  #panelResources {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  /* Liste des modules : scroll si besoin, sans s’étirer artificiellement (supprime le grand vide) */
+  #panelOverview .veille-accordion {
+    flex: 0 1 auto;
+    min-height: 0;
+    max-height: calc(100% - 0.25rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #panelResources .veille-resources-list {
+    flex: 0 1 auto;
+    min-height: 0;
+    max-height: calc(100% - 0.25rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Progression collée au bas de la colonne sidebar */
+  .veille-sidebar .veille-progress-block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    flex-shrink: 0;
+    z-index: 5;
+    background: var(--card);
+    box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.45);
+    height: 156px;
+    padding: 1.5rem 1rem calc(1rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--border-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.veille-accordion {
+  padding: 0.5rem 0 1rem;
+}
+
+.veille-mod {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.veille-mod-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.veille-mod-toggle:hover {
+  background: rgba(0, 180, 255, 0.06);
+}
+
+.veille-mod-toggle .chev {
+  transition: transform 0.25s;
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.veille-mod.is-open .veille-mod-toggle .chev {
+  transform: rotate(180deg);
+}
+
+.veille-mod-body {
+  display: none;
+  padding: 0 0.5rem 0.75rem;
+}
+
+.veille-mod.is-open .veille-mod-body {
+  display: block;
+}
+
+.veille-lesson {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.75rem 0.65rem 1.25rem;
+  margin-bottom: 0.25rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.veille-lesson:hover {
+  background: rgba(0, 180, 255, 0.1);
+  color: var(--text);
+}
+
+.veille-lesson.is-current {
+  background: rgba(0, 180, 255, 0.14);
+  color: var(--accent-2);
+  font-weight: 600;
+  border-left-color: var(--accent);
+}
+
+.veille-progress-block {
+  padding: 1rem;
+  border-top: 1px solid var(--border-cyan);
+}
+
+/* Mobile : progression sous le contenu (flux normal), sans grand vide */
+@media (max-width: 991.98px) {
+  .veille-sidebar .veille-progress-block {
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+}
+
+.veille-progress-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.veille-progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.veille-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 99px;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 12px rgba(0, 180, 255, 0.4);
+}
+
+.veille-resources-list {
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+.veille-resources-list h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 1rem 0 0.5rem;
+}
+
+.veille-resources-list h4:first-child {
+  margin-top: 0;
+}
+
+.veille-resources-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.veille-resources-list li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.veille-resources-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.veille-resources-list a:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+.veille-res-hint {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* Zone principale — flux naturel, défilement = page entière */
+.veille-main {
+  background: transparent;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Hero */
+.veille-hero {
+  position: relative;
+  min-height: 280px;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.veille-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 280px;
+}
+
+.veille-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11, 15, 20, 0.92) 0%,
+    rgba(11, 15, 20, 0.35) 45%,
+    rgba(0, 60, 90, 0.15) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.veille-hero-title {
+  color: #fff;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+}
+
+.veille-hero-hint {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.veille-hero-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 180, 255, 0.4);
+  background: rgba(0, 180, 255, 0.25);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+  backdrop-filter: blur(6px);
+}
+
+.veille-hero-nav:hover {
+  background: rgba(0, 180, 255, 0.45);
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.35);
+}
+
+.veille-hero-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+}
+
+.veille-hero-nav:disabled:hover {
+  background: rgba(0, 180, 255, 0.25);
+  transform: translateY(-50%);
+  box-shadow: none;
+}
+
+.veille-hero-nav--prev {
+  left: 1rem;
+}
+
+.veille-hero-nav--next {
+  right: 1rem;
+}
+
+/* Article */
+.veille-article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.veille-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.veille-meta-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.veille-article h2#veilleObjectifsTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.veille-article .lead {
+  font-size: 1.05rem;
+  color: var(--accent-2);
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+
+.veille-article #veilleBody p {
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.veille-article .veille-objectives-list {
+  margin: 1.25rem 0 0;
+  padding-left: 1.35rem;
+  color: var(--text);
+  line-height: 1.65;
+  list-style: disc;
+}
+
+.veille-article .veille-objectives-list li {
+  margin-bottom: 0.5rem;
+}
+
+.veille-article .veille-objectives-list li::marker {
+  color: var(--accent);
+}
+
+/* Bandeau contact — dans le flux (plus de position fixed) */
+.veille-contact-strip {
+  flex-shrink: 0;
+  border-top: 1px solid var(--border-cyan);
+  background: linear-gradient(180deg, rgba(15, 22, 32, 0.6), rgba(11, 15, 20, 0.9));
+  height: 156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.25rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.veille-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.veille-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+.veille-scroll-area::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.veille-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(0, 180, 255, 0.2);
+  border-radius: 4px;
+}
+.veille-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 180, 255, 0.4);
+}
+
+.veille-contact-strip .inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.veille-contact-strip strong {
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.veille-contact-hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.veille-btn-accent {
+  background: linear-gradient(135deg, var(--accent), #0090cc) !important;
+  border: none !important;
+  color: #0b0f14 !important;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 180, 255, 0.25);
+}
+
+.veille-btn-accent:hover {
+  filter: brightness(1.08);
+  color: #0b0f14 !important;
+}
+
+.veille-btn-outline {
+  border: 1px solid var(--border-cyan) !important;
+  color: var(--accent-2) !important;
+  background: transparent !important;
+  border-radius: var(--radius);
+}
+
+.veille-btn-outline:hover {
+  background: rgba(0, 180, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+/*
+ * Pied du site : au-dessus de la sidebar fixe (z-index 10) pour qu’il soit entièrement lisible au scroll ;
+ * marge gauche = même retrait que la colonne principale (évite le texte sous la sidebar).
+ */
+.veille-page .site-footer {
+  position: relative;
+  z-index: 12;
+  margin-top: 0;
+}
+
+@media (min-width: 992px) {
+  .veille-page .site-footer {
+    padding-left: var(--veille-sidebar-fixed-w);
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,118 @@
+================================================================================
+RAPPORTS DE STAGE (PDF) — ORTHOGRAPHE, GRAMMAIRE, VOCABULAIRE
+Fichiers sources (extractions) : data/*_extrait.txt
+Les PDF binaires n'ont pas ete modifies ; reimportez ce texte dans Word/LibreOffice pour un nouveau PDF.
+================================================================================
+
+COHERENCE DES NOMS PROPRES (a trancher une fois pour toutes sur vos documents) :
+- Entreprise : "iConnected Store" (i minuscule + Connected avec C majuscule) — eviter Iconnectede, iconnected seul, etc.
+- Tuteur : le site melange "Sami Mansori" et "Samy Mansory" selon les pages ; choisissez l'orthographe officielle et uniformisez.
+- Xceed (Maroc) : ne pas ecrire "Exceed" sur le CV si la marque est Xceed.
+
+================================================================================
+1) Rapport de stage 2024 (second passage) — Rapport-stage2DivinKimiaIconnected
+================================================================================
+
+Erreurs frequentes a corriger dans tout le document :
+- "leuraideprécieuse" -> "leur aide precieuse"
+- Sommaire : "Resultats" (sans accent) -> "Résultats"
+- "Iconnectede" (coupure de ligne) -> "iConnected"
+- "démarches suivie" -> "démarches suivies" (pluriel accord)
+- "Encombinant" / "cesefforts" -> "En combinant" / "ces efforts"
+- "accrroître" (si present) -> "accroître"
+- "L'objectifviséest" / "95 %desatisfactionen" : ajouter espaces
+- "Timly" / "Timly" vs marque "Timly" (URL timly.com) : verifier ; souvent "Timly" (produit) — coherent avec le site
+- "Utilisation de Timly" : titre "Timly" vs "Timly" (ligne 278 Timly) — unifier
+- "CONCEPTIO N" : fusionner "CONCEPTION"
+- "Cesite" -> "Ce site" ; "Deplus" -> "De plus" ; "artistes/code-barres" -> "articles/code-barres" (si contexte stock)
+- "Résultat du projet" / "IV- Resultat" -> "Résultat" avec accent et "Résultats" au pluriel si plusieurs
+- "omni présente" -> "omnipresente" (ou "omni-presente" avec trait d'union)
+- Paragraphe IA (l.527-534) : texte brise par extraction PDF — a recoller : "notamment l'intelligence artificielle des smartphones Samsung, avec la mise a jour One UI 6.1..."
+
+REMERCIEMENTS (version corrigee) :
+"Je remercie egalement mes collegues pour leur aide precieuse et leur esprit d'equipe."
+
+HISTOIRE / PRESENTATION :
+"Fondée en 2014 a Orleans avec Samy Mansory (ou Sami Mansori) comme gérant, iConnected Store incarne..."
+"En tant que leader, iConnected Store s'engage a connecter l'ensemble de ses clients..."
+"La boutique iConnected Store est gérée par [nom], mon tuteur de stage, pour une duree de 6 semaines du 11 mars au 19 avril 2024."
+(pas "de cette de 6 semaines" ; "Géré" accord avec boutique feminine : "gérée" ; "11 Mars" -> "11 mars" en francais courant)
+
+================================================================================
+2) Rapport 2024 (premier stage) — RapportdestageDivinKimpolo2024
+================================================================================
+
+Corrections typiques :
+- "Remerciemts" -> "Remerciements"
+- "l à mon" -> "a mon" (a + infinitif / prep.)
+- "Sami Mansori" (OK si c'est l'orthographe retenue)
+- "ADRESS" -> "ADRESSE" ; "TEL" orthographe : "Téléphone" ; "TEL" ; "Fxe" -> "fixe" ; "DIRIGEANT" OK
+- "PRÉFECTURE DU LOIRET" (OK) ; "KCORPORATION" : verifier nom officiel
+- "appareils informatique" -> "appareils informatiques" (pluriel accord) ou "informatique" comme domaine
+- "Procédure et démarches suivie" -> "Procedures et demarches suivies" (ou "suivies" si plusieurs demarches)
+- "Moyen techniques" -> "Moyens techniques" ; "a pour mission de endre" -> "a pour mission de rendre"
+- "chacun clien" -> "chaque client"
+- "spécialise" -> "specialisée" (boutique feminine)
+- "mission principal" -> "principale" ; "a l'aide" (accent)
+- "restitué de les connaissances" -> "restituer les connaissances" ou "dans l'optique de restituer les connaissances"
+- "Cette immersion a été important" -> "importante" (feminin) si "Cette immersion"
+- "outil de design" (pluriel) -> "outils" ; "esthétiquement et attrayant" -> "a la fois esthetique et attrayant"
+- "consacrée" -> "consacré" (j'ai consacré) — sujet "je"
+- "la e-reputation" -> "la e-reputation" ou "l'e-reputation" (e-reputation) ; "de la boutique" (article)
+- "quelque soit" -> "quel que soit" ; "Iconnected" -> "iConnected"
+- "j'ai créer" -> "j'ai créé" ; "l'opportunitépour" -> "l'opportunite pour" ; "prochin" -> "prochain" ; "démarches suivie" -> "démarches suivies" ; "de m'avoir appris" (phrase a refaire) : "Je remercie l'equipe d'iConnected Store pour son soutien et sa collaboration, et d'avoir accepte de m'initier a la reparation de smartphones, sur ma demande, tout au long de cette experience."
+- "L'entreprise de iConnected" -> "l'entreprise iConnected" / "d'iConnected"
+- "son devenu" -> "sont devenus" (capacite + equilibre = pluriel) ou reecrire : "La capacite a etablir un equilibre entre... est devenue..."
+- "période destage" -> "période de stage" ; "dun templet" -> "d'un template" ; "iconnected" -> "iConnected" ; "ce ces attentes" -> "ses attentes" ; "une courriel" -> "un courriel" ; "le logos" -> "le logo" ; "mette concevoir" -> "de concevoir" ; "fliyer" -> "flyer" ; "2ème" -> "deuxieme" ou "2e" (typo) ; "ce support a été" (accord) ; "collaborer avec avec" -> "collaborer avec" ; "leur posé" -> "leur poser" ; "3ème" -> "troisieme" ; "a été dédiée" (accord) ; "se qui" -> "ce qui" ; "énorme de temps" -> "un temps enorme" ; "finitions" : "finitions" ; "faute" (pluriel) fautes ; "en parlerais pus" -> "en parlerai plus" ; "verbal" -> "verbale" (communication verbale) ; "j'ai collecté" -> "j'ai collecte" (accord participe) selon sens — "j'ai collecte des informations" ; "Content Management Système" -> "Content Management System" (CMS) ; "l'ésotérisme internet" -> probablement "l'existence sur internet" ou "la présence en ligne" (faute grossiere) ; "le plateformes étudier" -> "les plateformes etudiees" ; "classifiés" -> "classer" (infinitif apres les aider) ou "a les classer" ; "de de wix" -> "de Wix" ; "on été" -> "ont été" / "L'intelligence... se retrouve" ; "casi" -> "quasi" ; "obstacle financière" -> "obstacle financier" ; "un... professionnelle" (appareil) ; "tâche" ; "d'un certains nombre" -> "d'un certain nombre" ; "par jours" -> "par jour" ; "tant dis" -> "tandis" ; "non entant" -> "n'etant" ; "mes requêtes de vais" -> "mes requêtes devaient" (??) "devaient etre" ; "teleque" -> "tels que" ; "dans l'obtique" -> "dans l'optique" ; "lobtique" -> "l'optique" ; "scane" -> "scan" ; "son impression" -> "leurs impressions" (clients) ; "le Wi-Fi" ; "Dans cette partie" (majuscule apres :)
+
+Phrases types corrigees :
+"Une fois le site web termine, j'ai cree un support..." : faute — ecrire "j'ai créé" (participe passé avec accent).
+"l'opportunite, pour moi, de decouvrir" — ponctuation
+
+================================================================================
+3) Rapport Crédit Agricole (ESC Pau) — RapportCréditAgricol
+================================================================================
+
+Sommaire / titres :
+- "Remerciement" (pluriel) -> "Remerciements" si plusieurs paragraphes
+- "developpemnt" -> "developpement" ; "Diagnostic Intern" -> "interne"
+- "Les 7 opérations réalisés" -> "realisees" (feminin accord avec operations)
+- "opération" + points de controle : "operations" (pluriel dans titre si besoin)
+- "II- Mission" "IV" numerotation coherente (III/IV)
+
+Remerciements (extrait) :
+"Je tiens... remerciements a ma famille qui m'a toujours SOUTENUE" / structure : 
+  "a ma famille, qui m'a toujours apporte (ou: toujours ete la) pour leur soutien tout au long de ma vie"
+  Le texte source : "ma Famille qui m'a toujours pour leur soutien" — manque le verbe : 
+  "... ma famille, pour son soutien tout au long de ma vie" ou "... qui m'a toujours soutenu"
+
+HISTORIQUE (page 3) version corrigee (extraits) :
+"Le Crédit Agricole, surnomme autrefois la 'Banque verte' en raison de son activite d'origine au service du monde agricole, a ete fonde il y a plus de 125 ans et constitue aujourd'hui le plus grand reseau de banques cooperatives et mutualistes au monde."
+
+"En France, le Crédit Agricole est compose de 39 caisses regionales. Il est devenu en 1990 un grand groupe bancaire generaliste a vocation internationale. Deux principes guident le groupe dans son developpement : l'unite au travers des grandes transformations de la societe et l'universalite de ses metiers, de ses efforts, de ses territoires et de ses clients." (Noms a majuscule selon charte Groupe : Regional, etc.)
+
+"Le groupe Crédit Agricole est le premier financeur de l'economie francaise, la 10e banque mondiale par le total des actifs, et l'un des premiers acteurs bancaires en Europe." (eviter "tout premiers premiers" double)
+
+"Leader de la banque de proximite en Europe, le groupe est egalement premier gestionnaire d'actifs europeen, premier bancassureur en Europe, et l'un des leaders europeens en financement de projets : moyens de paiement, gestion d'actifs, credit-bail et affacturage, banque de financement et d'investissement, assurance, financement vert, etc." (credit-bail, pas Crédit-bail en milieu de phrase ; "financement vert" ou "finacements verts" selon sens)
+
+"Banque de pres d'une entreprise sur deux en France" (ou formulation officielle Groupe) ; "le Groupe opere" ; "en France" majuscule minuscule : "en France" ; "2 agences" — "Pau" uniforme (pas "PAu")
+
+Agences : "cœur de Pau" (pas "clients coeur") ; "L'agence de Pau Carnot" ; "Le Crédit Agricole de Pau Lassence" -> verifier "Lassence" / "Lacassagne" noms de rue reels a Pau ; "L'agence est situee" (pas "L'agenc") ; "l'heure" (pas "l'heur") ; "Tous les mardis et jeudis" (pluriel) ; "nous avions" -> "nous avions" (imparfait) OK ou "nous avons" selon recit
+
+"formation en e-learning" ; "j'ai passé" (accents : passé) ; "taches simples telles que" ; "l'accompagnement des clients" ; "un planning m'a ete attribue" (pas "un plannings") ; "maitrise d'Excel" (pas "maitre")
+
+Definitions risque / fraude (page 6-7) :
+- "Avant de pouvoir enumerer ceci, il etait primordial" (pas "ces il etais")
+- "dont on ne sait pas s'ils se produiront" (reprendre la phrase)
+- "les risques bancaires" ; "inherents" (accent) ; "entrainer" -> "entraîner"
+- "operations sensibles" (pluriel) ; "ont deja cree" (accord participe) ; moyens "deloyaux" / fautes de frappe : ecrire "déloyaux" (moyens déloyaux) ou de préférence "frauduleux" / "illicites" selon le contexte
+- "les déposant" -> "les dépôsants" (?) "se faire passer pour" ; "développement d'Internet" ; "dématérialisation" ; "nous sommes" (pas "somme")
+- "répondu" ; "tant les entreprises" ; "hameçonnage" (accent)
+- "l'emmenant" (si lien) / "l'amenant" ; "visages" (pluriel) ; "usurpe" (accord)
+- "leurs clients" (pas "leurs client") ; "le moment ou" (accent ou) / "où" ; "le commercial" (pas "le commerciale" si sujet) ; "est un lieu où" ; "conseillers" ; "solutions" 
+
+Tableaux : "Points de controle" -> "controle" (un l ou deux — "contrôle" accent) ; "bénéficiaire" ; "recompte" -> "recomptage" (monnaie) — vocabulaire bancaire a verifier ; "Augmenter" (infinitif) "Augmenté" faute
+
+================================================================================
+FIN DU FICHIER — reprenez chaque chapitre dans l'editeur en appliquant les patterns ci-dessus.
+================================================================================

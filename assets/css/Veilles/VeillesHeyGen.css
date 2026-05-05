@@ -1,0 +1,75 @@
+/**
+ * Compléments HeyGen pour la veille type parcours (VeillesOpenClaw.css)
+ * — tableaux et blocs de code injectés via appendHtml dans .veille-lesson-rich
+ */
+
+.veille-lesson-rich {
+  margin-top: 1.25rem;
+}
+
+.veille-lesson-rich .veille-code-hint {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted, #94a3b8);
+  margin: 1rem 0 0.35rem;
+}
+
+.veille-lesson-rich .veille-code-hint:first-child {
+  margin-top: 0;
+}
+
+.veille-heygen-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.veille-heygen-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.veille-heygen-table th,
+.veille-heygen-table td {
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.veille-heygen-table th {
+  background: rgba(56, 189, 248, 0.1);
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.veille-heygen-table tr:last-child td {
+  border-bottom: none;
+}
+
+.veille-heygen-pre {
+  margin: 0.5rem 0 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #a5f3fc;
+  background: #070a0e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.veille-heygen-pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: pre;
+}
+
+@media (max-width: 575.98px) {
+  .veille-heygen-table-wrap {
+    font-size: 0.78rem;
+  }
+}

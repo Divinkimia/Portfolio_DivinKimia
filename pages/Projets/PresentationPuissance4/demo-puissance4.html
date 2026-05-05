@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4 — Démo jouable</title>
+    <link rel="stylesheet" href="../../../assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssPuissance4/demo-puissance4.css">
+  <link rel="stylesheet" href="../../../assets/css/fonts-offline.css" />
+  <!-- fin polices hors ligne -->
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <div class="brand">
+                <span class="brand-dot red"></span>
+                <span class="brand-dot yellow"></span>
+                <h1>Puissance 4</h1>
+            </div>
+            <div class="app-header-right">
+                <span class="round-indicator" id="roundInfo">Tour 1 / ∞</span>
+                <button class="icon-btn" id="btnSound" title="Son on/off"><i class="fas fa-volume-high"></i></button>
+            </div>
+        </header>
+
+        <section class="score-bar">
+            <div class="player-card" id="p1Card">
+                <div class="player-token p1"></div>
+                <div class="player-info">
+                    <span class="player-name" id="p1Name">Joueur 1</span>
+                    <span class="player-meta">Rouge</span>
+                </div>
+                <span class="player-score" id="p1Score">0</span>
+            </div>
+
+            <div class="turn-info" id="turnInfo">
+                <span class="turn-label">À</span>
+                <span class="turn-name" id="turnName">Joueur 1</span>
+                <span class="turn-arrow"><i class="fas fa-arrow-down"></i></span>
+            </div>
+
+            <div class="player-card" id="p2Card">
+                <div class="player-token p2"></div>
+                <div class="player-info">
+                    <span class="player-name" id="p2Name">Joueur 2</span>
+                    <span class="player-meta">Jaune</span>
+                </div>
+                <span class="player-score" id="p2Score">0</span>
+            </div>
+        </section>
+
+        <section class="board-wrap">
+            <div class="board-stage">
+                <div class="board-shadow" aria-hidden="true"></div>
+                <div class="board" id="board" role="grid" aria-label="Plateau Puissance 4">
+                    <!-- 7 colonnes x 6 lignes générées par JS -->
+                </div>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button class="btn btn-primary" id="btnNew"><i class="fas fa-rotate"></i> Nouvelle partie</button>
+            <button class="btn btn-ghost" id="btnUndo"><i class="fas fa-arrow-left"></i> Annuler</button>
+            <button class="btn btn-ghost" id="btnSwap"><i class="fas fa-right-left"></i> Inverser les couleurs</button>
+        </section>
+
+        <div class="overlay" id="overlay" aria-hidden="true">
+            <div class="overlay-card">
+                <div class="overlay-badge" id="overlayBadge"></div>
+                <h2 id="overlayTitle">Victoire</h2>
+                <p id="overlaySub">Quatre jetons alignés, bien joué.</p>
+                <div class="overlay-actions">
+                    <button class="btn btn-primary" id="btnPlayAgain"><i class="fas fa-play"></i> Rejouer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../assets/js/Projets/jsPuissance4/demo-puissance4.js"></script>
+</body>
+</html>

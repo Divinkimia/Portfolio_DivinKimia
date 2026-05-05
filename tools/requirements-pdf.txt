@@ -1,0 +1,3 @@
+# Environnement local pour outils/rebuild_experience_pdfs.py
+# python3 -m venv .venv && . .venv/bin/activate && pip install -r tools/requirements-pdf.txt
+reportlab>=4.0.0

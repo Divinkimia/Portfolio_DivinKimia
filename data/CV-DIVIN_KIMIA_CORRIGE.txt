@@ -1,0 +1,111 @@
+Version textuelle corrigée (orthographe, grammaire, cohérence) — d'après l'extraction du PDF CV.
+
+Divin Kimia
+divinkimia@protonmail.com
+Développeur
+Informatique
+Recherche d'alternance
+96, rue de Cottenchy, Amiens (80000)
+06 51 03 58 59
+
+
+DIPLÔMES ET FORMATIONS
+
+    Depuis septembre 2024
+    BTS SIO (service informatique aux organisations)
+    Lycée Édouard-Gand, Amiens
+    Formation en C#, PHP, JavaScript, HTML/CSS, SQL, Symfony, Python
+
+    De septembre 2023 à juin 2024
+    CS SNO (certificat de spécialisation — service numérique aux organisations)
+    Lycée Jean-Zay, Orléans
+    Spécialisation dans le domaine numérique : design, référencement web, développement
+    web et gestion de logiciels.
+
+    De novembre 2021 à juin 2022
+    DAEU
+    Université Sorbonne Paris
+    Équivalent du baccalauréat français scientifique
+    Développement informatique
+
+    De septembre 2020 à juillet 2021
+    EMPSI, Casablanca, Maroc
+    Formation en logique algorithmique ; langages : C, C++, HTML/CSS, mathématiques.
+    (Interrompue pour raisons sanitaires, COVID-19)
+
+    Technicien en gestion informatique
+    D'octobre 2017 à juillet 2019
+    Eurelec, Casablanca, Maroc
+    Formation en logique algorithmique, pack Office, programmation et gestion
+
+
+EXPÉRIENCES PROFESSIONNELLES
+
+    Développeur web
+    De novembre 2025 à décembre 2025
+    FS Barber, Amiens
+    — Création d'un site internet et d'une base de données complètes de A à Z.
+    — Tests et corrections pour assurer le bon fonctionnement du site.
+    — Déploiement du site en cours.
+
+    Web designer
+    De novembre 2023 à avril 2024
+    iConnected Store, Orléans
+    — Création du site web de l'entreprise à l'aide d'un CMS et d'un site en PHP.
+    — Conception graphique.
+    — Mise en place de solutions numériques.
+    — Création d'un système de gestion interne propre à l'entreprise.
+
+    Assistant technico-commercial
+    De mai 2023 à juillet 2023
+    Crédit Agricole, Pau
+    — Création et gestion de nouvelles bases de données.
+    — Gestion de la boîte mail des agences de Pau centre et répartition des messages.
+    — Support technique auprès des clients.
+
+    Conseiller technique
+    De juillet 2019 à septembre 2022
+    Xceed, Casablanca, Maroc
+    — Prise en charge et analyse des demandes des clients.
+    — Résolution des problèmes techniques rencontrés par les clients.
+    — Rédaction de rapports d'incidents après chaque appel client.
+
+    Assistant développeur web
+    D'avril 2019 à juillet 2019
+    Eurelec, Casablanca, Maroc
+    — Analyse des anomalies repérées et mise en œuvre d'actions correctives.
+    — Correction des erreurs sur les lignes de code.
+    — Vérification du bon fonctionnement du site internet.
+
+    Technicien de maintenance
+    De septembre 2018 à août 2019
+    Eurelec, Casablanca, Maroc
+    — Identification du type de réparation nécessaire à partir d'un diagnostic effectué en amont.
+    — Maintenance des ordinateurs de bureau.
+    — Installation des logiciels et des protections recommandés.
+
+
+COMPÉTENCES
+
+Informatique
+Back-end : C, C++, C#, PHP, Python
+Front-end : HTML/CSS, JavaScript
+Data : analyse et gestion de bases de données
+Outils : Symfony, outils CMS
+Design : conception graphique, Canva, Photoshop
+Autres : bonne communication avec les équipes et les utilisateurs ; organisation ; capacité
+d'adaptation aux nouveaux contextes et outils
+
+
+LANGUES
+Espagnol — B2 (niveau professionnel)
+Anglais — B2 (niveau professionnel)
+
+
+RÉFÉRENCES
+Charlotte Weber — professeure et auto-entrepreneure, Lycée Jean Zay — 07 89 52 18 16
+Sami Mansori — dirigeant, iConnected Store — 07 58 73 73 26
+
+
+CENTRES D'INTÉRÊT
+Programmation, lecture, sport (gym), voyage, musique

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Puissance 4 — deux versions Python (console scolaire & graphique Tkinter) et une arène 3D/4D dans le navigateur.">
+    <title>Arena 4D — Puissance 4</title>
+    <link rel="stylesheet" href="../../../assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/vendor/highlight.js/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssPuissance4/presentation-puissance4.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssPuissance4/presentation-puissance4-chrome.css">
+  <link rel="stylesheet" href="../../../assets/css/fonts-offline.css" />
+  <!-- fin polices hors ligne -->
+</head>
+<body>
+    <canvas id="tokensCanvas" aria-hidden="true"></canvas>
+
+    <div class="kim-nav-stack" id="kimNavStack">
+        <div class="nav-island-shell">
+            <nav class="nav-island" aria-label="Navigation présentation Puissance 4">
+                <div class="nav-island-left">
+                    <a href="../../Accueil.html" class="nav-island-link nav-island-link--muted" title="Page d'accueil du portfolio">Accueil portfolio</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../../Projets/index.html" class="nav-island-link nav-island-link--muted">Projets</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../../Projets/index.html" class="nav-island-link nav-island-link--strong">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Retour aux projets
+                    </a>
+                </div>
+                <a href="#hero" class="nav-island-brand">
+                    <span class="nav-island-brand-kicker">Portfolio</span>
+                    <span class="nav-island-brand-mark" aria-hidden="true"><i class="fas fa-circle"></i></span>
+                    <span class="nav-island-brand-name">Puissance 4</span>
+                </a>
+                <div class="nav-island-right">
+                    <span class="nav-island-pill">
+                        <i class="fas fa-cube" aria-hidden="true"></i>
+                        Three.js · 3D/4D
+                    </span>
+                    <a href="demo-puissance4.html" class="nav-island-link nav-island-link--muted nav-island-link--icon"
+                        target="_blank" rel="noopener noreferrer" title="Ouvrir la démo jouable">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="hero-label">
+                        <span class="dot-red"></span><span class="dot-yellow"></span>
+                        Puissance 4 · Python + Web 3D
+                    </p>
+                    <h1 class="hero-title">
+                        Quatre jetons.<br>
+                        <span class="hero-gradient">Une arène 4D.</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Un projet scolaire au départ : une version <strong>console</strong> (Python pur, niveau BTS) et une version
+                        <strong>graphique</strong> (Tkinter). Réinventé ici en scène <strong>3D interactive</strong> dans le
+                        navigateur, avec un <strong>visualiseur 4D</strong> qui rejoue une partie dans le temps.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#demo" class="btn btn-primary">
+                            <i class="fas fa-play"></i> Jouer la démo web
+                        </a>
+                        <a href="#fourd" class="btn btn-danger">
+                            <i class="fas fa-cube"></i> Voir la scène 4D
+                        </a>
+                        <a href="#about" class="btn btn-ghost">Découvrir le projet</a>
+                    </div>
+                </div>
+                <div class="hero-scene" id="heroScene" aria-hidden="true">
+                    <div class="hero-scene-caption">
+                        <span class="live-dot"></span>
+                        Plateau 3D · partie simulée
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== À propos ========== -->
+        <section class="about" id="about">
+            <div class="about-inner">
+                <h2 class="section-title">
+                    <span class="title-num">00</span>
+                    Contexte du projet
+                </h2>
+                <p class="about-lead">
+                    Puissance 4 est l'un de mes projets <strong>d'apprentissage fondamental</strong> : l'occasion de maîtriser
+                    les listes 2D, les fonctions, la boucle principale d'un jeu et la détection de victoire. Il a été livré en deux
+                    versions successives, puis réinventé côté web pour cette page — avec de la 3D et une timeline 4D.
+                </p>
+                <div class="about-points">
+                    <div class="about-point">
+                        <strong>Version 1 — Console (CM)</strong>
+                        <p>
+                            Sortie lors des <strong>cours magistraux</strong>. Pas d'interface graphique : tout se passe dans le
+                            terminal, avec une grille ASCII (<code>.</code> pour case vide, <code>X</code> et <code>O</code>
+                            pour les joueurs). Niveau débutant, style scolaire/BTS.
+                        </p>
+                    </div>
+                    <div class="about-point">
+                        <strong>Version 2 — Graphique Tkinter</strong>
+                        <p>
+                            Évolution pensée UX : choix des couleurs, plateau bleu, jetons circulaires, survol
+                            souris. La même logique de jeu, habillée d'un <code>Canvas</code> Tkinter et d'un écran de
+                            configuration avant la partie.
+                        </p>
+                    </div>
+                    <div class="about-point">
+                        <strong>Version 3 — Web 3D/4D</strong>
+                        <p>
+                            La présentation que tu parcours : un plateau <strong>3D Three.js</strong> qui rejoue des parties,
+                            un <strong>visualiseur 4D</strong> (3D + temps) et une démo jouable en
+                            HTML/CSS/JS, sans framework, directement dans le navigateur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Versions comparatives ========== -->
+        <section class="versions" id="versions">
+            <div class="versions-inner">
+                <h2 class="section-title">
+                    <span class="title-num">01</span>
+                    Deux versions Python, côte à côte
+                </h2>
+
+                <div class="versions-grid">
+                    <!-- Console -->
+                    <article class="version-card console">
+                        <span class="version-tag"><i class="fas fa-terminal"></i> Version spéciale CM</span>
+                        <h3>Puissance 4 — Console</h3>
+                        <p>
+                            Un seul fichier, zéro dépendance. La grille est une liste de listes, l'affichage
+                            se fait avec <code>print</code>. Parfait pour apprendre les bases : boucles, fonctions, contrôle
+                            de saisie, détection de victoire sur les 4 directions.
+                        </p>
+                        <ul>
+                            <li>Python 3 — 100% standard library</li>
+                            <li>Grille ASCII 6 × 7 dans le terminal</li>
+                            <li>Détection victoire : H / V / diag. / anti-diag.</li>
+                            <li>Contrôle de saisie robuste (1–7)</li>
+                        </ul>
+                        <div class="console-preview">
+<span class="dot">   1 2 3 4 5 6 7</span>
+<span class="dot">  ---------------</span>
+<span class="dot">  . . . . . . .</span>
+<span class="dot">  . . . . . . .</span>
+<span class="dot">  . . . . . . .</span>
+<span class="dot">  . . .</span> <span class="o">O</span> <span class="dot">. . .</span>
+<span class="dot">  . .</span> <span class="x">X</span> <span class="o">O</span> <span class="dot">. . .</span>
+<span class="dot">  . .</span> <span class="x">X</span> <span class="x">X</span> <span class="o">O</span> <span class="dot">. .</span>
+                        </div>
+                    </article>
+
+                    <!-- Graphique -->
+                    <article class="version-card graphique">
+                        <span class="version-tag"><i class="fas fa-desktop"></i> Version graphique</span>
+                        <h3>Puissance 4 — Tkinter</h3>
+                        <p>
+                            Interface fenêtrée avec un <code>Canvas</code>. Le joueur choisit ses
+                            couleurs avant la partie, voit un aperçu de son jeton au-dessus de la colonne survolée,
+                            et reçoit une <code>messagebox</code> en cas de victoire.
+                        </p>
+                        <ul>
+                            <li>Python 3 + Tkinter (bibliothèque standard)</li>
+                            <li>Écran de configuration des couleurs</li>
+                            <li>Survol souris → prévisualisation du jeton</li>
+                            <li>Bouton "Nouvelle partie" sans relancer le programme</li>
+                        </ul>
+                        <div class="tk-preview" aria-hidden="true">
+                            <div class="tk-board-mini">
+                                <div class="tk-cell"></div><div class="tk-cell"></div><div class="tk-cell"></div><div class="tk-cell red"></div><div class="tk-cell"></div><div class="tk-cell"></div><div class="tk-cell"></div>
+                                <div class="tk-cell"></div><div class="tk-cell"></div><div class="tk-cell yellow"></div><div class="tk-cell red"></div><div class="tk-cell yellow"></div><div class="tk-cell"></div><div class="tk-cell"></div>
+                                <div class="tk-cell"></div><div class="tk-cell red"></div><div class="tk-cell yellow"></div><div class="tk-cell red"></div><div class="tk-cell yellow"></div><div class="tk-cell red"></div><div class="tk-cell"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FLOW (pipeline) ========== -->
+        <section class="flow" id="flow">
+            <div class="flow-inner">
+                <h2 class="section-title">
+                    <span class="title-num">02</span>
+                    Du clic au jeton : le pipeline
+                </h2>
+                <div class="flow-diagram">
+                    <div class="flow-step reveal-target">
+                        <div class="flow-icon"><i class="fas fa-hand-pointer"></i></div>
+                        <h3>Saisie</h3>
+                        <p>
+                            En console, <code>input()</code> demande une colonne 1–7. Dans la version Tkinter,
+                            un <code>&lt;Button-1&gt;</code> sur le Canvas est converti en index de colonne via la
+                            position <code>event.x</code>.
+                        </p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="flow-step reveal-target">
+                        <div class="flow-icon"><i class="fas fa-arrow-down"></i></div>
+                        <h3>Gravité</h3>
+                        <p>
+                            <code>inserer_jeton</code> parcourt la colonne <em>du bas vers le haut</em> : on pose le
+                            jeton dans la première case vide rencontrée. Simple, efficace, 100% déterministe.
+                        </p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="flow-step reveal-target">
+                        <div class="flow-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Victoire</h3>
+                        <p>
+                            <code>verifier_direction</code> compte les jetons alignés dans une direction
+                            (et son opposée). Appelée sur les 4 axes : horizontal, vertical, diagonale montante et descendante.
+                        </p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="flow-step reveal-target">
+                        <div class="flow-icon"><i class="fas fa-repeat"></i></div>
+                        <h3>Tour suivant</h3>
+                        <p>
+                            Si personne ne gagne et la grille n'est pas pleine, on alterne
+                            <code>X ↔ O</code> (ou joueur 1 ↔ 2). La boucle principale reprend jusqu'au
+                            verdict final.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 4D VIEWER ========== -->
+        <section class="fourd" id="fourd">
+            <div class="fourd-inner">
+                <h2 class="section-title">
+                    <span class="title-num">03</span>
+                    Visualiseur 4D — 3D + temps
+                </h2>
+                <p class="fourd-desc">
+                    Le plateau est rendu en <strong>3D temps réel</strong> avec Three.js et tourne sur lui-même.
+                    La <strong>quatrième dimension</strong>, c'est le <strong>temps de la partie</strong> : lecture, pause,
+                    coup par coup. Tu peux rejouer une partie réelle dans son espace 3D, comme une chronologie animée.
+                </p>
+
+                <div class="fourd-stage" id="fourdStage">
+                    <div class="fourd-controls">
+                        <span class="fourd-pill" id="fourdStep">Coup <b>0</b> / 13</span>
+                        <div class="fourd-btns">
+                            <button type="button" class="fourd-btn" id="fourdPrev" aria-label="Coup précédent">
+                                <i class="fas fa-backward-step"></i>
+                            </button>
+                            <button type="button" class="fourd-btn active" id="fourdPlay" aria-label="Lecture / Pause">
+                                <i class="fas fa-pause"></i> Pause
+                            </button>
+                            <button type="button" class="fourd-btn" id="fourdNext" aria-label="Coup suivant">
+                                <i class="fas fa-forward-step"></i>
+                            </button>
+                            <button type="button" class="fourd-btn" id="fourdReset" aria-label="Réinitialiser">
+                                <i class="fas fa-rotate-left"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CODE ========== -->
+        <section class="code-section" id="code">
+            <div class="code-section-inner">
+                <h2 class="section-title">
+                    <span class="title-num">04</span>
+                    Extraits de code
+                </h2>
+                <p class="code-section-desc">
+                    Les pièces maîtresses côté Python : gravité, détection de victoire, survol souris sur le plateau
+                    Tkinter. Tout est en Python standard, sans dépendance externe.
+                </p>
+
+                <div class="code-block-group">
+                    <div class="code-block-item reveal-target">
+                        <h3 class="code-block-title"><i class="fas fa-arrow-down"></i> Gravité : insérer un jeton</h3>
+                        <p class="code-block-desc">
+                            On balaie la colonne <em>du bas vers le haut</em> et on dépose le jeton dans la première
+                            case libre. Pas de physique, juste une boucle <code>for</code> descendante.
+                        </p>
+                        <div class="code-window">
+                            <div class="code-window-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">puissance4.py</span>
+                            </div>
+                            <pre><code class="language-python">def inserer_jeton(grille, colonne, jeton):
+    indice_colonne = colonne - 1
+    for ligne in range(NB_LIGNES - 1, -1, -1):
+        if grille[ligne][indice_colonne] == VIDE:
+            grille[ligne][indice_colonne] = jeton
+            return ligne
+    return -1</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="code-block-item reveal-target">
+                        <h3 class="code-block-title"><i class="fas fa-bullseye"></i> Détection de victoire dans 4 directions</h3>
+                        <p class="code-block-desc">
+                            <code>verifier_direction</code> compte les jetons identiques dans un sens et dans l'opposé.
+                            On appelle la fonction avec 4 couples <code>(dLigne, dColonne)</code> : horizontal,
+                            vertical, les deux diagonales.
+                        </p>
+                        <div class="code-window">
+                            <div class="code-window-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">puissance4.py</span>
+                            </div>
+                            <pre><code class="language-python">def verifier_direction(grille, ligne, colonne, jeton, dL, dC):
+    compteur = 1
+    l, c = ligne + dL, colonne + dC
+    while 0 &lt;= l &lt; NB_LIGNES and 0 &lt;= c &lt; NB_COLONNES and grille[l][c] == jeton:
+        compteur += 1
+        l += dL; c += dC
+    l, c = ligne - dL, colonne - dC
+    while 0 &lt;= l &lt; NB_LIGNES and 0 &lt;= c &lt; NB_COLONNES and grille[l][c] == jeton:
+        compteur += 1
+        l -= dL; c -= dC
+    return compteur &gt;= 4
+
+def verifier_victoire(grille, ligne, colonne, jeton):
+    for dL, dC in [(0, 1), (1, 0), (1, 1), (1, -1)]:
+        if verifier_direction(grille, ligne, colonne, jeton, dL, dC):
+            return True
+    return False</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="code-block-item reveal-target">
+                        <h3 class="code-block-title"><i class="fas fa-mouse-pointer"></i> Survol souris & preview du jeton (Tkinter)</h3>
+                        <p class="code-block-desc">
+                            Dans la version graphique, un jeton "fantôme" apparaît en haut de la colonne survolée,
+                            dans la couleur du joueur courant. On transforme <code>event.x</code> en index de colonne.
+                        </p>
+                        <div class="code-window">
+                            <div class="code-window-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">puissance4_graphique.py</span>
+                            </div>
+                            <pre><code class="language-python">def x_vers_colonne(self, x):
+    if x &lt; MARGE_X or x &gt; MARGE_X + NB_COLONNES * TAILLE_CASE:
+        return None
+    return int((x - MARGE_X) // TAILLE_CASE)
+
+def survol_souris(self, event):
+    if self.partie_terminee:
+        return
+    self.colonne_survolee = self.x_vers_colonne(event.x)
+    self.dessiner()</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="code-block-item reveal-target">
+                        <h3 class="code-block-title"><i class="fas fa-cube"></i> Plateau Three.js (extrait de la page)</h3>
+                        <p class="code-block-desc">
+                            Le plateau bleu est un <code>BoxGeometry</code>, chaque case est un <code>CircleGeometry</code>
+                            sombre, les jetons sont des <code>CylinderGeometry</code>. La chute est intégrée par gravité
+                            simulée et rebond décroissant.
+                        </p>
+                        <div class="code-window">
+                            <div class="code-window-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">presentation-puissance4.js</span>
+                            </div>
+                            <pre><code class="language-javascript">const tokenGeo = new THREE.CylinderGeometry(R, R, 0.22, 48);
+tokenGeo.rotateX(Math.PI / 2);
+
+function makeToken(color) {
+    return new THREE.Mesh(tokenGeo, new THREE.MeshPhongMaterial({
+        color, emissive: color, emissiveIntensity: 0.22,
+        shininess: 90, specular: 0xffffff,
+    }));
+}
+
+// Gravité + rebond décroissant
+token.userData.vy += GRAVITY;
+token.position.y += token.userData.vy;
+if (token.position.y &lt;= yTarget) {
+    if (bouncesLeft &gt; 0) { vy = -vy * 0.35; bouncesLeft--; }
+    else { token.userData.resting = true; }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== DEMO iframe ========== -->
+        <section class="demo" id="demo">
+            <div class="demo-header">
+                <h2 class="section-title">
+                    <span class="title-num">05</span>
+                    Joue-y maintenant
+                </h2>
+                <p class="demo-desc">
+                    Une <strong>réimplémentation web</strong> du Puissance 4, directement dans le cadre ci-dessous.
+                    Aucun serveur, aucun framework — uniquement du HTML, CSS et JavaScript vanille. Pour une expérience plein
+                    écran, ouvre la démo dans un nouvel onglet.
+                </p>
+            </div>
+            <div class="demo-frame-wrapper">
+                <div class="demo-frame">
+                    <div class="demo-frame-bar">
+                        <div class="demo-dots"><span></span><span></span><span></span></div>
+                        <span class="demo-url">Puissance 4 — version web</span>
+                    </div>
+                    <iframe src="demo-puissance4.html" title="Puissance 4 — démo jouable" class="demo-iframe" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== STACK ========== -->
+        <section class="tech" id="tech">
+            <div class="tech-inner">
+                <h2 class="section-title">
+                    <span class="title-num">06</span>
+                    Stack technique
+                </h2>
+                <div class="tech-grid">
+                    <article class="tech-card reveal-target">
+                        <div class="tech-icon"><i class="fab fa-python"></i></div>
+                        <h3>Python 3</h3>
+                        <p>Logique cœur du jeu. Standard library uniquement (version console).</p>
+                    </article>
+                    <article class="tech-card reveal-target">
+                        <div class="tech-icon"><i class="fas fa-desktop"></i></div>
+                        <h3>Tkinter</h3>
+                        <p>Interface graphique native, Canvas, événements souris, messagebox.</p>
+                    </article>
+                    <article class="tech-card reveal-target">
+                        <div class="tech-icon"><i class="fas fa-cube"></i></div>
+                        <h3>Three.js</h3>
+                        <p>Plateau 3D, jetons avec gravité, viewer 4D temporel.</p>
+                    </article>
+                    <article class="tech-card reveal-target">
+                        <div class="tech-icon"><i class="fab fa-js"></i></div>
+                        <h3>JavaScript vanilla</h3>
+                        <p>Canvas 2D pour l'arrière-plan, scroll reveal, IntersectionObserver, zéro framework.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA FINAL ========== -->
+        <section class="cta-final">
+            <div class="cta-content">
+                <h2>Envie d'aligner quatre jetons&nbsp;?</h2>
+                <p>Ouvre la démo web en plein écran pour une expérience optimale.</p>
+                <a href="demo-puissance4.html" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-rocket"></i> Lancer Puissance 4
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer presentation-footer">
+        <div class="footer-accent" aria-hidden="true"></div>
+        <div class="container">
+            <div class="row g-4 footer-content">
+                <div class="col-12 col-lg-4 footer-brand">
+                    <div class="brand-info flex-column flex-sm-row align-items-sm-center">
+                        <div class="footer-logo-wrap">
+                            <div class="footer-logo-placeholder" aria-hidden="true"><i class="fas fa-circle"></i></div>
+                            <span class="footer-logo-glow" aria-hidden="true"></span>
+                        </div>
+                        <div class="brand-text">
+                            <h3>Puissance 4</h3>
+                            <p class="brand-tagline">Présentation projet</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Deux versions Python (console + Tkinter) et une arène 3D/4D dans le navigateur.
+                    </p>
+                    <div class="footer-tech-badges" aria-hidden="false">
+                        <span class="ft-badge" title="Python"><i class="fab fa-python"></i></span>
+                        <span class="ft-badge" title="Tkinter"><i class="fas fa-desktop"></i></span>
+                        <span class="ft-badge" title="Three.js"><i class="fas fa-cube"></i></span>
+                        <span class="ft-badge" title="JavaScript"><i class="fab fa-js"></i></span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/divin-kimia" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="mailto:divin.kimia@example.com" class="social-link" aria-label="E-mail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </a>
+                        <a href="demo-puissance4.html" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la démo">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                        <a href="../../Projets/index.html" class="social-link" aria-label="Tous les projets">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 footer-links">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li><a href="../../Accueil.html">Accueil portfolio</a></li>
+                                <li><a href="../../Projets/index.html">Projets</a></li>
+                                <li><a href="#hero">Haut de page</a></li>
+                                <li><a href="#about">Contexte</a></li>
+                                <li><a href="#versions">Versions</a></li>
+                                <li><a href="#flow">Pipeline</a></li>
+                                <li><a href="#fourd">Visualiseur 4D</a></li>
+                                <li><a href="#code">Code</a></li>
+                                <li><a href="#demo">Démo</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Contact rapide</h4>
+                            <ul>
+                                <li><a href="mailto:divin.kimia@example.com">Me contacter</a></li>
+                                <li><a href="demo-puissance4.html" target="_blank" rel="noopener noreferrer">Démo jouable</a></li>
+                                <li><a href="../../Accueil.html#contact">Formulaire (accueil)</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Légal</h4>
+                            <ul>
+                                <li><a href="#">Mentions légales</a></li>
+                                <li><a href="#">Politique de confidentialité</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom flex-column flex-sm-row justify-content-center justify-content-sm-between text-center text-sm-start">
+                <p class="mb-0">© <span id="footer-year">2026</span> <strong>Puissance 4</strong> — Présentation portfolio ·
+                    <a href="https://www.linkedin.com/in/divin-kimia" target="_blank" rel="noopener noreferrer">Divin Kimia</a>
+                </p>
+                <a href="#" class="back-to-top" aria-label="Retour en haut de la page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m18 15-6-6-6 6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../../../assets/vendor/three/three.min.js"></script>
+    <script src="../../../assets/vendor/highlight-js/highlight.min.js"></script>
+    <script src="../../../assets/vendor/highlight-js/languages/python.min.js"></script>
+    <script src="../../../assets/js/Projets/jsPuissance4/presentation-puissance4.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+      <script src="../../assets/js/light-theme-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Veille sur Claude Code et la collaboration en équipe : avantages, risques sécurité, impact emploi et éducation." />
+  <title>Divin Kimia | Veille IA — Claude Code</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../assets/css/Veilles/VeillesOpenClaw.css" />
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../../assets/js/script-light.js" defer></script>
+  <script src="../../assets/js/site-navbar.js" defer></script>
+<script src="../../assets/vendor/feather-icons/feather.min.js" defer></script>
+  <script src="../../assets/js/GalaxyEffect.js" defer></script>
+  <script src="../../assets/js/Veilles/VeillesClaudeCode-data.js" defer></script>
+  <script src="../../assets/js/Veilles/VeillesClaudeCode.js" defer></script>
+  <link rel="stylesheet" href="../../assets/css/fonts-offline.css" />
+  <link rel="stylesheet" href="../../assets/css/styles-light.css" />
+  <link rel="stylesheet" href="../../assets/css/light/light-veilles.css" />
+  <!-- fin polices hors ligne -->
+</head>
+<body class="portfolio-light veille-page lt-page-veilles" id="top">
+  <div id="galaxy-container" aria-hidden="true"></div>
+
+    <nav class="navbar navbar-expand-lg parcours-navbar lt-nav" aria-label="Navigation principale">
+    <div class="nav-left">
+      <img src="../../assets/img/ProfileAccueil.jpeg" alt="" class="logo" width="40" height="40" decoding="async" />
+      <span class="brand">Divin Kimia</span>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ltNav5ca3ed0"
+      aria-controls="ltNav5ca3ed0" aria-expanded="false" aria-label="Ouvrir le menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ltNav5ca3ed0">
+      <ul class="navbar-nav nav-links ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="../Accueil-light.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item dropdown dynamic-dropdown">
+          <a href="../Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-default-text="Parcours">Parcours</a>
+          <ul class="dropdown-menu dynamic-menu">
+            <li><a href="../Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html" class="dropdown-item swap-menu">Exp&eacute;riences professionnelles</a></li>
+            <li><a href="../Parcours_HTML/Formations/FormationsPage-light.html" class="dropdown-item swap-menu">Formations</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../Projets/index-light.html" class="nav-link">Projets</a></li>
+        <li class="nav-item"><a href="../Parcours_HTML/CertificationPage-light.html" class="nav-link">Certification</a></li>
+        <li class="nav-item"><a href="Veilles-light.html" class="nav-link active">Veilles</a></li>
+        <li class="nav-item"><a href="../MeDecouvrir-light.html" class="nav-link">Me d&eacute;couvrir</a></li>
+        <li class="nav-item"><a href="../Blog-light.html" class="nav-link">Blog</a></li>
+        <li class="nav-item d-lg-none"><a href="../Contact-light.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="../Contact-light.html" class="nav-btn d-none d-lg-inline-flex ms-lg-3">Contact</a>
+      <a href="VeillesClaudeCode.html" class="lt-theme-toggle ms-lg-2" aria-label="Basculer vers le th&egrave;me sombre" title="Version th&egrave;me sombre">Th&egrave;me sombre</a>
+    </div>
+  </nav>
+
+  <div class="veille-app">
+    <header class="veille-course-header" aria-label="Parcours en cours">
+      <div class="veille-course-header__start">
+        <button type="button" class="veille-icon-btn veille-sidebar-open d-lg-none" id="veilleOpenSidebar" aria-label="Ouvrir le menu du parcours">
+          <i data-feather="menu" width="22" height="22"></i>
+        </button>
+        <div class="veille-course-brand">
+          <span class="brand-mark" aria-hidden="true">VK</span>
+          <span class="veille-course-brand-text"><span class="d-none d-sm-inline">Veille · </span>Claude Code</span>
+        </div>
+      </div>
+      <h1 class="veille-course-title" id="veilleCourseTitle">Veille IA — Claude Code</h1>
+      <div class="veille-course-actions">
+        <button type="button" class="veille-icon-btn" id="veilleBtnGlossary" title="Ressources" aria-label="Aller aux ressources">
+          <i data-feather="book-open" width="20" height="20"></i>
+        </button>
+        <button type="button" class="veille-icon-btn" id="veilleBtnFs" title="Plein écran" aria-label="Plein écran">
+          <i data-feather="maximize-2" width="20" height="20"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="veille-layout">
+      <aside class="veille-sidebar" id="veilleSidebar" aria-label="Sommaire du parcours">
+        <div class="veille-tabs" role="tablist">
+          <button type="button" class="veille-tab is-active" role="tab" aria-selected="true" data-tab="overview">Aperçu du parcours</button>
+          <button type="button" class="veille-tab" role="tab" aria-selected="false" data-tab="resources">Ressources</button>
+        </div>
+
+        <div class="veille-sidebar-search">
+          <div class="veille-sidebar-search-wrap">
+            <i data-feather="search"></i>
+            <input type="search" id="veilleSearchInput" placeholder="Rechercher (sécurité, emploi, éducation...)" autocomplete="off" aria-label="Filtrer les thèmes" />
+          </div>
+        </div>
+
+        <div class="veille-panel is-visible" id="panelOverview" role="tabpanel">
+          <div class="veille-accordion" id="veilleAccordion"></div>
+          <div class="veille-progress-block">
+            <div class="veille-progress-label">
+              <span>Progression du parcours</span>
+              <span id="veilleProgressPct">0%</span>
+            </div>
+            <div class="veille-progress-bar" aria-hidden="true">
+              <div class="veille-progress-fill" id="veilleProgressFill" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="veille-panel" id="panelResources" role="tabpanel" hidden>
+          <div class="veille-resources-list">
+            <h4>Claude Code — sources officielles</h4>
+            <ul>
+              <li><i data-feather="book-open" width="16"></i><div><a href="https://docs.anthropic.com/en/docs/claude-code/security" target="_blank" rel="noopener">Security</a><br><span class="veille-res-hint">Permissions, sandbox, contrôles</span></div></li>
+              <li><i data-feather="book-open" width="16"></i><div><a href="https://docs.anthropic.com/en/docs/claude-code/permissions" target="_blank" rel="noopener">Permissions</a><br><span class="veille-res-hint">Modes et politiques de contrôle</span></div></li>
+              <li><i data-feather="book-open" width="16"></i><div><a href="https://docs.anthropic.com/en/docs/claude-code/settings" target="_blank" rel="noopener">Settings</a><br><span class="veille-res-hint">Configuration utilisateur/projet/entreprise</span></div></li>
+              <li><i data-feather="external-link" width="16"></i><div><a href="https://www.anthropic.com/news/projects/" target="_blank" rel="noopener">Projects (collaboration)</a><br><span class="veille-res-hint">Partage et cowork sur Claude</span></div></li>
+            </ul>
+            <h4>Impact emploi &amp; éducation</h4>
+            <ul>
+              <li><i data-feather="external-link" width="16"></i><div><a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/" target="_blank" rel="noopener">WEF Future of Jobs 2025</a><br><span class="veille-res-hint">Transformation des métiers d'ici 2030</span></div></li>
+              <li><i data-feather="external-link" width="16"></i><div><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" target="_blank" rel="noopener">UNESCO GenAI Education</a><br><span class="veille-res-hint">Cadre d'usage éthique en éducation</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <div class="veille-sidebar-backdrop" id="veilleSidebarBackdrop" aria-hidden="true"></div>
+
+      <main class="lt-main veille-main">
+        <div class="veille-scroll-area">
+          <section class="veille-hero" aria-labelledby="veilleHeroHeading">
+            <img id="veilleHeroImg" src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="1600" height="900" loading="eager" />
+            <div class="veille-hero-overlay">
+              <h2 class="veille-hero-title" id="veilleHeroHeading">Veille IA — Claude Code</h2>
+              <p class="veille-hero-hint"><i data-feather="chevron-down" width="18"></i> Faites défiler pour commencer</p>
+            </div>
+            <button type="button" class="veille-hero-nav veille-hero-nav--prev" id="veillePrevLesson" aria-label="Thème précédent"><i data-feather="chevron-left"></i></button>
+            <button type="button" class="veille-hero-nav veille-hero-nav--next" id="veilleNextLesson" aria-label="Thème suivant"><i data-feather="chevron-right"></i></button>
+          </section>
+
+          <article class="veille-article" id="veilleArticle">
+            <div class="veille-meta-row" id="veilleMeta"></div>
+            <h2 id="veilleObjectifsTitle">Synthèse</h2>
+            <p class="lead" id="veilleLead"></p>
+            <div id="veilleBody"></div>
+          </article>
+        </div>
+
+        <section class="veille-contact-strip" id="contact-veille">
+          <div class="inner">
+            <div>
+              <strong>Échangeons sur la veille</strong>
+              <p class="mb-0 mt-1 veille-contact-hint">Proposition de collaboration ou questions sur une thématique.</p>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="mailto:divinkimia@protonmail.com" class="btn veille-btn-accent">Me contacter</a>
+              <a href="../Accueil-light.html" class="btn veille-btn-outline">Accueil</a>
+            </div>
+          </div>
+          <div class="veille-mini-footer text-center mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.75rem; color: var(--muted);">
+            © <span id="mini-year">2026</span> Divin Kimia — Tous droits réservés.
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

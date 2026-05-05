@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+    <script src="../../assets/js/theme-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Certifications professionnelles — Divin Kimia : cybersécurité et développement web. Parcours structuré, design portfolio." />
+  <title>Certifications | Divin Kimia — Portfolio</title>
+
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/site-navbar-global.css" />
+  <link rel="stylesheet" href="../../assets/css/site-theme-global.css" />
+  <link rel="stylesheet" href="../../assets/css/Parcours_CSS/CertificationPage.css" />
+  <link rel="stylesheet" href="../../assets/css/site-footer-global.css" />
+
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="../../assets/js/site-navbar.js" defer></script>
+  <script src="../../assets/js/site-footer.js" defer></script>
+  <script src="../../assets/js/GalaxyEffect.js" defer></script>
+  <script src="../../assets/vendor/three/three.min.js" defer></script>
+  <script src="../../assets/js/Parcours_JS/CertificationPage.js" defer></script>
+  <link rel="stylesheet" href="../../assets/css/fonts-offline.css" />
+  <!-- fin polices hors ligne -->
+</head>
+<body class="cert-page" id="top">
+  <div id="galaxy-container" aria-hidden="true"></div>
+  <div id="cert-webgl-host" class="cert-webgl-host" aria-hidden="true"></div>
+
+  <nav class="navbar navbar-expand-lg parcours-navbar">
+    <div class="nav-left">
+      <img src="../../assets/img/ProfileAccueil.jpeg" alt="Divin Kimia" class="logo" width="42" height="42" decoding="async" />
+      <span class="brand">Divin Kimia</span>
+    </div>
+    <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarParcours"
+      aria-label="Ouvrir le menu" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarParcours">
+      <ul class="navbar-nav nav-links ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="../Accueil.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item dropdown dynamic-dropdown">
+          <a href="ExperiencesPro/ExperiencesProfessionnels.html" class="nav-link dropdown-toggle" data-default-text="Parcours">Parcours</a>
+          <ul class="dropdown-menu dynamic-menu">
+            <li><a href="ExperiencesPro/ExperiencesProfessionnels.html" class="dropdown-item swap-menu">Expériences professionnelles</a></li>
+            <li><a href="Formations/FormationsPage.html" class="dropdown-item swap-menu">Formations</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../Projets/index.html" class="nav-link">Projets</a></li>
+        <li class="nav-item"><a href="CertificationPage.html" class="nav-link active">Certification</a></li>
+        <li class="nav-item"><a href="../Veilles/Veilles.html" class="nav-link">Veilles</a></li>
+        <li class="nav-item"><a href="../MeDecouvrir.html" class="nav-link">Me découvrir</a></li>
+        <li class="nav-item"><a href="../Blog.html" class="nav-link">Blog</a></li>
+      </ul>
+      <a href="../Contact.html" class="nav-btn d-none d-lg-inline-flex ms-lg-3">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="cert-hero">
+      <div class="cert-hero__noise" aria-hidden="true"></div>
+      <div class="container cert-hero__inner">
+        <div class="cert-hero__copy">
+          <p class="cert-hero__eyebrow">
+            <span class="cert-hero__dot" aria-hidden="true"></span>
+            IA, cyberdéfense &amp; expertise
+          </p>
+          <h1 class="cert-hero__title">
+            Certifications <span class="cert-hero__title-accent">IA &amp; Cybersécurité</span>
+          </h1>
+          <p class="cert-hero__lead">
+            Une vue structurée de mon socle technique orienté IA appliquée et sécurité informatique :
+            détection, défense, architecture et exploitation responsable.
+          </p>
+          <div class="cert-hero__actions">
+            <a href="#catalogue" class="cert-btn cert-btn--primary">Parcourir le catalogue</a>
+            <a href="#parcours" class="cert-btn cert-btn--ghost">Parcours &amp; objectifs</a>
+          </div>
+        </div>
+        <aside class="cert-hero__panel" aria-label="Synthèse">
+          <div class="cert-hero__panel-inner">
+            <p class="cert-hero__panel-label">Synthèse</p>
+            <ul class="cert-hero__panel-list">
+              <li><strong>6</strong> certifications présentées</li>
+              <li><strong>2</strong> axes Cyber / Web couverts</li>
+              <li>Mise à jour <strong>2026</strong></li>
+            </ul>
+            <div class="cert-hero__panel-bar" role="presentation">
+              <span class="cert-hero__panel-fill" style="--cert-progress: 100%"></span>
+            </div>
+            <p class="cert-hero__panel-foot">Couverture des compétences critiques IA &amp; sécurité</p>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section class="cert-strip" aria-label="Indicateurs">
+      <div class="container">
+        <div class="cert-strip__grid">
+          <div class="cert-strip__item">
+            <span class="cert-strip__value" data-count="6">6</span>
+            <span class="cert-strip__label">Certifications stratégiques</span>
+          </div>
+          <div class="cert-strip__item">
+            <span class="cert-strip__value">100%</span>
+            <span class="cert-strip__label">Structuration IA / cyber</span>
+          </div>
+          <div class="cert-strip__item">
+            <span class="cert-strip__value">24/7</span>
+            <span class="cert-strip__label">Threat intel &amp; veille continue</span>
+          </div>
+          <div class="cert-strip__item">
+            <span class="cert-strip__value">∞</span>
+            <span class="cert-strip__label">Amélioration continue</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cert-principles" id="principes">
+      <div class="container">
+        <div class="cert-principles__grid">
+          <article class="cert-principle">
+            <h2 class="cert-principle__title">Défense proactive</h2>
+            <p class="cert-principle__text">Les compétences sont orientées prévention, détection et réponse face aux menaces numériques.</p>
+          </article>
+          <article class="cert-principle">
+            <h2 class="cert-principle__title">IA utile</h2>
+            <p class="cert-principle__text">Approche pragmatique de l’IA : automatisation, assistance à la décision et amélioration des opérations techniques.</p>
+          </article>
+          <article class="cert-principle">
+            <h2 class="cert-principle__title">Résilience</h2>
+            <p class="cert-principle__text">Montée en compétence continue pour garder des architectures fiables, robustes et auditées.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cert-catalog" id="catalogue">
+      <div class="container">
+        <header class="cert-section-head">
+          <h2 class="cert-section-head__title">Catalogue</h2>
+          <p class="cert-section-head__desc">Filtrez par domaine. Les cartes résument les briques clés pour l’IA appliquée et la cybersécurité.</p>
+        </header>
+
+        <div class="cert-filters" role="group" aria-label="Filtrer par domaine">
+          <button type="button" class="cert-filter is-active" data-filter="all">Tous</button>
+          <button type="button" class="cert-filter" data-filter="security">Sécurité</button>
+          <button type="button" class="cert-filter" data-filter="web">Développement web</button>
+        </div>
+
+        <div class="cert-bento">
+          <article class="cert-card cert-reveal" data-category="security" aria-label="MOOC de la CNI">
+            <div class="cert-card__glow" aria-hidden="true"></div>
+            <div class="cert-card__top">
+              <span class="cert-card__id">01</span>
+              <span class="cert-card__badge">CNI</span>
+            </div>
+            <h3 class="cert-card__name">MOOC CNI</h3>
+            <p class="cert-card__full">Sensibilisation cybersécurité</p>
+            <p class="cert-card__scope">Bonnes pratiques de sécurité numérique, prévention et comportements à risque.</p>
+            <ul class="cert-card__tags">
+              <li>Hygiène numérique</li>
+              <li>Prévention</li>
+              <li>Sensibilisation</li>
+            </ul>
+          </article>
+
+          <article class="cert-card cert-reveal" data-category="security" aria-label="MOOC de l'ANSSI">
+            <div class="cert-card__glow" aria-hidden="true"></div>
+            <div class="cert-card__top">
+              <span class="cert-card__id">02</span>
+              <span class="cert-card__badge">ANSSI</span>
+            </div>
+            <h3 class="cert-card__name">MOOC ANSSI</h3>
+            <p class="cert-card__full">Cybersécurité opérationnelle</p>
+            <p class="cert-card__scope">Fondamentaux de la cybersécurité, gestion des risques et mesures de protection.</p>
+            <ul class="cert-card__tags">
+              <li>Risques</li>
+              <li>Protection</li>
+              <li>Conformité</li>
+            </ul>
+          </article>
+
+          <article class="cert-card cert-reveal" data-category="web" aria-label="Certification OpenClassrooms JavaScript">
+            <div class="cert-card__glow" aria-hidden="true"></div>
+            <div class="cert-card__top">
+              <span class="cert-card__id">03</span>
+              <span class="cert-card__badge">OpenClassrooms</span>
+            </div>
+            <h3 class="cert-card__name">JavaScript</h3>
+            <p class="cert-card__full">Certification OpenClassrooms</p>
+            <p class="cert-card__scope">Maîtrise des bases JavaScript pour développer des interfaces web dynamiques.</p>
+            <ul class="cert-card__tags">
+              <li>ES6+</li>
+              <li>DOM</li>
+              <li>Logique</li>
+            </ul>
+          </article>
+
+          <article class="cert-card cert-reveal" data-category="web" aria-label="Certification HTML">
+            <div class="cert-card__glow" aria-hidden="true"></div>
+            <div class="cert-card__top">
+              <span class="cert-card__id">04</span>
+              <span class="cert-card__badge">Web</span>
+            </div>
+            <h3 class="cert-card__name">HTML</h3>
+            <p class="cert-card__full">Certification HTML</p>
+            <p class="cert-card__scope">Structuration sémantique des pages et bonnes pratiques d’accessibilité.</p>
+            <ul class="cert-card__tags">
+              <li>Sémantique</li>
+              <li>SEO</li>
+              <li>Accessibilité</li>
+            </ul>
+          </article>
+
+          <article class="cert-card cert-reveal" data-category="web" aria-label="Certification CSS">
+            <div class="cert-card__glow" aria-hidden="true"></div>
+            <div class="cert-card__top">
+              <span class="cert-card__id">05</span>
+              <span class="cert-card__badge">Web</span>
+            </div>
+            <h3 class="cert-card__name">CSS</h3>
+            <p class="cert-card__full">Certification CSS</p>
+            <p class="cert-card__scope">Mise en page responsive, design visuel et animations pour interfaces modernes.</p>
+            <ul class="cert-card__tags">
+              <li>Responsive</li>
+              <li>Layout</li>
+              <li>UI</li>
+            </ul>
+          </article>
+
+          <article class="cert-card cert-card--pix cert-reveal" data-category="web" aria-label="Certification PIX">
+            <div class="cert-card__glow" aria-hidden="true"></div>
+            <div class="cert-card__top">
+              <span class="cert-card__id">06</span>
+              <span class="cert-card__badge">PIX</span>
+            </div>
+            <h3 class="cert-card__name">PIX</h3>
+            <p class="cert-card__full">Certification des compétences numériques</p>
+            <p class="cert-card__scope">Validation des compétences numériques : sécurité, données, communication, création de contenu et culture digitale.</p>
+            <ul class="cert-card__tags">
+              <li>Compétences numériques</li>
+              <li>Sécurité</li>
+              <li>Culture digitale</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cert-principles" id="autres-certifications">
+      <div class="container">
+        <header class="cert-section-head">
+          <h2 class="cert-section-head__title">Autres certifications validées</h2>
+          <p class="cert-section-head__desc">Certifications complémentaires réalisées en cybersécurité et développement web.</p>
+        </header>
+        <div class="cert-principles__grid">
+          <article class="cert-principle">
+            <h3 class="cert-principle__title">MOOC de la CNI</h3>
+            <p class="cert-principle__text">Parcours de sensibilisation et de bonnes pratiques autour de la sécurité numérique.</p>
+          </article>
+          <article class="cert-principle">
+            <h3 class="cert-principle__title">MOOC de l’ANSSI</h3>
+            <p class="cert-principle__text">Formation orientée hygiène informatique, gestion des risques et cybersécurité opérationnelle.</p>
+          </article>
+          <article class="cert-principle">
+            <h3 class="cert-principle__title">OpenClassrooms — JavaScript</h3>
+            <p class="cert-principle__text">Certification centrée sur les fondamentaux du langage et la logique de programmation web.</p>
+          </article>
+          <article class="cert-principle">
+            <h3 class="cert-principle__title">Certification HTML</h3>
+            <p class="cert-principle__text">Maîtrise de la structuration sémantique des pages et des bonnes pratiques d’accessibilité.</p>
+          </article>
+          <article class="cert-principle">
+            <h3 class="cert-principle__title">Certification CSS</h3>
+            <p class="cert-principle__text">Compétences validées en mise en page, responsive design et personnalisation visuelle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cert-roadmap" id="parcours">
+      <div class="container">
+        <header class="cert-section-head cert-section-head--center">
+          <h2 class="cert-section-head__title">Roadmap IA &amp; Cyber</h2>
+          <p class="cert-section-head__desc">La certification est un repère : veille, labs, projets et simulation d’incidents structurent la progression.</p>
+        </header>
+        <ol class="cert-timeline">
+          <li class="cert-timeline__item cert-reveal">
+            <span class="cert-timeline__year">Aujourd’hui</span>
+            <div class="cert-timeline__body">
+              <h3 class="cert-timeline__title">Consolidation SOC</h3>
+              <p>Relier les certifications à des cas réels : analyse, supervision et durcissement d’environnements.</p>
+            </div>
+          </li>
+          <li class="cert-timeline__item cert-reveal">
+            <span class="cert-timeline__year">Court terme</span>
+            <div class="cert-timeline__body">
+              <h3 class="cert-timeline__title">Spécialisation IA sécurisée</h3>
+              <p>Approfondir les usages d’IA en contexte de sécurité : détection assistée, corrélation et automatisation.</p>
+            </div>
+          </li>
+          <li class="cert-timeline__item cert-reveal">
+            <span class="cert-timeline__year">Continu</span>
+            <div class="cert-timeline__body">
+              <h3 class="cert-timeline__title">Gouvernance &amp; transmission</h3>
+              <p>Diffuser les bonnes pratiques de sécurité et d’IA responsable via documentation, revues et accompagnement.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cert-cta" id="contact">
+      <div class="container">
+        <div class="cert-cta__box">
+          <div class="cert-cta__text">
+            <h2 class="cert-cta__title">Échanger sur un profil IA &amp; cybersécurité</h2>
+            <p class="cert-cta__lead">Pour une mission, un projet ou un entretien sur les sujets cyber et développement web : contactez-moi.</p>
+          </div>
+          <div class="cert-cta__actions">
+            <a href="../Contact.html" class="cert-btn cert-btn--primary">Formulaire de contact</a>
+            <a href="mailto:divinkimia@protonmail.com" class="cert-btn cert-btn--ghost">E-mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-accent"></div>
+    <div class="container">
+      <div class="row g-4 footer-content">
+        <div class="col-12 col-lg-4 footer-brand">
+          <div class="brand-info flex-column flex-sm-row align-items-sm-center">
+            <div class="footer-logo-wrap">
+              <img src="../../assets/img/ProfileAccueil.jpeg" alt="Avatar Divin Kimia" class="footer-logo img-fluid rounded-circle" width="64" height="64" decoding="async" />
+              <span class="footer-logo-glow"></span>
+            </div>
+            <div class="brand-text">
+              <h3>Divin Kimia</h3>
+              <p class="brand-tagline">Développeur Web &amp; Passionné d’IA</p>
+            </div>
+          </div>
+          <p class="footer-desc">Certifications &amp; parcours professionnel — portfolio à jour.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://github.com/Divinkimia" class="social-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-5.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 footer-links">
+          <div class="row g-4">
+            <div class="col-12 col-sm-6 col-md-4 link-group">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="../Accueil.html">Accueil</a></li>
+                <li><a href="ExperiencesPro/ExperiencesProfessionnels.html">Parcours</a></li>
+                <li><a href="../Projets/index.html">Projets</a></li>
+                <li><a href="CertificationPage.html">Certification</a></li>
+                <li><a href="../Veilles/Veilles.html">Veilles</a></li>
+                <li><a href="../MeDecouvrir.html">Me découvrir</a></li>
+                <li><a href="../Blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 link-group">
+              <h4>Contact rapide</h4>
+              <ul>
+                <li><a href="mailto:divinkimia@protonmail.com">Me contacter</a></li>
+                <li><a href="../CV_Divin_Kimia.pdf" download>Télécharger mon CV</a></li>
+                <li><a href="../Contact.html">Formulaire</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 link-group">
+              <h4>Légal</h4>
+              <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom flex-column flex-sm-row justify-content-center justify-content-sm-between text-center text-sm-start">
+        <p class="mb-0">© <span id="year"></span> <strong>Divin Kimia</strong> — Tous droits réservés.</p>
+        <a href="#top" class="back-to-top" aria-label="Retour en haut">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

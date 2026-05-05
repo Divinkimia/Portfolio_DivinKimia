@@ -1,0 +1,409 @@
+/**
+ * Blog personnel ù theme clair premium.
+ * body.portfolio-light.lt-page-blog
+ */
+
+body.portfolio-light.lt-page-blog #galaxy-container,
+body.portfolio-light.lt-page-blog .blog-webgl-host {
+  display: none !important;
+}
+
+body.portfolio-light.lt-page-blog.blog-page {
+  --blog-bg: var(--lt-bg);
+  --blog-bg-alt: var(--lt-bg-subtle);
+  --blog-border: var(--lt-border);
+  --blog-glass: rgba(255, 252, 247, 0.82);
+  --blog-text: var(--lt-text);
+  --blog-muted: var(--lt-muted);
+  --blog-accent: var(--lt-cyan);
+  --blog-accent-glow: rgba(11, 110, 124, 0.18);
+  --blog-purple: var(--lt-accent);
+  --blog-gold: var(--lt-accent-2);
+  --blog-sans: var(--lt-font-body), system-ui, sans-serif;
+  --blog-display: var(--lt-font-display), system-ui, sans-serif;
+  --blog-serif: var(--lt-font-display), Georgia, serif;
+  background-color: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+body.portfolio-light.lt-page-blog main.lt-main,
+body.portfolio-light.lt-page-blog .lt-main {
+  padding-top: 0;
+}
+
+/* Hero */
+body.portfolio-light.lt-page-blog .dk-blog-hero {
+  padding-top: calc(var(--lt-header-h) + 3rem);
+  background:
+    radial-gradient(ellipse 90% 70% at 10% 20%, rgba(21, 108, 101, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 90% 60%, rgba(11, 110, 124, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, var(--lt-bg) 0%, var(--lt-bg-subtle) 100%);
+  min-height: min(100vh, 900px);
+}
+
+body.portfolio-light.lt-page-blog .hero-kicker {
+  color: var(--lt-cyan);
+  font-weight: 700;
+}
+
+body.portfolio-light.lt-page-blog .hero-title {
+  font-family: var(--lt-font-display), Georgia, serif;
+  background: linear-gradient(145deg, var(--lt-text) 0%, var(--lt-text-secondary) 40%, var(--lt-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: none;
+}
+
+body.portfolio-light.lt-page-blog .hero-subtitle {
+  color: var(--lt-muted);
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+body.portfolio-light.lt-page-blog .hero-subtitle strong {
+  color: var(--lt-accent);
+}
+
+body.portfolio-light.lt-page-blog .blog-chip {
+  border-color: var(--lt-hairline);
+  background: var(--lt-surface-elevated);
+  color: var(--lt-cyan);
+  box-shadow: var(--lt-shadow-xs);
+  font-weight: 600;
+}
+
+body.portfolio-light.lt-page-blog .blog-hero-vignette {
+  background: radial-gradient(ellipse 80% 70% at 50% 40%, transparent 0%, rgba(244, 241, 234, 0.88) 75%);
+}
+
+body.portfolio-light.lt-page-blog .mouse {
+  border-color: var(--lt-border-strong);
+}
+
+body.portfolio-light.lt-page-blog .wheel {
+  background: var(--lt-cyan);
+}
+
+/* Progression lecture */
+body.portfolio-light.lt-page-blog .blog-scroll-progress {
+  background: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-blog .blog-scroll-progress::after {
+  background: linear-gradient(90deg, var(--lt-accent), var(--lt-cyan));
+  box-shadow: none;
+}
+
+/* Bande stats */
+body.portfolio-light.lt-page-blog .blog-universe-strip {
+  border-bottom: 1px solid var(--lt-border);
+  background: linear-gradient(180deg, transparent, rgba(21, 108, 101, 0.05));
+}
+
+body.portfolio-light.lt-page-blog .blog-strip-card {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-xs);
+  backdrop-filter: blur(12px);
+}
+
+body.portfolio-light.lt-page-blog .blog-strip-value {
+  background: linear-gradient(90deg, var(--lt-text), var(--lt-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.portfolio-light.lt-page-blog .blog-strip-label {
+  color: var(--lt-muted);
+}
+
+/* Editorial & filtres */
+body.portfolio-light.lt-page-blog .blog-editorial__kicker {
+  color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-blog .blog-editorial__title {
+  color: var(--lt-text);
+  font-family: var(--lt-font-display), Georgia, serif;
+}
+
+body.portfolio-light.lt-page-blog .blog-editorial__desc {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-blog .blog-topic-filter__btn {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-blog .blog-topic-filter__btn:hover {
+  color: var(--lt-text);
+  border-color: var(--lt-hairline);
+  background: var(--lt-surface-muted);
+}
+
+body.portfolio-light.lt-page-blog .blog-topic-filter__btn.is-active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan));
+  border-color: transparent;
+  box-shadow: var(--lt-shadow-sm);
+}
+
+/* Cartes articles */
+body.portfolio-light.lt-page-blog .blog-post-card {
+  background: linear-gradient(160deg, var(--lt-surface-elevated) 0%, var(--lt-surface) 100%);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-blog .blog-post-card:hover {
+  border-color: rgba(21, 108, 101, 0.3);
+  box-shadow: var(--lt-shadow-lg);
+}
+
+body.portfolio-light.lt-page-blog .blog-post-card__title {
+  color: var(--lt-text);
+  font-family: var(--lt-font-display), sans-serif;
+}
+
+body.portfolio-light.lt-page-blog .blog-post-card__meta {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-blog .blog-post-card__tags span {
+  color: var(--lt-cyan);
+  border-color: var(--lt-hairline);
+  background: var(--lt-cyan-soft);
+}
+
+body.portfolio-light.lt-page-blog .blog-layout__side {
+  top: calc(var(--lt-header-h) + 1rem);
+}
+
+body.portfolio-light.lt-page-blog .blog-widget {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-blog .blog-widget__title {
+  color: var(--lt-text);
+  font-family: var(--lt-font-display), sans-serif;
+}
+
+body.portfolio-light.lt-page-blog .blog-widget__list a {
+  color: var(--lt-accent);
+}
+
+body.portfolio-light.lt-page-blog .blog-widget__list a:hover {
+  color: var(--lt-accent-hover);
+}
+
+/* Nav rapide */
+body.portfolio-light.lt-page-blog .dk-quick-nav {
+  background: rgba(255, 252, 247, 0.92);
+  border-bottom: 1px solid var(--lt-border);
+  backdrop-filter: blur(16px);
+}
+
+body.portfolio-light.lt-page-blog .blog-quick-nav-glow {
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-blog .dk-quick-nav__link {
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-blog .dk-quick-nav__link:hover {
+  color: var(--lt-accent);
+  border-color: var(--lt-hairline);
+  background: var(--lt-accent-soft);
+  box-shadow: none;
+}
+
+/* Sections generiques */
+body.portfolio-light.lt-page-blog .section-title {
+  background: linear-gradient(120deg, var(--lt-text) 0%, var(--lt-accent) 55%, var(--lt-cyan) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.portfolio-light.lt-page-blog .section-subtitle {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-blog .alt-bg {
+  background: linear-gradient(180deg, var(--lt-bg-subtle) 0%, var(--lt-bg) 100%);
+  border-top: 1px solid var(--lt-border);
+  border-bottom: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-blog .glass-panel {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-blog .hover-3d:hover {
+  box-shadow: var(--lt-shadow-lg);
+  border-color: var(--lt-hairline);
+}
+
+/* Cartes personnalite */
+body.portfolio-light.lt-page-blog .logic-card {
+  background: linear-gradient(155deg, var(--lt-surface-elevated) 0%, var(--lt-bg-subtle) 100%);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-blog .logic-card .card-icon {
+  background: radial-gradient(circle at 30% 30%, var(--lt-cyan-soft), var(--lt-surface-elevated));
+  border: 1px solid var(--lt-hairline);
+  box-shadow: inset 0 0 20px rgba(21, 108, 101, 0.06);
+}
+
+body.portfolio-light.lt-page-blog .logic-card h3 {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-blog .logic-card p {
+  color: var(--lt-muted);
+}
+
+/* Timeline parcours */
+body.portfolio-light.lt-page-blog .timeline-container::before {
+  background: linear-gradient(180deg, var(--lt-accent), var(--lt-cyan));
+  opacity: 0.65;
+}
+
+body.portfolio-light.lt-page-blog .timeline-dot {
+  background: var(--lt-bg);
+  border-color: var(--lt-cyan);
+  box-shadow: 0 0 0 2px var(--lt-surface-elevated), 0 0 12px rgba(21, 108, 101, 0.35);
+}
+
+body.portfolio-light.lt-page-blog .timeline-item:last-child .timeline-dot {
+  border-color: var(--lt-accent);
+  box-shadow: 0 0 0 2px var(--lt-surface-elevated), 0 0 12px rgba(21, 108, 101, 0.35);
+}
+
+body.portfolio-light.lt-page-blog .timeline-content {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  border-radius: var(--lt-radius-md);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-blog .timeline-content h3 {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-blog .timeline-content p {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-blog .neon-blue {
+  background: var(--lt-cyan-soft);
+  color: var(--lt-cyan);
+  border: 1px solid var(--lt-hairline);
+  box-shadow: none;
+}
+
+body.portfolio-light.lt-page-blog .neon-purple {
+  background: var(--lt-accent-soft);
+  color: var(--lt-accent-hover);
+  border: 1px solid var(--lt-hairline);
+  box-shadow: none;
+}
+
+/* Grind / pays */
+body.portfolio-light.lt-page-blog .grind-card {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-blog .grind-card h3 {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-blog .grind-card p {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-blog .country-pill {
+  background: var(--lt-surface-muted);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-blog .country-pill:hover {
+  border-color: var(--lt-hairline);
+  color: var(--lt-accent);
+}
+
+/* Tùmoignages */
+body.portfolio-light.lt-page-blog .dk-testimonials-section {
+  --dk-lavender: var(--lt-accent);
+  --dk-lavender-deep: var(--lt-accent-hover);
+  --dk-periwinkle: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonials-subtitle {
+  color: var(--lt-muted);
+  opacity: 1;
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-card {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-quote-mark {
+  color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-deco-dot {
+  border-color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-text {
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-name {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-role {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-nav {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-dot {
+  background: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-dot.is-active {
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan));
+}
+
+body.portfolio-light.lt-page-blog .dk-testimonial-avatar {
+  background: var(--lt-accent-soft);
+  color: var(--lt-accent-hover);
+  border: 1px solid var(--lt-hairline);
+}
+
+/* Poemes / typos zones si couleur forcee */
+body.portfolio-light.lt-page-blog .dk-section {
+  color: var(--lt-text);
+}

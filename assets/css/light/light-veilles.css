@@ -1,0 +1,269 @@
+/**
+ * Veilles ù theme clair premium (landing NetAcad + parcours OpenClaw/HeyGen/Claude).
+ * body.portfolio-light.lt-page-veilles
+ */
+
+body.portfolio-light.lt-page-veilles #galaxy-container {
+  display: none !important;
+}
+
+body.portfolio-light.lt-page-veilles.veille-page {
+  --bg: var(--lt-bg);
+  --card: var(--lt-surface-elevated);
+  --glass: rgba(21, 108, 101, 0.08);
+  --accent: var(--lt-cyan);
+  --accent-2: var(--lt-accent);
+  --muted: var(--lt-muted);
+  --text: var(--lt-text);
+  --border: var(--lt-border);
+  --border-soft: var(--lt-border);
+  --border-cyan: var(--lt-hairline);
+  --shadow: var(--lt-shadow-md);
+  --va-shadow: var(--lt-shadow-md);
+  --font: var(--lt-font-body), system-ui, sans-serif;
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+body.portfolio-light.lt-page-veilles .lt-main {
+  padding-top: 0;
+}
+
+/* Landing Veilles.css */
+body.portfolio-light.lt-page-veilles .veille-landing {
+  padding-top: calc(var(--lt-header-h) + 1.25rem);
+}
+
+body.portfolio-light.lt-page-veilles .veille-hero-net {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(21, 108, 101, 0.12) 0%, transparent 55%);
+}
+
+body.portfolio-light.lt-page-veilles .veille-kicker {
+  color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-veilles .veille-hero-title,
+body.portfolio-light.lt-page-veilles .veille-h2,
+body.portfolio-light.lt-page-veilles .veille-stats-head h2 {
+  font-family: var(--lt-font-display), sans-serif;
+  color: var(--lt-text);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body.portfolio-light.lt-page-veilles .veille-underline {
+  background: linear-gradient(transparent 78%, rgba(21, 108, 101, 0.35) 78%);
+}
+
+body.portfolio-light.lt-page-veilles .veille-hero-lead,
+body.portfolio-light.lt-page-veilles .veille-intro,
+body.portfolio-light.lt-page-veilles .veille-stats-sub {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-veilles .veille-intro a {
+  color: var(--lt-accent);
+}
+
+body.portfolio-light.lt-page-veilles .veille-intro a:hover {
+  color: var(--lt-accent-hover);
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-primary {
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan)) !important;
+  color: #fff !important;
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-primary:hover {
+  filter: none;
+  color: #fff !important;
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-ghost {
+  border-color: var(--lt-border-strong) !important;
+  color: var(--lt-cyan) !important;
+  background: var(--lt-surface-elevated) !important;
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-ghost:hover {
+  background: var(--lt-accent-soft) !important;
+  color: var(--lt-accent-hover) !important;
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-pill {
+  background: var(--lt-cyan-soft) !important;
+  border-color: var(--lt-border) !important;
+  color: var(--lt-accent-hover) !important;
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-pill:hover {
+  background: var(--lt-accent-soft) !important;
+  color: var(--lt-text) !important;
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-outline-wide {
+  border-color: var(--lt-border-strong) !important;
+  color: var(--lt-text) !important;
+  background: var(--lt-surface-elevated) !important;
+}
+
+body.portfolio-light.lt-page-veilles .veille-btn-outline-wide:hover {
+  border-color: var(--lt-hairline) !important;
+  background: var(--lt-surface-muted) !important;
+}
+
+body.portfolio-light.lt-page-veilles .veille-stats {
+  background: linear-gradient(180deg, var(--lt-bg-subtle) 0%, transparent 100%);
+}
+
+body.portfolio-light.lt-page-veilles .veille-stat-num,
+body.portfolio-light.lt-page-veilles .veille-stat-num--pct {
+  color: var(--lt-accent);
+  font-family: var(--lt-font-display), sans-serif;
+}
+
+body.portfolio-light.lt-page-veilles .veille-stat-label {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-veilles .veille-block {
+  background: transparent;
+}
+
+body.portfolio-light.lt-page-veilles .veille-domain-card,
+body.portfolio-light.lt-page-veilles .veille-course-card {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-veilles .veille-domain-card:hover {
+  border-color: var(--lt-hairline);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-veilles .veille-domain-card.is-selected {
+  border-color: var(--lt-hairline);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-veilles .veille-course-title,
+body.portfolio-light.lt-page-veilles .veille-course-excerpt,
+body.portfolio-light.lt-page-veilles .veille-course-provider,
+body.portfolio-light.lt-page-veilles .veille-course-foot {
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-veilles .veille-course-title {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-veilles .veille-badge,
+body.portfolio-light.lt-page-veilles .veille-badge--soft {
+  background: var(--lt-accent-soft);
+  color: var(--lt-accent-hover);
+  border: 1px solid var(--lt-hairline);
+}
+
+body.portfolio-light.lt-page-veilles .veille-carousel-btn {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-veilles .veille-carousel-btn:hover {
+  border-color: var(--lt-hairline);
+  color: var(--lt-accent);
+}
+
+/* Parcours type OpenClaw (sidebar + article) */
+body.portfolio-light.lt-page-veilles .veille-course-header {
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(244, 241, 234, 0.96));
+  border-bottom: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-veilles .veille-course-brand {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-veilles .veille-course-brand .brand-mark {
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan));
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-veilles .veille-sidebar {
+  background: var(--lt-surface-elevated);
+  border-color: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-veilles .veille-mod-toggle {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-veilles .veille-lesson:hover {
+  background: var(--lt-accent-soft);
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-veilles .veille-lesson.is-current {
+  background: var(--lt-cyan-soft);
+  color: var(--lt-accent-hover);
+  border-left-color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-veilles .veille-progress-block {
+  border-top: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-veilles .veille-progress-bar {
+  background: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-veilles .veille-progress-fill {
+  background: linear-gradient(90deg, var(--lt-accent), var(--lt-cyan));
+  box-shadow: none;
+}
+
+body.portfolio-light.lt-page-veilles .veille-icon-btn:hover {
+  background: var(--lt-accent-soft);
+  color: var(--lt-accent);
+}
+
+body.portfolio-light.lt-page-veilles .veille-article .lead {
+  color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-veilles .veille-contact-strip {
+  background: linear-gradient(180deg, var(--lt-surface) 0%, var(--lt-bg-subtle) 100%);
+  border-top: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-veilles .veille-scroll-area::-webkit-scrollbar-track {
+  background: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-veilles .veille-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(21, 108, 101, 0.35);
+}
+
+body.portfolio-light.lt-page-veilles .veille-hero-nav {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-veilles .veille-share-btn {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-veilles .veille-share-btn:hover {
+  color: var(--lt-accent);
+}
+
+body.portfolio-light.lt-page-veilles .veille-extra-title {
+  color: var(--lt-text);
+}

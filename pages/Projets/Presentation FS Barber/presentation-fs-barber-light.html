@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+      <script src="../../../assets/js/light-theme-init.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="FS Barber — Présentation du projet. Salon de coiffure mixte, PHP, base de données, Stripe.">
+    <title>FS Barber — Présentation du projet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../assets/vendor/fontawesome/css/all.min.css">
+    <!-- Thème sombre cohérent avec la page (surchargé dans presentation-fs-barber.css) -->
+    <link rel="stylesheet"
+        href="../../../assets/vendor/highlight-js/styles/github-dark.min.css">
+    <!-- Bootstrap 5 - Dossier central -->
+    <link rel="stylesheet" href="../../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssFS Barber/presentation-fs-barber.css">
+  <link rel="stylesheet" href="../../../assets/css/fonts-offline.css" />
+  <link rel="stylesheet" href="../../../assets/css/styles-light.css" />
+  <link rel="stylesheet" href="../../../assets/css/light/light-projets.css" />
+  <!-- fin polices hors ligne -->
+  <script src="../../../assets/js/script-light.js" defer></script>
+</head>
+
+<body class="portfolio-light lt-page-projets" id="top">
+    <main>
+        <div class="nav-island-shell">
+            <nav class="nav-island" aria-label="Navigation présentation">
+                <div class="nav-island-left">
+                    <a href="../../Accueil-light.html" class="nav-island-link nav-island-link--muted">Accueil</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../index-light.html" class="nav-island-link nav-island-link--muted">Projets</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../index-light.html" class="nav-island-link nav-island-link--strong">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Retour aux projets
+                    </a>
+                </div>
+                <a href="#project-detail" class="nav-island-brand">
+                    <span class="nav-island-brand-kicker">Portfolio</span>
+                    <span class="nav-island-brand-mark" aria-hidden="true">FB</span>
+                    <span class="nav-island-brand-name">FS Barber</span>
+                </a>
+                <div class="nav-island-right">
+                    <span class="nav-island-pill">
+                        <i class="fas fa-book-open" aria-hidden="true"></i>
+                        Présentation
+                    </span>
+                    <a href="../Barber_backUp/PHP/index.php" target="_blank" rel="noopener noreferrer"
+                        class="nav-island-link nav-island-link--muted nav-island-link--icon" title="Voir le site live">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Hero Premium (Apple Style) -->
+        <section class="premium-hero">
+            <div class="premium-background">
+                <div class="premium-glow"></div>
+                <div class="premium-ambient" aria-hidden="true">
+                    <span class="ambient-orb ambient-orb--1"></span>
+                    <span class="ambient-orb ambient-orb--2"></span>
+                    <span class="ambient-orb ambient-orb--3"></span>
+                    <span class="ambient-orb ambient-orb--4"></span>
+                    <span class="ambient-orb ambient-orb--5"></span>
+                    <span class="ambient-line ambient-line--1"></span>
+                    <span class="ambient-line ambient-line--2"></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="premium-hero-content">
+                    <p class="premium-eyebrow"><span class="premium-eyebrow-inner">Portfolio</span></p>
+                    <img src="../../../assets/img/logos/fs-barber.png" alt="Logo FS Barber" class="premium-project-logo" width="200" decoding="async" />
+                    <h1 class="premium-title">FS Barber</h1>
+                    <p class="premium-subtitle">L'élégance d'un salon mixte, propulsée par une architecture web sur
+                        mesure (PHP, SQL, Stripe).</p>
+                    <div class="hero-buttons">
+                        <a href="#project-detail" class="cta-button primary">Découvrir le projet</a>
+                        <a href="../Barber_backUp/PHP/index.php" target="_blank" class="cta-button secondary">Voir le
+                            site live <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-detail" id="project-detail">
+            <div class="container">
+                <div class="project-header" data-scroll>
+                    <a href="../index-light.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+                    <p class="project-tagline">Projet web professionnel</p>
+                    <div class="project-header-ornament" aria-hidden="true">
+                        <span class="project-ornament-shine"></span>
+                    </div>
+                    <h1>FS Barber</h1>
+                    <p class="project-subtitle">Salon mixte Hommes, Femmes & Enfants. Prestations, fidélité, boutique,
+                        rendez-vous en ligne.</p>
+                </div>
+
+                <section class="detail-section detail-section--intro" data-scroll>
+                    <header class="detail-block-head">
+                        <p class="detail-eyebrow">Vue d’ensemble</p>
+                        <h2 class="detail-section-title">Présentation du projet</h2>
+                    </header>
+                    <div class="detail-intro-card detail-intro-card--panel">
+                        <p class="detail-intro-text">FS Barber est un site web complet pour salon de coiffure : galerie
+                            de coupes (hommes/femmes), programme de fidélité avec points, boutique en ligne avec panier et
+                            paiement Stripe, prise de rendez-vous, espace client et back-offices admin / superAdmin.</p>
+                        <ul class="detail-tech-tags detail-tech-tags--mono" aria-label="Stack technique">
+                            <li><i class="fab fa-php" aria-hidden="true"></i> PHP</li>
+                            <li><i class="fas fa-database" aria-hidden="true"></i> MySQL</li>
+                            <li><i class="fab fa-stripe" aria-hidden="true"></i> Stripe</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="detail-section detail-section--features" data-scroll>
+                    <header class="detail-block-head">
+                        <p class="detail-eyebrow">Périmètre fonctionnel</p>
+                        <h2 class="detail-section-title">Fonctionnalités principales</h2>
+                    </header>
+                    <p class="detail-section-lead">Quatre blocs métier, mis en avant dans une grille type « bento ».</p>
+                    <div class="features-grid features-grid--bento" role="list">
+                        <article class="feature-item feature-item--bento feature-item--wide" role="listitem">
+                            <span class="feature-num" aria-hidden="true">01</span>
+                            <div class="feature-item-top">
+                                <div class="feature-item-icon" aria-hidden="true"><i class="fas fa-cut"></i></div>
+                                <h3 class="feature-item-title">Coupes &amp; prestations</h3>
+                            </div>
+                            <p>Galerie coupes hommes/femmes, tarifs et prestations.</p>
+                        </article>
+                        <article class="feature-item feature-item--bento" role="listitem">
+                            <span class="feature-num" aria-hidden="true">02</span>
+                            <div class="feature-item-top">
+                                <div class="feature-item-icon" aria-hidden="true"><i class="fas fa-coins"></i></div>
+                                <h3 class="feature-item-title">Fidélité</h3>
+                            </div>
+                            <p>Points cumulés, réductions, espace client.</p>
+                        </article>
+                        <article class="feature-item feature-item--bento" role="listitem">
+                            <span class="feature-num" aria-hidden="true">03</span>
+                            <div class="feature-item-top">
+                                <div class="feature-item-icon" aria-hidden="true"><i class="fas fa-shopping-cart"></i></div>
+                                <h3 class="feature-item-title">Boutique</h3>
+                            </div>
+                            <p>Produits, panier, paiement sécurisé Stripe.</p>
+                        </article>
+                        <article class="feature-item feature-item--bento feature-item--full" role="listitem">
+                            <span class="feature-num" aria-hidden="true">04</span>
+                            <div class="feature-item-top feature-item-top--inline">
+                                <div class="feature-item-icon" aria-hidden="true"><i class="fas fa-calendar-alt"></i></div>
+                                <h3 class="feature-item-title">Rendez-vous</h3>
+                            </div>
+                            <p>Réservation en ligne, planning coiffeurs et créneaux disponibles en temps réel.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Parties du site - visuels interactifs -->
+                <section class="detail-section section-site-parts" data-scroll id="parties-site">
+                    <h2>Les parties du site</h2>
+                    <p class="section-lead">Chaque espace du projet a son rôle : accueil, prestations, boutique,
+                        rendez-vous, espace client et back-office.</p>
+                    <div class="scrolly-container">
+                        <!-- Colonne Texte (Scrollable) -->
+                        <div class="scrolly-text">
+                            <div class="scrolly-item" data-step="1">
+                                <h3>Accueil</h3>
+                                <p>Introduction immersive, vidéo de présentation du salon, galeries de coupes hommes &
+                                    femmes, un aperçu de la fidélité, de la boutique, et des avis certifiés.</p>
+                            </div>
+                            <div class="scrolly-item" data-step="2">
+                                <h3>Prestations</h3>
+                                <p>Catalogue clair avec tarification dynamique structurée par catégories (Homme, Femme,
+                                    Enfant, Soin). Design épuré pour mettre en valeur le savoir-faire.</p>
+                            </div>
+                            <div class="scrolly-item" data-step="3">
+                                <h3>Boutique & Paiement</h3>
+                                <p>Un e-commerce complet intégré. Gestion du panier asynchrone et processus de checkout
+                                    fluide 100% sécurisé via l'API Stripe.</p>
+                            </div>
+                            <div class="scrolly-item" data-step="4">
+                                <h3>Prise de Rendez-vous</h3>
+                                <p>Une interface de réservation intuitive. Choix du coiffeur, sélection des prestations
+                                    et affichage intelligent des créneaux disponibles en temps réel.</p>
+                            </div>
+                            <div class="scrolly-item" data-step="5">
+                                <h3>Espace Client</h3>
+                                <p>Un dashboard personnalisé : suivi des commandes, historique des visites, gestion du
+                                    profil et affichage en un coup d'œil du solde de points de fidélité.</p>
+                            </div>
+                            <div class="scrolly-item" data-step="6">
+                                <h3>Administration</h3>
+                                <p>Des back-offices puissants (Admin et SuperAdmin) pour garder le contrôle : gestion du
+                                    planning, des plannings d'équipe, des produits et des réservations.</p>
+                            </div>
+                        </div>
+
+                        <!-- Colonne Visuel (Sticky) -->
+                        <div class="scrolly-visual">
+                            <div class="device-mockup">
+                                <div class="device-notch"></div>
+                                <div class="device-screen">
+                                    <!-- Screens (affichés selon le scroll JS) -->
+                                    <div class="screen-content" data-screen="1">
+                                        <i class="fas fa-home"></i>
+                                        <span>Accueil</span>
+                                    </div>
+                                    <div class="screen-content" data-screen="2">
+                                        <i class="fas fa-scissors"></i>
+                                        <span>Prestations</span>
+                                    </div>
+                                    <div class="screen-content" data-screen="3">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Boutique</span>
+                                    </div>
+                                    <div class="screen-content" data-screen="4">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>Rendez-vous</span>
+                                    </div>
+                                    <div class="screen-content" data-screen="5">
+                                        <i class="fas fa-user"></i>
+                                        <span>Mon Compte</span>
+                                    </div>
+                                    <div class="screen-content" data-screen="6">
+                                        <i class="fas fa-cog"></i>
+                                        <span>Back-Office</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Schéma graphique BDD -->
+                <section class="detail-section section-db-diagram" data-scroll id="schema-bdd">
+                    <h2>Schéma graphique de la base de données</h2>
+                    <p class="section-lead">Modèle relationnel simplifié : tables et clés étrangères.</p>
+                    <div class="db-diagram-wrapper">
+                        <svg class="db-diagram-svg" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <defs>
+                                <marker id="arrow-db" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+                                    <polygon points="0 0, 4 2, 0 4" fill="var(--accent)" />
+                                </marker>
+                            </defs>
+                            <line x1="22" y1="18" x2="38" y2="18" stroke="var(--accent)" stroke-width="0.4"
+                                stroke-dasharray="2 2" marker-end="url(#arrow-db)" />
+                            <line x1="22" y1="28" x2="22" y2="48" stroke="var(--accent)" stroke-width="0.4"
+                                stroke-dasharray="2 2" marker-end="url(#arrow-db)" />
+                            <line x1="62" y1="28" x2="62" y2="48" stroke="var(--accent)" stroke-width="0.4"
+                                stroke-dasharray="2 2" marker-end="url(#arrow-db)" />
+                            <line x1="42" y1="28" x2="42" y2="48" stroke="var(--accent)" stroke-width="0.4"
+                                stroke-dasharray="2 2" marker-end="url(#arrow-db)" />
+                            <line x1="22" y1="62" x2="22" y2="78" stroke="var(--accent)" stroke-width="0.4"
+                                stroke-dasharray="2 2" marker-end="url(#arrow-db)" />
+                            <line x1="50" y1="78" x2="50" y2="92" stroke="var(--accent)" stroke-width="0.4"
+                                stroke-dasharray="2 2" marker-end="url(#arrow-db)" />
+                            <line x1="50" y1="92" x2="78" y2="92" stroke="var(--accent)" stroke-width="0.4"
+                                stroke-dasharray="2 2" marker-end="url(#arrow-db)" />
+                        </svg>
+                        <div class="db-tables">
+                            <div class="db-table db-table-clients">clients<div class="db-pk">id_client PK</div>
+                                <div class="db-fields">nom, prenom, email, fidelite_points</div>
+                            </div>
+                            <div class="db-table db-table-users">users<div class="db-pk">id PK</div>
+                                <div class="db-fk">id_client → clients</div>
+                            </div>
+                            <div class="db-table db-table-coiffeurs">coiffeurs<div class="db-pk">id_coiffeur PK</div>
+                            </div>
+                            <div class="db-table db-table-services">services<div class="db-pk">id_service PK</div>
+                                <div class="db-fields">nom_service, prix</div>
+                            </div>
+                            <div class="db-table db-table-rdv">rendezvous<div class="db-pk">id_rdv PK</div>
+                                <div class="db-fk">id_client, id_coiffeur, id_service</div>
+                            </div>
+                            <div class="db-table db-table-cmd">commandes<div class="db-pk">id_commande PK</div>
+                                <div class="db-fk">id_client</div>
+                                <div class="db-fields">total, statut</div>
+                            </div>
+                            <div class="db-table db-table-details">commande_details<div class="db-pk">id_detail PK</div>
+                                <div class="db-fk">id_commande, id_produit</div>
+                            </div>
+                            <div class="db-table db-table-produits">produits<div class="db-pk">id_produit PK</div>
+                                <div class="db-fields">nom, prix, stock</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="detail-section detail-section--code detail-section--code-lite" id="extrait-code"
+                    data-scroll>
+                    <header class="detail-block-head">
+                        <p class="detail-eyebrow">Technique</p>
+                        <h2 class="detail-section-title">SQL &amp; PHP</h2>
+                    </header>
+                    <p class="code-section-intro">Base <strong>fs_barber</strong> (MySQL) et extraits PHP — ouvrez un
+                        volet pour voir le code.</p>
+                    <p class="code-tables-note" aria-label="Liste des tables">Tables : clients, users, coiffeurs,
+                        services, rendezvous, commandes, commande_details, produits.</p>
+
+                    <div class="code-accordion" role="region" aria-label="Extraits de code SQL et PHP">
+                        <details class="code-drawer" open>
+                            <summary class="code-drawer-summary">
+                                <span class="code-drawer-badge">SQL</span>
+                                <span class="code-drawer-text">
+                                    <span class="code-drawer-title">Schéma (CREATE TABLE)</span>
+                                    <span class="code-drawer-hint">clients, users, RDV, commandes…</span>
+                                </span>
+                                <span class="code-drawer-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="code-drawer-body">
+                                <div class="code-block code-block--lite" data-lang="SQL">
+                                    <div class="code-block-toolbar">
+                                        <span class="code-block-lang">SQL</span>
+                                        <button type="button" class="code-block-copy code-block-copy--icon"
+                                            data-copy-label="Copier" data-copied-label="Copié !"
+                                            title="Copier" aria-label="Copier ce code">
+                                            <i class="fas fa-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <pre><code class="language-sql">-- Table clients (fidélité, coordonnées)
+CREATE TABLE `clients` (
+  `id_client` int(11) NOT NULL AUTO_INCREMENT,
+  `num_client` varchar(12) DEFAULT NULL,
+  `nom` varchar(100) NOT NULL,
+  `prenom` varchar(100) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `telephone` varchar(20) NOT NULL,
+  `fidelite_points` int(11) NOT NULL DEFAULT 100,
+  `date_inscription` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id_client`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table users (connexion site + lien client)
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `first_name` varchar(100) DEFAULT NULL,
+  `last_name` varchar(100) DEFAULT NULL,
+  `role` enum('client','admin') DEFAULT 'client',
+  `id_client` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`),
+  KEY `id_client` (`id_client`),
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `clients` (`id_client`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table rendezvous
+CREATE TABLE `rendezvous` (
+  `id_rdv` int(11) NOT NULL AUTO_INCREMENT,
+  `id_client` int(11) NOT NULL,
+  `id_coiffeur` int(11) NOT NULL,
+  `id_service` int(11) NOT NULL,
+  `date_rdv` date NOT NULL,
+  `heure_rdv` time NOT NULL,
+  `statut` enum('En attente','Confirmé','Terminé','Annulé') DEFAULT 'En attente',
+  PRIMARY KEY (`id_rdv`),
+  KEY `id_client` (`id_client`),
+  KEY `id_coiffeur` (`id_coiffeur`),
+  KEY `id_service` (`id_service`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table commandes (boutique)
+CREATE TABLE `commandes` (
+  `id_commande` int(11) NOT NULL AUTO_INCREMENT,
+  `id_client` int(11) NOT NULL,
+  `total` decimal(10,2) NOT NULL,
+  `statut` enum('En attente','Payée','Expédiée','Annulée') DEFAULT 'En attente',
+  PRIMARY KEY (`id_commande`),
+  KEY `id_client` (`id_client`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;</code></pre>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="code-drawer">
+                            <summary class="code-drawer-summary">
+                                <span class="code-drawer-badge">PHP</span>
+                                <span class="code-drawer-text">
+                                    <span class="code-drawer-title">config.php — PDO</span>
+                                    <span class="code-drawer-hint">getDBConnection(), constantes BDD</span>
+                                </span>
+                                <span class="code-drawer-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="code-drawer-body">
+                                <div class="code-block code-block--lite" data-lang="PHP">
+                                    <div class="code-block-toolbar">
+                                        <span class="code-block-lang">PHP</span>
+                                        <button type="button" class="code-block-copy code-block-copy--icon"
+                                            data-copy-label="Copier" data-copied-label="Copié !"
+                                            title="Copier" aria-label="Copier ce code">
+                                            <i class="fas fa-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <pre><code class="language-php">// config.php - Connexion base de données
+define('DB_HOST', '127.0.0.1');
+define('DB_NAME', 'fs_barber');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_CHARSET', 'utf8mb4');
+
+function getDBConnection() {
+    static $pdo = null;
+    if ($pdo !== null) return $pdo;
+
+    try {
+        $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
+        $options = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ];
+        $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
+        return $pdo;
+    } catch (PDOException $e) {
+        error_log("Erreur BDD: " . $e->getMessage());
+        return null;
+    }
+}</code></pre>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="code-drawer">
+                            <summary class="code-drawer-summary">
+                                <span class="code-drawer-badge">PHP</span>
+                                <span class="code-drawer-text">
+                                    <span class="code-drawer-title">session.php — navigation</span>
+                                    <span class="code-drawer-hint">fsb_nav_context(), points fidélité</span>
+                                </span>
+                                <span class="code-drawer-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="code-drawer-body">
+                                <div class="code-block code-block--lite" data-lang="PHP">
+                                    <div class="code-block-toolbar">
+                                        <span class="code-block-lang">PHP</span>
+                                        <button type="button" class="code-block-copy code-block-copy--icon"
+                                            data-copy-label="Copier" data-copied-label="Copié !"
+                                            title="Copier" aria-label="Copier ce code">
+                                            <i class="fas fa-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <pre><code class="language-php">// includes/session.php
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
+function fsb_nav_context(): array {
+    $loggedIn = !empty($_SESSION['logged_in']) || !empty($_SESSION['user_id']);
+    $points = isset($_SESSION['fidelite_points']) ? (int) $_SESSION['fidelite_points'] : 0;
+    $displayName = '';
+
+    if ($loggedIn && !empty($_SESSION['user_last_name']) && !empty($_SESSION['user_first_name'])) {
+        $lastName = trim((string) $_SESSION['user_last_name']);
+        $firstName = trim((string) $_SESSION['user_first_name']);
+        $initial = $lastName !== '' ? mb_strtoupper(mb_substr($lastName, 0, 1), 'UTF-8') : '';
+        $normalizedFirst = $firstName !== '' ? mb_strtolower($firstName, 'UTF-8') : '';
+        $displayName = $initial !== '' ? sprintf('%s.%s', $initial, $normalizedFirst) : $normalizedFirst;
+    }
+
+    return [
+        'logged_in' => $loggedIn,
+        'display_name' => $displayName,
+        'points' => $points,
+    ];
+}</code></pre>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="code-drawer">
+                            <summary class="code-drawer-summary">
+                                <span class="code-drawer-badge">PHP</span>
+                                <span class="code-drawer-text">
+                                    <span class="code-drawer-title">get_base_path()</span>
+                                    <span class="code-drawer-hint">Chemins CSS / JS / images</span>
+                                </span>
+                                <span class="code-drawer-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="code-drawer-body">
+                                <div class="code-block code-block--lite" data-lang="PHP">
+                                    <div class="code-block-toolbar">
+                                        <span class="code-block-lang">PHP</span>
+                                        <button type="button" class="code-block-copy code-block-copy--icon"
+                                            data-copy-label="Copier" data-copied-label="Copié !"
+                                            title="Copier" aria-label="Copier ce code">
+                                            <i class="fas fa-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <pre><code class="language-php">function get_base_path() {
+    $script_path = $_SERVER['SCRIPT_NAME'] ?? $_SERVER['PHP_SELF'] ?? '';
+    $script_path = str_replace('\\', '/', $script_path);
+    $base_path = dirname($script_path);
+    $base_path = str_replace('\\', '/', $base_path);
+
+    if (strpos($script_path, '/PHP/') !== false || basename(dirname($script_path)) === 'PHP') {
+        return '../';
+    }
+    if (in_array(end(explode('/', trim($base_path, '/'))), ['admin', 'superAdmin'])) {
+        return '../../';
+    }
+    return '';
+}</code></pre>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="detail-section cta-section" data-scroll>
+                        <a href="../Barber_backUp/PHP/index.php" class="cta-button" target="_blank"
+                            rel="noopener noreferrer">Voir le site FS Barber</a>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- Footer : même disposition que la page d'accueil (site-footer) -->
+          <footer class="lt-footer">
+    <div class="lt-container">
+      <div class="lt-footer-top">
+        <div class="lt-footer-brand">
+          <div class="lt-footer-brand-row">
+            <img class="lt-footer-logo" src="../../../assets/img/ProfileAccueil.jpeg" alt="" width="52" height="52" decoding="async" />
+            <div>
+              <h3>Divin Kimia</h3>
+              <p class="tag">D&eacute;veloppeur web &amp; IA</p>
+            </div>
+          </div>
+          <p>Conception d&apos;exp&eacute;riences num&eacute;riques fiables &mdash; du prototype &agrave; l&apos;exploitation.</p>
+          <div class="lt-footer-social">
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://github.com/Divinkimia" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-5.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="lt-footer-grid">
+          <div class="lt-footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="../../Accueil-light.html">Accueil (clair)</a></li>
+              <li><a href="../../Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html">Parcours</a></li>
+              <li><a href="../index-light.html">Projets</a></li>
+              <li><a href="../../Parcours_HTML/CertificationPage-light.html">Certification</a></li>
+              <li><a href="../../Veilles/Veilles-light.html">Veilles</a></li>
+              <li><a href="../../MeDecouvrir-light.html">Me d&eacute;couvrir</a></li>
+              <li><a href="../../Blog-light.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:divinkimia@protonmail.com">Email</a></li>
+              <li><a href="../../CV_Divin_Kimia.pdf" download>CV</a></li>
+              <li><a href="../../Contact-light.html">Formulaire (clair)</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>L&eacute;gal</h4>
+            <ul>
+              <li><a href="../../MentionsLegales-light.html">Mentions l&eacute;gales</a></li>
+              <li><a href="../../MentionsLegales.html#confidentialite">Confidentialit&eacute;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lt-footer-bottom">
+        <p>&copy; <span id="year"></span> <strong>Divin Kimia</strong> &mdash; Tous droits r&eacute;serv&eacute;s.</p>
+        <a href="#top" class="lt-back-top" aria-label="Retour en haut">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+    </main>
+
+    <script src="../../../assets/vendor/highlight-js/highlight.min.js" defer></script>
+    <script src="../../../assets/vendor/highlight-js/languages/php.min.js" defer></script>
+    <script src="../../../assets/vendor/highlight-js/languages/sql.min.js" defer></script>
+    <script src="../../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../../../assets/js/Projets/jsFSBarber/presentation-fs-barber.js" defer></script>
+    <script src="../../../assets/js/Projets/project-scroll-progress.js" defer></script>
+</body>
+
+</html>

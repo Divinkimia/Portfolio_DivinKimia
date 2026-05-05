@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <script src="../assets/js/light-theme-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Me d&eacute;couvrir &mdash; Divin Kimia : parcours, passions, vision (th&egrave;me clair premium)." />
+  <title>Me d&eacute;couvrir | Divin Kimia &mdash; Th&egrave;me clair</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/styles-light.css" />
+  <link rel="stylesheet" href="../assets/css/fonts-offline.css" />
+  <link rel="stylesheet" href="../assets/css/me-decouvrir.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body class="portfolio-light md-discovery lt-page-medecouvrir" id="top">
+  <div class="md-atmosphere" aria-hidden="true">
+    <div class="md-atmosphere__gradient" data-md-parallax></div>
+    <div class="md-atmosphere__grid"></div>
+    <div class="md-atmosphere__grain"></div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg parcours-navbar lt-nav" aria-label="Navigation principale">
+    <div class="nav-left">
+      <img src="../assets/img/ProfileAccueil.jpeg" alt="" class="logo" width="40" height="40" decoding="async" />
+      <span class="brand">Divin Kimia</span>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ltNavMd"
+      aria-controls="ltNavMd" aria-expanded="false" aria-label="Ouvrir le menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ltNavMd">
+      <ul class="navbar-nav nav-links ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="Accueil-light.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item dropdown dynamic-dropdown">
+          <a href="Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-default-text="Parcours">Parcours</a>
+          <ul class="dropdown-menu dynamic-menu">
+            <li><a href="Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html" class="dropdown-item swap-menu">Exp&eacute;riences professionnelles</a></li>
+            <li><a href="Parcours_HTML/Formations/FormationsPage-light.html" class="dropdown-item swap-menu">Formations</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="Projets/index-light.html" class="nav-link">Projets</a></li>
+        <li class="nav-item"><a href="Parcours_HTML/CertificationPage-light.html" class="nav-link">Certification</a></li>
+        <li class="nav-item"><a href="Veilles/Veilles-light.html" class="nav-link">Veilles</a></li>
+        <li class="nav-item"><a href="MeDecouvrir-light.html" class="nav-link active">Me d&eacute;couvrir</a></li>
+        <li class="nav-item"><a href="Blog-light.html" class="nav-link">Blog</a></li>
+        <li class="nav-item d-lg-none"><a href="Contact-light.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="Contact-light.html" class="nav-btn d-none d-lg-inline-flex ms-lg-3">Contact</a>
+      <a href="MeDecouvrir.html" class="lt-theme-toggle ms-lg-2" aria-label="Basculer vers le th&egrave;me sombre" title="Version th&egrave;me sombre">Th&egrave;me sombre</a>
+    </div>
+  </nav>
+
+  <div class="md-wrap">
+    <main class="md-main">
+
+      <section class="md-hero" aria-label="Introduction">
+        <div class="md-container md-hero__grid">
+          <div class="md-hero-copy">
+            <p class="md-kicker md-reveal-base">Univers personnel</p>
+            <h1 class="md-reveal-base">
+              Au-del&agrave; du code,
+              <span class="md-hero-word">une vision.</span>
+            </h1>
+            <p class="md-hero-sub md-reveal-base">
+              Je construis des exp&eacute;riences num&eacute;riques avec exigence, curiosit&eacute; et chaleur humaine &mdash;
+              une rencontre entre rigueur technique, sensibilit&eacute; produit et sens du d&eacute;tail.
+            </p>
+            <div class="md-hero-actions md-reveal-base">
+              <a class="md-btn md-btn--primary" href="#qui-suis-je">
+                Plonger dans mon histoire
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+              <a class="md-btn md-btn--ghost" href="#md-cta">Travaillons ensemble</a>
+            </div>
+            <div class="md-hero-meta md-reveal-base">
+              <span class="md-pill">Disponible pour collaborations</span>
+              <span class="md-pill">8 pays travers&eacute;s</span>
+              <span class="md-pill">R&eacute;ponse sous 48h</span>
+            </div>
+          </div>
+          <div class="md-hero-visual">
+            <div class="md-hero-frame" data-md-hero-frame>
+              <div class="md-hero-blob"></div>
+              <span class="md-hero-sticker-ring" aria-hidden="true"></span>
+              <div class="md-hero-photo md-reveal-base">
+                <img src="../assets/img/ProfileAccueil.jpeg" width="560" height="560" decoding="async" alt="Portrait de Divin Kimia" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md-scroll-hint" aria-hidden="true"><span>D&eacute;filer</span><span></span></div>
+      </section>
+
+      <section class="md-section md-about" id="qui-suis-je">
+        <div class="md-container">
+          <header class="md-section-head md-reveal-base">
+            <p class="md-kicker">Qui suis-je</p>
+            <h2 class="md-section-title">Une mosa&iuml;que entre <em>s&eacute;rieux</em> et <em>l&eacute;g&egrave;ret&eacute;</em></h2>
+            <p class="md-section-lead">Je crois aux profils complets : lucide sur la complexit&eacute;, enthousiasm&eacute; par les nouvelles id&eacute;es, attentif aux personnes derri&egrave;re l&rsquo;&eacute;cran.</p>
+          </header>
+          <article class="md-about__surface md-reveal-base">
+            <div class="md-prose">
+              <p>
+                Je suis quelqu&rsquo;un qui avance avec calme et constance : ponctuel sur mes engagements,
+                obsessionnel sur la qualit&eacute; quand il le faut, et toujours capable de sourire quand une solution r&eacute;siste encore.
+              </p>
+              <p>
+                La tech nourrit ma curiosit&eacute; naturelle ; le code devient un terrain de jeu rationnel
+                o&ugrave; chaque refactor est une petite le&ccedil;on d&rsquo;humilit&eacute;. J&rsquo;aime transformer l&rsquo;abstraction
+                en sensations concr&egrave;tes : interfaces nettes, parcours clairs, d&eacute;tails qui donnent envie de rester.
+              </p>
+              <p>
+                Avec des amis, des coll&egrave;gues ou des &eacute;quipes projet, je m&rsquo;investis dans la douce exigence :
+                bienveillance et standards ne s&rsquo;opposent pas. Quand tout est stabilis&eacute;, je prends du recul pour recommencer &agrave; apprendre.
+              </p>
+            </div>
+            <div class="md-traits" aria-label="Traits de caract&egrave;re clefs">
+              <span class="md-trait">S&eacute;rieux &amp; r&eacute;silience</span>
+              <span class="md-trait">Curieux insatiable</span>
+              <span class="md-trait">Travailleur m&eacute;thodique</span>
+              <span class="md-trait">Gentillesse affirm&eacute;e</span>
+              <span class="md-trait">Joie de cr&eacute;er</span>
+              <span class="md-trait">Esprit cr&eacute;atif</span>
+              <span class="md-trait">Passion tech profonde</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="md-section md-journey" id="parcours">
+        <div class="md-container">
+          <header class="md-section-head md-reveal-base">
+            <p class="md-kicker">Mon parcours</p>
+            <h2 class="md-section-title">Huit pays, une m&ecirc;me capacit&eacute; <em>d&rsquo;adaptation</em></h2>
+            <p class="md-section-lead">Chaque escale a &eacute;largi mon regard : observer, ajuster mon rythme, et rebondir sans perdre mes rep&egrave;res.</p>
+          </header>
+          <div class="md-journey__viewport md-reveal-base">
+            <div class="md-journey__rail" id="md-journey-rail" tabindex="0" aria-label="Frise du parcours">
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">GA</span><span class="md-journey-card__step">01 / 08</span></div><h3>Gabon</h3><p>Racines, premiers souvenirs de rigueur scolaire et go&ucirc;t du travail bien fait l&agrave; o&ugrave; chaque ressource compte.</p><span class="md-journey-card__tag">Origines</span></article>
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">CM</span><span class="md-journey-card__step">02 / 08</span></div><h3>Cameroun</h3><p>Esprit collectif renforc&eacute; et capacit&eacute; &agrave; moduler son &eacute;nergie selon les contextes humains.</p><span class="md-journey-card__tag">Collectif</span></article>
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">CG</span><span class="md-journey-card__step">03 / 08</span></div><h3>R&eacute;publique du Congo</h3><p>Immersion francophone affirm&eacute;e et admiration pour la cr&eacute;ativit&eacute; du quotidien.</p><span class="md-journey-card__tag">Cr&eacute;ativit&eacute;</span></article>
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">CD</span><span class="md-journey-card__step">04 / 08</span></div><h3>R&eacute;publique d&eacute;mocratique du Congo</h3><p>R&eacute;silience, patience strat&eacute;gique et ing&eacute;niosit&eacute; lorsque les contraintes s&rsquo;accumulent.</p><span class="md-journey-card__tag">R&eacute;silience</span></article>
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">ES</span><span class="md-journey-card__step">05 / 08</span></div><h3>Espagne</h3><p>Ouverture europ&eacute;enne urbaine et plaisir de naviguer dans plusieurs langues, au travail comme dans la vie.</p><span class="md-journey-card__tag">Ouverture</span></article>
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">NL</span><span class="md-journey-card__step">06 / 08</span></div><h3>Pays-Bas</h3><p>Culture de la clart&eacute; : infrastructures fiables, design sobre et respect du rythme personnel.</p><span class="md-journey-card__tag">Clart&eacute;</span></article>
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">BE</span><span class="md-journey-card__step">07 / 08</span></div><h3>Belgique</h3><p>R&eacute;seau europ&eacute;en francophone, &eacute;quilibres entre grandes structures et artisans du num&eacute;rique.</p><span class="md-journey-card__tag">Equilibre</span></article>
+              <article class="md-journey-card"><div class="md-journey-card__head"><span class="md-journey-dot">MA</span><span class="md-journey-card__step">08 / 08</span></div><h3>Maroc</h3><p>&Eacute;lan entrepreneurial terrain : lier projet digital fort et proximit&eacute; humaine tangible.</p><span class="md-journey-card__tag">Entrepreneurial</span></article>
+            </div>
+            <div class="md-journey__nav">
+              <button type="button" class="md-icon-btn" id="md-journey-prev" aria-label="Etape pr&eacute;c&eacute;dente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+              <div class="md-journey__progress" id="md-journey-progress" aria-hidden="true"></div>
+              <button type="button" class="md-icon-btn" id="md-journey-next" aria-label="Etape suivante"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md-section md-passions" id="passions">
+        <div class="md-container">
+          <header class="md-section-head md-reveal-base">
+            <p class="md-kicker">Mes passions</p>
+            <h2 class="md-section-title">Ce qui fait <em>vibrer</em> hors backlog</h2>
+            <p class="md-section-lead">Des rituels qui nourrissent ma concentration longue dur&eacute;e et mon imaginaire technique.</p>
+          </header>
+          <div class="md-passions-grid md-reveal-base">
+            <div class="md-passion" data-md-tilt><div class="md-passion__inner"><div class="md-passion__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m9 9 2 2-2 2"/><path d="M13 13h3"/></svg></div><h3>Nouvelles technologies</h3><p>Explorer frameworks, usages &eacute;mergents et outillage pour rendre les produits plus fluides &mdash; avec mesure.</p><div class="md-passion__shine"></div></div></div>
+            <div class="md-passion" data-md-tilt><div class="md-passion__inner"><div class="md-passion__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div><h3>Photographie de paysages</h3><p>Voir comme une interface : cadre, lumi&egrave;re, lignes de tension &mdash; des rep&egrave;res visuels applicables aux UI premium.</p><div class="md-passion__shine"></div></div></div>
+            <div class="md-passion" data-md-tilt><div class="md-passion__inner"><div class="md-passion__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div><h3>Po&eacute;sie</h3><p>Jouer avec les mots pour capter une &eacute;motion fugace &mdash; la m&ecirc;me rigueur qu&rsquo;un refactoring sans bruit.</p><div class="md-passion__shine"></div></div></div>
+            <div class="md-passion" data-md-tilt><div class="md-passion__inner"><div class="md-passion__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.5 6.5h11"/><path d="M6.5 17.5h11"/><path d="M6.5 6.5v11"/><path d="M17.5 6.5v11"/><path d="M2 9h2v6H2z"/><path d="M20 9h2v6h-2z"/></svg></div><h3>Sport en salle</h3><p>Discipline physique pour renforcer la discipline mentale : r&eacute;p&eacute;titions, progression, endurance.</p><div class="md-passion__shine"></div></div></div>
+            <div class="md-passion" data-md-tilt><div class="md-passion__inner"><div class="md-passion__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><h3>Lecture</h3><p>Essais, fiction et docs techniques nourrissent un regard large &mdash; &eacute;viter tout silotage intellectuel.</p><div class="md-passion__shine"></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md-section md-vision-wrap" id="vision">
+        <div class="md-container">
+          <header class="md-section-head md-reveal-base">
+            <p class="md-kicker">Ma vision</p>
+            <h2 class="md-section-title">L&rsquo;informatique au service des <em>personnes</em></h2>
+            <p class="md-section-lead">Trois boucles imbriqu&eacute;es : apprentissage continu, ex&eacute;cution pr&eacute;cise et &eacute;volution avec l&rsquo;&eacute;quipe.</p>
+          </header>
+          <div class="md-vision md-reveal-base">
+            <div class="md-vision__content">
+              <div class="md-vision__lead">
+                <p>Je vois les syst&egrave;mes num&eacute;riques comme des prolongements de l&rsquo;attention : donn&eacute;es, narration, UX, s&eacute;curit&eacute; et performance doivent coexister sans que l&rsquo;une &eacute;crase les autres.</p>
+                <p>Mon ambition : livrer un logiciel <em>conscient</em> &mdash; efficace sous charge, &eacute;l&eacute;gant en situation r&eacute;elle &mdash; et laisser une trajectoire claire dans le d&eacute;p&ocirc;t comme dans les rituels d&rsquo;&eacute;quipe.</p>
+                <p class="md-vision-quote">Apprendre sans cesse, cr&eacute;er avec exigence, &eacute;voluer avec les humains avant les machines.</p>
+              </div>
+              <div class="md-vision__pillars">
+                <div class="md-vision-pillar"><span class="md-vision-pillar__num">01</span><div><h4>Apprendre en boucle</h4><p>Veille continue, lectures, exp&eacute;rimentations &mdash; transformer la curiosit&eacute; en savoir-faire.</p></div></div>
+                <div class="md-vision-pillar"><span class="md-vision-pillar__num">02</span><div><h4>Cr&eacute;er avec exigence</h4><p>Code lisible, interfaces nettes, performance mesur&eacute;e : la qualit&eacute; comme posture par d&eacute;faut.</p></div></div>
+                <div class="md-vision-pillar"><span class="md-vision-pillar__num">03</span><div><h4>&Eacute;voluer avec les humains</h4><p>Communication claire, transmission, &eacute;coute : le produit grandit avec l&rsquo;&eacute;quipe.</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md-section md-social" id="preuves">
+        <div class="md-container">
+          <header class="md-section-head md-reveal-base">
+            <p class="md-kicker">Preuves sociales</p>
+            <h2 class="md-section-title">Ce que disent les personnes avec qui je <em>collabore</em></h2>
+            <p class="md-section-lead">Extraits illustrant la m&ecirc;me combinaison : rigueur, douceur et clart&eacute; lorsque les enjeux montent.</p>
+          </header>
+          <div class="md-testimonial-track-wrap md-reveal-base">
+            <div class="md-testimonial-track" id="md-testimonial-track" tabindex="0" aria-label="T&eacute;moignages">
+              <figure class="md-testimonial"><blockquote class="md-quote">Divin sait traduire une intention floue en exp&eacute;rience concr&egrave;te. Il garde le cap quand un sprint se corse, sans jamais durcir le ton.</blockquote><figcaption class="md-testimonial-meta"><span class="md-avatar" aria-hidden="true">AL</span><div><strong>Am&eacute;lie L.</strong><span>Product designer, startup SaaS</span></div></figcaption></figure>
+              <figure class="md-testimonial"><blockquote class="md-quote">Ce qui m&rsquo;a marqu&eacute; : une curiosit&eacute; technique aussi vive que l&rsquo;&eacute;coute. On sent quelqu&rsquo;un qui veut que le produit vieillisse bien.</blockquote><figcaption class="md-testimonial-meta"><span class="md-avatar">KR</span><div><strong>Karim R.</strong><span>Lead d&eacute;veloppeur, &eacute;quipe distribu&eacute;e</span></div></figcaption></figure>
+              <figure class="md-testimonial"><blockquote class="md-quote">Un profil rare entre exigence et chaleur. Les revues de code devenaient des moments d&rsquo;apprentissage, pas de friction.</blockquote><figcaption class="md-testimonial-meta"><span class="md-avatar">SM</span><div><strong>Sofia M.</strong><span>CTO adjointe, scale-up</span></div></figcaption></figure>
+              <figure class="md-testimonial"><blockquote class="md-quote">M&eacute;thodique mais jamais rigide. Il sait quand tenir le cadre et quand laisser respirer une id&eacute;e nouvelle.</blockquote><figcaption class="md-testimonial-meta"><span class="md-avatar">JD</span><div><strong>Julien D.</strong><span>Chef de projet digital</span></div></figcaption></figure>
+            </div>
+            <div class="md-testimonial-nav">
+              <button type="button" class="md-icon-btn" id="md-testimonials-prev" aria-label="T&eacute;moignage pr&eacute;c&eacute;dent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+              <button type="button" class="md-icon-btn" id="md-testimonials-next" aria-label="T&eacute;moignage suivant"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md-section md-final-cta" id="md-cta">
+        <div class="md-container md-reveal-base">
+          <div class="md-final-cta__box">
+            <h2>Pr&ecirc;t &agrave; construire quelque chose de <em>m&eacute;morable</em>&nbsp;?</h2>
+            <p>Si ce que tu viens de lire r&eacute;sonne, parlons de ton produit, de ton &eacute;quipe ou de l&rsquo;id&eacute;e la plus audacieuse de ton dossier &laquo;&nbsp;&agrave; faire&nbsp;&raquo;.</p>
+            <div class="md-final-buttons">
+              <a class="md-btn md-btn--primary" href="Contact-light.html">Travaillons ensemble<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+              <a class="md-btn md-btn--ghost" href="mailto:divinkimia@protonmail.com">Me contacter</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="lt-footer">
+      <div class="lt-container">
+        <div class="lt-footer-top">
+          <div class="lt-footer-brand">
+            <div class="lt-footer-brand-row">
+              <img class="lt-footer-logo" src="../assets/img/ProfileAccueil.jpeg" alt="" width="52" height="52" decoding="async" />
+              <div>
+                <h3>Divin Kimia</h3>
+                <p class="tag">D&eacute;veloppeur web &amp; IA</p>
+              </div>
+            </div>
+            <p>Conception d&rsquo;exp&eacute;riences num&eacute;riques fiables &mdash; du prototype &agrave; l&rsquo;exploitation.</p>
+            <div class="lt-footer-social">
+              <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="https://github.com/Divinkimia" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            </div>
+          </div>
+          <div class="lt-footer-grid">
+            <div class="lt-footer-col">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="Accueil-light.html">Accueil (clair)</a></li>
+                <li><a href="Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html">Parcours</a></li>
+                <li><a href="Projets/index-light.html">Projets</a></li>
+                <li><a href="Parcours_HTML/CertificationPage-light.html">Certification</a></li>
+                <li><a href="Veilles/Veilles-light.html">Veilles</a></li>
+                <li><a href="MeDecouvrir-light.html">Me d&eacute;couvrir</a></li>
+                <li><a href="Blog-light.html">Blog</a></li>
+              </ul>
+            </div>
+            <div class="lt-footer-col">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:divinkimia@protonmail.com">Email</a></li>
+                <li><a href="CV_Divin_Kimia.pdf" download>CV</a></li>
+                <li><a href="Contact-light.html">Formulaire (clair)</a></li>
+              </ul>
+            </div>
+            <div class="lt-footer-col">
+              <h4>L&eacute;gal</h4>
+              <ul>
+                <li><a href="MentionsLegales-light.html">Mentions l&eacute;gales</a></li>
+                <li><a href="MentionsLegales.html#confidentialite">Confidentialit&eacute;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="lt-footer-bottom">
+          <p>&copy; <span id="year"></span> <strong>Divin Kimia</strong> &mdash; Tous droits r&eacute;serv&eacute;s.</p>
+          <a href="#top" class="lt-back-top" aria-label="Retour en haut">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/site-navbar.js" defer></script>
+  <script src="../assets/js/script-light.js" defer></script>
+  <script src="../assets/js/me-decouvrir.js" defer></script>
+</body>
+</html>

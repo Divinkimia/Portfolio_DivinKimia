@@ -1,0 +1,12 @@
+/**
+ * Theme clair premium (pages *-light). Ordre : variables -> base -> sections -> composants -> navbar/footer -> contact -> animations.
+ */
+@import url("light/light-variables.css");
+@import url("light/light-base.css");
+@import url("light/light-pages.css");
+@import url("light/light-components.css");
+@import url("light/light-navbar.css");
+@import url("light/light-footer.css");
+@import url("light/light-legacy-pages.css");
+@import url("light/light-contact.css");
+@import url("light/light-animations.css");

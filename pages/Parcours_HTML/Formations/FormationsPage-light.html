@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+      <script src="../../../assets/js/light-theme-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divin Kimia | Mon Parcours de Formation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../../assets/vendor/bootstrap/bootstrap.min.css" />
+  
+  <!-- Lien vers le CSS -->
+  <link rel="stylesheet" href="../../../assets/css/Parcours_CSS/ParcoursPage.css" />
+<!-- Google Fonts -->
+
+  <!-- JS : navbar/footer en premier pour optimiser images + prefetch avant le reste -->
+  <script src="../../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../../../assets/js/script-light.js" defer></script>
+  <script src="../../../assets/js/site-navbar.js" defer></script>
+<script src="../../../assets/js/GalaxyEffect.js" defer></script>
+  <script src="../../../assets/js/Parcours_JS/ParcoursPage.js" defer></script>
+  <link rel="stylesheet" href="../../../assets/css/fonts-offline.css" />
+  <link rel="stylesheet" href="../../../assets/css/styles-light.css" />
+  <link rel="stylesheet" href="../../../assets/css/light/light-parcours.css" />
+  <!-- fin polices hors ligne -->
+</head>
+<body class="portfolio-light lt-page-parcours" id="top">
+  <!-- Container pour l'effet galaxie -->
+  <div id="galaxy-container"></div>
+  <!-- Navbar Bootstrap responsive -->
+    <nav class="navbar navbar-expand-lg parcours-navbar lt-nav" aria-label="Navigation principale">
+    <div class="nav-left">
+      <img src="../../../assets/img/ProfileAccueil.jpeg" alt="" class="logo" width="40" height="40" decoding="async" />
+      <span class="brand">Divin Kimia</span>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ltNav0121829"
+      aria-controls="ltNav0121829" aria-expanded="false" aria-label="Ouvrir le menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ltNav0121829">
+      <ul class="navbar-nav nav-links ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="../../Accueil-light.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item dropdown dynamic-dropdown">
+          <a href="../ExperiencesPro/ExperiencesProfessionnels-light.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" data-default-text="Parcours">Parcours</a>
+          <ul class="dropdown-menu dynamic-menu">
+            <li><a href="../ExperiencesPro/ExperiencesProfessionnels-light.html" class="dropdown-item swap-menu">Exp&eacute;riences professionnelles</a></li>
+            <li><a href="FormationsPage-light.html" class="dropdown-item swap-menu">Formations</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../../Projets/index-light.html" class="nav-link">Projets</a></li>
+        <li class="nav-item"><a href="../CertificationPage-light.html" class="nav-link">Certification</a></li>
+        <li class="nav-item"><a href="../../Veilles/Veilles-light.html" class="nav-link">Veilles</a></li>
+        <li class="nav-item"><a href="../../MeDecouvrir-light.html" class="nav-link">Me d&eacute;couvrir</a></li>
+        <li class="nav-item"><a href="../../Blog-light.html" class="nav-link">Blog</a></li>
+        <li class="nav-item d-lg-none"><a href="../../Contact-light.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="../../Contact-light.html" class="nav-btn d-none d-lg-inline-flex ms-lg-3">Contact</a>
+      <a href="FormationsPage.html" class="lt-theme-toggle ms-lg-2" aria-label="Basculer vers le th&egrave;me sombre" title="Version th&egrave;me sombre">Th&egrave;me sombre</a>
+    </div>
+  </nav>
+
+  <main class="lt-main">
+
+  <!-- HERO SECTION FORMATION -->
+  <header class="formation-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Mon <span class="accent-text">Parcours</span> de Formation</h1>
+        <p class="hero-subtitle">Un chemin d'apprentissage continu et passionné</p>
+        <p class="parcours-cross-link">
+          <a href="../ExperiencesPro/ExperiencesProfessionnels-light.html">Voir aussi mes expériences professionnelles →</a>
+        </p>
+        <button type="button" class="parcours-atypique-btn" id="parcours-atypique-btn" aria-label="En savoir plus sur mon parcours atypique">
+          <span class="btn-icon">✦</span>
+          <span class="btn-text">Un parcours atypique ?</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Modal parcours atypique -->
+  <div class="parcours-atypique-modal" id="parcours-atypique-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+    <div class="parcours-atypique-overlay"></div>
+    <div class="parcours-atypique-content">
+      <button type="button" class="parcours-atypique-close" id="parcours-atypique-close" aria-label="Fermer">
+        <span>&times;</span>
+      </button>
+      <h2 id="modal-title">Mon parcours atypique</h2>
+      <div class="intro-text">
+        <p>
+          Parcours atypique mais déterminé vers l'informatique. Après avoir arrêté mes études en première, 
+          j'ai obtenu mon DAEU puis enchaîné les formations spécialisées pour construire mon expertise technique.
+        </p>
+        <p>
+          Chaque diplôme et expérience professionnelle a renforcé mes compétences en développement web, 
+          cybersécurité et gestion de projets. Aujourd'hui en BTS SIO, je continue d'évoluer dans ce domaine qui me passionne.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION FORMATIONS -->
+  <section class="formations-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Diplômes & Formations</h2>
+        <p>Parcours académique en informatique</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Indicateur lumineux qui suit le scroll -->
+        <div class="timeline-progress-indicator" id="timeline-progress"></div>
+        <!-- Formation à venir -->
+        <div class="timeline-item future">
+          <div class="timeline-marker">
+            <span class="marker-icon">🎓</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Licence Professionnelle en Informatique</h3>
+              <span class="timeline-date">À venir</span>
+            </div>
+            <div class="timeline-body">
+              <p>Prochaine étape de mon parcours académique</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BTS SIO -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-icon">🎓</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>BTS SIO - Services Informatiques aux Organisations</h3>
+              <span class="timeline-date">2024 - 2026</span>
+            </div>
+            <div class="timeline-body">
+              <div class="institution-with-logo">
+                <div class="logo-placeholder education-logo">
+                  <img src="../../../assets/img/logos/lycee-edouard-gand.jpg" alt="Lycée Edouard Gand" class="logo-image" loading="lazy" decoding="async">
+                </div>
+                <div class="institution-info">
+                  <p class="institution">Lycée Edouard Gand, Amiens, France</p>
+                  <p class="option">Option SLAM (Solutions Logicielles et Applications Métiers)</p>
+                </div>
+              </div>
+              <ul class="timeline-details">
+                <li>Développement d'applications</li>
+                <li>Cybersécurité</li>
+                <li>Gestion de projet informatique</li>
+                <li>Délégué de classe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- CS SNO -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-icon">🏆</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>CS SNO - Certification de Spécialisation</h3>
+              <span class="timeline-date">2022 - 2023</span>
+            </div>
+            <div class="timeline-body">
+              <div class="institution-with-logo">
+                <div class="logo-placeholder education-logo">
+                  <img src="../../../assets/img/logos/lycee-jeanzay.png" alt="Lycée Jeanzay" class="logo-image" loading="lazy" decoding="async">
+                </div>
+                <div class="institution-info">
+                  <p class="institution">Lycée Jeanzay, Orléans, France</p>
+                  <p class="mention">Obtenue avec mention</p>
+                </div>
+              </div>
+              <ul class="timeline-details">
+                <li>Services réseau et infrastructure</li>
+                <li>Administration systèmes</li>
+                <li>Sécurité informatique</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAEU -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-icon">📚</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>DAEU - Diplôme d'Accès aux Études Universitaires</h3>
+              <span class="timeline-date">2020 - 2021</span>
+            </div>
+            <div class="timeline-body">
+              <div class="institution-with-logo">
+                <div class="logo-placeholder education-logo">
+                  <img src="../../../assets/img/logos/sorbonne.png" alt="Sorbonne Paris Nord" class="logo-image" loading="lazy" decoding="async">
+                </div>
+                <div class="institution-info">
+                  <p class="institution">La Sorbonne Paris Nord, Paris, France</p>
+                  <p>Équivalence du baccalauréat permettant l'accès à l'enseignement supérieur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formation EMPSI -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-icon">💻</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Formation en Développement d'Applications Web et Mobile</h3>
+              <span class="timeline-date">2019 - 2020</span>
+            </div>
+            <div class="timeline-body">
+              <div class="institution-with-logo">
+                <div class="logo-placeholder education-logo">
+                  <img src="../../../assets/img/logos/EMPSI.webp" alt="EMPSI" class="logo-image" loading="lazy" decoding="async">
+                </div>
+                <div class="institution-info">
+                  <p class="institution">EMPSI, Casablanca, Maroc</p>
+                  <p class="interruption">Formation interrompue pour raisons sanitaires (COVID-19)</p>
+                </div>
+              </div>
+              <ul class="timeline-details">
+                <li>Développement front-end et back-end</li>
+                <li>Applications mobiles</li>
+                <li>Bases de données</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- BT Gestion Informatique -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-icon">⭐</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>BT - Gestion Informatique</h3>
+              <span class="timeline-date">2017 - 2019</span>
+            </div>
+            <div class="timeline-body">
+              <div class="institution-with-logo">
+                <div class="logo-placeholder education-logo">
+                  <img src="../../../assets/img/logos/eurelec.jpg" alt="Eurelec" class="logo-image" loading="lazy" decoding="async">
+                </div>
+                <div class="institution-info">
+                  <p class="institution">Institut Européen d'Électronique et d'Informatique, Casablanca, Maroc</p>
+                  <p class="mention">Major de promotion - Diplôme obtenu avec mention</p>
+                </div>
+              </div>
+              <ul class="timeline-details">
+                <li>Programmation et développement</li>
+                <li>Gestion de bases de données</li>
+                <li>Réseaux informatiques</li>
+                <li>Management des SI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Première C -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-icon">📖</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Première C - Mathématiques, Physique, Chimie, Technologie</h3>
+              <span class="timeline-date">2016 - 2017</span>
+            </div>
+            <div class="timeline-body">
+              <div class="institution-with-logo">
+                <div class="logo-placeholder education-logo">
+                  <img src="../../../assets/img/logos/cocabinodana.jpg" alt="COCABINODANA" class="logo-image" loading="lazy" decoding="async">
+                </div>
+                <div class="institution-info">
+                  <p class="institution">Collège Catholique et Bilingue Notre Dame des Nations, Douala, Cameroun</p>
+                  <p>Filière scientifique avec spécialisation technologique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION DÉTAILS DES FORMATIONS -->
+  <section class="formation-details-section">
+    <div class="container">
+      <div class="formation-details-header">
+        <h2>Mon Parcours</h2>
+        <div class="formation-details-subtitle">
+          <span class="subtitle-line"></span>
+          <p>Mes Établissements de Formation</p>
+          <span class="subtitle-line"></span>
+        </div>
+      </div>
+
+      <div class="formation-cards-grid">
+        <!-- BTS SIO -->
+        <div class="formation-card-modern">
+          <div class="formation-card-image">
+            <img src="../../../assets/img/EdouardGand%20IMG.jpg" alt="Lycée Edouard Gand" loading="lazy" decoding="async" />
+            <div class="formation-institution-badge">
+              <span class="badge-icon">🏫</span>
+              <span>Lycée Edouard Gand</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="formation-card-content">
+            <h3>BTS SIO - Option SLAM</h3>
+            <ul class="formation-modules-list">
+              <li>Programmation & Algorithmique : <strong>120h</strong></li>
+              <li>Développement Web : <strong>100h</strong></li>
+              <li>Base de Données : <strong>80h</strong></li>
+            </ul>
+            <div class="formation-card-actions">
+              <a href="FormationBTS_SIO-light.html" class="btn-primary-formation">Voir la fiche détaillée 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CS SNO -->
+        <div class="formation-card-modern">
+          <div class="formation-card-image">
+            <img src="../../../assets/img/JeanZayOrleans.png" alt="Lycée Jean Zay, Orléans" loading="lazy" decoding="async" />
+            <div class="formation-institution-badge">
+              <span class="badge-icon">🎓</span>
+              <span>Lycée Jeanzay</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="formation-card-content">
+            <h3>CS SNO - Certification de Spécialisation</h3>
+            <ul class="formation-modules-list">
+              <li>Programmation : <strong>150h</strong></li>
+              <li>Réseaux & Systèmes : <strong>90h</strong></li>
+              <li>Gestion de Projet : <strong>70h</strong></li>
+            </ul>
+            <div class="formation-card-actions">
+              <a href="FormationCS_SNO-light.html" class="btn-primary-formation">Voir la fiche détaillée 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAEU -->
+        <div class="formation-card-modern">
+          <div class="formation-card-image">
+            <img src="../../../assets/img/ParisSorbonneNord%20IMG.jpg" alt="La Sorbonne Paris Nord" loading="lazy" decoding="async" />
+            <div class="formation-institution-badge">
+              <span class="badge-icon">📚</span>
+              <span>La Sorbonne Paris Nord</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="formation-card-content">
+            <h3>DAEU - Diplôme d'Accès aux Études Universitaires</h3>
+            <ul class="formation-modules-list">
+              <li>Mathématiques : <strong>120h</strong></li>
+              <li>Français : <strong>100h</strong></li>
+              <li>Anglais : <strong>80h</strong></li>
+            </ul>
+            <div class="formation-card-actions">
+              <a href="FormationDAEU-light.html" class="btn-primary-formation">Voir la fiche détaillée 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- BT Gestion Informatique -->
+        <div class="formation-card-modern">
+          <div class="formation-card-image">
+            <img src="../../../assets/img/EURLEC-ecole.jpg" alt="Eurelec — Institut Européen d'Électronique et d'Informatique" loading="lazy" decoding="async" />
+            <div class="formation-institution-badge">
+              <span class="badge-icon">⭐</span>
+              <span>Eurelec</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="formation-card-content">
+            <h3>BT - Gestion Informatique</h3>
+            <ul class="formation-modules-list">
+              <li>Programmation & Algorithmique : <strong>160h</strong></li>
+              <li>Gestion de bases de données : <strong>120h</strong></li>
+              <li>Réseaux informatiques : <strong>100h</strong></li>
+            </ul>
+            <div class="formation-card-actions">
+              <a href="FormationBT_GestionInformatique-light.html" class="btn-primary-formation">Voir la fiche détaillée 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION COMPÉTENCES ACQUISES -->
+<section class="skills-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Compétences Développées</h2>
+      <p>Expertise technique et transversale</p>
+    </div>
+
+    <div class="skills-ecosystem">
+      <!-- Cœur technique -->
+      <div class="skill-orbit">
+        <div class="orbit-center">
+          <div class="core-tech">
+            <div class="core-icon">💻</div>
+            <h3>Cœur Technique</h3>
+            <p>Expertise fondamentale</p>
+          </div>
+        </div>
+        
+        <div class="orbit-items">
+          <div class="orbit-item" style="--angle: 0deg">
+            <div class="orbit-content">
+              <span class="orbit-icon">🌐</span>
+              <h4>Développement Web</h4>
+              <p>Full-Stack</p>
+            </div>
+          </div>
+          <div class="orbit-item" style="--angle: 72deg">
+            <div class="orbit-content">
+              <span class="orbit-icon">🔧</span>
+              <h4>Maintenance</h4>
+              <p>Support technique</p>
+            </div>
+          </div>
+          <div class="orbit-item" style="--angle: 144deg">
+            <div class="orbit-content">
+              <span class="orbit-icon">📊</span>
+              <h4>Base de Données</h4>
+              <p>Gestion & optimisation</p>
+            </div>
+          </div>
+          <div class="orbit-item" style="--angle: 216deg">
+            <div class="orbit-content">
+              <span class="orbit-icon">🛡️</span>
+              <h4>Cybersécurité</h4>
+              <p>Protection des systèmes</p>
+            </div>
+          </div>
+          <div class="orbit-item" style="--angle: 288deg">
+            <div class="orbit-content">
+              <span class="orbit-icon">📱</span>
+              <h4>Applications</h4>
+              <p>Mobile & Desktop</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grille des compétences transversales -->
+      <div class="skills-grid-modern">
+        <div class="skill-pillar">
+          <div class="pillar-header">
+            <div class="pillar-icon">🚀</div>
+            <div class="pillar-progress">
+              <div class="progress-circle" data-progress="85">
+                <svg width="60" height="60" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                  <circle class="progress-circle-fill" cx="60" cy="60" r="54" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+                </svg>
+                <span class="progress-text">85%</span>
+              </div>
+            </div>
+          </div>
+          <h3>Innovation & Créativité</h3>
+          <ul>
+            <li>Résolution de problèmes complexes</li>
+            <li>Thinking outside the box</li>
+            <li>Adaptation aux nouvelles technologies</li>
+            <li>Veille technologique</li>
+          </ul>
+        </div>
+
+        <div class="skill-pillar">
+          <div class="pillar-header">
+            <div class="pillar-icon">🤝</div>
+            <div class="pillar-progress">
+              <div class="progress-circle" data-progress="90">
+                <svg width="60" height="60" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                  <circle class="progress-circle-fill" cx="60" cy="60" r="54" fill="none" stroke="var(--accent-2)" stroke-width="4" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+                </svg>
+                <span class="progress-text">90%</span>
+              </div>
+            </div>
+          </div>
+          <h3>Collaboration & Leadership</h3>
+          <ul>
+            <li>Travail d'équipe efficace</li>
+            <li>Communication claire</li>
+            <li>Gestion de projet agile</li>
+            <li>Mentorat & formation</li>
+          </ul>
+        </div>
+
+        <div class="skill-pillar">
+          <div class="pillar-header">
+            <div class="pillar-icon">⚡</div>
+            <div class="pillar-progress">
+              <div class="progress-circle" data-progress="88">
+                <svg width="60" height="60" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                  <circle class="progress-circle-fill" cx="60" cy="60" r="54" fill="none" stroke="#00d4aa" stroke-width="4" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+                </svg>
+                <span class="progress-text">88%</span>
+              </div>
+            </div>
+          </div>
+          <h3>Efficacité Opérationnelle</h3>
+          <ul>
+            <li>Gestion du temps</li>
+            <li>Optimisation des processus</li>
+            <li>Polyvalence</li>
+            <li>Résistance au stress</li>
+          </ul>
+        </div>
+
+        <div class="skill-pillar">
+          <div class="pillar-header">
+            <div class="pillar-icon">🎯</div>
+            <div class="pillar-progress">
+              <div class="progress-circle" data-progress="82">
+                <svg width="60" height="60" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                  <circle class="progress-circle-fill" cx="60" cy="60" r="54" fill="none" stroke="#ff6b6b" stroke-width="4" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+                </svg>
+                <span class="progress-text">82%</span>
+              </div>
+            </div>
+          </div>
+          <h3>Orientation Client</h3>
+          <ul>
+            <li>Écoute active</li>
+            <li>Empathie utilisateur</li>
+            <li>Support technique</li>
+            <li>Relation client durable</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline des compétences -->
+      <div class="skills-timeline">
+        <div class="timeline-milestone">
+          <div class="milestone-year">2016-2019</div>
+          <div class="milestone-content">
+            <h4>Fondations Techniques</h4>
+            <div class="milestone-skills">
+              <span class="skill-tag">Programmation Base</span>
+              <span class="skill-tag">Réseaux</span>
+              <span class="skill-tag">Maintenance</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-milestone">
+          <div class="milestone-year">2019-2022</div>
+          <div class="milestone-content">
+            <h4>Spécialisation Web</h4>
+            <div class="milestone-skills">
+              <span class="skill-tag">Développement Full-Stack</span>
+              <span class="skill-tag">Base de Données</span>
+              <span class="skill-tag">Support Client</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-milestone">
+          <div class="milestone-year">2022-2024</div>
+          <div class="milestone-content">
+            <h4>Expertise Avancée</h4>
+            <div class="milestone-skills">
+              <span class="skill-tag">Cybersécurité</span>
+              <span class="skill-tag">Architecture</span>
+              <span class="skill-tag">Gestion de Projet</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-milestone">
+          <div class="milestone-year">2024-2026</div>
+          <div class="milestone-content">
+            <h4>Leadership & Innovation</h4>
+            <div class="milestone-skills">
+              <span class="skill-tag">IA & Data</span>
+              <span class="skill-tag">DevOps</span>
+              <span class="skill-tag">Mentorat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- SECTION CONTACT -->
+  <section id="contact" class="contact-preview">
+    <div class="container">
+      <div class="contact-content">
+        <h2>Un projet en tête ?</h2>
+        <p>Contactez-moi pour discuter de vos besoins ou opportunités professionnelles.</p>
+        
+        <div class="contact-actions">
+          <a href="mailto:divin.kimia@example.com" class="btn btn-primary">Me contacter</a>
+          <a href="../../Accueil-light.html" class="btn btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER (identique Accueil) -->
+    <footer class="lt-footer">
+    <div class="lt-container">
+      <div class="lt-footer-top">
+        <div class="lt-footer-brand">
+          <div class="lt-footer-brand-row">
+            <img class="lt-footer-logo" src="../../../assets/img/ProfileAccueil.jpeg" alt="" width="52" height="52" decoding="async" />
+            <div>
+              <h3>Divin Kimia</h3>
+              <p class="tag">D&eacute;veloppeur web &amp; IA</p>
+            </div>
+          </div>
+          <p>Conception d&apos;exp&eacute;riences num&eacute;riques fiables &mdash; du prototype &agrave; l&apos;exploitation.</p>
+          <div class="lt-footer-social">
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://github.com/Divinkimia" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-5.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="lt-footer-grid">
+          <div class="lt-footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="../../Accueil-light.html">Accueil (clair)</a></li>
+              <li><a href="../ExperiencesPro/ExperiencesProfessionnels-light.html">Parcours</a></li>
+              <li><a href="../../Projets/index-light.html">Projets</a></li>
+              <li><a href="../CertificationPage-light.html">Certification</a></li>
+              <li><a href="../../Veilles/Veilles-light.html">Veilles</a></li>
+              <li><a href="../../MeDecouvrir-light.html">Me d&eacute;couvrir</a></li>
+              <li><a href="../../Blog-light.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:divinkimia@protonmail.com">Email</a></li>
+              <li><a href="../../CV_Divin_Kimia.pdf" download>CV</a></li>
+              <li><a href="../../Contact-light.html">Formulaire (clair)</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>L&eacute;gal</h4>
+            <ul>
+              <li><a href="../../MentionsLegales-light.html">Mentions l&eacute;gales</a></li>
+              <li><a href="../../MentionsLegales.html#confidentialite">Confidentialit&eacute;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lt-footer-bottom">
+        <p>&copy; <span id="year"></span> <strong>Divin Kimia</strong> &mdash; Tous droits r&eacute;serv&eacute;s.</p>
+        <a href="#top" class="lt-back-top" aria-label="Retour en haut">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

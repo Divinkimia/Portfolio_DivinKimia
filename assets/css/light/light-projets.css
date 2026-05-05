@@ -1,0 +1,446 @@
+/**
+ * Projets - theme clair premium (index + pages *-light).
+ * body.portfolio-light.lt-page-projets
+ *
+ * Remap des variables var() des feuilles Projets et presentations sur body.
+ */
+
+/* Design tokens (heritage sur toute la page) */
+body.portfolio-light.lt-page-projets {
+  /* Projets.css (index) */
+  --bg: var(--lt-bg);
+  --bg-secondary: var(--lt-bg-subtle);
+  --card: var(--lt-surface-elevated);
+  --glass: rgba(21, 108, 101, 0.07);
+  --glass-border: var(--lt-border);
+  --accent: var(--lt-cyan);
+  --accent-2: var(--lt-accent);
+  --accent-glow: rgba(11, 110, 124, 0.22);
+  --text-primary: var(--lt-text);
+  --text-secondary: var(--lt-text-secondary);
+  --text-muted: var(--lt-muted);
+  --nav-bg: rgba(255, 252, 247, 0.78);
+  --nav-border: var(--lt-border);
+  --nav-text: var(--lt-text);
+  --nav-muted: var(--lt-muted);
+  --nav-contact-bg: var(--lt-surface-muted);
+  --nav-contact-text: var(--lt-text);
+  --shadow-sm: var(--lt-shadow-xs);
+  --shadow-md: var(--lt-shadow-sm);
+  --shadow-lg: var(--lt-shadow-md);
+  --shadow-xl: 0 28px 56px rgba(27, 31, 38, 0.1);
+  --font: var(--lt-font-body), system-ui, sans-serif;
+  --radius: var(--lt-radius-md);
+  --radius-lg: var(--lt-radius-lg);
+
+  /* Kim Shoes et pages detail similaires */
+  --bg-dark: var(--lt-bg);
+  --bg-darker: var(--lt-bg-subtle);
+  --bg-card: var(--lt-surface-elevated);
+  --bg-code: var(--lt-bg-subtle);
+  --text: var(--lt-text);
+  --text-muted: var(--lt-muted);
+  --gradient-start: var(--lt-cyan);
+  --gradient-mid: var(--lt-accent);
+  --gradient-end: #0b6e7c;
+  --accent-blue: var(--lt-cyan);
+  --accent-cyan: var(--lt-cyan);
+  --accent-violet: var(--lt-accent);
+  --accent-purple: var(--lt-accent);
+  --accent-pink: #156c65;
+  --accent-green: var(--lt-accent-2);
+  --green: var(--lt-accent-2);
+  --border: var(--lt-border);
+  --island-bg: rgba(255, 252, 247, 0.92);
+  --island-border: var(--lt-border);
+  --island-accent: var(--lt-accent);
+  --island-accent-soft: var(--lt-accent-soft);
+
+  /* FS Barber */
+  --bg-color: var(--lt-bg);
+  --bg-surface: var(--lt-surface);
+  --bg-surface-elevated: var(--lt-surface-elevated);
+  --text-light: var(--lt-muted);
+  --accent-gold: #b8860b;
+  --accent-gold-glow: rgba(184, 134, 11, 0.15);
+  --border-subtle: var(--lt-border);
+  --border-strong: var(--lt-border-strong);
+  --glass-bg: rgba(255, 252, 247, 0.75);
+  --detail-accent: var(--lt-accent);
+  --detail-accent-soft: var(--lt-accent-soft);
+  --detail-accent-border: var(--lt-hairline);
+
+  /* Puissance 4 / ML5 (tokens partages) */
+  --bg-elevated: var(--lt-surface);
+  --red: #b84d5c;
+  --red-dim: rgba(184, 77, 92, 0.35);
+  --yellow: #b8941f;
+  --yellow-dim: rgba(184, 148, 31, 0.35);
+  --blue: #156c65;
+  --blue-dim: rgba(21, 108, 101, 0.35);
+  --cyan: var(--lt-cyan);
+  --cyan-dim: rgba(11, 110, 124, 0.4);
+  --violet: var(--lt-accent);
+  --violet-dim: var(--lt-accent-soft);
+
+  /* MAUI Coach */
+  --muted: var(--lt-muted);
+  --text-light: var(--lt-muted-soft);
+
+  /* RadarPF */
+  --accent-color: var(--lt-cyan);
+  --accent-secondary: var(--lt-accent);
+
+  font-family: var(--lt-font-body), system-ui, sans-serif;
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+body.portfolio-light.lt-page-projets #galaxy-container {
+  display: none !important;
+}
+
+/* Index - decorations code */
+body.portfolio-light.lt-page-projets .code-decorations {
+  opacity: 0.22;
+}
+
+body.portfolio-light.lt-page-projets .code-box {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-xs);
+  backdrop-filter: blur(12px);
+}
+
+body.portfolio-light.lt-page-projets .code-dots span {
+  background: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-projets .code-text,
+body.portfolio-light.lt-page-projets .code-icon span,
+body.portfolio-light.lt-page-projets .code-text-bottom-right span {
+  color: var(--lt-muted);
+}
+
+/* Index - hero */
+body.portfolio-light.lt-page-projets .lt-main {
+  padding-top: 0;
+}
+
+body.portfolio-light.lt-page-projets .hero-content {
+  padding-top: calc(var(--lt-header-h) + 4rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  min-height: min(100vh, 920px);
+  background:
+    radial-gradient(ellipse 85% 55% at 12% 18%, rgba(21, 108, 101, 0.11) 0%, transparent 52%),
+    radial-gradient(ellipse 70% 50% at 88% 72%, rgba(11, 110, 124, 0.09) 0%, transparent 48%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(255, 252, 247, 0.9) 0%, transparent 55%),
+    linear-gradient(180deg, var(--lt-bg) 0%, var(--lt-bg-subtle) 45%, var(--lt-surface) 100%);
+}
+
+body.portfolio-light.lt-page-projets .hero-title {
+  font-family: var(--lt-font-display), var(--lt-font-body), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-projets .hero-content .accent-text {
+  background: linear-gradient(125deg, var(--lt-accent) 0%, var(--lt-cyan) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.portfolio-light.lt-page-projets .hero-description {
+  color: var(--lt-muted);
+  font-size: clamp(1.02rem, 2.1vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 38rem;
+  font-weight: 400;
+}
+
+/* Fenùtres dùcoratives hero */
+body.portfolio-light.lt-page-projets .code-window {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-projets .code-dot {
+  background: linear-gradient(180deg, var(--lt-cyan), var(--lt-accent));
+}
+
+body.portfolio-light.lt-page-projets .code-content {
+  color: var(--lt-cyan);
+}
+
+body.portfolio-light.lt-page-projets .gear-icon {
+  color: var(--lt-muted-soft);
+  filter: none;
+  opacity: 0.45;
+}
+
+body.portfolio-light.lt-page-projets .code-symbol,
+body.portfolio-light.lt-page-projets .code-bracket {
+  color: var(--lt-muted);
+  opacity: 0.4;
+}
+
+body.portfolio-light.lt-page-projets .ui-element {
+  opacity: 0.35;
+}
+
+/* Index - bandeau scroll horizontal */
+body.portfolio-light.lt-page-projets .horizontal-scroll-section {
+  background: linear-gradient(
+    180deg,
+    var(--lt-surface) 0%,
+    var(--lt-bg-subtle) 35%,
+    var(--lt-bg) 100%
+  );
+}
+
+body.portfolio-light.lt-page-projets .horizontal-track {
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* Cartes mises en avant ù bords dùaccent assourdis, ombre papier */
+body.portfolio-light.lt-page-projets .featured-card {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-md);
+  border-radius: var(--lt-radius-lg);
+  transition:
+    transform 0.45s var(--lt-ease-out),
+    box-shadow 0.45s var(--lt-ease-out),
+    border-color 0.35s ease;
+}
+
+body.portfolio-light.lt-page-projets .featured-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(21, 108, 101, 0.28);
+  box-shadow:
+    var(--lt-shadow-lg),
+    0 0 0 1px rgba(21, 108, 101, 0.06);
+}
+
+body.portfolio-light.lt-page-projets .ecommerce-card {
+  border-top-color: #c45060;
+}
+
+body.portfolio-light.lt-page-projets .rh-card {
+  border-top-color: #1f7a4d;
+}
+
+body.portfolio-light.lt-page-projets .dashboard-card {
+  border-top-color: #0b6e7c;
+}
+
+body.portfolio-light.lt-page-projets .mobile-card {
+  border-top-color: #c17a2d;
+}
+
+body.portfolio-light.lt-page-projets .card-header,
+body.portfolio-light.lt-page-projets .rh-header,
+body.portfolio-light.lt-page-projets .dashboard-header,
+body.portfolio-light.lt-page-projets .mobile-header {
+  background: linear-gradient(180deg, var(--lt-surface) 0%, var(--lt-surface-elevated) 100%);
+  border-bottom: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-projets .card-header h3,
+body.portfolio-light.lt-page-projets .rh-header h3,
+body.portfolio-light.lt-page-projets .dashboard-header h3,
+body.portfolio-light.lt-page-projets .mobile-header h3 {
+  font-family: var(--lt-font-display), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+body.portfolio-light.lt-page-projets .card-footer,
+body.portfolio-light.lt-page-projets .rh-footer,
+body.portfolio-light.lt-page-projets .dashboard-footer,
+body.portfolio-light.lt-page-projets .mobile-footer {
+  background: linear-gradient(180deg, var(--lt-surface-elevated) 0%, var(--lt-bg-subtle) 100%);
+  border-top: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-projets .featured-card-media {
+  background: #f8f6f1 !important;
+}
+
+body.portfolio-light.lt-page-projets .featured-card-media--video {
+  background: linear-gradient(165deg, #ebe7df 0%, #f4f1ea 50%, #e8e4dc 100%) !important;
+  border-top: 1px solid var(--lt-border);
+  border-bottom: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-projets .featured-card-media-video {
+  border-radius: var(--lt-radius-md);
+  background: #1b1f26;
+  box-shadow:
+    var(--lt-shadow-md),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Index - grille tous les projets */
+body.portfolio-light.lt-page-projets .all-projects {
+  padding: clamp(5rem, 12vw, 8rem) 0;
+  background: linear-gradient(180deg, var(--lt-bg) 0%, var(--lt-bg-subtle) 100%);
+  border-top: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-projets .section-header h2 {
+  font-family: var(--lt-font-display), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  background: linear-gradient(120deg, var(--lt-text) 0%, var(--lt-accent) 55%, var(--lt-cyan) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.portfolio-light.lt-page-projets .section-header p {
+  color: var(--lt-muted);
+  font-weight: 400;
+}
+
+body.portfolio-light.lt-page-projets .filter-btn {
+  background: var(--lt-surface-elevated);
+  color: var(--lt-text-secondary);
+  border: 1px solid var(--lt-border);
+  font-weight: 500;
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-projets .filter-btn:hover {
+  background: var(--lt-accent-soft);
+  color: var(--lt-accent-hover);
+  border-color: var(--lt-hairline);
+  transform: translateY(-2px);
+}
+
+body.portfolio-light.lt-page-projets .filter-btn.active {
+  background: linear-gradient(135deg, var(--lt-accent) 0%, var(--lt-cyan) 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-projets .projects-load-more-btn {
+  background: linear-gradient(135deg, var(--lt-accent) 0%, var(--lt-cyan) 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-projets .projects-load-more-btn:hover,
+body.portfolio-light.lt-page-projets .projects-load-more-btn:focus-visible {
+  box-shadow: var(--lt-shadow-lg);
+  filter: brightness(1.05);
+}
+
+body.portfolio-light.lt-page-projets .project-card {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-sm);
+  border-radius: var(--lt-radius-md);
+}
+
+body.portfolio-light.lt-page-projets .project-card:nth-child(odd):hover,
+body.portfolio-light.lt-page-projets .project-card:nth-child(even):hover {
+  transform: translateY(-10px);
+  border-color: rgba(21, 108, 101, 0.35);
+  box-shadow:
+    var(--lt-shadow-lg),
+    0 24px 48px rgba(21, 108, 101, 0.1);
+}
+
+body.portfolio-light.lt-page-projets .project-overlay {
+  background: linear-gradient(180deg, transparent 0%, rgba(27, 31, 38, 0.88) 100%);
+}
+
+body.portfolio-light.lt-page-projets .project-link {
+  background: rgba(255, 252, 247, 0.96);
+  color: var(--lt-text);
+  border: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-projets .project-link:hover {
+  background: var(--lt-accent);
+  color: #fff;
+  border-color: var(--lt-accent);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-projets .project-content h3 {
+  font-family: var(--lt-font-display), sans-serif;
+  font-weight: 600;
+}
+
+body.portfolio-light.lt-page-projets .project-tech span {
+  background: var(--lt-surface-muted);
+  color: var(--lt-cyan);
+  border: 1px solid var(--lt-border);
+  font-weight: 500;
+}
+
+/* Ancien footer .site-footer si prùsent ù harmonisù clair */
+body.portfolio-light.lt-page-projets .site-footer {
+  background: var(--lt-bg-subtle);
+  border-top: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-projets .footer-socials a:hover {
+  background: var(--lt-accent-soft);
+  border-color: var(--lt-hairline);
+  color: var(--lt-accent-hover);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+/* Presentations - nav ilot */
+body.portfolio-light.lt-page-projets .nav-island {
+  background: var(--island-bg) !important;
+  border: 1px solid var(--island-border) !important;
+  box-shadow: var(--lt-shadow-md);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  backdrop-filter: blur(18px) saturate(1.15);
+}
+
+body.portfolio-light.lt-page-projets .nav-island-link,
+body.portfolio-light.lt-page-projets .nav-island-link--muted,
+body.portfolio-light.lt-page-projets a.nav-island-link {
+  color: var(--lt-text-secondary) !important;
+}
+
+body.portfolio-light.lt-page-projets .nav-island-link:hover {
+  color: var(--lt-accent) !important;
+}
+
+body.portfolio-light.lt-page-projets .nav-island-dot {
+  background: var(--lt-border-strong) !important;
+}
+
+/* Barre de progression scroll (Kim Shoes, etc.) */
+body.portfolio-light.lt-page-projets .scroll-progress {
+  background: linear-gradient(90deg, var(--lt-accent), var(--lt-cyan)) !important;
+}
+
+/* Orbes de fond - attenues en theme clair */
+body.portfolio-light.lt-page-projets .bg-orbes .orb,
+body.portfolio-light.lt-page-projets .orb {
+  opacity: 0.38 !important;
+  filter: saturate(0.85);
+}
+
+/* Utilitaires Tailwind (ex. RadarPF presentation-light) */
+body.portfolio-light.lt-page-projets.text-white {
+  color: var(--lt-text) !important;
+}
+
+/* Cadre neon discret (presentation Meteo) */
+body.portfolio-light.lt-page-projets .page-frame {
+  box-shadow: inset 0 0 80px rgba(21, 108, 101, 0.04);
+  border: 1px solid var(--lt-border);
+}

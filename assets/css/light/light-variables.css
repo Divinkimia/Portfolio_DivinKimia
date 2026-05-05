@@ -1,0 +1,60 @@
+/**
+ * Jetons de design du thème clair (premium tech / papier chaud).
+ * Fond blanc cassé, texte anthracite, accents teal acier — pas de clichés violets.
+ */
+.portfolio-light {
+  /* Surfaces */
+  --lt-bg: #f4f1ea;
+  --lt-bg-subtle: #ebe7de;
+  --lt-surface: #fffcf7;
+  --lt-surface-elevated: #ffffff;
+  --lt-surface-muted: rgba(255, 252, 247, 0.72);
+
+  /* Borders */
+  --lt-border: rgba(28, 33, 40, 0.09);
+  --lt-border-strong: rgba(28, 33, 40, 0.14);
+  --lt-hairline: rgba(21, 108, 101, 0.22);
+
+  /* Text */
+  --lt-text: #1b1f26;
+  --lt-text-secondary: #3d4551;
+  --lt-muted: #5f6774;
+  --lt-muted-soft: #8b929e;
+
+  /* Accents */
+  --lt-accent: #156c65;
+  --lt-accent-hover: #0f534e;
+  --lt-accent-soft: rgba(21, 108, 101, 0.12);
+  --lt-accent-2: #1f7a4d;
+  --lt-accent-2-soft: rgba(31, 122, 77, 0.1);
+  --lt-cyan: #0b6e7c;
+  --lt-cyan-soft: rgba(11, 110, 124, 0.1);
+
+  /* UI states */
+  --lt-focus: #0b6e7c;
+  --lt-danger: #b42318;
+
+  /* Shadows */
+  --lt-shadow-xs: 0 1px 2px rgba(27, 31, 38, 0.05);
+  --lt-shadow-sm: 0 4px 14px rgba(27, 31, 38, 0.07);
+  --lt-shadow-md: 0 12px 40px rgba(27, 31, 38, 0.09);
+  --lt-shadow-nav: 0 8px 32px rgba(27, 31, 38, 0.08);
+
+  /* Radii */
+  --lt-radius-sm: 10px;
+  --lt-radius-md: 16px;
+  --lt-radius-lg: 24px;
+  --lt-radius-pill: 999px;
+
+  /* Typography (loaded in HTML) */
+  --lt-font-display: "Outfit", system-ui, sans-serif;
+  --lt-font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --lt-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Layout */
+  --lt-container: 72rem;
+  --lt-section-y: clamp(4rem, 8vw, 7.5rem);
+  --lt-header-h: 4.25rem;
+  --lt-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --lt-duration: 0.45s;
+}

@@ -1,0 +1,219 @@
+/**
+ * Boutons, badges, cartes projet, pills competences.
+ */
+.portfolio-light .lt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.35rem;
+  font-family: var(--lt-font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--lt-radius-pill);
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s var(--lt-ease-out), box-shadow 0.25s ease,
+    background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.portfolio-light .lt-btn:focus-visible {
+  outline: 2px solid var(--lt-focus);
+  outline-offset: 2px;
+}
+
+.portfolio-light .lt-btn--primary {
+  color: #fff;
+  background: linear-gradient(180deg, #157a72 0%, var(--lt-accent) 100%);
+  box-shadow: 0 8px 24px rgba(21, 108, 101, 0.25);
+}
+
+.portfolio-light .lt-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(21, 108, 101, 0.32);
+}
+
+.portfolio-light .lt-btn--secondary {
+  color: var(--lt-text);
+  background: var(--lt-surface-elevated);
+  border-color: var(--lt-border-strong);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+.portfolio-light .lt-btn--secondary:hover {
+  border-color: var(--lt-hairline);
+  background: var(--lt-surface);
+  transform: translateY(-1px);
+}
+
+.portfolio-light .lt-btn--ghost {
+  color: var(--lt-accent);
+  background: transparent;
+  border-color: var(--lt-hairline);
+}
+
+.portfolio-light .lt-btn--ghost:hover {
+  background: var(--lt-accent-soft);
+}
+
+/* Badges / tags */
+.portfolio-light .lt-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  font-family: var(--lt-font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lt-cyan);
+  background: var(--lt-cyan-soft);
+  border-radius: var(--lt-radius-sm);
+  border: 1px solid rgba(11, 110, 124, 0.2);
+}
+
+.portfolio-light .lt-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--lt-text-secondary);
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  border-radius: var(--lt-radius-pill);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+.portfolio-light .lt-pill span[aria-hidden] {
+  opacity: 0.85;
+}
+
+/* Carte projet premium */
+.portfolio-light .lt-project {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  border-radius: var(--lt-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--lt-shadow-sm);
+  transition: transform var(--lt-duration) var(--lt-ease-out),
+    box-shadow var(--lt-duration) var(--lt-ease-out),
+    border-color 0.25s ease;
+}
+
+.portfolio-light .lt-project:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--lt-shadow-md);
+  border-color: var(--lt-border-strong);
+}
+
+.portfolio-light .lt-project__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--lt-bg-subtle);
+}
+
+.portfolio-light .lt-project__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--lt-ease-out);
+}
+
+.portfolio-light .lt-project:hover .lt-project__media img {
+  transform: scale(1.03);
+}
+
+.portfolio-light .lt-project__caption {
+  padding: 1.35rem 1.35rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.portfolio-light .lt-project__caption h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.portfolio-light .lt-project__caption p {
+  font-size: 0.98rem;
+  flex: 1;
+}
+
+.portfolio-light .lt-project__link {
+  font-family: var(--lt-font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lt-accent);
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.portfolio-light .lt-project__link:hover {
+  color: var(--lt-accent-hover);
+}
+
+.portfolio-light .lt-project--featured .lt-project__media {
+  aspect-ratio: 16 / 11;
+}
+
+.portfolio-light .lt-project__tagrow {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.portfolio-light .lt-project__overlay-tags {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  background: linear-gradient(to top, rgba(27, 31, 38, 0.72), transparent);
+}
+
+.portfolio-light .lt-project__overlay-tags span {
+  font-family: var(--lt-font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f4f1ea;
+  background: rgba(255, 252, 247, 0.12);
+  border: 1px solid rgba(255, 252, 247, 0.2);
+  padding: 0.2rem 0.45rem;
+  border-radius: var(--lt-radius-sm);
+}
+
+/* Petite carte icone (sans image) */
+.portfolio-light .lt-project--icon {
+  padding: 1.35rem;
+  gap: 0.75rem;
+}
+
+.portfolio-light .lt-project__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--lt-radius-md);
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  background: var(--lt-bg-subtle);
+  border: 1px solid var(--lt-border);
+}

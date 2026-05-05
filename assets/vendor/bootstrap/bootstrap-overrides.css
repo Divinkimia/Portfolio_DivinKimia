@@ -1,0 +1,104 @@
+/**
+ * =============================================================================
+ * BOOTSTRAP — SURCHARGES & RÉFÉRENCE PROJET (portfolio Divin Kimia)
+ * =============================================================================
+ *
+ * RÔLE DE CE FICHIER
+ * ------------------
+ * Ce fichier documente COMMENT personnaliser Bootstrap sans toucher à
+ * bootstrap.min.css. Les règles ci-dessous sont en majorité des EXEMPLES
+ * commentés : copiez-les dans le CSS de la page concernée (assets/css/Accueil.css,
+ * assets/css/Projets/Projets.css, etc.) ou décommentez-les ici si vous chargez ce
+ * fichier APRÈS bootstrap.min.css dans une page de test.
+ *
+ * ORDRE DE CHARGEMENT RECOMMANDÉ
+ * ------------------------------
+ *   1. assets/vendor/bootstrap/bootstrap.min.css
+ *   2. [optionnel] bootstrap-overrides.css  ← ce fichier
+ *   3. CSS de la page (assets/css/…/….css)
+ *
+ * DOCUMENTATION À JOUR
+ * --------------------
+ *   • assets/vendor/bootstrap/README.md
+ *   • assets/vendor/bootstrap/doc/PAGES-ET-CSS.md
+ *   • assets/vendor/bootstrap/doc/INDEX.md
+ *   • docs/PORTFOLIO-STRUCTURE.md (racine du projet)
+ *
+ * =============================================================================
+ * TABLEAU — PAGE HTML ↔ FICHIER CSS DU PROJET (navbar / repère)
+ * =============================================================================
+ *
+ *   Accueil              pages/Accueil.html              assets/css/Accueil.css              .accueil-navbar
+ *   Projets (liste)      pages/Projets/index.html        assets/css/Projets/Projets.css      .parcours-navbar (voir fichier)
+ *   Veilles              pages/Veilles/Veilles.html      assets/css/Veilles.css              .veilles-navbar
+ *   Blog                 pages/Blog.html                 assets/css/Accueil.css (souvent)    .accueil-navbar
+ *   Me découvrir         pages/MeDecouvrir.html          assets/css/me-decouvrir.css         .parcours-navbar
+ *   Parcours             pages/Parcours_HTML/*.html      assets/css/Parcours_CSS/*.css       .parcours-navbar
+ *   Présentations        pages/Projets/Presentation*/    assets/css/Projets/css…/            selon projet
+ *
+ * Détail : assets/vendor/bootstrap/doc/PAGES-ET-CSS.md
+ *
+ * =============================================================================
+ * PARTIE A — NAVBAR : icône hamburger (navbar-toggler)
+ * =============================================================================
+ *
+ * Bootstrap fournit une icône SVG grise par défaut. Chaque page du portfolio
+ * redéfinit souvent .navbar-toggler-icon dans SON CSS pour matcher le fond.
+ *
+ * Exemple (à adapter dans le CSS de la page, pas dans bootstrap.min.css) :
+ *
+ * .ma-navbar .navbar-toggler-icon {
+ *   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+ * }
+ *
+ * =============================================================================
+ * PARTIE B — THÈME & VARIABLES (--bs-*)
+ * =============================================================================
+ *
+ * Pour une surcharge globale des couleurs Bootstrap :
+ *
+ * :root {
+ *   --bs-primary: #0d6efd;
+ *   --bs-primary-rgb: 13, 110, 253;
+ * }
+ *
+ * [data-bs-theme="dark"] {
+ *   --bs-body-bg: #212529;
+ *   --bs-body-color: #f8f9fa;
+ * }
+ *
+ * =============================================================================
+ * PARTIE C — GRILLE & ESPACEMENTS
+ * =============================================================================
+ *
+ * • .container — largeur max par breakpoint
+ * • .row + .col-* — colonnes
+ * • .g-4, .g-5 — gouttières entre colonnes
+ *
+ * Exemple d’élargissement :
+ * .container { max-width: 1400px; }
+ *
+ * =============================================================================
+ * PARTIE D — COMPOSANTS (boutons, cartes, formulaires)
+ * =============================================================================
+ *
+ * Personnalisation typique dans votre CSS :
+ * • .btn, .btn-primary — arrondis, ombres
+ * • .card — ombre légère
+ * • .form-control:focus — contour focus accessible
+ *
+ * =============================================================================
+ * PARTIE E — UTILITAIRES Bootstrap
+ * =============================================================================
+ *
+ * Souvent utilisés dans le portfolio : d-flex, gap-*, mb-*, mt-*, text-center,
+ * justify-content-*, align-items-*, col-12 col-lg-6, etc.
+ * Liste officielle : https://getbootstrap.com/docs/5.3/utilities/api/
+ *
+ * =============================================================================
+ */
+
+/* Exemples désactivés — décommenter pour tester après bootstrap.min.css */
+
+/* .navbar-toggler { border-color: rgba(255, 255, 255, 0.5); } */
+/* .navbar-toggler:focus { box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25); } */

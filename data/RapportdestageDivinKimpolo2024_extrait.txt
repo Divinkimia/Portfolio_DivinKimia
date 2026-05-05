@@ -1,0 +1,672 @@
+RAPPORT DE
+  STAGE
+ CHEZ ICONNECTED STORE
+
+
+
+
+                         Présenter par
+                 KIMPOLO KIMIA DIVIN
+Remerciemts
+Je remercie toutes les personnes qui ont
+contribué à la réalisation de ce stage. Car leur
+soutien m’a énormément motivé et enrichi mon
+expérience professionnelle.
+
+
+
+Je souhaite adresser premièrement mes
+remerciements l à mon maître de stage, Sami
+Mansori , pour son encadrement, sa disponibilité
+et sa bienveillance tout au long de cette période.
+Ce stage a été une opportunité exceptionnelle, et
+je suis reconnaissant d'avoir pu bénéficier de son
+encadrement.
+
+
+Mes remerciements s'adressent également à
+l'ensemble de mes enseignants qui m'ont
+accompagnés tout au long de ma formation
+jusqu’à présent.
+
+Enfin, je remercie profondément ma famille qui
+m’a toujours soutenu et encouragé tout au long
+de mon parcours.
+
+
+
+
+                                                     1
+   ICONNECTED STORE
+
+
+ADRESS/COORDONNÉES
+5 RUE DU FAUBOURG MADELEINE ,
+45000 ORLÉANS
+
+
+Tel : 02 38 78 12 12
+
+Email : iconnectedstore@gmail.com
+
+
+
+
+PROPRIÉTAIRE ET                     OUTILS UTILISÉS
+DIRIGEANT
+                                    - WIX.       - EXCEL
+                                    -CANVA.      -IMPRIMANTE
+                                    WIFI.        - TÉLÉPHONE FXE
+                                    -CHATGPT-4
+                                    -IMAGEN
+
+
+
+
+DOMAINE D'ACTIVITÉ
+
+
+
+
+                                                          10
+   ICONNECTED STORE
+
+
+PARTENAIRES
+
+KCORPORATION
+
+IMEDIA
+
+PRÉFECTURE DU LOIRET                        NOM ET FONCTION DU
+                                            TUTEUR
+
+
+                                              SAMI MANSORI
+
+PROPRIÉTAIRE ET
+DIRIGEANT
+
+
+SAMI MANSORI
+
+
+                                              SITE INTERNET
+
+
+
+
+DOMAINE D'ACTIVITÉ
+PRINCIPAL
+
+Réparation, vente et assistance
+d'appareils informatique
+
+SECONDAIRE                                    SERVICE INTÉGRÉ
+Installation de vidéo surveillance, point
+relais colis et impression
+                                              SERVICE INFORMATIQUE
+                                              ET COMMUNICATION
+
+
+
+
+                                                                10
+Sommaire :
+             Structure d'accueil
+
+             Procédure et démarches
+             suivie
+             Moyen techniques mis en
+             œuvre
+             Résultats
+
+
+             Conclusion
+I- Structure d'accueil
+  1-Histoire de la boutique
+  Fondé en 2014, iConnected Store a émergé de
+  la passion pour la technologie et l'innovation
+  dans le cœur historique d'Orléans. Notre
+  magasin situé au 5 rue du Faubourg
+  Madeleine est un pionnier local dans la
+  fourniture   de    solutions  technologiques
+  avancées, y compris des dispositifs et services
+  de connectivité indispensables pour les
+  particuliers et les entreprises avec pour
+  mission de endre la technologie accessible à
+  tous, en proposant une gamme de produits et
+  services personnalisés qui répondent aux
+  besoins uniques de chaque clien
+
+
+
+
+                                                    1
+2- Contexte
+Mon stage chez iConnected Store, boutique
+spécialise dans la réparation, la vente et le conseil
+informatique au 5 rue du Faubourg Madeleine,
+Saint-Jean-de-la-Ruelle, à Orléans, a été une
+expérience enrichissante . Ma mission principal
+était de créer un site web pour la boutique a
+l’aide du CMS WIX, ce n'était qu’un des points que
+j’ai abordé dans l’optique de restitué de les
+connaissances acquises lors de ce premier
+semestre .
+
+
+
+Dès le début de mon stage, j'ai été plongé dans
+l'environnement de la boutique. J'ai eu l'occasion
+avec l’aide de mes collègues et du gérant afin de
+pouvoir répondre correctement aux exigences
+de l’entreprise, les attentes des clients, et les
+défis auxquels l'équipe était confrontée. Cette
+immersion a été important pour la réussite de
+mon projet.
+
+
+
+
+                                                        2
+La création du site web a débuté par une
+analyse approfondie. J'ai travaillé en étroite
+collaboration avec les techniciens et le gérant
+pour comprendre les besoins spécifiques de
+la boutique et les fonctionnalités essentielles
+à intégrer dans le site.
+
+
+Le processus de développement du site a
+impliqué l'utilisation de divers outil de design
+pour m'assurer que le site soit à la fois
+esthétiquement et attrayant, offrant une
+expérience utilisateur optimale. Le design a
+été élaboré en tenant compte de l'identité
+visuelle de la boutique.
+
+
+En parallèle à la création du site web j'ai également
+consacrée mon travail à la surveillance et
+l'amélioration de la e-réputation de la boutique. Cela
+impliquait de surveiller activement les plateformes
+en ligne, de répondre aux avis et aux commentaires
+des clients, et de maintenir une image positive de la
+boutique sur Internet. J'ai appris à utiliser un langage
+positif quelque soit le type de commentaire.
+
+La communication dans la boutique a été une
+composante essentielle de mon stage. J'ai participé
+à l'élaboration d'une stratégie de communication
+globale dans le cadre du lancement du site web.
+
+
+
+
+                                                           3
+Une fois le site web terminé, j'ai créer un support
+d'accompagnement détaillé pour l'équipe de la
+boutique. Ce document comprenait des instructions
+claires sur la gestion quotidienne du site, les mises à
+jour du contenu, et la résolution des problèmes
+techniques courants. L'objectif était de garantir une
+transition en douceur vers l'autonomie après la fin
+de mon stage.
+
+l'impact de ce stage dépasse largement le simple fait
+d'effectuer un projet dans le cadre scolaire pour
+obtenir une note mais l'opportunitépour moi de
+découvrir les défis de mon prochin métier. Dans les
+prochains paragraphes, je vais détailler les démarches
+que j'ai suivies pour aborder mes activités au sein du
+iConnected Store, mettant en lumière les opportunités
+d'apprentissage, l'application de mes connaissances
+dans un contexte professionnel.
+
+Cette expérience a non seulement renforcé ma passion
+pour le web design, mais elle m'a également préparé
+de manière assurée à affronter les défis du monde
+professionnel. Un immense merci à l'équipe du
+iConnected Store pour leur soutien et leur
+collaboration de m'avoir appris également la
+réparation de smartphone à ma demande tout au long
+de cette expérience enrichissante.
+
+
+
+
+                                                          4
+II- Procédures et
+démarches suivie
+
+Avec l'évolution constante du paysage numérique et de
+l'IA (intelligence artificielle), je me suis non seulement
+retrouvé à apprendre à utiliser certains de ces outils
+mais également améliorer mes compétences sur l'outil
+WIX dans l'univers spécifique de la réparation, mais
+également contraint d'adopter une posture
+professionnelle stratégique pour répondre aux exigences
+complexes du secteur.
+
+Dans ce contexte, la posture que j'ai adoptée revêt une
+importance capitale. Je devais non seulement
+démontrer une compréhension approfondie des besoins
+spécifiques de l'entreprise de iConnected mais
+également cultiver une sensibilité artistique pour
+traduire visuellement son identité et son savoir-faire sur
+le net. La capacité à établir un équilibre entre la
+fonctionnalité technique et l'esthétique créative son
+devenu lors de ce stage une compétence obligatoire.
+Comprendre les spécificités du secteur de la réparation,
+les attentes de la clientèle et les concurrents potentiels
+sont selon moi les éléments clés pour concevoir un site
+internet pertinent et performant.
+.
+
+
+
+
+                                                             5
+En parallèle, j'ai dû m'engager dans un processus de
+recherche créative durant toute ma période destage,
+explorant des concepts visuels qui non seulement
+captivent l'audience mais reflètent également l'essence
+même d'iconnected Store. C'est la raison pour laquelle
+j'ai dû partir de zéro c'est à dire d'une page vierge et non
+dun templet . Des maquettes et des prototypes sont
+ensuite élaborés sur une feuille de brouillon, permettant
+d'itérer et de perfectionner le design en collaboration
+avec les parties prenantes de l'entreprise
+
+
+
+
+  A- Semaine 1
+
+  Ma première semaine fut une semaine
+  majoritairement constitué d'observation, afin de
+  cerné ce domaine que je ne connaissais pas
+  particulièrement. J'ai effectué plusieurs échanges
+  avec le gérant pour connaître ces attentes
+  concernant le site web, à la suite de ces échanges
+  j'ai reçu une courriel sur l'histoire de la boutique,
+  le logos et le thème couleur ce qui m'a été très
+  utile. Après avoir remarqué que plusieurs passant
+  entraient dans la boutique pour demander si
+  Iconnected faisait des impressions, j'ai décidé de
+  mette concevoir un fliyer à ce sujet afin d'informer
+  les clients rapidement et efficacement.
+
+
+
+
+                                                               6
+ B- Semaine 2
+
+ Ma 2ème semaine j'ai débuté le support post-stage
+ que vous trouverez ci-joint ce support à été conçu
+ dans le but d'offrir une assistance technique après la
+ livraison du site c'est à dire ( mise à jour, modification,
+ rajout de page ...) dans cette partie mon attention était
+ sur la page réparation page j'ai du collaborer
+ étroitement avec avec les techniciens en charge de la
+ réparation leur posé énormément de questions afin
+ d'avoir suffisamment d'informations sur la répartition
+ et ces aspects.
+
+
+
+
+C- Semaine 3
+
+Outre le support post-stage, ma 3ème semaine à été
+dédiée à création d'une boutique en ligne destinée à
+l'exposition produit disponible en boutique, produits
+sur lequel j'ai pris l'initiative de ne pas mettre le prix
+cette boutique vitrine à pour objectif d'informer tous
+visiteurs que iconnected store vend également du
+matériel informatique et des accessoires d'appareil
+m'inspirant ainsi du site de wifix l'un des leaders de
+réparation d'appareil informatique en France.
+
+
+
+
+                                                               7
+D- Semaine 4
+lorsque de ma 4ème semaine je me suis pencher sur la
+e-réputation quoi de mieux pour la réparation de la
+boutique que de bon commentaire, pour ce faire après
+que le technicien ai résolu la problématique du client je
+leur demandait par la suite qu'il était possible de laisser
+un commentaire Google ou sur les réseaux sociaux
+pour que d'autres clients puissent bénéficier aussi du
+même service. Et pour le site j'ai pensé à rajouter une
+rubrique réseaux sociaux dans cette optique et
+quelques témoignages de clients.
+
+
+
+
+E- Semaine 5
+Ma semaine 5 était plus centré sur la création
+d'une base de données se qui m'a pris énorme de
+temps étant donné que je l'ai effectué sur wix en
+triant chaque marque de smartphones et
+accessoires de boutique et éléments du site en
+termes d'image.
+
+
+
+
+F- Semaine 6 et 7
+Mes 2 dernières semaines étaient des semaines de
+finitions j'ai eu à reparcourir le site et remarqué des faute
+d'orthographe des éléments pas bien alignées à l'aide de
+plusieurs outils dont je vous en parlerais pus dans la
+prochaine partie j'ai eu à y remédier, rajouté les liens
+internet page et externe pas
+
+
+
+
+                                                                8
+III- Moyens techniques mis
+en œuvre
+
+1- Communication
+
+Dans cette partie je vais vous parler de l'ensemble des
+ressources ,moyens et outils utilisés lors de ma
+période de stage à savoir :
+
+- la communication verbal : Grâce à la communication c'est
+à dire aux échanges entre moi , le gérant et mes collègues
+j'ai pu collecté énormément d'informations qui m'ont
+permis de réaliser à bien cette tâche et comprendre les
+besoins de Iconnected. Des échanges avec les clients lors
+du retrait de leurs appareils une fois réparé ont contribué à
+la e-réputation de l'entreprise
+
+
+
+
+- la communication écrite non verbal : avec Gmail j'ai
+eu à recevoir les informations écrites claires que je
+pouvais relire si besoin. Grâce toujours à la
+communication écrite avec Google nous avons pu
+répondre au commentaire permettant ainsi à
+l'entreprise de rester à l'écoute des besoins clients.
+
+
+
+
+               "Il est impossible de ne pas communiquer"
+                             Paul Watzlawick
+
+
+
+
+                                                                9
+2- Wix
+
+J'ai utilisé le CMS (Content Management Système) qui est un
+système de gestion de contenu qui m'a permis de créer
+l'ésotérisme internet de Iconnected store étant donné que c'est
+le plateformes étudier en cours Grâce à sa simplicité d'utilisation
+et de personnalisation j'ai pu créer plus rapidement le site web
+en partant de zéro et sans avoir besoin à taper des ligne de code
+ce qui m'aurait pris énormément de temps. Wix propose une
+vaste      bibliothèque      d'applications   qui    étendent      les
+fonctionnalités de base du CMS. Sa fonctionnalité glisser-déposer
+simplifie le processus de création de pages. Une fonctionnalité
+boutique est disponible permettant de créer une boutique en
+ligne rapidement avec un système de gestion de produits ce qui
+m'a permis de créer facilement la boutique vitrine mentionné
+précédemment. Grâce à l'outil galerie j'ai eu la possibilité
+d'importer des fichiers de mon ordinateur et de les classifiés . J'ai
+également eu a découvrir la nouvelle fonctionnalité de de wix
+qui est Studio Wix (une IA) permettant de générer du texte tout
+en prenant en considération les éléments déjà présents sur notre
+page . Je peux dire que wix est un outil qui m'a été très utile bien
+que j'ai utilisé la version gratuite avec moins de fonctionnalités
+
+
+
+
+                                                                         10
+3- L'intelligence artificielle
+De nous jours L'intelligence Artificielle se retrouve dans la casi
+totalité des nouvelles technologies, dans le but de surmonter
+l'obstacle financière de l'entreprise qui était celui d'acheter un
+appareil photo professionnelle afin de pouvoir prendre en photo
+les articles disponibles chez iconnected pour les intégrer dans la
+boutique en ligne nous nous sommes tourné vers L'IA ChatGPT-
+4, Dall-e, Média Magique de Canva et Imagen de chez Google.
+
+
+
+
+Pour des raisons de droit d'auteur plus de 85% des images du site
+web on été généré par l'une des ces intelligence artificielle., bien
+que cela n'a pas été un tâche facile car certains de ces logiciels
+comme Dall-e, Média Magique et Imagen étaient utilisés
+gratuitement donc ne pouvait générer qu'un certains nombre
+d'images par jours, tant dis que ChatGPT-4 non entant donné
+que l'entreprise possède la version complète. Lors de l'utilisation
+de ces IA mes requêtes de vais être détaillée, claire et précis afin
+de générer le plus d'images possible et gagner ainsi en temps. Ex
+: pour l'image ci-dessous j'ai dû formuler une requête comme
+suite sur ChatGPT-4 : " génère une image sur un fond gris un
+demi bras tenant un iPhone de dos afin de l'intégrer sur une
+page de site web de de boutique de réparation de smartphones
+et outils informatique"
+
+
+
+                                                                       11
+3- Autres outils
+
+En dehors de L'intelligence Artificielle d'autres outils on été utilisé
+teleque l'outil du packs office Excel dans lobtique de stocker les
+informations clients tel que nom , prénom, numéro de téléphone
+et/ou adresse mail, appareil déposé, modèle, problème. J'ai été
+aussi chargé d'accompagner les clients pour effectuer leurs
+impressions, photocopie ou scanne c'est dans ce sens que j'ai
+généré un QR pour simplifier la connexion au Wi-Fi et permettre
+ainsi aux clients d'effectuer son impression sans avoir à nous
+transférer quelconque dossier permettant de limiter la
+propagation de virus
+
+
+
+
+                                                                          12
+IV- Résultat
+Dans cette partie je vais vous présenter l'ensemble de mes
+résultats au cours de ma période de stage
+
+
+
+
+                Flyer indiquant que chez iconnected il est
+                   possible d'imprimer des documents
+
+
+                                                             13
+      Nous allons voir la différence entre la méthode précédente d'impression
+      et la comparer avec la nouvelle méthode que j'ai eu à mettre en plus
+
+
+
+
+       Avant
+
+
+
+
+Le client saisie l'adresse mail
+de la boutique                               La boutique ouverte la boîte mail
+                                                                                                  Puis la boutique lance
+Iconnectestore@gmail.com                        pour s'assurer que le client a
+                                                                                                l'impression est lancé si
+et nous transmets le                          envoyé à la bonne adresse mail
+document à imprimer                                                                                 tout est correct
+
+
+
+
+    Maintenant
+
+
+
+
+                     Le client scan le QR code qui lui                           Le client lance lui même
+                         connecte directement à                                         l'impression
+                           l'imprimante en WiFi
+
+
+                                                                                                                14
+Vous trouverez si dessous le schéma de la première page qui
+a conduit au résultat final
+
+
+
+
+                                                              15
+Vous trouverez ici l'un des échanges effectué par mail avec le
+gérant dans le cadre de création du site web
+
+
+
+
+                Communication interne ( instructions
+                     donné par le gérant)
+                                                                 16
+V- Compétences
+professionnelles et
+savoirs associés
+Dans cette partie je vais vous présenter par semaine
+l'ensemble des compétences professionnelles et savoirs
+associés.
+
+
+
+
+-Semaine 1: Découverte et Impression du Site Web
+
+Compétences professionnelles: Communication
+interpersonnelle, compréhension des attentes du client.
+Savoir associé: Familiarisation avec l'environnement de
+travail, esquisse de la structure du site, promotion
+d'activités annexes.
+
+-Semaine 2: Support Post-Stage et Développement du Site
+
+Compétences professionnelles: Assistance technique,
+collaboration avec les collègues, réceptivité aux retours.
+Savoir associé: Développement du site, gestion du support
+post-livraison.
+
+-Semaine 3: Extension du Site Web
+
+Compétences professionnelles: Créativité, négociation avec
+le client, gestion de nouvelles tâches.
+Savoir associé: Extension du site web, exploration de l'ajout
+d'une boutique en ligne, adaptation aux exigences de
+qualité.
+                                                                17
+-Semaine 3: Extension du Site Web
+
+Compétences professionnelles: Créativité, négociation avec
+le client, gestion de nouvelles tâches.
+Savoir associé: Extension du site web, exploration de l'ajout
+d'une boutique en ligne, adaptation aux exigences de
+qualité.
+
+Semaine 4: E-Réputation et Finalisation du Site
+
+Compétences professionnelles: Stratégies de gestion de l'e-
+réputation, intégration de retours clients.Savoir associé:
+Intégration d'icônes de réseaux sociaux, rédaction de
+documents post-stage, perfectionnement du site.
+
+Semaine 5: Base de Données et Présentation du Site
+
+Compétences professionnelles: Conception de bases de
+données, organisation de catégories de produits.Savoir
+associé: Création d'une base de données, présentation
+claire et simple du site
+
+.Semaine 6: Finition et Boutique Vitrine en Ligne
+
+Compétences professionnelles: Finalisation détaillée,
+analyse stratégique pour améliorer le trafic en
+boutique.Savoir associé: Correction des détails, ajout
+d'éléments visuels, intégration d'une boutique vitrine en
+ligne.
+
+
+
+
+                                                                18
+-Semaine 7: Conclusion du Stage et Dernières Améliorations
+
+Compétences professionnelles: Priorisation des dernières
+améliorations, utilisation de l'IA pour optimiser des
+images.Savoir associé: Travaux sur la base de données des
+smartphones, amélioration de la boutique en ligne,
+ajustements pratiques.
+
+
+
+
+                                                             19
+VI- Conclusion
+En résumé ces 7 semaines de stage on été très enrichissante
+pour moi j'ai pu cree un site en partant en collectant les
+idées de mon client ICONNECTED améliorer mon sens de la
+communication en entreprise grâce à nos échanges par mail
+et en échangeant avec les clients, en collaborant avec mes
+collègues techniciens j'ai travaillé mon esprit d'équipe car
+cela est primordiale en entreprise., J'ai également également
+cultiver un esprit créatif en apportant ma touché personnelle
+sur le site web et en faisant face aux obstacles grâce à
+l'initiative d'utiliser L'intelligence Artificielle pour surmonter
+le     problème        financier    d'achat     d'appareil   photo
+professionnelle , je suis très satisfait du progrès que ce stage
+m'a apporté dans l'amélioration de mes compétences sur la
+plate-forme wix avec lequel je dorénavant alaise en
+découvert des fonctionnalités telque l'ajout rapide d'une
+boutique en ligne, l'IA Studio wix et pleins d'autres
+fonctionnalités. Néanmoins des améliorations s'impose sur la
+gestion de mon temps de travail car cumul mon job
+étudiant et le stage pendant un moment j'ai eu du mal à
+suivre,
+
+
+
+
+                                                                     20
+Gestion financière
+
+  Coût de lancement
+  En résumé ces 7 semaines de stage on été très enrichissante pour
+  moi j'ai pu cree un site en partant en collectant les idées de mon
+  client ICONNECTED améliorer mon sens de la communication en
+  entreprise grâce à nos échanges par mail et en échangeant avec les
+  clients, en collaborant avec mes collègues techniciens j'ai travaillé
+  mon esprit d'équipe car cela est primordiale en entreprise., J'ai
+  également également cultiver un esprit créatif en apportant ma
+  touché personnelle sur le site web et en faisant face aux obstacles
+  grâce à l'initiative d'utiliser L'intelligence Artificielle pour surmonter
+  le problème financier d'achat d'appareil photo professionnelle , je
+  suis très satisfait du progrès que ce stage m'a apporté dans
+  l'amélioration de mes compétences sur la plate-forme wix avec
+  lequel je dorénavant alaise en découvert des fonctionnalités
+  telque l'ajout rapide d'une boutique en ligne, l'IA Studio wix et
+  pleins d'autres fonctionnalités. Néanmoins des améliorations
+  s'impose sur la gestion de mon temps de travail car cumul mon job
+  étudiant et le stage pendant un moment j'ai eu du mal à suivre,
+

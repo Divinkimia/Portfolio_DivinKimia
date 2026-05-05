@@ -1,0 +1,209 @@
+  </footer>
+
+  <script>
+    window.VEILLE_DATA = {
+      modules: [
+        {
+          id: 'oc-intro',
+          title: 'Module 1 · OpenClaw : vision',
+          lessons: [
+            {
+              id: 'oc-what',
+              title: 'Qu’est-ce qu’OpenClaw ?',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'OpenClaw est une passerelle (Gateway) auto-hébergée, open source (licence MIT), qui relie des applications de messagerie — WhatsApp, Telegram, Discord, iMessage, etc. — à des agents d’IA orientés code (dont l’agent « Pi »). Vous exécutez un processus sur votre machine ou serveur : vous gardez la main sur les données, sans dépendre d’un SaaS opaque.',
+              body: [
+                'La documentation officielle (docs.openclaw.ai) insiste sur le positionnement : développeurs et power users qui veulent un assistant joignable depuis le téléphone ou le bureau, avec des règles locales.',
+                'Ce n’est pas qu’un chat web : le Gateway centralise sessions, routage et connexions aux canaux ; une Control UI dans le navigateur permet de piloter chat, configuration et sessions.',
+                'Pour une fiche de veille : citer le dépôt github.com/openclaw/openclaw et la doc, et expliquer en quoi cela diffère d’un simple client ChatGPT.'
+              ],
+              bullets: [
+                'Self-hosted : vos règles, votre matériel.',
+                'Multi-canal : une passerelle pour plusieurs messageries.',
+                'Agent-native : outils, sessions, mémoire, routage multi-agent documentés.'
+              ]
+            },
+            {
+              id: 'oc-arch',
+              title: 'Gateway, agent Pi & interface',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'Le schéma documenté fait de la Gateway la source de vérité pour les sessions et le routage. L’agent Pi reçoit les messages ; le CLI et la Control UI permettent d’administrer. Des « nodes » mobiles (iOS / Android) peuvent étendre les usages (Canvas, caméra, actions appareil).',
+              body: [
+                'Veille technique : noter comment les sessions sont isolées (par expéditeur, workspace ou agent) — important pour la confidentialité en équipe.',
+                'Le modèle utilisé dépend du fournisseur configuré : la doc recommande un modèle récent et fort pour qualité et sécurité ; il faut une clé API du fournisseur choisi.',
+                'Comparer mentalement à d’autres ponts « messagerie ↔ LLM » : ici l’accent est mis sur l’écosystème agents outillés, pas sur un simple bot de FAQ.'
+              ],
+              bullets: [
+                'Gateway = point unique pour canaux + sessions.',
+                'Control UI locale (ex. http://127.0.0.1:18789/ par défaut).',
+                'Prévoir qui accède au dashboard en cas d’exposition réseau (Tailscale, SSH, etc.).'
+              ]
+            },
+            {
+              id: 'oc-why',
+              title: 'Intérêt pour la veille IA & le métier',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'OpenClaw illustre une tendance 2024–2026 : ramener l’IA dans l’infrastructure qu’on contrôle (on-prem ou serveur dédié), avec des canaux métier déjà utilisés par les équipes. Pour un rapport de veille BTS SIO / école d’ingé : c’est un cas d’usage concret « IA + messagerie + sécurité ».',
+              body: [
+                'Questions à traiter : traçabilité des messages, conformité RGPD si des données personnelles transitent, politique de rétention.',
+                'Côté compétences : lecture de doc technique npm, JSON de config, bonnes pratiques secrets — aligné avec le référentiel administrateur réseau ou développeur.',
+                'Synthèse possible : « cas d’usage OpenClaw » + grille risques / mesures (voir module sécurité).'
+              ],
+              bullets: [
+                'Lier la veille à un besoin métier réel (support, dev, ops).',
+                'Documenter hypothèses et limites (périmètre, modèle, coût API).',
+                'Préparer une démo filmée ou un schéma d’architecture pour l’oral.'
+              ]
+            }
+          ]
+        },
+        {
+          id: 'oc-cap',
+          title: 'Module 2 · Canaux & capacités',
+          lessons: [
+            {
+              id: 'oc-channels',
+              title: 'Messageries & plugins',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'La doc décrit l’activation de plusieurs canaux depuis une seule Gateway : WhatsApp, Telegram, Discord, iMessage, avec des plugins pour d’autres systèmes (ex. Mattermost). Chaque canal a ses contraintes (webhooks, tokens, pairing).',
+              body: [
+                'Pour démarrer vite, la documentation suggère souvent Telegram comme canal simple à connecter avant d’étendre.',
+                'Veille : suivre les guides « channel-specific » quand une API de messagerie change (breaking changes fréquents côté Meta / WhatsApp).',
+                'Pensez « surface d’attaque » : chaque canal branché augmente les risques si les listes blanches ne sont pas configurées.'
+              ],
+              bullets: [
+                'Tester un seul canal avant de tout ouvrir.',
+                'Lire la section Help / Troubleshooting lors des mises à jour.',
+                'Journal de veille : date + canal + version du connecteur.'
+              ]
+            },
+            {
+              id: 'oc-agents',
+              title: 'Outils, sessions & routage multi-agent',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'OpenClaw est décrit comme « agent-native » : usage d’outils (tool use), sessions, mémoire, et possibilité de routage multi-agent avec isolation par workspace ou agent. C’est le cœur de la valeur pour un développeur : l’agent ne se contente pas de répondre, il peut enchaîner des actions dans un cadre défini.',
+              body: [
+                'Pour la veille : rapprocher des travaux sur MCP (Model Context Protocol) et des assistants IDE — même enjeu de composition d’outils.',
+                'Noter les limites : un agent puissant avec trop de droits = risque ; la doc préconise des contrôles (allowlists, règles de mention en groupe, etc.).',
+                'Expérimentation : reproduire un scénario minimal (une question, une action outillée) et consigner latence et qualité.'
+              ],
+              bullets: [
+                'Isoler les sessions sensibles (workspace dédié).',
+                'Limiter les outils au strict nécessaire.',
+                'Comparer résultats selon le modèle sous-jacent.'
+              ]
+            },
+            {
+              id: 'oc-media',
+              title: 'Médias, mobile & expérience utilisateur',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'La documentation mentionne l’envoi et la réception d’images, audio et documents, ainsi que des nodes mobiles pour des flux avec caméra ou voix. Pour une veille UX / accessibilité : quels formats, quelles limites de taille, quelle ergonomie sur mobile ?',
+              body: [
+                'Ces fonctions augmentent l’usage réel (captures d’écran, vocal) mais aussi les risques (PII dans les médias).',
+                'Prévoir une politique interne : qui peut envoyer quoi, et comment les médias sont stockés ou supprimés.',
+                'Pour le rapport : un tableau « fonctionnalité → risque → mitigation » est parlant pour un jury.'
+              ],
+              bullets: [
+                'Ne pas exposer de médias sensibles sans chiffrement.',
+                'Définir durée de conservation des pièces jointes.',
+                'Tester les parcours mobile vs desktop.'
+              ]
+            }
+          ]
+        },
+        {
+          id: 'oc-deploy',
+          title: 'Module 3 · Installation & configuration',
+          lessons: [
+            {
+              id: 'oc-install',
+              title: 'Installation npm & prise en main',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'La documentation propose l’installation globale via npm (`npm install -g openclaw@latest`), puis une commande d’onboarding (`openclaw onboard --install-daemon`) et l’ouverture du dashboard (`openclaw dashboard`). Les versions de Node recommandées sont précisées (ex. Node 24, ou 22 LTS compatible).',
+              body: [
+                'Pour la veille : figer dans votre compte-rendu les versions Node, openclaw et OS utilisées lors du test — indispensable pour la reproductibilité.',
+                'Ne jamais publier de clé API : stocker les secrets hors dépôt (gestionnaire de secrets, variables d’environnement).',
+                'Si vous filmez une démo : flouter les identifiants et les numéros de téléphone visibles dans les messageries.'
+              ],
+              bullets: [
+                'Environnement propre (VM ou conteneur) pour les essais.',
+                'Journal des commandes exécutées (copier-coller dans l’annexe).',
+                'Vérifier les prérequis réseau (ports, pare-feu).'
+              ]
+            },
+            {
+              id: 'oc-config',
+              title: 'Fichier de configuration (~/.openclaw)',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'La configuration vit typiquement dans `~/.openclaw/openclaw.json`. La doc explique qu’à défaut de personnalisation, OpenClaw peut utiliser le binaire Pi intégré en mode RPC avec des sessions par expéditeur — et qu’on peut verrouiller l’accès (ex. `channels.whatsapp.allowFrom`, règles de mention en groupe).',
+              body: [
+                'Compétence veille : lire du JSON5 / JSON de config, comprendre les clés `channels`, `messages`, etc., et les commenter dans votre synthèse.',
+                'Chaque modification doit être testée sur un compte de staging avant production.',
+                'Documenter le « pourquoi » de chaque règle (qui peut écrire au bot, quels groupes, mentions obligatoires).'
+              ],
+              bullets: [
+                'Versionner un exemple anonymisé de config (sans secrets).',
+                'Aligner la config sur la politique de sécurité du SI.',
+                'Prévoir une procédure de rotation des tokens.'
+              ]
+            }
+          ]
+        },
+        {
+          id: 'oc-risk',
+          title: 'Module 4 · Sécurité & veille continue',
+          lessons: [
+            {
+              id: 'oc-security',
+              title: 'Sécurité : tokens, allowlists, exposition réseau',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'La documentation dédie une section à la sécurité : jetons d’API, listes d’autorisation, contrôle des accès. Un Gateway qui relie messageries et LLM est une cible : prompt injection via groupes, usurpation, fuite de données si le modèle est trop permissif.',
+              body: [
+                'Mesures typiques : allowlists de numéros / comptes, mentions obligatoires dans les groupes, limitation des canaux actifs, surveillance des journaux Gateway.',
+                'Si vous exposez le dashboard ou utilisez Tailscale / SSH, appliquez les guides « remote access » de la doc et la doctrine de votre organisation.',
+                'Croiser avec OWASP LLM / guides ANSSI sur l’IA : classification des données, minimisation, traçabilité.'
+              ],
+              bullets: [
+                'Principe du moindre privilège sur chaque canal.',
+                'Plan de réponse en cas de message ou fichier malveillant.',
+                'Revues après chaque mise à jour majeure d’OpenClaw.'
+              ]
+            },
+            {
+              id: 'oc-compare',
+              title: 'Comparer avec d’autres approches',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'OpenClaw se distingue par le couplage messageries ↔ agent auto-hébergé. D’autres outils poussent plutôt l’orchestration dans le cloud, l’IDE, ou des workflows no-code. La veille consiste à choisir des critères : souveraineté des données, coût API, complexité, conformité, compétences internes.',
+              body: [
+                'Tableau suggéré : critère × OpenClaw × alternative A × alternative B, avec sources.',
+                'Éviter l’effet mode : un POC sur un petit périmètre vaut mieux qu’un grand déploiement immédiat.',
+                'Pour un oral : une minute sur « pourquoi pas un bot SaaS » puis les avantages self-hosted.'
+              ],
+              bullets: [
+                'Critères : licence MIT, communauté GitHub, fréquence des releases.',
+                'Mesurer TCO (API + infra + temps admin).',
+                'Citer la bibliographie (doc officielle, articles techniques).'
+              ]
+            },
+            {
+              id: 'oc-follow',
+              title: 'Veille continue & bibliographie',
+              hero: '../../assets/img/offline-gallery-placeholder.svg',
+              lead: 'Pour suivre OpenClaw : releases GitHub, changelog, section Help, et évolutions réglementaires (IA Act UE, recommandations CNIL). Croiser avec des flux généraux (arXiv cs.AI, blogs d’ingénieurs) pour ne pas isoler l’outil de son contexte.',
+              body: [
+                'Routine : mensuelle — synthèse des mises à jour ; après chaque release majeure — retester votre scénario de référence.',
+                'Cette page regroupe les modules de veille : utilisez-la comme plan de présentation orale (une leçon = une slide ou une section).',
+                'Conservez captures d’écran datées et hashes de version pour prouver la reproductibilité de votre travail.'
+              ],
+              bullets: [
+                'Surveiller le dépôt openclaw/openclaw (releases, issues sécurité).',
+                'Indexer docs.openclaw.ai dans vos favoris de veille.',
+                'Archiver PDF ou export Markdown de votre synthèse finale.'
+              ]
+            }
+          ]
+        }
+      ]
+    };
+  </script>
+</body>

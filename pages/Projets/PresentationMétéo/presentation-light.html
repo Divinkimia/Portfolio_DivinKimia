@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+      <script src="../../../assets/js/light-theme-init.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Météo — Présentation du Projet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../../assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/vendor/highlight.js/atom-one-dark.min.css">
+
+    <link rel="stylesheet" href="../../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssMétéo/presentation.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssMachineLearning/presentation-ml5-portfolio-chrome.css">
+  <link rel="stylesheet" href="../../../assets/css/fonts-offline.css" />
+  <link rel="stylesheet" href="../../../assets/css/styles-light.css" />
+  <link rel="stylesheet" href="../../../assets/css/light/light-projets.css" />
+  <!-- fin polices hors ligne -->
+  <script src="../../../assets/js/script-light.js" defer></script>
+</head>
+
+<body class="portfolio-light lt-page-projets" id="top">
+    <div class="page-frame"></div>
+
+    <div class="kim-nav-stack" id="kimNavStack">
+        <div class="nav-island-shell">
+            <nav class="nav-island" aria-label="Navigation présentation App Météo">
+                <div class="nav-island-left">
+                    <a href="../../Accueil-light.html" class="nav-island-link nav-island-link--muted" title="Page d’accueil du portfolio">Accueil portfolio</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../index-light.html" class="nav-island-link nav-island-link--muted">Projets</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../index-light.html" class="nav-island-link nav-island-link--strong">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Retour aux projets
+                    </a>
+                </div>
+                <a href="#hero" class="nav-island-brand">
+                    <span class="nav-island-brand-kicker">Portfolio</span>
+                    <span class="nav-island-brand-mark" aria-hidden="true"><i class="fas fa-cloud-sun"></i></span>
+                    <span class="nav-island-brand-name">App Météo</span>
+                </a>
+                <div class="nav-island-right">
+                    <span class="nav-island-pill">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                        Node · Express · SQLite
+                    </span>
+                    <a href="http://localhost:3000" class="nav-island-link nav-island-link--muted nav-island-link--icon"
+                        target="_blank" rel="noopener noreferrer" title="Lancer l’application locale">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="badge-dot"></span>
+                        <span class="badge">Node.js</span>
+                        <span class="badge">Express</span>
+                        <span class="badge">API Météo</span>
+                        <span class="badge">SQLite</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Le monde<br>
+                        à portée de<br>
+                        <span class="title-gradient">nuage.</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Analysez la météo en temps réel, géolocalisez votre position et enregistrez l'humeur du ciel dans une architecture backend robuste.
+                    </p>
+                    <div class="hero-cta d-flex flex-column flex-sm-row gap-2">
+                        <a href="#architecture" class="btn-primary">Découvrir l'architecture</a>
+                        <a href="#architecture" class="btn-secondary">Voir le code source <i class="fas fa-code"></i></a>
+                    </div>
+                </div>
+                <div class="hero-mockup">
+                    <div class="phone-frame" id="heroPhoneMockup">
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <span class="phone-loc"><i class="fas fa-map-marker-alt"></i> <span id="weatherLocation">Chargement…</span></span>
+                                <span class="phone-weather-icon" id="weatherIcon"><i class="fas fa-cloud-sun"></i></span>
+                            </div>
+                            <div class="phone-main">
+                                <div class="phone-temp-row">
+                                    <div class="phone-temp-block">
+                                        <span class="phone-temp"><span id="weatherTemp">--</span>°</span>
+                                        <span class="phone-condition" id="weatherCondition">--</span>
+                                    </div>
+                                    <div class="phone-extras">
+                                        <span id="weatherHighLow">H: --° L: --°</span>
+                                        <span id="weatherHum">Hum: --%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone-forecast" id="weatherForecast">
+                                <div class="forecast-hour"><span>--:--</span><i class="fas fa-cloud"></i><span>--°</span></div>
+                                <div class="forecast-hour active"><span>--:--</span><i class="fas fa-cloud"></i><span>--°</span></div>
+                                <div class="forecast-hour"><span>--:--</span><i class="fas fa-cloud"></i><span>--°</span></div>
+                                <div class="forecast-hour"><span>--:--</span><i class="fas fa-cloud"></i><span>--°</span></div>
+                            </div>
+                            <div class="phone-mood">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <strong>Mood Saver</strong>
+                                    <span>Enregistrer votre humeur</span>
+                                </div>
+                                <div class="mood-toggle active"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <span>SCROLL</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Section Express.js - Le Cerveau -->
+        <section class="section section-architecture" id="architecture">
+            <div class="section-bg-glow"></div>
+            <div class="section-inner">
+                <div class="section-content">
+                    <div class="section-icon hex-icon">
+                        <span>JS</span>
+                    </div>
+                    <h2 class="section-title">Le Cerveau : Express.js</h2>
+                    <p class="section-desc">
+                        Le serveur web reçoit les coordonnées via une requête <code>GET /weather/:lat/:long</code>, s'assure de l'intégrité des données reçues et orchestre asynchronement la suite du pipeline.
+                    </p>
+                    <ul class="section-list">
+                        <li><i class="fas fa-check"></i> Validation des types ISO</li>
+                        <li><i class="fas fa-check"></i> Gestion fluide des erreurs via try/catch</li>
+                    </ul>
+                </div>
+                <div class="section-code">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <div class="code-filename">index.js</div>
+                        </div>
+                        <pre><code class="language-javascript">app.get('/weather/:lat/:long', async (req, res) => {
+    const { lat, long } = req.params;
+
+    if (isNaN(lat) || isNaN(long)) {
+        return res.status(400).json({
+            error: 'Coordonnées invalides'
+        });
+    }
+
+    try {
+        const apiKey = process.env.WEATHER_API_KEY;
+        const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}&aqi=yes`;
+        const response = await fetch(apiUrl);
+        const json = await response.json();
+        res.json(json);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Interface -->
+        <section class="section section-interface" id="interface">
+            <div class="section-bg-glow"></div>
+            <div class="section-interface-wrap">
+                <header class="interface-header">
+                    <div class="section-icon ui-icon">
+                        <i class="fas fa-mobile-screen"></i>
+                    </div>
+                    <h2 class="section-title">L'Interface</h2>
+                    <p class="section-desc section-desc-wide">
+                        Une interface épurée affiche la météo en temps réel : température ressentie, conditions textuelles, humidité, prévisions par tranches horaires et indice de qualité de l’air. Le <strong>Mood Saver</strong> enregistre une humeur (emoji ou état) liée à votre position — utile pour corréler ressenti et ciel.
+                    </p>
+                </header>
+
+                <div class="interface-showcase">
+                    <div class="interface-preview">
+                        <div class="phone-frame phone-mini">
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <span class="phone-loc"><i class="fas fa-map-marker-alt"></i> Paris, FR</span>
+                                    <span class="phone-weather-icon"><i class="fas fa-cloud-sun"></i></span>
+                                </div>
+                                <div class="phone-main">
+                                    <span class="phone-temp">14°</span>
+                                    <span class="phone-condition">Nuageux</span>
+                                    <div class="phone-metrics-row">
+                                        <span><i class="fas fa-tint"></i> 72%</span>
+                                        <span><i class="fas fa-wind"></i> 18 km/h</span>
+                                    </div>
+                                </div>
+                                <div class="aqi-strip" aria-hidden="true">
+                                    <span class="aqi-label">Air</span>
+                                    <span class="aqi-badge aqi-good">Bon</span>
+                                    <span class="aqi-detail">PM2.5 · DEFRA 2</span>
+                                </div>
+                                <div class="phone-mood phone-mood-compact">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Mood Saver</span>
+                                    <div class="mood-toggle active"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="interface-side">
+                        <div class="stat-strip">
+                            <div class="stat-pill"><span class="stat-num">3</span><span class="stat-label">sources d’entrée</span></div>
+                            <div class="stat-pill"><span class="stat-num">5</span><span class="stat-label">prédictions horaires</span></div>
+                            <div class="stat-pill"><span class="stat-num">1</span><span class="stat-label">requête API météo</span></div>
+                        </div>
+                        <ul class="section-list interface-list-tight">
+                            <li><i class="fas fa-check"></i> <strong>Géolocalisation</strong> — <code>navigator.geolocation</code> + coordonnées envoyées au backend</li>
+                            <li><i class="fas fa-check"></i> <strong>AQI &amp; polluants</strong> — indices DEFRA, PM2.5 quand l’API les expose</li>
+                            <li><i class="fas fa-check"></i> <strong>Prévisions</strong> — créneaux horaires pour anticiper la journée</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="interface-feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-card-icon"><i class="fas fa-location-crosshairs"></i></div>
+                        <h3 class="feature-card-title">Position</h3>
+                        <p class="feature-card-desc">Latitude et longitude validées côté serveur avant appel à l’API Weather, pour éviter les requêtes incohérentes.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card-icon"><i class="fas fa-clock"></i></div>
+                        <h3 class="feature-card-title">Temps réel</h3>
+                        <p class="feature-card-desc">Rafraîchissement des données courantes et construction d’une timeline horaire lisible sur mobile.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card-icon"><i class="fas fa-lungs"></i></div>
+                        <h3 class="feature-card-title">Qualité de l’air</h3>
+                        <p class="feature-card-desc">Lecture des indices santé et particules fines pour compléter le ressenti météo.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card-icon"><i class="fas fa-heart-pulse"></i></div>
+                        <h3 class="feature-card-title">Mood Saver</h3>
+                        <p class="feature-card-desc">Capture d’une humeur au moment T, associée au lieu — persistée via SQLite pour historique local.</p>
+                    </article>
+                </div>
+
+                <div class="interface-pipeline">
+                    <h3 class="pipeline-heading">Parcours dans l’app</h3>
+                    <div class="pipeline-steps" role="list">
+                        <div class="pipeline-step" role="listitem">
+                            <span class="pipeline-num">1</span>
+                            <span class="pipeline-text">Autoriser la géolocalisation</span>
+                        </div>
+                        <span class="pipeline-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                        <div class="pipeline-step" role="listitem">
+                            <span class="pipeline-num">2</span>
+                            <span class="pipeline-text">Backend appelle <code>GET /weather/:lat/:long</code></span>
+                        </div>
+                        <span class="pipeline-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                        <div class="pipeline-step" role="listitem">
+                            <span class="pipeline-num">3</span>
+                            <span class="pipeline-text">Affichage UI + option Mood</span>
+                        </div>
+                        <span class="pipeline-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                        <div class="pipeline-step" role="listitem">
+                            <span class="pipeline-num">4</span>
+                            <span class="pipeline-text"><code>POST /api/locations</code> si humeur envoyée</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-code-block">
+                    <div class="code-window code-window-wide">
+                        <div class="code-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <div class="code-filename">fetchWeather.js (extrait)</div>
+                        </div>
+                        <pre><code class="language-javascript">const res = await fetch(`/weather/${lat}/${lon}`);
+const data = await res.json();
+// data.current : température, condition, humidité, vent
+// data.forecast : prévisions pour la timeline</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section SQLite - La Mémoire -->
+        <section class="section section-memory" id="memory">
+            <div class="section-bg-glow"></div>
+            <div class="section-memory-wrap">
+                <div class="memory-intro">
+                    <div class="section-icon db-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h2 class="section-title">La Mémoire : SQLite</h2>
+                    <p class="section-desc section-desc-wide">
+                        Le fichier <code>weatherAppapi.db</code> vit à côté du serveur Node. Chaque enregistrement d’humeur crée une ligne traçable : qui (session implicite), où (lat/long), quoi (mood), quand (timestamp ISO). Idéal pour prototyper sans base cloud.
+                    </p>
+                </div>
+
+                <div class="memory-split">
+                    <div class="memory-column">
+                        <h3 class="memory-subtitle">Ce que stocke la base</h3>
+                        <div class="schema-table-wrap">
+                            <table class="schema-table">
+                                <thead>
+                                    <tr>
+                                        <th>Colonne</th>
+                                        <th>Rôle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>id</code></td><td>Clé primaire auto-incrémentée</td></tr>
+                                    <tr><td><code>latitude</code> / <code>longitude</code></td><td>Position arrondie associée au mood</td></tr>
+                                    <tr><td><code>mood</code></td><td>Libellé ou code d’humeur</td></tr>
+                                    <tr><td><code>created_at</code></td><td>Horodatage de l’enregistrement</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="section-list">
+                            <li><i class="fas fa-check"></i> Fichier unique — zéro configuration DBA</li>
+                            <li><i class="fas fa-check"></i> Transactions SQLite pour inserts sûrs</li>
+                            <li><i class="fas fa-check"></i> Réponses JSON légères pour le front</li>
+                        </ul>
+                    </div>
+                    <div class="memory-column">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <div class="code-filename">schema.sql</div>
+                            </div>
+                            <pre><code class="language-sql">CREATE TABLE IF NOT EXISTS locations (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  latitude REAL NOT NULL,
+  longitude REAL NOT NULL,
+  mood TEXT NOT NULL,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+                        </div>
+                        <div class="memory-json-preview">
+                            <span class="memory-json-label">Exemple de réponse <code>GET /api/locations</code></span>
+                            <pre class="memory-json-pre"><code class="language-json">[
+  {
+    "lat": 48.85,
+    "long": 2.35,
+    "mood": "serein",
+    "at": "2026-03-28T14:22:00.000Z"
+  }
+]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memory-cards">
+                    <article class="memory-mini-card">
+                        <i class="fas fa-shield-halved"></i>
+                        <h4>Local d’abord</h4>
+                        <p>Les données restent sur la machine de dev — pratique pour les démos et la vie privée.</p>
+                    </article>
+                    <article class="memory-mini-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Écriture rapide</h4>
+                        <p>Un insert par mood : latence minimale entre clic utilisateur et persistance.</p>
+                    </article>
+                    <article class="memory-mini-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>Évolutif</h4>
+                        <p>Schéma extensible (colonnes utilisateur, tags) sans changer de moteur SQL.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section CTA Final -->
+        <section class="section section-cta" id="cta-explore">
+            <div class="cta-panel">
+                <div class="cta-panel-glow" aria-hidden="true"></div>
+                <div class="cta-inner cta-inner-rich">
+                    <p class="cta-eyebrow">Prochaine étape</p>
+                    <h2 class="cta-title">Prêt à explorer la météo ?</h2>
+                    <p class="cta-desc">Installez les dépendances, configurez votre clé API météo dans <code>.env</code>, puis lancez le serveur Express. Ouvrez l’app sur le port affiché dans le terminal (souvent <code>3000</code>).</p>
+                    <ol class="cta-checklist">
+                        <li><span class="cta-check-ico"><i class="fas fa-terminal"></i></span><span><code>npm install</code> à la racine du projet</span></li>
+                        <li><span class="cta-check-ico"><i class="fas fa-key"></i></span><span><code>WEATHER_API_KEY</code> renseignée pour WeatherAPI</span></li>
+                        <li><span class="cta-check-ico"><i class="fas fa-play"></i></span><span><code>npm start</code> — puis ouvrez l’URL locale dans le navigateur</span></li>
+                    </ol>
+                    <div class="cta-actions">
+                        <a href="http://localhost:3000" class="btn-primary btn-large" target="_blank" rel="noopener">
+                            <i class="fas fa-rocket"></i> Lancer l'App
+                        </a>
+                        <a href="#architecture" class="btn-secondary btn-large">Revoir l’architecture</a>
+                    </div>
+                    <p class="cta-footnote">
+                        <i class="fas fa-circle-info"></i> Pensez à autoriser la géolocalisation dans le navigateur pour les données en direct sur la présentation.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+      <footer class="lt-footer">
+    <div class="lt-container">
+      <div class="lt-footer-top">
+        <div class="lt-footer-brand">
+          <div class="lt-footer-brand-row">
+            <img class="lt-footer-logo" src="../../../assets/img/ProfileAccueil.jpeg" alt="" width="52" height="52" decoding="async" />
+            <div>
+              <h3>Divin Kimia</h3>
+              <p class="tag">D&eacute;veloppeur web &amp; IA</p>
+            </div>
+          </div>
+          <p>Conception d&apos;exp&eacute;riences num&eacute;riques fiables &mdash; du prototype &agrave; l&apos;exploitation.</p>
+          <div class="lt-footer-social">
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://github.com/Divinkimia" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-5.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="lt-footer-grid">
+          <div class="lt-footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="../../Accueil-light.html">Accueil (clair)</a></li>
+              <li><a href="../../Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html">Parcours</a></li>
+              <li><a href="../index-light.html">Projets</a></li>
+              <li><a href="../../Parcours_HTML/CertificationPage-light.html">Certification</a></li>
+              <li><a href="../../Veilles/Veilles-light.html">Veilles</a></li>
+              <li><a href="../../MeDecouvrir-light.html">Me d&eacute;couvrir</a></li>
+              <li><a href="../../Blog-light.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:divinkimia@protonmail.com">Email</a></li>
+              <li><a href="../../CV_Divin_Kimia.pdf" download>CV</a></li>
+              <li><a href="../../Contact-light.html">Formulaire (clair)</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>L&eacute;gal</h4>
+            <ul>
+              <li><a href="../../MentionsLegales-light.html">Mentions l&eacute;gales</a></li>
+              <li><a href="../../MentionsLegales.html#confidentialite">Confidentialit&eacute;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lt-footer-bottom">
+        <p>&copy; <span id="year"></span> <strong>Divin Kimia</strong> &mdash; Tous droits r&eacute;serv&eacute;s.</p>
+        <a href="#top" class="lt-back-top" aria-label="Retour en haut">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+    <script src="../../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../../../assets/vendor/gsap/gsap.min.js" defer></script>
+    <script src="../../../assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="../../../assets/vendor/highlight-js/highlight.min.js" defer></script>
+    <script src="../../../assets/js/Projets/jsMétéo/presentation.js" defer></script>
+    <script src="../../../assets/js/Projets/project-scroll-progress.js" defer></script>
+</body>
+
+</html>

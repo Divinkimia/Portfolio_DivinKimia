@@ -1,0 +1,27 @@
+/**
+ * Couche de compatibilitÈ pour les pages ´ hÈritÈes ª du thËme sombre
+ * affichÈes avec body.portfolio-light + leurs CSS de page.
+ */
+.portfolio-light {
+  background-color: var(--lt-bg) !important;
+  color: var(--lt-text);
+}
+
+/* Effets sombres / WebGL souvent inutiles en clair */
+.portfolio-light #galaxy-container,
+.portfolio-light #blog-webgl-host,
+.portfolio-light .cert-webgl-host,
+.portfolio-light [id$="-webgl-host"] {
+  display: none !important;
+}
+
+/* Laisser de la place sous la navbar flottante (light-navbar) */
+.portfolio-light > main,
+.portfolio-light main {
+  padding-top: clamp(4.5rem, 10vw, 6rem);
+}
+
+/* Liens par dùfaut lisibles si une CSS de page force une couleur sombre */
+.portfolio-light main a:not(.nav-link):not(.dropdown-item):not(.btn):not(.lt-btn) {
+  color: var(--lt-cyan);
+}

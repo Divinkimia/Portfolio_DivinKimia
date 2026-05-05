@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divin Kimia - Chargement du portfolio</title>
+    <style>
+      :root {
+        --bg: #070f1d;
+        --accent: #00b4ff;
+        --accent-2: #7cc7ff;
+        --text: #e9f4ff;
+        --muted: #9cb6d1;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(0, 180, 255, 0.15), transparent 45%),
+          radial-gradient(circle at 80% 70%, rgba(124, 199, 255, 0.12), transparent 45%),
+          var(--bg);
+      }
+      .loader {
+        width: min(88vw, 420px);
+        text-align: center;
+      }
+      .loader__logo {
+        width: 84px;
+        height: 84px;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+        border: 2px solid var(--accent);
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        box-shadow: 0 0 28px rgba(0, 180, 255, 0.35);
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      .loader__logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .loader__text {
+        margin: 0 0 0.8rem;
+        color: var(--muted);
+      }
+      .loader__bar {
+        height: 7px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        overflow: hidden;
+      }
+      .loader__bar > span {
+        display: block;
+        width: 42%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        box-shadow: 0 0 20px rgba(0, 180, 255, 0.45);
+        animation: slide 1.15s ease-in-out infinite;
+      }
+      .loader__fallback {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+      .loader__fallback a { color: var(--accent-2); }
+      @keyframes slide {
+        0% { transform: translateX(-130%); }
+        100% { transform: translateX(320%); }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: .9; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+    </style>
+    <script>
+      (function () {
+        try { localStorage.setItem('portfolio-theme', 'dark'); } catch (e) {}
+        var target = 'pages/Accueil.html';
+        var minDelay = 1100;
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            try { location.replace(target); } catch (e) { location.href = target; }
+          }, minDelay);
+        });
+      })();
+    </script>
+  <link rel="stylesheet" href="assets/css/fonts-offline.css" />
+  <!-- fin polices hors ligne -->
+</head>
+<body>
+    <main class="loader" aria-live="polite" aria-label="Chargement du portfolio">
+      <div class="loader__logo">
+        <img src="assets/img/ProfileAccueil.jpeg" alt="Divin Kimia" width="84" height="84" decoding="async" fetchpriority="high" />
+      </div>
+      <p class="loader__text">Chargement du portfolio...</p>
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__fallback">Si la redirection ne fonctionne pas, <a href="pages/Accueil.html">cliquez ici</a>.</p>
+    </main>
+</body>
+</html>

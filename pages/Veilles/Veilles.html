@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+    <script src="../../assets/js/theme-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divin Kimia | Veille technologique</title>
+
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../assets/css/Veilles/Veilles.css" />
+    <link rel="stylesheet" href="../../assets/css/site-navbar-global.css" />
+  <link rel="stylesheet" href="../../assets/css/site-theme-global.css" />
+  <link rel="stylesheet" href="../../assets/css/site-footer-global.css" />
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="../../assets/js/site-navbar.js" defer></script>
+  <script src="../../assets/js/site-footer.js" defer></script>
+  <script src="../../assets/vendor/feather-icons/feather.min.js" defer></script>
+  <script src="../../assets/js/GalaxyEffect.js" defer></script>
+  <script src="../../assets/js/Veilles/Veilles.js" defer></script>
+  <link rel="stylesheet" href="../../assets/css/fonts-offline.css" />
+  <!-- fin polices hors ligne -->
+</head>
+<body class="veille-page">
+  <div id="galaxy-container" aria-hidden="true"></div>
+
+  <nav class="navbar navbar-expand-lg parcours-navbar">
+    <div class="nav-left">
+      <img src="../../assets/img/ProfileAccueil.jpeg" alt="avatar" class="logo">
+      <span class="brand">Divin Kimia</span>
+    </div>
+    <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarParcours"
+      aria-label="Ouvrir le menu" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarParcours">
+      <ul class="navbar-nav nav-links ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="../Accueil.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item dropdown dynamic-dropdown">
+          <a href="../Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels.html" class="nav-link dropdown-toggle" data-default-text="Parcours">Parcours</a>
+          <ul class="dropdown-menu dynamic-menu">
+            <li><a href="../Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels.html" class="dropdown-item swap-menu">Exp&eacute;riences professionnelles</a></li>
+            <li><a href="../Parcours_HTML/Formations/FormationsPage.html" class="dropdown-item swap-menu">Formations</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../Projets/index.html" class="nav-link">Projets</a></li>
+        <li class="nav-item"><a href="../Parcours_HTML/CertificationPage.html" class="nav-link">Certification</a></li>
+        <li class="nav-item"><a href="Veilles.html" class="nav-link active">Veilles</a></li>
+        <li class="nav-item"><a href="../MeDecouvrir.html" class="nav-link">Me découvrir</a></li>
+        <li class="nav-item"><a href="../Blog.html" class="nav-link">Blog</a></li>
+      </ul>
+      <a href="#contact-veille" class="nav-btn d-none d-lg-inline-flex ms-lg-3">Contact</a>
+    </div>
+  </nav>
+
+  <main class="veille-landing">
+    <!-- Hero -->
+    <header class="veille-hero-net">
+      <div class="container">
+        <p class="veille-kicker">Veille technologique</p>
+        <h1 class="veille-hero-title">Anticiper les <span class="veille-underline">tendances</span> du numérique</h1>
+        <p class="veille-hero-lead col-lg-9 mx-auto">
+          Une approche structurée, inspirée des parcours d’apprentissage en ligne — pour suivre l’IA, le web, la cybersécurité et le cloud avec la même rigueur que sur un catalogue de formations.
+        </p>
+        <div class="veille-hero-cta">
+          <a href="#domaines" class="btn veille-btn-primary">Explorer les domaines</a>
+          <a href="#notes" class="btn veille-btn-ghost">Voir les veilles</a>
+          <a href="VeillesOpenClaw.html" class="btn veille-btn-ghost">Parcours e-learning</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats (bande type NetAcad) -->
+    <section class="veille-stats" aria-labelledby="veille-stats-title">
+      <div class="container">
+        <div class="veille-stats-head text-center">
+          <h2 id="veille-stats-title">Une veille utile, mesurable</h2>
+          <p class="veille-stats-sub">Comme sur les portails de formation professionnelle, je structure le suivi et le partage des apprentissages.</p>
+        </div>
+        <div class="row g-4 veille-stats-row justify-content-center">
+          <div class="col-6 col-md-4 col-lg-3 text-center">
+            <div class="veille-stat-num" data-target="9">0</div>
+            <p class="veille-stat-label">Thématiques suivies</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 text-center">
+            <div class="veille-stat-num" data-target="24">0</div>
+            <p class="veille-stat-label">Notes &amp; synthèses</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 text-center">
+            <div class="veille-stat-num veille-stat-num--pct" data-target="96">0</div>
+            <p class="veille-stat-label">Sources actives (objectif)</p>
+          </div>
+        </div>
+        <div class="text-center mt-4 pt-2">
+          <a href="#notes" class="btn veille-btn-pill">Consulter les dernières notes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Domaines — grille type NetAcad -->
+    <section id="domaines" class="veille-block veille-block--domains">
+      <div class="container">
+        <h2 class="veille-h2 text-center mb-2">Domaines</h2>
+        <p class="veille-intro text-center mx-auto mb-5">Les piliers de ma veille — du même esprit que les parcours thématiques des plateformes comme <a href="https://www.netacad.com/fr/" target="_blank" rel="noopener noreferrer">Cisco Networking Academy</a>, avec votre charte graphique.</p>
+        <div class="row g-3 g-md-4">
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="ia" aria-label="Filtrer les notes : Intelligence artificielle"><span class="veille-domain-ico"><i data-feather="cpu"></i></span><span>Intelligence artificielle</span></div></div>
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="web" aria-label="Filtrer les notes : Développement web"><span class="veille-domain-ico"><i data-feather="globe"></i></span><span>Développement web</span></div></div>
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="sec" aria-label="Filtrer les notes : Cybersécurité"><span class="veille-domain-ico"><i data-feather="shield"></i></span><span>Cybersécurité</span></div></div>
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="cloud" aria-label="Filtrer les notes : Cloud et DevOps"><span class="veille-domain-ico"><i data-feather="cloud"></i></span><span>Cloud &amp; DevOps</span></div></div>
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="data" aria-label="Filtrer les notes : Data et analytique"><span class="veille-domain-ico"><i data-feather="database"></i></span><span>Data &amp; analytique</span></div></div>
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="mobile" aria-label="Filtrer les notes : Mobile et UX"><span class="veille-domain-ico"><i data-feather="smartphone"></i></span><span>Mobile &amp; UX</span></div></div>
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="archi" aria-label="Filtrer les notes : Architecture logicielle"><span class="veille-domain-ico"><i data-feather="layers"></i></span><span>Architecture logicielle</span></div></div>
+          <div class="col-6 col-md-3"><div class="veille-domain-card" tabindex="0" role="button" data-domain="innov" aria-label="Filtrer les notes : Innovation et produit"><span class="veille-domain-ico"><i data-feather="zap"></i></span><span>Innovation &amp; produit</span></div></div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-12 col-md-8 col-lg-6">
+            <div class="veille-domain-card veille-domain-card--wide mx-auto" tabindex="0" role="button" data-domain="veille" aria-label="Afficher toutes les notes de veille">
+              <span class="veille-domain-ico"><i data-feather="book-open"></i></span>
+              <span>Méthodologie &amp; veille collaborative</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="../Blog.html" class="btn veille-btn-outline-wide">Découvrir le catalogue complet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cartes « cours » / notes de veille -->
+    <section id="notes" class="veille-block veille-block--courses">
+      <div class="container">
+        <h2 class="veille-h2 mb-2">Les <span class="veille-underline">veilles</span> récentes</h2>
+        <p class="veille-intro mb-4 col-lg-8">Format carte type catalogue : badge, visuel, extrait et métadonnées — pour parcourir vite, comme les aperçus de cours en ligne. <strong>Cliquez une carte</strong> pour ouvrir la veille (ex. <strong>OpenClaw</strong>, <strong>HeyGen</strong>). <strong>Cliquez un domaine ci-dessus</strong> pour n’afficher ici que les notes correspondantes.</p>
+
+        <p id="veilleNotesEmpty" class="veille-notes-empty" role="status" aria-live="polite" hidden>Aucune note ne correspond à ce domaine (ou au mot-clé) pour le moment.</p>
+
+        <div class="veille-carousel-shell">
+          <button type="button" class="veille-carousel-btn veille-carousel-btn--prev" id="veilleCarPrev" aria-label="Voir les cartes précédentes">
+            <i data-feather="chevron-left"></i>
+          </button>
+          <div class="veille-carousel-viewport" id="veilleCarousel" tabindex="0" role="region" aria-label="Carrousel des notes de veille">
+            <div class="veille-carousel-track">
+            <article class="veille-course-card" data-veille-href="VeillesOpenClaw.html" data-topic="ia">
+              <div class="veille-course-thumb">
+                <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                <span class="veille-badge">Veille récente</span>
+                <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager">
+                  <i data-feather="share-2" width="18" height="18"></i>
+                </button>
+              </div>
+              <div class="veille-course-body">
+                <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                <div class="veille-course-format">
+                  <i data-feather="book-open" width="16" height="16" aria-hidden="true"></i>
+                  <span>Veille · IA &amp; agents</span>
+                </div>
+                <h3 class="veille-course-title">OpenClaw — automatisation &amp; veille IA</h3>
+                <p class="veille-course-excerpt">Parcours e-learning : contexte, enjeux et ressources pour suivre cette veille structurée.</p>
+                <div class="veille-course-foot">
+                  <span><i data-feather="clock" width="14"></i> Parcours</span>
+                  <span><i data-feather="bookmark" width="14"></i> Veille</span>
+                </div>
+              </div>
+            </article>
+            <article class="veille-course-card" data-veille-href="VeillesHeyGen.html" data-topic="ia">
+              <div class="veille-course-thumb">
+                <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                <span class="veille-badge veille-badge--soft">IA vidéo</span>
+                <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager">
+                  <i data-feather="share-2" width="18" height="18"></i>
+                </button>
+              </div>
+              <div class="veille-course-body">
+                <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                <div class="veille-course-format">
+                  <i data-feather="book-open" width="16" height="16" aria-hidden="true"></i>
+                  <span>Veille · HeyGen</span>
+                </div>
+                <h3 class="veille-course-title">HeyGen — avatars, API Video Agent &amp; enjeux deepfake</h3>
+                <p class="veille-course-excerpt">Veille complète : fonctionnement, tarifs 2026, intégration API, sécurité et cadre éthique.</p>
+                <div class="veille-course-foot">
+                  <span><i data-feather="clock" width="14"></i> Dossier</span>
+                  <span><i data-feather="bookmark" width="14"></i> Veille</span>
+                </div>
+              </div>
+            </article>
+            <article class="veille-course-card" data-veille-href="VeillesClaudeCode.html" data-topic="ia">
+              <div class="veille-course-thumb">
+                <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                <span class="veille-badge">Synthèse</span>
+                <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager">
+                  <i data-feather="share-2" width="18" height="18"></i>
+                </button>
+              </div>
+              <div class="veille-course-body">
+                <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                <div class="veille-course-format">
+                  <i data-feather="book-open" width="16" height="16" aria-hidden="true"></i>
+                  <span>Veille · IA de développement</span>
+                </div>
+                <h3 class="veille-course-title">Claude Code &amp; cowork : sécurité, emploi, éducation</h3>
+                <p class="veille-course-excerpt">Analyse détaillée des avantages, risques sécurité, impact marché du travail et apprentissages.</p>
+                <div class="veille-course-foot">
+                  <span><i data-feather="clock" width="14"></i> Dossier</span>
+                  <span><i data-feather="bookmark" width="14"></i> Veille</span>
+                </div>
+              </div>
+            </article>
+            <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="web">
+              <div class="veille-course-thumb">
+                <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                <span class="veille-badge veille-badge--soft">Focus</span>
+                <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager">
+                  <i data-feather="share-2" width="18" height="18"></i>
+                </button>
+              </div>
+              <div class="veille-course-body">
+                <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                <div class="veille-course-format">
+                  <i data-feather="book-open" width="16" height="16" aria-hidden="true"></i>
+                  <span>Veille · Front-end</span>
+                </div>
+                <h3 class="veille-course-title">SSR, islands et performance</h3>
+                <p class="veille-course-excerpt">Tendances 2025 pour des interfaces rapides et maintenables.</p>
+                <div class="veille-course-foot">
+                  <span><i data-feather="clock" width="14"></i> 10 min</span>
+                  <span><i data-feather="bookmark" width="14"></i> Veille</span>
+                </div>
+              </div>
+            </article>
+            <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="sec">
+              <div class="veille-course-thumb">
+                <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                <span class="veille-badge">Sécurité</span>
+                <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager">
+                  <i data-feather="share-2" width="18" height="18"></i>
+                </button>
+              </div>
+              <div class="veille-course-body">
+                <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                <div class="veille-course-format">
+                  <i data-feather="book-open" width="16" height="16" aria-hidden="true"></i>
+                  <span>Veille · Cybersécurité</span>
+                </div>
+                <h3 class="veille-course-title">Cloud : erreurs IAM fréquentes</h3>
+                <p class="veille-course-excerpt">Checklist inspirée des retours CVE et audits récents.</p>
+                <div class="veille-course-foot">
+                  <span><i data-feather="clock" width="14"></i> 15 min</span>
+                  <span><i data-feather="bookmark" width="14"></i> Veille</span>
+                </div>
+              </div>
+            </article>
+            <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="cloud">
+              <div class="veille-course-thumb">
+                <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                <span class="veille-badge veille-badge--soft">DevOps</span>
+                <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager">
+                  <i data-feather="share-2" width="18" height="18"></i>
+                </button>
+              </div>
+              <div class="veille-course-body">
+                <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                <div class="veille-course-format">
+                  <i data-feather="book-open" width="16" height="16" aria-hidden="true"></i>
+                  <span>Veille · Conteneurs</span>
+                </div>
+                <h3 class="veille-course-title">GitOps &amp; supply chain</h3>
+                <p class="veille-course-excerpt">Sécuriser les clusters et les pipelines de build.</p>
+                <div class="veille-course-foot">
+                  <span><i data-feather="clock" width="14"></i> 11 min</span>
+                  <span><i data-feather="bookmark" width="14"></i> Veille</span>
+                </div>
+              </div>
+            </article>
+            </div>
+          </div>
+          <button type="button" class="veille-carousel-btn veille-carousel-btn--next" id="veilleCarNext" aria-label="Voir les cartes suivantes">
+            <i data-feather="chevron-right"></i>
+          </button>
+        </div>
+        <div class="text-center mt-5">
+          <button type="button" id="veilleShowAllBtn" class="btn veille-btn-primary" data-veille-toggle-extra aria-expanded="false" aria-controls="veilleExtraWrap">
+            Afficher toutes les veilles
+          </button>
+        </div>
+
+        <!-- Grille étendue (même page, masquée par défaut) -->
+        <div id="veilleExtraWrap" class="veille-extra-wrap" hidden>
+          <h3 class="veille-extra-title">Autres sujets de veille</h3>
+          <p class="veille-extra-intro text-center mx-auto mb-4">Notes complémentaires — mêmes cartes, autres thématiques. Le filtre par domaine s’applique aussi à cette grille.</p>
+          <div class="row g-4 veille-extra-grid">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="data">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">Data</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Data &amp; analytique</span></div>
+                  <h3 class="veille-course-title">Entrepôts et modèles dimensionnels</h3>
+                  <p class="veille-course-excerpt">Bonnes pratiques autour du lakehouse et des pipelines batch vs streaming.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 14 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="mobile">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge veille-badge--soft">Mobile</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Mobile &amp; UX</span></div>
+                  <h3 class="veille-course-title">PWA : hors-ligne et stratégies de cache</h3>
+                  <p class="veille-course-excerpt">Service Workers, Workbox et expérience utilisateur sur réseaux instables.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 9 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="archi">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">Archi</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Architecture logicielle</span></div>
+                  <h3 class="veille-course-title">Hexagonale vs ports &amp; adapters</h3>
+                  <p class="veille-course-excerpt">Quand isoler le domaine métier pour faciliter les tests et l’évolution.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 13 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="innov">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge veille-badge--soft">Innovation</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Innovation &amp; produit</span></div>
+                  <h3 class="veille-course-title">Discovery continue et roadmap agile</h3>
+                  <p class="veille-course-excerpt">Aligner la veille techno avec les objectifs produit trimestriels.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 8 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="ia">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">IA</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · IA générative</span></div>
+                  <h3 class="veille-course-title">RAG : chunking et métadonnées</h3>
+                  <p class="veille-course-excerpt">Améliorer la pertinence des réponses avec une base documentaire propre.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 16 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="web">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge veille-badge--soft">Web</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Front-end</span></div>
+                  <h3 class="veille-course-title">Edge et CDN : où exécuter le code ?</h3>
+                  <p class="veille-course-excerpt">Latence, coûts et cas d’usage pour les fonctions à la périphérie.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 11 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="sec">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">Sécurité</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Cybersécurité</span></div>
+                  <h3 class="veille-course-title">SBOM et dépendances transitives</h3>
+                  <p class="veille-course-excerpt">Suivre les vulnérabilités dans la chaîne logicielle moderne.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 12 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="cloud">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge veille-badge--soft">Cloud</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Conteneurs</span></div>
+                  <h3 class="veille-course-title">FinOps : suivre le coût par équipe</h3>
+                  <p class="veille-course-excerpt">Tags, budgets et alertes sur les environnements multi-comptes.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 10 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="data">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">Data</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Data &amp; analytique</span></div>
+                  <h3 class="veille-course-title">Qualité des données : tests de fraîcheur</h3>
+                  <p class="veille-course-excerpt">Contrats de données et monitoring dans les pipelines ELT.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 15 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="mobile">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge veille-badge--soft">Mobile</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Mobile &amp; UX</span></div>
+                  <h3 class="veille-course-title">Design systems sur iOS et Android</h3>
+                  <p class="veille-course-excerpt">Tokens, composants et cohérence multi-plateformes.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 11 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="archi">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">Archi</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Architecture logicielle</span></div>
+                  <h3 class="veille-course-title">CQRS et lectures optimisées</h3>
+                  <p class="veille-course-excerpt">Séparer commandes et requêtes pour scaler la lecture.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 14 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="innov">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge veille-badge--soft">Innovation</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Innovation &amp; produit</span></div>
+                  <h3 class="veille-course-title">Veille concurrentielle éthique</h3>
+                  <p class="veille-course-excerpt">Cadre légal et bonnes pratiques pour analyser le marché.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 7 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="ia">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">IA</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · IA générative</span></div>
+                  <h3 class="veille-course-title">Évaluation des modèles : métriques métier</h3>
+                  <p class="veille-course-excerpt">Au-delà du accuracy : aligner les KPI avec les utilisateurs.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 18 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="veille-course-card" data-veille-href="../Blog.html" data-topic="sec">
+                <div class="veille-course-thumb">
+                  <img src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="640" height="360" loading="lazy" />
+                  <span class="veille-badge">Sécurité</span>
+                  <button type="button" class="veille-share-btn" data-veille-share aria-label="Partager cette note" title="Partager"><i data-feather="share-2" width="18" height="18"></i></button>
+                </div>
+                <div class="veille-course-body">
+                  <p class="veille-course-provider">Divin Kimia · <strong>Portfolio</strong></p>
+                  <div class="veille-course-format"><i data-feather="book-open" width="16" height="16" aria-hidden="true"></i><span>Veille · Cybersécurité</span></div>
+                  <h3 class="veille-course-title">Post-quantique : préparer les migrations crypto</h3>
+                  <p class="veille-course-excerpt">Veille sur les algorithmes et impacts sur les certificats TLS.</p>
+                  <div class="veille-course-foot"><span><i data-feather="clock" width="14"></i> 17 min</span><span><i data-feather="bookmark" width="14"></i> Veille</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="text-center mt-5 pt-2">
+            <button type="button" class="btn veille-btn-primary" data-veille-toggle-extra data-veille-toggle-from="bottom" aria-expanded="false" aria-controls="veilleExtraWrap">
+              Afficher toutes les veilles
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloc image + texte (coins arrondis type NetAcad) -->
+    <section class="veille-split veille-split--img-left">
+      <div class="container">
+        <div class="row align-items-center g-4 g-xl-5">
+          <div class="col-lg-6">
+            <div class="veille-img-clip veille-img-clip--br">
+              <img src="../../assets/img/offline-gallery-placeholder.svg" alt="Équipe en atelier" width="1200" height="800" loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="veille-h2">Comment je mets en œuvre ma <span class="veille-underline">veille</span></h2>
+            <p class="veille-prose">Je commence par <strong>définir les thèmes</strong> qui comptent pour mon parcours (IA, web, cybersécurité, cloud, etc.), puis je <strong>choisis des sources fiables</strong> : flux RSS, newsletters spécialisées, documentations officielles et retours de la communauté (articles, conférences, dépôts).</p>
+            <div id="veilleMethodeMore" class="veille-methode-more" hidden>
+              <p class="veille-prose">Ensuite, je <strong>consacre un temps régulier</strong> à la lecture et à la sélection : je note les idées importantes, les liens utiles et ce qui mérite d’être creusé. Je <strong>synthétise</strong> sous forme de fiches ou de courtes notes — ce que tu retrouves ici sous forme de cartes — pour garder l’essentiel et pouvoir m’y référer vite.</p>
+              <p class="veille-prose">Enfin, j’<strong>organise et je filtre</strong> par domaine (comme sur cette page) pour ne garder que ce qui correspond à un sujet précis, et je complète avec des <strong>échanges</strong> (pair à pair, veille collaborative) quand c’est pertinent.</p>
+            </div>
+            <button type="button" id="veilleMethodeToggle" class="btn veille-btn-ghost mt-2" aria-expanded="false" aria-controls="veilleMethodeMore">
+              Voir plus
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignage / citation -->
+    <section class="veille-quote-block" aria-labelledby="veille-quote-title">
+      <div class="container text-center">
+        <div class="veille-quote-ico" id="veille-quote-title"><i data-feather="message-circle"></i></div>
+        <blockquote class="veille-quote-text" id="veilleQuoteText">La veille n’est pas une accumulation de liens : c’est un cadre pour décider et expliquer.</blockquote>
+        <p class="veille-quote-auth" id="veilleQuoteAuth"><strong>Divin Kimia</strong> — développeur web &amp; passionné d’IA</p>
+        <div class="veille-quote-nav mt-4">
+          <button type="button" class="veille-qbtn" id="veilleQuotePrev" aria-label="Citation précédente"><i data-feather="chevron-left"></i></button>
+          <button type="button" class="veille-qbtn" id="veilleQuoteNext" aria-label="Citation suivante"><i data-feather="chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Texte + image inversé -->
+    <section class="veille-split veille-split--img-right">
+      <div class="container">
+        <div class="row align-items-center g-4 g-xl-5 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <div class="veille-img-clip veille-img-clip--bl">
+              <img src="../../assets/img/offline-gallery-placeholder.svg" alt="Technologie" width="1200" height="800" loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="veille-h2">Partager &amp; documenter</h2>
+            <p class="veille-prose">Chaque thème peut devenir une fiche, un article de blog ou une recommandation pour une équipe — comme les fiches de cours d’un parcours en ligne.</p>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <a href="../Blog.html" class="btn veille-btn-primary">Voir le blog</a>
+              <a href="#contact-veille" class="btn veille-btn-ghost">Proposer un sujet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recherche split (type « Trouver une académie ») -->
+    <section id="filtrer" class="veille-search-block">
+      <div class="container">
+        <div class="row align-items-stretch g-4 g-lg-5">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h2 class="veille-h2">Filtrer ma <span class="veille-underline">veille</span></h2>
+            <p class="veille-prose mb-4">Combinez un domaine et un mot-clé pour mettre en avant les cartes correspondantes (aperçu interactif).</p>
+            <form class="veille-search-bar" id="veilleFilterForm" action="#">
+              <label class="veille-search-field veille-sr-only" for="veilleFilterTheme">Thème</label>
+              <div class="veille-search-seg">
+                <i data-feather="tag" width="18"></i>
+                <select id="veilleFilterTheme" class="form-select veille-select" aria-label="Filtrer par thème">
+                  <option value="">Tous les domaines</option>
+                  <option value="ia">IA</option>
+                  <option value="web">Web</option>
+                  <option value="sec">Sécurité</option>
+                  <option value="cloud">Cloud</option>
+                  <option value="data">Data</option>
+                  <option value="mobile">Mobile</option>
+                  <option value="archi">Architecture</option>
+                  <option value="innov">Innovation</option>
+                  <option value="veille">Toutes les notes (vue globale)</option>
+                </select>
+              </div>
+              <div class="veille-search-seg">
+                <i data-feather="search" width="18"></i>
+                <input type="search" id="veilleFilterQ" class="form-control veille-input" placeholder="Mot-clé (optionnel)" autocomplete="off" />
+              </div>
+              <button type="submit" class="veille-search-submit">Rechercher</button>
+            </form>
+            <p class="veille-hint mt-3 mb-0"><small>Les notes non correspondantes sont masquées dans la section ci-dessus. Un second clic sur le même domaine réinitialise le filtre.</small></p>
+          </div>
+          <div class="col-lg-6">
+            <div class="veille-search-visual">
+              <img src="../../assets/img/offline-gallery-placeholder.svg" alt="Formation et collaboration" width="1200" height="800" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact-veille" class="veille-cta-final">
+      <div class="container">
+        <div class="veille-cta-inner d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
+          <div>
+            <h2 class="veille-h2 mb-2">Un sujet de veille à creuser ?</h2>
+            <p class="veille-prose mb-0">Échangeons sur une thématique, une veille partagée ou une veille en équipe.</p>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="mailto:divin.kimia@example.com" class="btn veille-btn-primary">Me contacter</a>
+            <a href="../Accueil.html" class="btn veille-btn-ghost">Accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-accent"></div>
+    <div class="container">
+      <div class="row g-4 footer-content">
+        <div class="col-12 col-lg-4 footer-brand">
+          <div class="brand-info flex-column flex-sm-row align-items-sm-center">
+            <div class="footer-logo-wrap">
+              <img src="../../assets/img/ProfileAccueil.jpeg" alt="Avatar Divin Kimia" class="footer-logo img-fluid rounded-circle" />
+              <span class="footer-logo-glow"></span>
+            </div>
+            <div class="brand-text">
+              <h3>Divin Kimia</h3>
+              <p class="brand-tagline">Développeur Web & Passionné d'IA</p>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Créateur d'expériences digitales innovantes, à la croisée du développement web et de l'intelligence
+            artificielle.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="social-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-5.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 footer-links">
+          <div class="row g-4">
+            <div class="col-12 col-sm-6 col-md-4 link-group">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="../Accueil.html">Accueil</a></li>
+                <li><a href="../Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels.html">Parcours</a></li>
+                <li><a href="../Projets/index.html">Projets</a></li>
+                <li><a href="../Parcours_HTML/CertificationPage.html">Certification</a></li>
+                <li><a href="Veilles.html">Veilles</a></li>
+                <li><a href="../MeDecouvrir.html">Me découvrir</a></li>
+                <li><a href="../Blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 link-group">
+              <h4>Contact rapide</h4>
+              <ul>
+                <li><a href="mailto:divin.kimia@example.com">Me contacter</a></li>
+                <li><a href="../CV_Divin_Kimia.pdf" download>Télécharger mon CV</a></li>
+                <li><a href="../Accueil.html#contact">Formulaire</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 link-group">
+              <h4>Légal</h4>
+              <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom flex-column flex-sm-row justify-content-center justify-content-sm-between text-center text-sm-start">
+        <p class="mb-0">© <span id="year"></span> <strong>Divin Kimia</strong> — Tous droits réservés.</p>
+        <a href="#" class="back-to-top" aria-label="Retour en haut">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

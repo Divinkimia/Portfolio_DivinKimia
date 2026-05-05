@@ -1,0 +1,103 @@
+/**
+ * Base: fond global, typographie, liens, selection (scope .portfolio-light).
+ */
+.portfolio-light {
+  background-color: var(--lt-bg);
+  color: var(--lt-text);
+  font-family: var(--lt-font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.portfolio-light *,
+.portfolio-light *::before,
+.portfolio-light *::after {
+  box-sizing: border-box;
+}
+
+.portfolio-light img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-light a {
+  color: var(--lt-cyan);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.portfolio-light a:hover {
+  color: var(--lt-accent);
+}
+
+.portfolio-light h1,
+.portfolio-light h2,
+.portfolio-light h3,
+.portfolio-light h4 {
+  font-family: var(--lt-font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--lt-text);
+  line-height: 1.15;
+}
+
+.portfolio-light h1 {
+  font-size: clamp(2.35rem, 4vw + 1rem, 3.75rem);
+}
+
+.portfolio-light h2 {
+  font-size: clamp(1.75rem, 2vw + 1rem, 2.35rem);
+}
+
+.portfolio-light h3 {
+  font-size: 1.2rem;
+}
+
+.portfolio-light p {
+  color: var(--lt-text-secondary);
+  margin-bottom: 0;
+}
+
+.portfolio-light ::selection {
+  background: var(--lt-accent-soft);
+  color: var(--lt-text);
+}
+
+.portfolio-light .lt-container {
+  width: min(100% - 2rem, var(--lt-container));
+  margin-inline: auto;
+}
+
+.portfolio-light .lt-kicker {
+  font-family: var(--lt-font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lt-muted);
+  margin-bottom: 0.85rem;
+}
+
+.portfolio-light .lt-section-head {
+  max-width: 38rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.portfolio-light .lt-section-head p {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: var(--lt-muted);
+}
+
+.portfolio-light .lt-grid-bg {
+  background-image:
+    linear-gradient(var(--lt-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--lt-border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
+  mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+  pointer-events: none;
+}

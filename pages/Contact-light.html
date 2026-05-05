@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <script src="../assets/js/light-theme-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact — Divin Kimia (version thème clair)." />
+  <title>Contact | Divin Kimia — Thème clair</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/styles-light.css" />
+
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/site-navbar.js" defer></script>
+  <script src="../assets/js/script-light.js" defer></script>
+  <link rel="stylesheet" href="../assets/css/fonts-offline.css" />
+</head>
+<body class="portfolio-light lt-page-contact" id="top">
+  <nav class="navbar navbar-expand-lg parcours-navbar lt-nav" aria-label="Navigation principale">
+    <div class="nav-left">
+      <img src="../assets/img/ProfileAccueil.jpeg" alt="" class="logo" width="40" height="40" decoding="async" />
+      <span class="brand">Divin Kimia</span>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ltNavContact"
+      aria-controls="ltNavContact" aria-expanded="false" aria-label="Ouvrir le menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ltNavContact">
+      <ul class="navbar-nav nav-links ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="Accueil-light.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item dropdown dynamic-dropdown">
+          <a href="Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-default-text="Parcours">Parcours</a>
+          <ul class="dropdown-menu dynamic-menu">
+            <li><a href="Parcours_HTML/ExperiencesPro/ExperiencesProfessionnels-light.html" class="dropdown-item swap-menu">Expériences professionnelles</a></li>
+            <li><a href="Parcours_HTML/Formations/FormationsPage-light.html" class="dropdown-item swap-menu">Formations</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="Projets/index-light.html" class="nav-link">Projets</a></li>
+        <li class="nav-item"><a href="Parcours_HTML/CertificationPage-light.html" class="nav-link">Certification</a></li>
+        <li class="nav-item"><a href="Veilles/Veilles-light.html" class="nav-link">Veilles</a></li>
+        <li class="nav-item"><a href="MeDecouvrir-light.html" class="nav-link">Me découvrir</a></li>
+        <li class="nav-item"><a href="Blog-light.html" class="nav-link">Blog</a></li>
+        <li class="nav-item d-lg-none"><a href="Contact-light.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="Contact-light.html" class="nav-btn d-none d-lg-inline-flex ms-lg-3" aria-current="page">Contact</a>
+      <a href="Contact.html" class="lt-theme-toggle ms-lg-2" aria-label="Basculer vers le thème sombre" title="Ouvrir la version thème sombre">Thème sombre</a>
+    </div>
+  </nav>
+
+  <main class="lt-main">
+    <header class="lt-contact-hero">
+      <div class="lt-container" data-lt-reveal>
+        <p class="lt-kicker">Contact</p>
+        <h1>Parlons de votre projet</h1>
+        <p class="lead">
+          Besoin d'un développeur web orienté IA, d'un renfort sur un projet, ou d'un échange technique ?
+          Laissez un message structuré : je réponds rapidement.
+        </p>
+      </div>
+    </header>
+
+    <div class="lt-container lt-contact-layout">
+      <aside class="lt-contact-aside" data-lt-reveal data-lt-delay="1">
+        <h2>Informations</h2>
+        <p>Disponible pour collaborations, missions freelance et opportunités professionnelles.</p>
+        <ul class="lt-contact-list">
+          <li><strong>Email :</strong> <a href="mailto:divinkimia@protonmail.com">divinkimia@protonmail.com</a></li>
+          <li><strong>Statut :</strong> Ouvert aux opportunités</li>
+          <li><strong>Domaine :</strong> Web, IA, cybersécurité</li>
+        </ul>
+        <a href="CV_Divin_Kimia.pdf" class="lt-btn lt-btn--ghost" download>Télécharger mon CV</a>
+      </aside>
+
+      <section class="lt-contact-form-card" data-lt-reveal data-lt-delay="2" aria-label="Formulaire de contact">
+        <h2>Envoyer un message</h2>
+        <form id="contactForm" class="lt-form">
+          <label for="contactName">Nom complet</label>
+          <input id="contactName" name="name" type="text" required placeholder="Votre nom" autocomplete="name" />
+
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" name="email" type="email" required placeholder="vous@email.com" autocomplete="email" />
+
+          <label for="contactSubject">Sujet</label>
+          <input id="contactSubject" name="subject" type="text" required placeholder="Sujet de votre message" />
+
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" required placeholder="Décrivez votre besoin, le contexte et vos délais."></textarea>
+
+          <button class="lt-btn lt-btn--primary" type="submit">Envoyer</button>
+          <p id="contactFeedback" class="lt-contact-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="lt-footer">
+    <div class="lt-container">
+      <div class="lt-footer-top">
+        <div class="lt-footer-brand">
+          <div class="lt-footer-brand-row">
+            <img class="lt-footer-logo" src="../assets/img/ProfileAccueil.jpeg" alt="" width="52" height="52" decoding="async" />
+            <div>
+              <h3>Divin Kimia</h3>
+              <p class="tag">Développeur web &amp; IA</p>
+            </div>
+          </div>
+          <p>Conception d'expériences numériques fiables — du prototype à l'exploitation.</p>
+        </div>
+        <div class="lt-footer-grid">
+          <div class="lt-footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="Accueil-light.html">Accueil (clair)</a></li>
+              <li><a href="Projets/index-light.html">Projets</a></li>
+              <li><a href="Contact-light.html">Contact (clair)</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>Autres</h4>
+            <ul>
+              <li><a href="Parcours_HTML/CertificationPage-light.html">Certification</a></li>
+              <li><a href="MentionsLegales-light.html">Mentions légales</a></li>
+            </ul>
+          </div>
+          <div class="lt-footer-col">
+            <h4>Thèmes</h4>
+            <ul>
+              <li><a href="Accueil-light.html">Version sombre (accueil)</a></li>
+              <li><a href="Contact.html">Version sombre (contact)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lt-footer-bottom">
+        <p>© <span id="year"></span> <strong>Divin Kimia</strong> — Tous droits réservés.</p>
+        <a href="#top" class="lt-back-top" aria-label="Retour en haut">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,495 @@
+/**
+ * Parcours (expùriences, formations, stages, dùtail formation) ù thùme clair.
+ * body.portfolio-light.lt-page-parcours
+ */
+
+body.portfolio-light.lt-page-parcours #galaxy-container {
+  display: none !important;
+}
+
+body.portfolio-light.lt-page-parcours .lt-main {
+  padding-top: 0;
+}
+
+/* Variables partagùes ParcoursPage / ExperiencesProfessionnels */
+body.portfolio-light.lt-page-parcours {
+  --bg: var(--lt-bg);
+  --card: var(--lt-surface-elevated);
+  --glass: rgba(21, 108, 101, 0.08);
+  --accent: var(--lt-cyan);
+  --accent-2: var(--lt-accent);
+  --muted: var(--lt-muted);
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+body.portfolio-light.lt-page-parcours .hero-title,
+body.portfolio-light.lt-page-parcours .formation-hero h1.hero-title,
+body.portfolio-light.lt-page-parcours .professional-exp-header h2,
+body.portfolio-light.lt-page-parcours .section-header h2 {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours .accent-text,
+body.portfolio-light.lt-page-parcours .formation-hero .accent-text {
+  background: linear-gradient(120deg, var(--lt-accent), var(--lt-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+body.portfolio-light.lt-page-parcours .hero-subtitle,
+body.portfolio-light.lt-page-parcours .parcours-cross-link a {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-parcours .parcours-cross-link a:hover {
+  color: var(--lt-accent);
+}
+
+body.portfolio-light.lt-page-parcours .hero-section,
+body.portfolio-light.lt-page-parcours .formation-hero {
+  background: transparent;
+}
+
+body.portfolio-light.lt-page-parcours .parcours-atypique-btn {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-parcours .parcours-atypique-btn:hover {
+  border-color: var(--lt-hairline);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-parcours .parcours-atypique-modal .parcours-atypique-content {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  color: var(--lt-text);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-parcours .parcours-atypique-overlay {
+  background: rgba(27, 31, 38, 0.35);
+}
+
+body.portfolio-light.lt-page-parcours .parcours-atypique-content h2,
+body.portfolio-light.lt-page-parcours .parcours-atypique-content .intro-text p {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours .professional-exp-card,
+body.portfolio-light.lt-page-parcours .experience-card,
+body.portfolio-light.lt-page-parcours .other-experience-card {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-parcours .professional-exp-card:hover {
+  border-color: var(--lt-hairline);
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-parcours .pro-exp-title-group h3,
+body.portfolio-light.lt-page-parcours .pro-exp-achievements h4 {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours .pro-exp-view-btn {
+  background: var(--lt-surface-elevated);
+  color: var(--lt-text);
+  border: 1px solid var(--lt-border-strong);
+}
+
+body.portfolio-light.lt-page-parcours .pro-exp-view-btn:hover {
+  background: var(--lt-accent-soft);
+  border-color: var(--lt-hairline);
+  color: var(--lt-accent-hover);
+}
+
+body.portfolio-light.lt-page-parcours .pro-exp-divider {
+  background: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .pro-exp-skill-tag {
+  background: var(--lt-surface-muted);
+  color: var(--lt-text-secondary);
+  border: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .pro-exp-skill-tag:hover {
+  border-color: var(--lt-hairline);
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours .experiences-section,
+body.portfolio-light.lt-page-parcours .other-experiences-section {
+  background: var(--lt-bg-subtle);
+}
+
+body.portfolio-light.lt-page-parcours .pro-exp-timeline-marker,
+body.portfolio-light.lt-page-parcours .pro-exp-marker-icon {
+  border-color: var(--lt-border-strong);
+  background: var(--lt-surface-elevated);
+}
+
+body.portfolio-light.lt-page-parcours .contact-preview {
+  background: var(--lt-bg);
+}
+
+body.portfolio-light.lt-page-parcours .contact-content h2 {
+  background: linear-gradient(120deg, var(--lt-text), var(--lt-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.portfolio-light.lt-page-parcours .contact-content p {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-parcours .btn-secondary {
+  background: var(--lt-surface-elevated);
+  color: var(--lt-text);
+  border: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .btn-primary {
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan));
+  color: #fff;
+  box-shadow: var(--lt-shadow-sm);
+}
+
+/* Timeline formations (ParcoursPage) */
+body.portfolio-light.lt-page-parcours .timeline-content {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .timeline-header h3,
+body.portfolio-light.lt-page-parcours .timeline-content p,
+body.portfolio-light.lt-page-parcours .timeline-date {
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-parcours .timeline::before {
+  background: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .skill-tag,
+body.portfolio-light.lt-page-parcours .milestone-skills .skill-tag {
+  background: var(--lt-accent-soft);
+  color: var(--lt-accent-hover);
+  border: 1px solid var(--lt-hairline);
+}
+
+/* Stage FS Barber */
+body.portfolio-light.lt-page-parcours.stage-fsb-page {
+  --fsb-bg: var(--lt-bg);
+  --fsb-card: var(--lt-surface-elevated);
+  --fsb-border: var(--lt-border-strong);
+  --fsb-gold: var(--lt-accent);
+  --fsb-gold-soft: var(--lt-accent-soft);
+  --fsb-text: var(--lt-text);
+  --fsb-muted: var(--lt-muted);
+  --accent: var(--fsb-gold);
+  --accent-2: #8a6400;
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+body.portfolio-light.lt-page-parcours.stage-fsb-page .stage-fsb-hero__glow {
+  opacity: 0.5;
+}
+
+body.portfolio-light.lt-page-parcours.stage-fsb-page,
+body.portfolio-light.lt-page-parcours.stage-ics-page,
+body.portfolio-light.lt-page-parcours.stage-ca-page {
+  background:
+    radial-gradient(ellipse 80% 55% at 50% -20%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 58%),
+    var(--lt-bg) !important;
+}
+
+body.portfolio-light.lt-page-parcours.stage-fsb-page .stage-fsb-hero__inner,
+body.portfolio-light.lt-page-parcours.stage-ics-page .stage-ics-hero__inner,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-hero__inner {
+  background: color-mix(in srgb, var(--lt-surface-elevated) 88%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--lt-border));
+  box-shadow: var(--lt-shadow-md);
+}
+
+body.portfolio-light.lt-page-parcours.stage-fsb-page .stage-fsb-hero::after,
+body.portfolio-light.lt-page-parcours.stage-ics-page .stage-ics-hero::after,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-hero::after {
+  background-image:
+    linear-gradient(rgba(27, 31, 38, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 31, 38, 0.035) 1px, transparent 1px);
+}
+
+body.portfolio-light.lt-page-parcours.stage-fsb-page .stage-fsb-section:nth-of-type(even),
+body.portfolio-light.lt-page-parcours.stage-ics-page .stage-ics-section:nth-of-type(even),
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-section:nth-of-type(even) {
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--accent) 5%, transparent) 50%, transparent);
+}
+
+body.portfolio-light.lt-page-parcours.stage-fsb-page .stage-fsb-card,
+body.portfolio-light.lt-page-parcours.stage-ics-page .stage-ics-card,
+body.portfolio-light.lt-page-parcours.stage-ics-page .ics-panel,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card,
+body.portfolio-light.lt-page-parcours.stage-ca-page .ca-day-card {
+  background: var(--lt-surface-elevated);
+  border-color: color-mix(in srgb, var(--accent) 18%, var(--lt-border));
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-parcours.stage-fsb-page .stage-fsb-card:hover,
+body.portfolio-light.lt-page-parcours.stage-ics-page .stage-ics-card:hover,
+body.portfolio-light.lt-page-parcours.stage-ics-page .ics-panel:hover,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card:hover,
+body.portfolio-light.lt-page-parcours.stage-ca-page .ca-day-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--lt-border));
+  box-shadow: var(--lt-shadow-md);
+}
+
+/* Stage Iconnected */
+body.portfolio-light.lt-page-parcours.stage-ics-page {
+  --ics-bg: var(--lt-bg);
+  --ics-surface: var(--lt-surface);
+  --ics-card: var(--lt-surface-elevated);
+  --ics-border: rgba(83, 128, 61, 0.2);
+  --ics-brand: #537f3d;
+  --ics-brand-soft: rgba(83, 128, 61, 0.1);
+  --ics-accent: #668f4e;
+  --ics-accent-2: #3d443c;
+  --ics-petal: #a85f78;
+  --ics-petal-soft: rgba(168, 95, 120, 0.1);
+  --ics-text: var(--lt-text);
+  --ics-muted: var(--lt-text-secondary);
+  --accent: var(--ics-accent);
+  --accent-2: var(--ics-accent-2);
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+/* Stage Crùdit Agricole */
+body.portfolio-light.lt-page-parcours.stage-ca-page {
+  --ca-bg: var(--lt-bg);
+  --ca-surface: var(--lt-surface);
+  --ca-card: var(--lt-surface-elevated);
+  --ca-border: rgba(0, 107, 63, 0.2);
+  --ca-green: #006b3f;
+  --ca-green-soft: rgba(0, 107, 63, 0.12);
+  --ca-gold: #7a5b00;
+  --ca-text: var(--lt-text);
+  --ca-muted: var(--lt-text-secondary);
+  --accent: var(--ca-green);
+  --accent-2: var(--ca-gold);
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-hero__glow {
+  opacity: 0.55;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% -20%, rgba(0, 107, 63, 0.16) 0%, transparent 58%),
+    radial-gradient(ellipse 50% 40% at 90% 30%, rgba(122, 91, 0, 0.12) 0%, transparent 52%);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-hero h1,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-section__title {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-hero h1 span,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card h3,
+body.portfolio-light.lt-page-parcours.stage-ca-page .ca-day-card h4 {
+  color: var(--ca-green);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-lead,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card p,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card li,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-accordion .accordion-body,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-strip p,
+body.portfolio-light.lt-page-parcours.stage-ca-page .text-muted {
+  color: var(--lt-text-secondary) !important;
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card p strong,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card li strong,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-lead strong {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-pill,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-tag {
+  color: var(--ca-green);
+  background: var(--ca-green-soft);
+  border-color: var(--ca-border);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-card,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-table-wrap,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-accordion .accordion-item,
+body.portfolio-light.lt-page-parcours.stage-ca-page .ca-day-card,
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-strip {
+  background: var(--lt-surface-elevated);
+  border-color: var(--lt-border-strong);
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .ca-day-card {
+  background: var(--lt-surface);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .btn-ca-primary {
+  background: linear-gradient(135deg, #006b3f, #0b6e7c);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(0, 107, 63, 0.22);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .btn-ca-primary:hover {
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0, 107, 63, 0.28);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .btn-ca-ghost {
+  background: var(--lt-surface-elevated);
+  color: var(--ca-green);
+  border-color: var(--ca-border);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .btn-ca-ghost:hover {
+  color: var(--lt-text);
+  border-color: rgba(0, 107, 63, 0.38);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-table-wrap .table {
+  --bs-table-bg: var(--lt-surface-elevated);
+  --bs-table-color: var(--lt-text);
+  --bs-table-hover-bg: rgba(0, 107, 63, 0.08);
+  --bs-table-hover-color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-table-wrap .table thead th {
+  background: rgba(0, 107, 63, 0.12);
+  color: var(--ca-green);
+  border-color: var(--lt-border-strong);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-table-wrap .table td {
+  color: var(--lt-text-secondary);
+  border-color: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-table-wrap .table tbody tr:hover td {
+  background: rgba(0, 107, 63, 0.08);
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-accordion .accordion-button {
+  background: rgba(0, 107, 63, 0.08);
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-accordion .accordion-button:not(.collapsed) {
+  background: rgba(0, 107, 63, 0.14);
+  color: var(--ca-green);
+}
+
+body.portfolio-light.lt-page-parcours.stage-ca-page .stage-ca-accordion .accordion-button::after {
+  filter: none;
+}
+
+/* Xceed Maroc */
+body.portfolio-light.lt-page-parcours.xc-page {
+  --xc-bg: var(--lt-bg);
+  --xc-bg-elevated: var(--lt-surface);
+  --xc-surface: var(--lt-surface-elevated);
+  --xc-card: var(--lt-surface-elevated);
+  --xc-border: var(--lt-border);
+  --xc-accent: var(--lt-accent);
+  --xc-accent-strong: var(--lt-accent-hover);
+  --xc-accent-soft: var(--lt-accent-soft);
+  --xc-text: var(--lt-text);
+  --xc-muted: var(--lt-muted);
+  --accent: var(--xc-accent);
+  --accent-2: var(--xc-accent-strong);
+  background: var(--lt-bg) !important;
+  color: var(--lt-text) !important;
+}
+
+/* Pages formation dùtail (.formation-page) */
+body.portfolio-light.lt-page-parcours .formation-page .formation-title,
+body.portfolio-light.lt-page-parcours .formation-page .formation-desc,
+body.portfolio-light.lt-page-parcours .formation-page h2,
+body.portfolio-light.lt-page-parcours .formation-page h3 {
+  color: var(--lt-text);
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .formation-desc,
+body.portfolio-light.lt-page-parcours .formation-page p {
+  color: var(--lt-text-secondary);
+}
+
+body.portfolio-light.lt-page-parcours .breadcrumb-nav,
+body.portfolio-light.lt-page-parcours .breadcrumb-nav a {
+  color: var(--lt-muted);
+}
+
+body.portfolio-light.lt-page-parcours .breadcrumb-nav a:hover {
+  color: var(--lt-accent);
+}
+
+body.portfolio-light.lt-page-parcours .formation-main,
+body.portfolio-light.lt-page-parcours .formation-sidebar,
+body.portfolio-light.lt-page-parcours .mode-option {
+  background: var(--lt-surface-elevated);
+  border: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .mode-option.active {
+  border-color: var(--lt-hairline);
+  box-shadow: var(--lt-shadow-xs);
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .btn-primary-small {
+  background: linear-gradient(135deg, var(--lt-accent), var(--lt-cyan));
+  color: #fff !important;
+  border: none;
+  box-shadow: var(--lt-shadow-sm);
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .btn-primary-small:hover {
+  color: #fff !important;
+  filter: brightness(1.06);
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .btn-secondary-small {
+  background: var(--lt-surface-elevated);
+  color: var(--lt-text) !important;
+  border: 1px solid var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .btn-secondary-small:hover {
+  border-color: var(--lt-accent);
+  color: var(--lt-accent-hover) !important;
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .sidebar-cta {
+  background: var(--lt-surface);
+  border-color: var(--lt-border);
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .admission-cta {
+  background: var(--lt-accent-soft);
+  border-color: var(--lt-hairline);
+}
+
+body.portfolio-light.lt-page-parcours .formation-page .admission-cta h4 {
+  color: var(--lt-accent-hover);
+}
