@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="�valuation des mod�les et m�triques m�tier">
+  <defs>
+    <linearGradient id="ml-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160828"/>
+      <stop offset="100%" stop-color="#240f38"/>
+    </linearGradient>
+    <linearGradient id="ml-curve" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc"/><stop offset="100%" stop-color="#e879f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#ml-bg)"/>
+  <ellipse cx="280" cy="620" rx="220" ry="120" fill="#a855f7" opacity="0.09"/>
+  <!-- Axes -->
+  <path d="M460 640 H1180 M460 640 V260" stroke="#64748b" stroke-width="3"/>
+  <!-- Courbe ROC stylis�e -->
+  <path d="M460 640 Q620 620 720 520 T980 320 L1180 260" fill="none" stroke="url(#ml-curve)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Zone AUC -->
+  <path d="M460 640 Q680 600 860 400 L1180 260 V640 Z" fill="#6b21a8" opacity="0.25"/>
+  <!-- Jauge -->
+  <path d="M1320 560 A80 80 0 0 0 1160 560" fill="none" stroke="#475569" stroke-width="14" stroke-linecap="round"/>
+  <path d="M1320 560 A80 80 0 0 1 1240 488" fill="none" stroke="#e879f9" stroke-width="14" stroke-linecap="round"/>
+</svg>

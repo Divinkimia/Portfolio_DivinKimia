@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ISS JS — position de la Station spatiale internationale en temps quasi réel, API Where The ISS At, Leaflet et OpenStreetMap.">
+    <title>ISS sur la carte — Présentation</title>
+    <link rel="stylesheet" href="../../../assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssISS/presentation-iss.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssMachineLearning/presentation-ml5-portfolio-chrome.css">
+    <link rel="stylesheet" href="../../../assets/css/fonts-offline.css">
+</head>
+<body class="presentation-iss-page iss-future">
+    <div class="page-frame" aria-hidden="true"></div>
+    <canvas id="issCosmos" class="iss-cosmos" aria-hidden="true"></canvas>
+    <div class="iss-scanlines" aria-hidden="true"></div>
+
+    <div class="kim-nav-stack" id="kimNavStack">
+        <div class="nav-island-shell">
+            <nav class="nav-island" aria-label="Navigation présentation ISS">
+                <div class="nav-island-left">
+                    <a href="../../Accueil.html" class="nav-island-link nav-island-link--muted" title="Page d'accueil du portfolio">Accueil portfolio</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../../Projets/index.html" class="nav-island-link nav-island-link--muted">Projets</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../../Projets/index.html" class="nav-island-link nav-island-link--strong">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Retour aux projets
+                    </a>
+                </div>
+                <a href="#hero" class="nav-island-brand">
+                    <span class="nav-island-brand-kicker">Portfolio</span>
+                    <span class="nav-island-brand-mark" aria-hidden="true"><i class="fas fa-satellite"></i></span>
+                    <span class="nav-island-brand-name">ISS</span>
+                </a>
+                <div class="nav-island-right">
+                    <span class="nav-island-pill">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                        API · Leaflet · JS
+                    </span>
+                    <a href="../iss.js-main/index.html" class="nav-island-link nav-island-link--muted nav-island-link--icon"
+                        target="_blank" rel="noopener noreferrer" title="Ouvrir la démo (serveur local recommandé)">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="iss-hero" id="hero">
+            <div class="iss-hero__glow" aria-hidden="true"></div>
+            <div class="iss-hero__stars" aria-hidden="true"></div>
+            <div class="iss-hud-bar">
+                <span class="iss-hud-bar__seg"><span class="iss-hud-pulse" aria-hidden="true"></span> SYSTÈME ACTIF</span>
+                <span class="iss-hud-bar__seg">OBJECT <strong>NORAD 25544</strong></span>
+                <span class="iss-hud-bar__seg iss-hud-bar__seg--cyber">FLUX JSON · 4 Hz</span>
+                <span class="iss-hud-bar__seg iss-hud-bar__mono" id="iss-hud-clock">--:--:--</span>
+            </div>
+            <div class="iss-hero__grid">
+                <div>
+                    <div class="iss-hero__badges">
+                        <span class="iss-badge"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
+                        <span class="iss-badge"><i class="fas fa-satellite" aria-hidden="true"></i> API REST</span>
+                        <span class="iss-badge"><i class="fas fa-map" aria-hidden="true"></i> Leaflet</span>
+                    </div>
+                    <p class="iss-hero__kicker">TÉLÉMÉTRIE NAVIGATEUR · PAS DE SERVEUR MAISON · DONNÉES SPATIALES OUVERTES</p>
+                    <h1 class="iss-hero__title">
+                        <span class="iss-hero__title-pre">ORBIT / SEGMENT FLUX-25544</span>
+                        <span class="iss-hero__title-main">La station <span class="iss-glitch" data-text="ISS">ISS</span> sur la <span>carte vivante</span></span>
+                    </h1>
+                    <p class="iss-hero__lead">
+                        Conçu comme une <strong>console de vol légère</strong> : une API publique envoie la trajectoire réelle,
+                        le navigateur projette la Terre et le satellite — une idée «&nbsp;dashboard spatial&nbsp;» déjà alignée avec
+                        les usages modernes du web ouvert, avant même les architectures temps réel type WebSocket généralisées.
+                    </p>
+                    <div class="iss-hero__cta">
+                        <a href="../iss.js-main/index.html" class="iss-btn iss-btn--primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-satellite-dish" aria-hidden="true"></i> Ouvrir la démo
+                        </a>
+                        <a href="#flux" class="iss-btn iss-btn--ghost">
+                            <i class="fas fa-stream" aria-hidden="true"></i> Voir le flux
+                        </a>
+                    </div>
+                    <nav class="iss-hero__quick iss-reveal" aria-label="Accès rapide">
+                        <a href="#live" class="iss-quick-link"><i class="fas fa-bolt" aria-hidden="true"></i> Télémétrie</a>
+                        <a href="#signal" class="iss-quick-link"><i class="fas fa-wave-square" aria-hidden="true"></i> Signal</a>
+                        <a href="#vision" class="iss-quick-link"><i class="fas fa-rocket" aria-hidden="true"></i> Vision</a>
+                        <a href="#console" class="iss-quick-link"><i class="fas fa-terminal" aria-hidden="true"></i> Console</a>
+                    </nav>
+                </div>
+                <div>
+                    <figure class="iss-hero__visual iss-hero__visual--tilt iss-hud-frame iss-reveal" id="issHeroVisual">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" class="iss-hero__svg" width="480" height="300" role="img" aria-labelledby="issi-title issi-desc">
+                            <title id="issi-title">ISS au-dessus de la Terre</title>
+                            <desc id="issi-desc">Illustration stylisée Terre, orbite et satellite.</desc>
+                            <defs>
+                                <linearGradient id="issi-sky" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#312e81"/>
+                                </linearGradient>
+                                <radialGradient id="issi-earth" cx="35%" cy="65%" r="55%">
+                                    <stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#0c4a6e"/>
+                                </radialGradient>
+                            </defs>
+                            <rect width="640" height="400" rx="24" fill="url(#issi-sky)"/>
+                            <circle cx="220" cy="260" r="115" fill="url(#issi-earth)"/>
+                            <ellipse cx="220" cy="260" rx="200" ry="50" fill="none" stroke="rgba(167,139,250,0.4)" stroke-width="2" stroke-dasharray="8 10" transform="rotate(-16 220 260)"/>
+                            <g transform="translate(400 128)">
+                                <rect x="-20" y="-12" width="40" height="24" rx="6" fill="rgba(148,163,184,0.35)" stroke="rgba(167,139,250,0.55)" stroke-width="1.5"/>
+                                <text x="0" y="5" text-anchor="middle" fill="#e0e7ff" font-family="system-ui,sans-serif" font-size="10" font-weight="700">ISS</text>
+                            </g>
+                        </svg>
+                        <figcaption class="iss-hero__caption">HUD interactif · inclinez au survol · données réelles ci-dessous</figcaption>
+
+                        <div class="iss-live iss-live--hud iss-reveal" data-iss-live id="live">
+                            <p class="iss-live__title">CANAL ISS · LIVE FEED</p>
+                            <p class="iss-live__status" id="iss-live-status" aria-live="polite">Chargement…</p>
+                            <dl class="iss-live__grid">
+                                <dt>Latitude</dt><dd id="iss-live-lat">—</dd>
+                                <dt>Longitude</dt><dd id="iss-live-lon">—</dd>
+                                <dt>Altitude</dt><dd id="iss-live-alt">—</dd>
+                                <dt>Vitesse</dt><dd id="iss-live-speed">—</dd>
+                                <dt>Mise à jour</dt><dd id="iss-live-time">—</dd>
+                            </dl>
+                            <button type="button" class="iss-live__btn" id="iss-live-refresh">
+                                <i class="fas fa-sync-alt" aria-hidden="true"></i> Actualiser
+                            </button>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <div class="iss-ticker-wrap iss-reveal" id="signal">
+            <div class="iss-ticker" aria-hidden="true">
+                <div class="iss-ticker__track">
+                    <span>JavaScript ES6+</span><span>·</span><span>Fetch API</span><span>·</span><span>async / await</span><span>·</span><span>Where The ISS At</span><span>·</span><span>NORAD 25544</span><span>·</span><span>Leaflet 1.9</span><span>·</span><span>OpenStreetMap</span><span>·</span><span>Tuiles XYZ</span><span>·</span><span>L.divIcon</span><span>·</span><span>requestAnimationFrame friendly</span><span>·</span>
+                    <span>JavaScript ES6+</span><span>·</span><span>Fetch API</span><span>·</span><span>async / await</span><span>·</span><span>Where The ISS At</span><span>·</span><span>NORAD 25544</span><span>·</span><span>Leaflet 1.9</span><span>·</span><span>OpenStreetMap</span><span>·</span><span>Tuiles XYZ</span><span>·</span><span>L.divIcon</span><span>·</span><span>requestAnimationFrame friendly</span><span>·</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="iss-section iss-section--vision iss-reveal" id="vision">
+            <div class="iss-section__inner iss-section__inner--wide">
+                <p class="iss-eyebrow">Perspective</p>
+                <h2>Déjà « demain » dans le navigateur</h2>
+                <p class="iss-lead iss-lead--center">
+                    Ce projet assume une conviction : la géodata spatiale n’a pas besoin d’un stack obscur pour être spectaculaire —
+                    un flux HTTP propre, du JSON et une carte suffisent pour donner l’impression d’un centre de contrôle orbital.
+                </p>
+                <div class="iss-neo-grid">
+                    <article class="iss-neo-card">
+                        <div class="iss-neo-card__icon" aria-hidden="true"><i class="fas fa-unlock-alt"></i></div>
+                        <h3>Ouverture sans clé API</h3>
+                        <p>Endpoint documenté, pas d’authentification payante : la démo vit dans le même monde que les données publiques spatial awareness.</p>
+                    </article>
+                    <article class="iss-neo-card">
+                        <div class="iss-neo-card__icon" aria-hidden="true"><i class="fas fa-globe-americas"></i></div>
+                        <h3>Planète dans le DOM</h3>
+                        <p>Leaflet impose une lecture intuitive : la Station devient un pixel qui traverse continents et océans en temps quasi réel.</p>
+                    </article>
+                    <article class="iss-neo-card">
+                        <div class="iss-neo-card__icon" aria-hidden="true"><i class="fas fa-hourglass-half"></i></div>
+                        <h3>Rythme / silence</h3>
+                        <p>Polling à intervalle fixe plutôt que torrent WebSocket : suffisant pour l’ISS, élégant pour la batterie et le réseau.</p>
+                    </article>
+                </div>
+
+                <div class="iss-orbit-showcase" aria-hidden="true">
+                    <div class="iss-orbit-showcase__ring iss-orbit-showcase__ring--a"></div>
+                    <div class="iss-orbit-showcase__ring iss-orbit-showcase__ring--b"></div>
+                    <div class="iss-orbit-showcase__core"><i class="fas fa-satellite"></i></div>
+                    <p class="iss-orbit-showcase__cap">Schéma d’orbite stylisé · CSS pur</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="iss-section iss-reveal" id="console">
+            <div class="iss-section__inner">
+                <p class="iss-eyebrow">Interface</p>
+                <h2>Console mission (aperçu)</h2>
+                <p class="iss-lead">Le flux réel ressemble à une session terminal — sans SSH, uniquement HTTP.</p>
+                <div class="iss-terminal" role="region" aria-label="Exemple de flux fictif">
+                    <div class="iss-terminal__bar">
+                        <span></span><span></span><span></span>
+                        <span class="iss-terminal__title">iss-feed · localhost</span>
+                    </div>
+                    <pre class="iss-terminal__body"><span class="iss-terminal__prompt">➜</span> <span class="iss-terminal__cmd">GET</span> /v1/satellites/25544/ <span class="iss-terminal__muted">HTTP/2 200</span>
+<span class="iss-terminal__json">{ "latitude": …, "longitude": …, "velocity": … }</span>
+<span class="iss-terminal__prompt">➜</span> <span class="iss-terminal__cmd">MAP</span> L.marker.update(<span class="iss-terminal__accent">latlng</span>) <span class="iss-terminal__muted">// panTo animé</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="iss-section iss-reveal" id="metrics">
+            <div class="iss-section__inner iss-section__inner--wide">
+                <p class="iss-eyebrow">Chiffres</p>
+                <h2>Ce que le projet illustre</h2>
+                <p class="iss-lead iss-lead--center">Une chaîne courte et lisible : HTTP asynchrone, JSON, puis rendu cartographique — sans framework imposé.</p>
+                <div class="iss-stats" role="list">
+                    <div class="iss-stat" role="listitem">
+                        <span class="iss-stat__num iss-stat__num--text">4 s</span>
+                        <span class="iss-stat__label">intervalle de polling</span>
+                        <span class="iss-stat__hint">Rafraîchissement périodique côté client</span>
+                    </div>
+                    <div class="iss-stat" role="listitem">
+                        <span class="iss-stat__num">25544</span>
+                        <span class="iss-stat__label">satellite NORAD</span>
+                        <span class="iss-stat__hint">Identifiant ISS dans l’API</span>
+                    </div>
+                    <div class="iss-stat" role="listitem">
+                        <span class="iss-stat__num iss-stat__num--text">100 %</span>
+                        <span class="iss-stat__label">front-end</span>
+                        <span class="iss-stat__hint">Fetch, DOM, Leaflet embarqué</span>
+                    </div>
+                    <div class="iss-stat" role="listitem">
+                        <span class="iss-stat__num iss-stat__num--text">OSM</span>
+                        <span class="iss-stat__label">tuiles cartes</span>
+                        <span class="iss-stat__hint">Couche OpenStreetMap standard</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="iss-section iss-reveal" id="flux">
+            <div class="iss-section__inner iss-section__inner--wide">
+                <p class="iss-eyebrow">Données</p>
+                <h2>Du satellite au pixel</h2>
+                <p class="iss-lead">Cliquez sur une étape pour détailler le flux appliqué dans <code>index.js</code>.</p>
+                <ol class="iss-flow" role="list">
+                    <li class="iss-flow__step is-open" data-step="0">
+                        <button type="button" class="iss-flow__btn" aria-expanded="true">
+                            <span class="iss-flow__idx">1</span>
+                            <span class="iss-flow__title">Requête HTTP</span>
+                            <i class="fas fa-chevron-down iss-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="iss-flow__panel">
+                            <p><code>fetch(API_URL)</code> interroge l’endpoint REST ; les erreurs réseau ou HTTP sont capturées pour afficher un message utilisateur sans bloquer la page.</p>
+                        </div>
+                    </li>
+                    <li class="iss-flow__step" data-step="1">
+                        <button type="button" class="iss-flow__btn" aria-expanded="false">
+                            <span class="iss-flow__idx">2</span>
+                            <span class="iss-flow__title">Document JSON</span>
+                            <i class="fas fa-chevron-down iss-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="iss-flow__panel" hidden>
+                            <p>La réponse est parsée en objet JavaScript : latitude, longitude, altitude, vitesse et horodatage alimentent le DOM et la carte.</p>
+                        </div>
+                    </li>
+                    <li class="iss-flow__step" data-step="2">
+                        <button type="button" class="iss-flow__btn" aria-expanded="false">
+                            <span class="iss-flow__idx">3</span>
+                            <span class="iss-flow__title">Carte Leaflet</span>
+                            <i class="fas fa-chevron-down iss-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="iss-flow__panel" hidden>
+                            <p>Au premier jeu de coordonnées valides, la carte est initialisée ; ensuite le marqueur est déplacé et la vue suit avec <code>panTo</code> animé.</p>
+                        </div>
+                    </li>
+                    <li class="iss-flow__step" data-step="3">
+                        <button type="button" class="iss-flow__btn" aria-expanded="false">
+                            <span class="iss-flow__idx">4</span>
+                            <span class="iss-flow__title">Boucle temporelle</span>
+                            <i class="fas fa-chevron-down iss-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="iss-flow__panel" hidden>
+                            <p><code>setInterval(fetchISS, POLL_MS)</code> relance la récupération toutes les 4 secondes pour garder un suivi quasi temps réel sans recharger la page.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="iss-section iss-reveal" id="apercu">
+            <div class="iss-section__inner">
+                <p class="iss-eyebrow">Contexte</p>
+                <h2>Vue d’ensemble</h2>
+                <p class="iss-lead">
+                    Le dépôt <code>pages/Projets/iss.js-main</code> regroupe une page <code>index.html</code>, la logique <code>index.js</code> et les dépendances Leaflet chargées en CDN. L’objectif pédagogique est clair : consommer une API tierce documentée, manipuler des données géospatiales et les rendre sur une carte web standard.
+                </p>
+                <div class="iss-card">
+                    <p class="iss-card__muted">
+                        L’ancienne présentation embarquée dans le dossier (<code>iss.js-main/presentation.html</code>) a été remplacée par cette page portfolio pour garder une navigation et un ton alignés sur le reste du site.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="iss-section iss-reveal" id="features">
+            <div class="iss-section__inner iss-section__inner--wide">
+                <p class="iss-eyebrow">Points forts</p>
+                <h2>Fonctionnalités</h2>
+                <div class="iss-features">
+                    <article class="iss-feature">
+                        <div class="iss-feature__icon" aria-hidden="true"><i class="fas fa-cloud-download-alt"></i></div>
+                        <h3>API publique</h3>
+                        <p>Endpoint stable pour la position de l’ISS (satellite 25544) avec réponse JSON documentée.</p>
+                    </article>
+                    <article class="iss-feature">
+                        <div class="iss-feature__icon" aria-hidden="true"><i class="fas fa-map-marked-alt"></i></div>
+                        <h3>Carte interactive</h3>
+                        <p>Zoom, déplacement et tuiles OSM ; marqueur personnalisé en emoji satellite.</p>
+                    </article>
+                    <article class="iss-feature">
+                        <div class="iss-feature__icon" aria-hidden="true"><i class="fas fa-tachometer-alt"></i></div>
+                        <h3>Indicateurs live</h3>
+                        <p>Latitude, longitude, altitude, vitesse et horodatage formatés pour la lecture humaine.</p>
+                    </article>
+                    <article class="iss-feature">
+                        <div class="iss-feature__icon" aria-hidden="true"><i class="fas fa-sync"></i></div>
+                        <h3>Mise à jour continue</h3>
+                        <p>Polling régulier sans rechargement de page ni backend propriétaire.</p>
+                    </article>
+                    <article class="iss-feature">
+                        <div class="iss-feature__icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Responsive</h3>
+                        <p>Mise en page fluide ; la hauteur de carte s’adapte au viewport.</p>
+                    </article>
+                    <article class="iss-feature">
+                        <div class="iss-feature__icon" aria-hidden="true"><i class="fas fa-universal-access"></i></div>
+                        <h3>Accessibilité</h3>
+                        <p>Régions <code>aria-live</code> pour le statut et rôle application sur la carte.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="iss-section iss-reveal" id="analyse">
+            <div class="iss-section__inner iss-section__inner--wide">
+                <p class="iss-eyebrow">Technique</p>
+                <h2>Découper le projet</h2>
+                <p class="iss-lead">Trois angles pour retrouver vite ce qui vous intéresse dans les sources.</p>
+                <div class="iss-tabs" data-iss-tabs>
+                    <div class="iss-tabs__list" role="tablist" aria-label="Sections techniques">
+                        <button type="button" class="iss-tabs__tab is-active" role="tab" aria-selected="true" id="iss-tab-fetch" aria-controls="iss-panel-fetch" data-tab="fetch">
+                            <i class="fas fa-plug" aria-hidden="true"></i> API &amp; fetch
+                        </button>
+                        <button type="button" class="iss-tabs__tab" role="tab" aria-selected="false" id="iss-tab-carte" aria-controls="iss-panel-carte" data-tab="carte">
+                            <i class="fas fa-map" aria-hidden="true"></i> Leaflet
+                        </button>
+                        <button type="button" class="iss-tabs__tab" role="tab" aria-selected="false" id="iss-tab-fichiers" aria-controls="iss-panel-fichiers" data-tab="fichiers">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i> Fichiers
+                        </button>
+                    </div>
+                    <div class="iss-tabs__panels">
+                        <div class="iss-tabs__panel is-active" role="tabpanel" id="iss-panel-fetch" aria-labelledby="iss-tab-fetch">
+                            <ul class="iss-file-list">
+                                <li>URL : <code>https://api.wheretheiss.at/v1/satellites/25544/</code></li>
+                                <li>Méthode asynchrone avec <code>async/await</code> et contrôle <code>response.ok</code></li>
+                                <li>Validation minimale des coordonnées avant init carte</li>
+                            </ul>
+                        </div>
+                        <div class="iss-tabs__panel" role="tabpanel" id="iss-panel-carte" aria-labelledby="iss-tab-carte" hidden>
+                            <ul class="iss-file-list">
+                                <li><code>L.map('issMap')</code> avec <code>worldCopyJump</code> pour le méridien</li>
+                                <li>Tuiles OSM via <code>L.tileLayer</code> et attribution respectée</li>
+                                <li><code>L.divIcon</code> pour un marqueur léger basé sur emoji</li>
+                            </ul>
+                        </div>
+                        <div class="iss-tabs__panel" role="tabpanel" id="iss-panel-fichiers" aria-labelledby="iss-tab-fichiers" hidden>
+                            <ul class="iss-file-list">
+                                <li><code>index.html</code> — structure, stats, conteneur carte</li>
+                                <li><code>index.js</code> — logique fetch, rendu et timer</li>
+                                <li>Leaflet 1.9 chargé en CDN (CSS + JS)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="iss-section iss-reveal" id="local">
+            <div class="iss-section__inner">
+                <p class="iss-eyebrow">Exécution</p>
+                <h2>Lancer la démo en local</h2>
+                <p class="iss-lead">Servez le dossier <code>iss.js-main</code> en HTTP pour éviter les blocages sur les tuiles et garantir un comportement <code>fetch</code> cohérent.</p>
+                <div class="iss-code-block">
+<pre><code>cd pages/Projets/iss.js-main
+python3 -m http.server 8080</code></pre>
+                </div>
+                <p class="iss-note">Puis ouvrez <a href="http://localhost:8080" target="_blank" rel="noopener noreferrer">http://localhost:8080</a> (adaptez le port). La même API est utilisée par le bloc « live » en haut de cette page lorsque vous êtes en ligne.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer presentation-footer">
+        <div class="footer-accent" aria-hidden="true"></div>
+        <div class="container">
+            <div class="row g-4 footer-content">
+                <div class="col-12 col-lg-4 footer-brand">
+                    <div class="brand-info flex-column flex-sm-row align-items-sm-center">
+                        <div class="footer-logo-wrap">
+                            <div class="footer-logo-placeholder" aria-hidden="true"><i class="fas fa-satellite"></i></div>
+                            <span class="footer-logo-glow" aria-hidden="true"></span>
+                        </div>
+                        <div class="brand-text">
+                            <h3>ISS JS</h3>
+                            <p class="brand-tagline">Présentation projet</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Suivi de la Station spatiale internationale via API publique, carte Leaflet et JavaScript moderne.
+                    </p>
+                    <div class="footer-tech-badges" aria-hidden="false">
+                        <span class="ft-badge" title="JavaScript"><i class="fab fa-js"></i></span>
+                        <span class="ft-badge" title="Leaflet"><i class="fas fa-map"></i></span>
+                        <span class="ft-badge" title="API"><i class="fas fa-cloud"></i></span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/divin-kimia" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="../../../Cv%20+%20Motivation%20+%20Rapports/CV-DIVIN_KIMIA.pdf" class="social-link" aria-label="Télécharger le CV (PDF)">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        </a>
+                        <a href="../iss.js-main/index.html" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la démo ISS">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                        <a href="../../Projets/index.html" class="social-link" aria-label="Tous les projets">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 footer-links">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li><a href="../../Accueil.html">Accueil portfolio</a></li>
+                                <li><a href="../../Projets/index.html">Projets</a></li>
+                                <li><a href="#hero">Haut de page</a></li>
+                                <li><a href="#signal">Signal</a></li>
+                                <li><a href="#vision">Vision</a></li>
+                                <li><a href="#console">Console</a></li>
+                                <li><a href="#live">Live ISS</a></li>
+                                <li><a href="#flux">Flux</a></li>
+                                <li><a href="#features">Fonctionnalités</a></li>
+                                <li><a href="#local">Démo locale</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Ressources</h4>
+                            <ul>
+                                <li><a href="../iss.js-main/index.html" target="_blank" rel="noopener noreferrer">Démo ISS</a></li>
+                                <li><a href="presentation-iss-light.html">Version thème clair</a></li>
+                                <li><a href="../../Contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Légal</h4>
+                            <ul>
+                                <li><a href="#">Mentions légales</a></li>
+                                <li><a href="#">Politique de confidentialité</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom flex-column flex-sm-row justify-content-center justify-content-sm-between text-center text-sm-start">
+                <p class="mb-0">© <span id="footer-year">2026</span> <strong>ISS JS</strong> — Présentation portfolio ·
+                    <a href="https://www.linkedin.com/in/divin-kimia" target="_blank" rel="noopener noreferrer">Divin Kimia</a>
+                </p>
+                <a href="#hero" class="back-to-top" aria-label="Retour en haut de la page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="m18 15-6-6-6 6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../../../assets/js/Projets/jsISS/presentation-iss.js" defer></script>
+    <script src="../../../assets/js/Projets/project-scroll-progress.js" defer></script>
+</body>
+</html>

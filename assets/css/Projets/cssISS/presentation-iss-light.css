@@ -1,0 +1,118 @@
+/* Variante claire — surcharge (avec styles-light.css) */
+
+body.presentation-iss-page.portfolio-light .page-frame {
+  background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+body.presentation-iss-page.portfolio-light .iss-hero__title {
+  color: #0f172a;
+}
+
+body.presentation-iss-page.portfolio-light .iss-hero__lead,
+body.presentation-iss-page.portfolio-light .iss-lead,
+body.presentation-iss-page.portfolio-light .iss-feature p,
+body.presentation-iss-page.portfolio-light .iss-flow__panel,
+body.presentation-iss-page.portfolio-light .iss-file-list {
+  color: #475569;
+}
+
+body.presentation-iss-page.portfolio-light .iss-section h2,
+body.presentation-iss-page.portfolio-light .iss-feature h3 {
+  color: #0f172a;
+}
+
+body.presentation-iss-page.portfolio-light .iss-card,
+body.presentation-iss-page.portfolio-light .iss-stat,
+body.presentation-iss-page.portfolio-light .iss-feature,
+body.presentation-iss-page.portfolio-light .iss-flow__step,
+body.presentation-iss-page.portfolio-light .iss-tabs__panels {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+body.presentation-iss-page.portfolio-light .iss-live {
+  background: rgba(224, 231, 255, 0.85);
+  border-color: rgba(124, 58, 237, 0.25);
+}
+
+body.presentation-iss-page.portfolio-light .iss-live__grid dd {
+  color: #5b21b6;
+}
+
+body.presentation-iss-page.portfolio-light .iss-quick-link {
+  color: #475569;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.presentation-iss-page.portfolio-light .iss-quick-link:hover {
+  color: #0f172a;
+}
+
+body.presentation-iss-page.portfolio-light .iss-tabs__tab {
+  background: rgba(255, 255, 255, 0.9);
+  color: #475569;
+}
+
+body.presentation-iss-page.portfolio-light .iss-tabs__tab.is-active {
+  color: #fafafa;
+}
+
+body.presentation-iss-page.portfolio-light .iss-code-block {
+  background: #f1f5f9;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.presentation-iss-page.portfolio-light .iss-code-block pre {
+  color: #1e293b;
+}
+
+body.presentation-iss-page.portfolio-light .iss-card__muted {
+  color: #475569 !important;
+}
+
+body.presentation-iss-page.portfolio-light .iss-flow__btn {
+  color: #0f172a;
+}
+
+/* Thème futuriste en mode clair */
+body.presentation-iss-page.portfolio-light .iss-hud-bar {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(224, 231, 255, 0.85));
+  border-color: rgba(124, 58, 237, 0.25);
+  color: #475569;
+}
+
+body.presentation-iss-page.portfolio-light .iss-hud-bar__mono {
+  color: #0e7490;
+}
+
+body.presentation-iss-page.portfolio-light .iss-ticker-wrap {
+  background: rgba(241, 245, 249, 0.95);
+  border-color: rgba(14, 116, 144, 0.2);
+}
+
+body.presentation-iss-page.portfolio-light .iss-neo-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(224, 231, 255, 0.65));
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+body.presentation-iss-page.portfolio-light .iss-neo-card h3 {
+  color: #0f172a;
+}
+
+body.presentation-iss-page.portfolio-light .iss-terminal {
+  border-color: rgba(13, 148, 136, 0.35);
+  background: #f8fafc;
+}
+
+body.presentation-iss-page.portfolio-light .iss-terminal__body {
+  color: #0f766e;
+}
+
+body.presentation-iss-page.portfolio-light .iss-scanlines {
+  opacity: 0.12;
+}
+
+body.presentation-iss-page.portfolio-light .iss-cosmos {
+  opacity: 0.35;
+}

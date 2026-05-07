@@ -1,0 +1,461 @@
+/* ============================================
+   RECAP PRESENTATION — Composant autonome
+   Préfixe .recap-* pour isolation totale
+   ============================================ */
+
+:root {
+    --recap-bg: #0d0d0d;
+    --recap-surface: #1a1a2e;
+    --recap-surface-hover: #222240;
+    --recap-border: rgba(255, 255, 255, 0.08);
+    --recap-text: #e0e0e0;
+    --recap-text-muted: #8a8a9a;
+    --recap-accent: #6c63ff;
+    --recap-accent-glow: rgba(108, 99, 255, 0.3);
+    --recap-radius: 16px;
+    --recap-radius-sm: 10px;
+    --recap-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recap--light {
+    --recap-bg: #f8f9fa;
+    --recap-surface: #ffffff;
+    --recap-surface-hover: #f0f0f5;
+    --recap-border: rgba(0, 0, 0, 0.08);
+    --recap-text: #1a1a2e;
+    --recap-text-muted: #6c6c7a;
+    --recap-accent: #5a52d5;
+    --recap-accent-glow: rgba(90, 82, 213, 0.2);
+}
+
+/* --- Bouton flottant --- */
+.recap-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 99990;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--recap-accent);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 24px var(--recap-accent-glow), 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--recap-transition), box-shadow var(--recap-transition);
+    animation: recap-pulse 2s ease-in-out 1;
+}
+
+.recap-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 32px var(--recap-accent-glow), 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.recap-fab:active {
+    transform: scale(0.95);
+}
+
+@keyframes recap-pulse {
+    0%, 100% { box-shadow: 0 4px 24px var(--recap-accent-glow); }
+    50% { box-shadow: 0 4px 40px var(--recap-accent-glow), 0 0 60px var(--recap-accent-glow); }
+}
+
+/* --- Overlay / Panel --- */
+.recap-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99995;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--recap-transition), visibility var(--recap-transition);
+}
+
+.recap-overlay.recap--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.recap-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: min(520px, 92vw);
+    height: 100vh;
+    background: var(--recap-bg);
+    border-left: 1px solid var(--recap-border);
+    transform: translateX(100%);
+    transition: transform var(--recap-transition);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.recap-panel.recap--visible {
+    transform: translateX(0);
+}
+
+/* --- Fullscreen mode --- */
+.recap-panel.recap--fullscreen {
+    width: 100vw;
+    border-left: none;
+}
+
+.recap-panel.recap--fullscreen .recap-body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Header --- */
+.recap-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--recap-border);
+    flex-shrink: 0;
+}
+
+.recap-header-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--recap-text);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recap-header-title i {
+    color: var(--recap-accent);
+}
+
+.recap-header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.recap-btn-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--recap-border);
+    background: var(--recap-surface);
+    color: var(--recap-text-muted);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--recap-transition);
+}
+
+.recap-btn-icon:hover {
+    background: var(--recap-surface-hover);
+    color: var(--recap-accent);
+    border-color: var(--recap-accent);
+}
+
+/* --- Body / Scroll --- */
+.recap-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    scroll-behavior: smooth;
+}
+
+.recap-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.recap-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.recap-body::-webkit-scrollbar-thumb {
+    background: var(--recap-border);
+    border-radius: 3px;
+}
+
+/* --- Sections --- */
+.recap-section {
+    background: var(--recap-surface);
+    border: 1px solid var(--recap-border);
+    border-radius: var(--recap-radius);
+    padding: 20px;
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: recap-fadeUp 0.4s ease forwards;
+}
+
+.recap-section:nth-child(1) { animation-delay: 0.05s; }
+.recap-section:nth-child(2) { animation-delay: 0.1s; }
+.recap-section:nth-child(3) { animation-delay: 0.15s; }
+.recap-section:nth-child(4) { animation-delay: 0.2s; }
+.recap-section:nth-child(5) { animation-delay: 0.25s; }
+.recap-section:nth-child(6) { animation-delay: 0.3s; }
+.recap-section:nth-child(7) { animation-delay: 0.35s; }
+.recap-section:nth-child(8) { animation-delay: 0.4s; }
+.recap-section:nth-child(9) { animation-delay: 0.45s; }
+.recap-section:nth-child(10) { animation-delay: 0.5s; }
+
+@keyframes recap-fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recap-section:hover {
+    border-color: var(--recap-accent);
+    box-shadow: 0 0 0 1px var(--recap-accent-glow);
+}
+
+.recap-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.recap-section-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--recap-radius-sm);
+    background: var(--recap-accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.recap-section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--recap-text);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.recap-section-content {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--recap-text-muted);
+}
+
+.recap-section-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.recap-section-content ul li {
+    background: var(--recap-surface-hover);
+    border: 1px solid var(--recap-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--recap-accent);
+}
+
+.recap-tech-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.recap-tech-item {
+    background: var(--recap-surface-hover);
+    border: 1px solid var(--recap-border);
+    padding: 14px 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color var(--recap-transition), transform var(--recap-transition);
+}
+
+.recap-tech-item:hover {
+    border-color: var(--recap-accent);
+    transform: translateX(4px);
+}
+
+.recap-tech-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--recap-accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recap-tech-name::before {
+    content: "•";
+    color: var(--recap-accent);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.recap-tech-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--recap-text-muted);
+}
+
+/* --- Slides mode (fullscreen) --- */
+.recap-panel.recap--fullscreen .recap-section {
+    display: none;
+}
+
+.recap-panel.recap--fullscreen .recap-section.recap-section--active {
+    display: block;
+    animation: recap-slideIn 0.3s ease forwards;
+}
+
+@keyframes recap-slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Footer / Navigation --- */
+.recap-footer {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border-top: 1px solid var(--recap-border);
+    flex-shrink: 0;
+}
+
+.recap-panel.recap--fullscreen .recap-footer {
+    display: flex;
+}
+
+.recap-nav-btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--recap-border);
+    background: var(--recap-surface);
+    color: var(--recap-text);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--recap-transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.recap-nav-btn:hover {
+    background: var(--recap-accent);
+    color: #fff;
+    border-color: var(--recap-accent);
+}
+
+.recap-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.recap-nav-btn:disabled:hover {
+    background: var(--recap-surface);
+    color: var(--recap-text);
+    border-color: var(--recap-border);
+}
+
+.recap-progress {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.recap-progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--recap-border);
+    transition: all var(--recap-transition);
+}
+
+.recap-progress-dot.recap-progress-dot--active {
+    background: var(--recap-accent);
+    box-shadow: 0 0 8px var(--recap-accent-glow);
+    transform: scale(1.3);
+}
+
+/* --- Toast / Feedback copie --- */
+.recap-toast {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    z-index: 100000;
+    background: var(--recap-accent);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.recap-toast.recap--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .recap-panel {
+        width: 100vw;
+        border-left: none;
+    }
+
+    .recap-fab {
+        bottom: 18px;
+        right: 18px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .recap-body {
+        padding: 16px;
+    }
+
+    .recap-section {
+        padding: 16px;
+    }
+
+    .recap-header {
+        padding: 14px 16px;
+    }
+
+    .recap-footer {
+        padding: 12px 16px;
+    }
+}

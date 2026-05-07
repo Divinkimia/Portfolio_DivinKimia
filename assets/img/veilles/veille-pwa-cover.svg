@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="PWA, hors-ligne et cache">
+  <defs>
+    <linearGradient id="pwa-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12081f"/>
+      <stop offset="100%" stop-color="#1a1030"/>
+    </linearGradient>
+    <linearGradient id="pwa-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e879f9"/><stop offset="100%" stop-color="#c026d3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#pwa-bg)"/>
+  <circle cx="1320" cy="200" r="190" fill="#d946ef" opacity="0.09"/>
+  <!-- Smartphone -->
+  <rect x="700" y="220" width="200" height="420" rx="28" fill="#0f0720" stroke="url(#pwa-accent)" stroke-width="4"/>
+  <rect x="718" y="268" width="164" height="300" rx="8" fill="#1a0f30"/>
+  <!-- Signal hors-ligne -->
+  <path d="M760 420 Q800 360 840 420 Q880 480 920 420" fill="none" stroke="#f0abfc" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="780" cy="530" r="12" fill="#22c55e"/><path d="M774 530 L778 536 L788 522" stroke="#052e16" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Ic�ne cache -->
+  <rect x="940" y="480" width="120" height="90" rx="10" fill="#3b0764" stroke="#e879f9" stroke-width="2" opacity="0.9"/>
+  <path d="M970 505 H1030 M970 525 H1010 M970 545 H1030" stroke="#fae8ff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+</svg>

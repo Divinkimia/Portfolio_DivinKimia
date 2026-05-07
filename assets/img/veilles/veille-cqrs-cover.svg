@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="CQRS et lectures optimis�es">
+  <defs>
+    <linearGradient id="cq-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="cq-w" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="cq-r" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cq-bg)"/>
+  <ellipse cx="1180" cy="720" rx="280" ry="130" fill="#6366f1" opacity="0.08"/>
+  <!-- Split -->
+  <path d="M800 260 V640" stroke="#475569" stroke-width="4"/>
+  <!-- Write side -->
+  <g transform="translate(420 320)" stroke="url(#cq-w)" stroke-width="3" fill="#0f172a">
+    <rect x="0" y="0" width="280" height="200" rx="16"/><path d="M80 60 H200 M80 100 H180 M80 140 H160" stroke="#bae6fd" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- Read side -->
+  <g transform="translate(900 320)" stroke="url(#cq-r)" stroke-width="3" fill="#0f172a">
+    <rect x="0" y="0" width="280" height="200" rx="16"/>
+    <path d="M40 80 H240 M40 120 H220 M40 160 H200" stroke="#fde68a" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  </g>
+</svg>

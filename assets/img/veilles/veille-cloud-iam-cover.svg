@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Cybers�curit� cloud et IAM">
+  <defs>
+    <linearGradient id="iam-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140f18"/>
+      <stop offset="100%" stop-color="#1a0f14"/>
+    </linearGradient>
+    <linearGradient id="iam-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#iam-bg)"/>
+  <ellipse cx="1220" cy="220" rx="260" ry="140" fill="#ea580c" opacity="0.08"/>
+  <!-- Nuage -->
+  <path d="M680 420 Q760 320 880 360 Q940 280 1060 320 Q1180 300 1240 400 Q1320 420 1280 520 Q1220 580 1080 560 Q940 600 820 540 Q700 560 640 480 Q600 420 680 420 Z" fill="#1c1418" stroke="#fdba74" stroke-width="3" opacity="0.95"/>
+  <!-- Bouclier -->
+  <path d="M800 380 L800 500 Q900 580 1000 500 L1000 380 Q900 340 800 380 Z" fill="#292524" stroke="url(#iam-accent)" stroke-width="4"/>
+  <path d="M830 420 L970 420 M830 460 L970 460 M830 500 L970 500" stroke="#fed7aa" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <!-- Cl� stylis�e -->
+  <g transform="translate(1050 440)" fill="none" stroke="#fb923c" stroke-width="5" stroke-linecap="round">
+    <circle cx="0" cy="0" r="28"/>
+    <path d="M22 22 L90 90"/><path d="M72 72 L90 90"/><path d="M82 82 L100 100"/>
+  </g>
+</svg>

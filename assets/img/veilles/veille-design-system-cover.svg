@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Design system multi-plateformes">
+  <defs>
+    <linearGradient id="ds-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120818"/>
+      <stop offset="100%" stop-color="#180f28"/>
+    </linearGradient>
+    <linearGradient id="ds-acc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d8b4fe"/><stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#ds-bg)"/>
+  <circle cx="1340" cy="660" r="190" fill="#a855f7" opacity="0.09"/>
+  <!-- Deux devices -->
+  <rect x="560" y="260" width="170" height="340" rx="22" fill="#1a1033" stroke="#c4b5fd" stroke-width="3"/>
+  <rect x="870" y="300" width="210" height="380" rx="26" fill="#1a1033" stroke="url(#ds-acc)" stroke-width="4"/>
+  <!-- Composants partag�s -->
+  <g transform="translate(730 200)">
+    <rect x="0" y="0" width="140" height="44" rx="10" fill="#4c1d95" stroke="#e9d5ff" stroke-width="2"/>
+    <rect x="160" y="0" width="140" height="44" rx="10" fill="#4c1d95" stroke="#e9d5ff" stroke-width="2"/>
+    <rect x="80" y="64" width="140" height="44" rx="10" fill="#581c87" stroke="#fae8ff" stroke-width="2"/>
+  </g>
+  <path d="M685 420 Q800 480 915 440" stroke="#ddd6fe" stroke-width="2" stroke-dasharray="8 8" fill="none" opacity="0.6"/>
+</svg>

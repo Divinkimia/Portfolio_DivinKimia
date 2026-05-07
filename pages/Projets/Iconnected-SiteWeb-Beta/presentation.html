@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Présentation du projet IConnected Store — boutique en ligne et rendez-vous à Orléans." />
+  <title>Présentation du projet — IConnected Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/presentation.css" />
+</head>
+<body class="page-presentation-body">
+
+<header>
+  <h1>IConnected Store</h1>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.php">Accueil</a></li>
+      <li><a href="presentation.html" aria-current="page">Présentation</a></li>
+      <li><a href="boutique.php">Boutique</a></li>
+      <li><a href="rdv.php">Prendre RDV</a></li>
+      <li><a href="login.php">Connexion</a></li>
+      <li><a href="register.php">Inscription</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="presentation" id="presentation-app">
+  <section class="pres-hero" aria-labelledby="pres-hero-title">
+    <div class="pres-hero__aurora" aria-hidden="true"></div>
+    <div class="pres-hero__grid" aria-hidden="true"></div>
+    <div class="pres-hero__inner">
+      <p class="pres-hero__eyebrow" data-reveal>Réalité augmentée du commerce local</p>
+      <h1 id="pres-hero-title" class="pres-hero__title" data-reveal>
+        <span class="pres-hero__gradient">IConnected Store</span>
+        <span class="pres-hero__subtitle">La vitrine numérique qui prolonge votre magasin à Orléans.</span>
+      </h1>
+      <p class="pres-hero__lead" data-reveal>
+        Une plateforme pensée comme un écosystème : boutique en ligne, prise de rendez-vous fluide et parcours client unifié — sans sacrifier l’humain ni la proximité.
+      </p>
+      <div class="pres-hero__actions" data-reveal>
+        <a class="pres-btn pres-btn--primary" href="boutique.php">Découvrir la boutique</a>
+        <a class="pres-btn pres-btn--ghost" href="rdv.php">Réserver un créneau</a>
+      </div>
+    </div>
+    <div class="pres-hero__scroll" aria-hidden="true">
+      <span>Explorer</span>
+      <span class="pres-hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <section class="pres-strip" aria-label="Indicateurs clés">
+    <div class="pres-strip__item" data-reveal>
+      <span class="pres-strip__value"><span class="js-counter" data-target="3">0</span>+</span>
+      <span class="pres-strip__label">Piliers métier</span>
+    </div>
+    <div class="pres-strip__item" data-reveal>
+      <span class="pres-strip__value"><span class="js-counter" data-target="100">0</span>%</span>
+      <span class="pres-strip__label">Focus expérience</span>
+    </div>
+    <div class="pres-strip__item" data-reveal>
+      <span class="pres-strip__value">24<span class="pres-strip__suffix">/7</span></span>
+      <span class="pres-strip__label">Boutique accessible</span>
+    </div>
+    <div class="pres-strip__item" data-reveal>
+      <span class="pres-strip__value">1</span>
+      <span class="pres-strip__label">Parcours utilisateur cohérent</span>
+    </div>
+  </section>
+
+  <section class="pres-section" aria-labelledby="pres-vision-title">
+    <div class="pres-section__head" data-reveal>
+      <h2 id="pres-vision-title">Vision</h2>
+      <p class="pres-section__intro">
+        Nous avons conçu IConnected Store comme une réponse concrète aux attentes d’aujourd’hui : transparence des stocks, autonomie du client et lien direct avec l’atelier — le tout dans une interface sobre et rapide.
+      </p>
+    </div>
+    <div class="pres-bento">
+      <article class="pres-card pres-card--wide" data-reveal>
+        <h3 class="pres-card__title">Fluidité avant tout</h3>
+        <p>Parcours d’achat et de réservation sans friction : moins d’étapes, plus de clarté. Chaque écran assume un rôle unique pour éviter la surcharge cognitive.</p>
+      </article>
+      <article class="pres-card" data-reveal>
+        <h3 class="pres-card__title">Confiance</h3>
+        <p>Comptes clients, historique de rendez-vous et panier : les usages essentiels d’un commerce de proximité modernisé.</p>
+      </article>
+      <article class="pres-card pres-card--accent" data-reveal>
+        <h3 class="pres-card__title">Pérennité</h3>
+        <p>Architecture PHP / MySQL classique et maintenable : performance réelle, pas seulement effet de surface.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="pres-section pres-section--alt" aria-labelledby="pres-stack-title">
+    <div class="pres-section__head" data-reveal>
+      <h2 id="pres-stack-title">Stack &amp; architecture</h2>
+      <p class="pres-section__intro">Une base technique volontairement lisible, pour évoluer sans dette obscure.</p>
+    </div>
+    <ul class="pres-stack" data-reveal>
+      <li><span class="pres-stack__tag">PHP</span> pages dynamiques, sessions sécurisées</li>
+      <li><span class="pres-stack__tag">MySQL</span> produits, utilisateurs, rendez-vous</li>
+      <li><span class="pres-stack__tag">HTML5</span> sémantique &amp; accessibilité</li>
+      <li><span class="pres-stack__tag">CSS3</span> layout moderne, animations maîtrisées</li>
+      <li><span class="pres-stack__tag">JS</span> micro-interactions ciblées</li>
+    </ul>
+  </section>
+
+  <section class="pres-section" aria-labelledby="pres-features-title">
+    <div class="pres-section__head" data-reveal>
+      <h2 id="pres-features-title">Fonctionnalités</h2>
+      <p class="pres-section__intro">Les briques qui composent l’expérience IConnected Store aujourd’hui.</p>
+    </div>
+    <ol class="pres-timeline">
+      <li class="pres-timeline__step" data-reveal>
+        <span class="pres-timeline__marker" aria-hidden="true"></span>
+        <div class="pres-timeline__body">
+          <h3>Boutique &amp; panier</h3>
+          <p>Catalogue filtrable par catégorie, fiches produits claires, ajout au panier pour les clients connectés.</p>
+        </div>
+      </li>
+      <li class="pres-timeline__step" data-reveal>
+        <span class="pres-timeline__marker" aria-hidden="true"></span>
+        <div class="pres-timeline__body">
+          <h3>Rendez-vous</h3>
+          <p>Prise de RDV structurée et suivi dans l’espace personnel — le lien digital avec l’atelier physique.</p>
+        </div>
+      </li>
+      <li class="pres-timeline__step" data-reveal>
+        <span class="pres-timeline__marker" aria-hidden="true"></span>
+        <div class="pres-timeline__body">
+          <h3>Compte utilisateur</h3>
+          <p>Inscription, connexion et session : socle pour personnaliser la relation client dans le temps.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="pres-cta" aria-labelledby="pres-cta-title">
+    <div class="pres-cta__inner" data-reveal>
+      <h2 id="pres-cta-title">Prêt à franchir la porte numérique ?</h2>
+      <p>Cette présentation est une invitation à explorer le site réel — là où le projet prend vie.</p>
+      <div class="pres-cta__actions">
+        <a class="pres-btn pres-btn--primary" href="index.php">Retour à l’accueil</a>
+        <a class="pres-btn pres-btn--ghost" href="boutique.php">Voir les produits</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="js/presentation.js" defer></script>
+</main>
+
+<footer>
+  <p>&copy; <span id="footer-year"></span> IConnected Store. Tous droits réservés.</p>
+</footer>
+</body>
+</html>

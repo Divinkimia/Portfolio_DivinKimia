@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
     <script src="../../assets/js/theme-init.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Veille sur Claude Code et la collaboration en équipe : avantages, risques sécurité, impact emploi et éducation." />
-  <title>Divin Kimia | Veille IA — Claude Code</title>
+  <meta name="description" content="Veille technologique structurée : écosystème Claude (Claude, espaces de travail, Claude Code), méthode QQQCCP et problématique BTS SIO." />
+  <title>Divin Kimia | Veille IA — Écosystème Claude</title>
 
   <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="../../assets/css/Veilles/VeillesOpenClaw.css" />
+  <link rel="stylesheet" href="../../assets/css/Veilles/VeillesHeyGen.css" />
     <link rel="stylesheet" href="../../assets/css/site-navbar-global.css" />
   <link rel="stylesheet" href="../../assets/css/site-theme-global.css" />
   <link rel="stylesheet" href="../../assets/css/site-footer-global.css" />
@@ -47,8 +48,8 @@
         <li class="nav-item"><a href="../Projets/index.html" class="nav-link">Projets</a></li>
         <li class="nav-item"><a href="../Parcours_HTML/CertificationPage.html" class="nav-link">Certification</a></li>
         <li class="nav-item"><a href="Veilles.html" class="nav-link active">Veilles</a></li>
-        <li class="nav-item"><a href="../MeDecouvrir.html" class="nav-link">Me découvrir</a></li>
-        <li class="nav-item"><a href="../Blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="../EnDeveloppement.html" class="nav-link">Me découvrir</a></li>
+        <li class="nav-item"><a href="../EnDeveloppement.html" class="nav-link">Blog</a></li>
       </ul>
       <a href="#contact-veille" class="nav-btn d-none d-lg-inline-flex ms-lg-3">Contact</a>
     </div>
@@ -62,10 +63,10 @@
         </button>
         <div class="veille-course-brand">
           <span class="brand-mark" aria-hidden="true">VK</span>
-          <span class="veille-course-brand-text"><span class="d-none d-sm-inline">Veille · </span>Claude Code</span>
+          <span class="veille-course-brand-text"><span class="d-none d-sm-inline">Veille · </span>Claude</span>
         </div>
       </div>
-      <h1 class="veille-course-title" id="veilleCourseTitle">Veille IA — Claude Code</h1>
+      <h1 class="veille-course-title" id="veilleCourseTitle">Veille IA — Écosystème Claude</h1>
       <div class="veille-course-actions">
         <button type="button" class="veille-icon-btn" id="veilleBtnGlossary" title="Ressources" aria-label="Aller aux ressources">
           <i data-feather="book-open" width="20" height="20"></i>
@@ -86,7 +87,7 @@
         <div class="veille-sidebar-search">
           <div class="veille-sidebar-search-wrap">
             <i data-feather="search"></i>
-            <input type="search" id="veilleSearchInput" placeholder="Rechercher (sécurité, emploi, éducation...)" autocomplete="off" aria-label="Filtrer les thèmes" />
+            <input type="search" id="veilleSearchInput" placeholder="Rechercher (Claude Code, travail, problématique…)" autocomplete="off" aria-label="Filtrer les thèmes" />
           </div>
         </div>
 
@@ -105,12 +106,18 @@
 
         <div class="veille-panel" id="panelResources" role="tabpanel" hidden>
           <div class="veille-resources-list">
-            <h4>Claude Code — sources officielles</h4>
+            <h4>Écosystème Claude — références</h4>
+            <ul>
+              <li><i data-feather="external-link" width="16"></i><div><a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a><br><span class="veille-res-hint">Éditeur de Claude — actualités et vision produit</span></div></li>
+              <li><i data-feather="book-open" width="16"></i><div><a href="https://docs.anthropic.com" target="_blank" rel="noopener">Documentation Anthropic</a><br><span class="veille-res-hint">Guides API, bonnes pratiques, Claude Code</span></div></li>
+              <li><i data-feather="external-link" width="16"></i><div><a href="https://claude.ai" target="_blank" rel="noopener">Claude (application)</a><br><span class="veille-res-hint">Assistant, projets et usage quotidien</span></div></li>
+            </ul>
+            <h4>Claude Code — documentation technique</h4>
             <ul>
               <li><i data-feather="book-open" width="16"></i><div><a href="https://docs.anthropic.com/en/docs/claude-code/security" target="_blank" rel="noopener">Security</a><br><span class="veille-res-hint">Permissions, sandbox, contrôles</span></div></li>
               <li><i data-feather="book-open" width="16"></i><div><a href="https://docs.anthropic.com/en/docs/claude-code/permissions" target="_blank" rel="noopener">Permissions</a><br><span class="veille-res-hint">Modes et politiques de contrôle</span></div></li>
               <li><i data-feather="book-open" width="16"></i><div><a href="https://docs.anthropic.com/en/docs/claude-code/settings" target="_blank" rel="noopener">Settings</a><br><span class="veille-res-hint">Configuration utilisateur/projet/entreprise</span></div></li>
-              <li><i data-feather="external-link" width="16"></i><div><a href="https://www.anthropic.com/news/projects/" target="_blank" rel="noopener">Projects (collaboration)</a><br><span class="veille-res-hint">Partage et cowork sur Claude</span></div></li>
+              <li><i data-feather="external-link" width="16"></i><div><a href="https://www.anthropic.com/news/projects/" target="_blank" rel="noopener">Projects (collaboration)</a><br><span class="veille-res-hint">Contexte partagé et travail d’équipe</span></div></li>
             </ul>
             <h4>Impact emploi &amp; éducation</h4>
             <ul>
@@ -126,9 +133,9 @@
       <main class="veille-main">
         <div class="veille-scroll-area">
           <section class="veille-hero" aria-labelledby="veilleHeroHeading">
-            <img id="veilleHeroImg" src="../../assets/img/offline-gallery-placeholder.svg" alt="" width="1600" height="900" loading="eager" />
+            <img id="veilleHeroImg" src="../../assets/img/veilles/veille-claude-code-cover.svg" alt="Visuel veille écosystème Claude" width="1600" height="900" loading="eager" />
             <div class="veille-hero-overlay">
-              <h2 class="veille-hero-title" id="veilleHeroHeading">Veille IA — Claude Code</h2>
+              <h2 class="veille-hero-title" id="veilleHeroHeading">Veille IA — Écosystème Claude</h2>
               <p class="veille-hero-hint"><i data-feather="chevron-down" width="18"></i> Faites défiler pour commencer</p>
             </div>
             <button type="button" class="veille-hero-nav veille-hero-nav--prev" id="veillePrevLesson" aria-label="Thème précédent"><i data-feather="chevron-left"></i></button>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="RAG, chunking et m�tadonn�es">
+  <defs>
+    <linearGradient id="rag-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181028"/>
+      <stop offset="100%" stop-color="#221038"/>
+    </linearGradient>
+    <linearGradient id="rag-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <marker id="rag-m" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#f472b6"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#rag-bg)"/>
+  <circle cx="280" cy="200" r="170" fill="#ec4899" opacity="0.08"/>
+  <!-- Blocs documents -->
+  <g fill="#3f1028" stroke="#fbcfe8" stroke-width="2">
+    <rect x="480" y="380" width="100" height="120" rx="8"/><rect x="600" y="400" width="100" height="120" rx="8"/><rect x="720" y="360" width="100" height="120" rx="8"/>
+  </g>
+  <!-- Fl�che vers embedding -->
+  <path d="M860 440 H1020" stroke="url(#rag-accent)" stroke-width="4" marker-end="url(#rag-m)"/>
+  <!-- Graphe simplifi� -->
+  <circle cx="1140" cy="440" r="90" fill="#4c0519" stroke="#f472b6" stroke-width="4"/>
+  <g stroke="#fce7f3" stroke-width="2.5" opacity="0.65">
+    <path d="M1100 420 L1180 460"/><path d="M1120 480 L1160 400"/><path d="M1080 460 L1200 430"/>
+  </g>
+</svg>

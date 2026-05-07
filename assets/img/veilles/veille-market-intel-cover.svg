@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Veille concurrentielle et analyse de march�">
+  <defs>
+    <linearGradient id="mi-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1420"/>
+      <stop offset="100%" stop-color="#142032"/>
+    </linearGradient>
+    <linearGradient id="mi-acc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a8dadc"/><stop offset="100%" stop-color="#457b9d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#mi-bg)"/>
+  <circle cx="1340" cy="220" r="160" fill="#457b9d" opacity="0.12"/>
+  <!-- Radar -->
+  <g transform="translate(780 420)" fill="none" stroke="#94a3b8" stroke-width="2" opacity="0.45">
+    <polygon points="0,-140 132,-42 82,114 -82,114 -132,-42"/><polygon points="0,-90 85,-27 53,73 -53,73 -85,-27"/><polygon points="0,-45 42,-14 26,36 -26,36 -42,-14"/>
+    <line x1="0" y1="0" x2="0" y2="-140"/><line x1="0" y1="0" x2="132" y2="-42"/><line x1="0" y1="0" x2="82" y2="114"/><line x1="0" y1="0" x2="-82" y2="114"/><line x1="0" y1="0" x2="-132" y2="-42"/>
+  </g>
+  <polygon points="780,300 870,352 830,438 730,438 690,352" fill="#1e3a5f" stroke="url(#mi-acc)" stroke-width="3" opacity="0.95"/>
+  <!-- Balance -->
+  <path d="M560 560 H1040" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M800 560 V520 M760 560 Q800 500 840 560" fill="none" stroke="#a8dadc" stroke-width="4" stroke-linecap="round"/>
+</svg>

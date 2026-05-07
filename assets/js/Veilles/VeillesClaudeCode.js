@@ -1,6 +1,6 @@
 /**
- * Veille Claude Code - meme parcours que OpenClaw/HeyGen
- * Donnees : window.VEILLE_DATA (VeillesClaudeCode-data.js)
+ * Veille écosystème Claude — même parcours qu’OpenClaw/HeyGen (8 modules)
+ * Données : window.VEILLE_DATA (VeillesClaudeCode-data.js)
  */
 (function () {
   'use strict';

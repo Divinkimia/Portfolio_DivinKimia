@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="GitOps et cha�ne d&apos;approvisionnement logicielle">
+  <defs>
+    <linearGradient id="go-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061417"/>
+      <stop offset="100%" stop-color="#0a1f24"/>
+    </linearGradient>
+    <linearGradient id="go-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <marker id="go-arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#5eead4"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#go-bg)"/>
+  <circle cx="260" cy="640" r="180" fill="#14b8a6" opacity="0.07"/>
+  <!-- Branches git -->
+  <g stroke="url(#go-accent)" stroke-width="4" fill="none" stroke-linecap="round">
+    <circle cx="420" cy="420" r="18" fill="#5eead4" stroke="none"/>
+    <path d="M438 420 H620"/><circle cx="638" cy="420" r="18" fill="#5eead4" stroke="none"/>
+    <path d="M420 402 Q420 300 560 280"/><circle cx="578" cy="280" r="18" fill="#99f6e4" stroke="none"/>
+    <path d="M420 438 Q420 560 560 580"/><circle cx="578" cy="580" r="18" fill="#99f6e4" stroke="none"/>
+  </g>
+  <!-- Pipeline -->
+  <g transform="translate(920 360)" stroke="#ccfbf1" stroke-width="3" fill="#134e4a">
+    <rect x="0" y="0" width="100" height="72" rx="10"/><rect x="140" y="0" width="100" height="72" rx="10"/><rect x="280" y="0" width="100" height="72" rx="10"/>
+  </g>
+  <path d="M1020 396 H1060 M1160 396 H1200 M1300 396 H1340" stroke="#5eead4" stroke-width="3" marker-end="url(#go-arr)" opacity="0.9"/>
+</svg>

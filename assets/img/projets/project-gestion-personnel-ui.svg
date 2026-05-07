@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="gpub-title gpub-desc">
+  <title id="gpub-title">Illustration tableau de bord RH</title>
+  <desc id="gpub-desc">Silhouettes et tableau de bord stylises pour une application RH web.</desc>
+  <defs>
+    <linearGradient id="gpub-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#134e4a"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="gpub-shine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="gpub-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="400" rx="24" fill="url(#gpub-bg)"/>
+  <rect x="32" y="32" width="576" height="48" rx="12" fill="rgba(15,23,42,0.65)" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+  <rect x="48" y="46" width="120" height="20" rx="6" fill="rgba(34,211,238,0.35)"/>
+  <rect x="180" y="46" width="80" height="20" rx="6" fill="rgba(148,163,184,0.25)"/>
+  <circle cx="560" cy="56" r="14" fill="rgba(34,211,238,0.5)"/>
+  <rect x="32" y="96" width="200" height="272" rx="16" fill="rgba(15,23,42,0.55)" stroke="rgba(34,211,238,0.2)"/>
+  <text x="52" y="132" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Dashboard</text>
+  <rect x="52" y="148" width="160" height="8" rx="4" fill="rgba(34,211,238,0.45)"/>
+  <rect x="52" y="168" width="120" height="8" rx="4" fill="rgba(148,163,184,0.2)"/>
+  <rect x="52" y="192" width="160" height="56" rx="10" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.35)"/>
+  <rect x="52" y="264" width="160" height="56" rx="10" fill="rgba(148,163,184,0.08)" stroke="rgba(148,163,184,0.2)"/>
+  <rect x="248" y="96" width="360" height="272" rx="16" fill="rgba(15,23,42,0.45)" stroke="rgba(34,211,238,0.18)"/>
+  <rect x="268" y="116" width="320" height="36" rx="8" fill="rgba(34,211,238,0.08)"/>
+  <rect x="288" y="128" width="60" height="12" rx="4" fill="rgba(148,163,184,0.35)"/>
+  <rect x="360" y="128" width="80" height="12" rx="4" fill="rgba(148,163,184,0.25)"/>
+  <rect x="452" y="128" width="100" height="12" rx="4" fill="rgba(148,163,184,0.25)"/>
+  <g transform="translate(268 172)" filter="url(#gpub-glow)">
+    <rect y="0" width="72" height="72" rx="14" fill="rgba(34,211,238,0.2)" stroke="rgba(34,211,238,0.45)"/>
+    <circle cx="36" cy="28" r="12" fill="#22d3ee"/>
+    <path d="M14 62c6-12 16-18 22-18h20c6 0 16 6 22 18" fill="none" stroke="#67e8f9" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(356 172)">
+    <rect y="0" width="72" height="72" rx="14" fill="rgba(148,163,184,0.12)" stroke="rgba(148,163,184,0.3)"/>
+    <circle cx="36" cy="28" r="12" fill="#94a3b8"/>
+    <path d="M14 62c6-12 16-18 22-18h20c6 0 16 6 22 18" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(444 172)">
+    <rect y="0" width="72" height="72" rx="14" fill="rgba(148,163,184,0.12)" stroke="rgba(148,163,184,0.3)"/>
+    <circle cx="36" cy="28" r="12" fill="#94a3b8"/>
+    <path d="M14 62c6-12 16-18 22-18h20c6 0 16 6 22 18" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <rect x="268" y="268" width="320" height="84" rx="12" fill="rgba(34,211,238,0.06)" stroke="rgba(34,211,238,0.15)"/>
+  <rect x="288" y="292" width="200" height="10" rx="4" fill="rgba(148,163,184,0.2)"/>
+  <rect x="288" y="312" width="140" height="10" rx="4" fill="rgba(148,163,184,0.15)"/>
+  <rect y="360" width="640" height="40" fill="url(#gpub-shine)" opacity="0.6"/>
+</svg>

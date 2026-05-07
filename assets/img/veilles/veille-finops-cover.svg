@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="FinOps et allocation des co�ts cloud">
+  <defs>
+    <linearGradient id="fn-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071218"/>
+      <stop offset="100%" stop-color="#0c1824"/>
+    </linearGradient>
+    <linearGradient id="fn-bar" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#fn-bg)"/>
+  <circle cx="1340" cy="240" r="170" fill="#2dd4bf" opacity="0.07"/>
+  <!-- Barres -->
+  <g transform="translate(560 420)" fill="url(#fn-bar)" stroke="#99f6e4" stroke-width="2">
+    <rect x="0" y="140" width="72" height="160" rx="8"/><rect x="112" y="80" width="72" height="220" rx="8"/><rect x="224" y="110" width="72" height="190" rx="8"/><rect x="336" y="40" width="72" height="260" rx="8"/><rect x="448" y="170" width="72" height="130" rx="8"/>
+  </g>
+  <!-- �tiquettes -->
+  <rect x="1180" y="520" width="140" height="56" rx="10" fill="#042f2e" stroke="#5eead4" stroke-width="2"/>
+  <path d="M1210 544 H1290 M1210 560 H1260" stroke="#ccfbf1" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Veille Claude Code &#8211; d&#233;veloppement assist&#233; par IA">
+  <defs>
+    <linearGradient id="cc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0a09"/>
+      <stop offset="100%" stop-color="#1c1410"/>
+    </linearGradient>
+    <linearGradient id="cc-term" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cc-bg)"/>
+  <circle cx="1240" cy="680" r="240" fill="#ea580c" opacity="0.08"/>
+  <rect x="560" y="220" width="880" height="480" rx="16" fill="url(#cc-term)" stroke="#44403c" stroke-width="2"/>
+  <rect x="560" y="220" width="880" height="44" rx="16" fill="#292524"/>
+  <circle cx="588" cy="242" r="8" fill="#ef4444"/>
+  <circle cx="612" cy="242" r="8" fill="#eab308"/>
+  <circle cx="636" cy="242" r="8" fill="#22c55e"/>
+  <text x="600" y="330" fill="#fed7aa" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="26">&gt; git status</text>
+  <text x="600" y="380" fill="#a8a29e" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="22">  cowork / review / tests</text>
+  <text x="600" y="440" fill="#fdba74" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="26">&gt; analyze src/</text>
+  <path d="M600 520 L660 560 L600 600" fill="none" stroke="#fb923c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="120" fill="#fff7ed" font-family="system-ui,Segoe UI,sans-serif" font-size="38" font-weight="700" letter-spacing="-0.02em">Claude Code</text>
+  <text x="80" y="178" fill="#fdba74" font-family="system-ui,Segoe UI,sans-serif" font-size="22" opacity="0.95">Veille &#183; IA et d&#233;veloppement</text>
+</svg>

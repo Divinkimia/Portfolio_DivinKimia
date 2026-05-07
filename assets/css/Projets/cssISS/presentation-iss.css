@@ -1,0 +1,1109 @@
+/**
+ * Présentation — Projet ISS (Where The ISS At · Leaflet · JS)
+ * Complète presentation-ml5-portfolio-chrome.css
+ */
+
+body.presentation-iss-page {
+  --iss-accent: #a78bfa;
+  --iss-accent-2: #22d3ee;
+  --iss-accent-soft: rgba(167, 139, 250, 0.14);
+  --iss-surface: rgba(15, 23, 42, 0.72);
+  --iss-border: rgba(148, 163, 184, 0.18);
+  --island-accent: #a78bfa;
+  --island-accent-soft: rgba(167, 139, 250, 0.14);
+}
+
+.presentation-iss-page .page-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -15%, rgba(167, 139, 250, 0.14), transparent),
+    radial-gradient(ellipse 55% 45% at 100% 40%, rgba(34, 211, 238, 0.08), transparent),
+    linear-gradient(180deg, #020617 0%, #0f172a 42%, #020617 100%);
+}
+
+.presentation-iss-page main {
+  position: relative;
+  z-index: 1;
+  padding-top: 5.5rem;
+}
+
+.presentation-iss-page.iss-future .kim-nav-stack {
+  position: relative;
+  z-index: 20;
+}
+
+/* Hero */
+.iss-hero {
+  position: relative;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem) clamp(2.5rem, 7vw, 4.5rem);
+  overflow: hidden;
+}
+
+.iss-hero__glow {
+  position: absolute;
+  inset: -35% -15% auto;
+  height: 75%;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.16) 0%, transparent 62%);
+  pointer-events: none;
+}
+
+.iss-hero__stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1px 1px at 75% 18%, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1px 1px at 45% 55%, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 88% 62%, rgba(255, 255, 255, 0.3), transparent);
+  pointer-events: none;
+  opacity: 0.65;
+  animation: iss-twinkle 7s ease-in-out infinite alternate;
+}
+
+@keyframes iss-twinkle {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    opacity: 0.85;
+  }
+}
+
+.iss-hero__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 40%);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .iss-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.iss-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.iss-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--iss-accent-soft);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  color: #e9d5ff;
+}
+
+.iss-hero__title {
+  margin: 0 0 1rem;
+}
+
+.iss-hero__lead {
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.65;
+  color: #94a3b8;
+  max-width: 54ch;
+  margin: 0 0 1.35rem;
+}
+
+.iss-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.iss-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.iss-btn--primary {
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: #f8fafc;
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.35);
+}
+
+.iss-btn--primary:hover {
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.iss-btn--ghost {
+  border: 1px solid var(--iss-border);
+  color: #e2e8f0;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.iss-btn--ghost:hover {
+  border-color: rgba(167, 139, 250, 0.45);
+  color: #fff;
+}
+
+.iss-hero__quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.iss-quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #94a3b8;
+  border: 1px solid var(--iss-border);
+  text-decoration: none;
+  background: rgba(15, 23, 42, 0.45);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.iss-quick-link:hover {
+  color: #e9d5ff;
+  border-color: rgba(167, 139, 250, 0.45);
+  transform: translateY(-1px);
+}
+
+.iss-hero__visual {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid var(--iss-border);
+  background: var(--iss-surface);
+  padding: 1rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  margin: 0;
+  perspective: 880px;
+}
+
+.iss-hero__visual--tilt {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.iss-hero__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.iss-hero__caption {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  color: #64748b;
+  text-align: center;
+}
+
+/* Live API teaser */
+.iss-live {
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  background: rgba(8, 47, 73, 0.35);
+}
+
+.iss-live__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--iss-accent-2);
+  margin: 0 0 0.65rem;
+}
+
+.iss-live__status {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+}
+
+.iss-live__status.is-error {
+  color: #fca5a5;
+}
+
+.iss-live__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+  font-size: 0.86rem;
+  color: #cbd5e1;
+}
+
+@media (min-width: 420px) {
+  .iss-live__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.iss-live__grid dt {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.iss-live__grid dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  color: #e9d5ff;
+}
+
+.iss-live__btn {
+  margin-top: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e9d5ff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.iss-live__btn:hover {
+  background: rgba(167, 139, 250, 0.15);
+  border-color: rgba(167, 139, 250, 0.65);
+}
+
+/* Sections */
+.iss-section {
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
+}
+
+.iss-section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.iss-section__inner--wide {
+  max-width: 1100px;
+}
+
+.iss-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--iss-accent);
+  margin: 0 0 0.5rem;
+}
+
+.iss-section h2 {
+  font-family: var(--font-heading, 'Outfit', system-ui, sans-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #f1f5f9;
+  margin: 0 0 1rem;
+}
+
+.iss-lead {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+  max-width: 65ch;
+}
+
+.iss-lead--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iss-card {
+  background: var(--iss-surface);
+  border: 1px solid var(--iss-border);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+}
+
+.iss-card__muted {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* Stats */
+.iss-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.iss-stat {
+  padding: 1.25rem 1.15rem;
+  border-radius: 16px;
+  border: 1px solid var(--iss-border);
+  background: rgba(15, 23, 42, 0.55);
+  text-align: center;
+  transition: border-color 0.25s ease, transform 0.2s ease;
+}
+
+.iss-stat:hover {
+  border-color: rgba(167, 139, 250, 0.35);
+  transform: translateY(-3px);
+}
+
+.iss-stat__num {
+  display: block;
+  font-family: var(--font-heading, 'Outfit', system-ui, sans-serif);
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #c4b5fd;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.iss-stat__num--text {
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  letter-spacing: 0.03em;
+}
+
+.iss-stat__label {
+  font-weight: 600;
+  color: #f1f5f9;
+  font-size: 0.92rem;
+}
+
+.iss-stat__hint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+/* Flow accordion */
+.iss-flow {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.iss-flow__step {
+  border-radius: 14px;
+  border: 1px solid var(--iss-border);
+  background: rgba(15, 23, 42, 0.45);
+  overflow: hidden;
+}
+
+.iss-flow__step.is-open {
+  border-color: rgba(167, 139, 250, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+}
+
+.iss-flow__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.15rem;
+  border: none;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.iss-flow__btn:hover,
+.iss-flow__btn:focus-visible {
+  background: rgba(167, 139, 250, 0.06);
+  outline: none;
+}
+
+.iss-flow__idx {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--iss-accent-soft);
+  color: var(--iss-accent);
+}
+
+.iss-flow__title {
+  flex: 1;
+}
+
+.iss-flow__chev {
+  transition: transform 0.25s ease;
+  color: #64748b;
+}
+
+.iss-flow__step.is-open .iss-flow__chev {
+  transform: rotate(180deg);
+  color: var(--iss-accent);
+}
+
+.iss-flow__panel {
+  padding: 0 1.15rem 1.1rem 3.35rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.iss-flow__panel[hidden] {
+  display: none;
+}
+
+.iss-flow__panel p {
+  margin: 0;
+}
+
+/* Features */
+.iss-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.iss-feature {
+  padding: 1.25rem;
+  border-radius: 14px;
+  border: 1px solid var(--iss-border);
+  background: rgba(15, 23, 42, 0.55);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.iss-feature:hover {
+  border-color: rgba(34, 211, 238, 0.28);
+  transform: translateY(-2px);
+}
+
+.iss-feature__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--iss-accent-2);
+  margin-bottom: 0.75rem;
+}
+
+.iss-feature h3 {
+  font-size: 1.05rem;
+  color: #f8fafc;
+  margin: 0 0 0.5rem;
+}
+
+.iss-feature p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.55;
+}
+
+/* Tabs stack */
+.iss-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.iss-tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--iss-border);
+  background: rgba(15, 23, 42, 0.55);
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.iss-tabs__tab:hover {
+  color: #e2e8f0;
+}
+
+.iss-tabs__tab.is-active {
+  color: #f8fafc;
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
+  border-color: transparent;
+}
+
+.iss-tabs__panels {
+  border-radius: 16px;
+  border: 1px solid var(--iss-border);
+  background: rgba(15, 23, 42, 0.5);
+  padding: 1.25rem 1.35rem;
+  min-height: 10rem;
+}
+
+.iss-tabs__panel[hidden] {
+  display: none;
+}
+
+.iss-file-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #cbd5e1;
+  line-height: 1.75;
+  font-size: 0.92rem;
+}
+
+.iss-file-list code {
+  font-size: 0.88em;
+  color: #67e8f9;
+}
+
+/* Code block */
+.iss-code-block {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--iss-border);
+  background: #0b1220;
+}
+
+.iss-code-block pre {
+  margin: 0;
+  padding: 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  overflow-x: auto;
+  color: #e2e8f0;
+}
+
+.iss-note {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-top: 0.75rem;
+}
+
+.iss-note a {
+  color: var(--iss-accent-2);
+}
+
+/* Reveal */
+.iss-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.iss-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ========== Thème futuriste / mission control ========== */
+.presentation-iss-page.iss-future .page-frame {
+  background:
+    radial-gradient(ellipse 100% 80% at 50% -30%, rgba(168, 85, 247, 0.18), transparent),
+    radial-gradient(ellipse 70% 50% at 90% 20%, rgba(34, 211, 238, 0.12), transparent),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(236, 72, 153, 0.08), transparent),
+    linear-gradient(185deg, #030712 0%, #0c1222 38%, #020617 100%);
+}
+
+.iss-cosmos {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.iss-scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+}
+
+.presentation-iss-page.iss-future main {
+  position: relative;
+  z-index: 2;
+}
+
+/* Barre HUD */
+.iss-hud-bar {
+  max-width: 1100px;
+  margin: 0 auto 1.25rem;
+  padding: 0.45rem 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1.25rem;
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  border: 1px solid rgba(34, 211, 238, 0.22);
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.85), rgba(30, 27, 75, 0.5));
+  box-shadow:
+    0 0 24px rgba(34, 211, 238, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.iss-hud-bar__seg strong {
+  color: #e9d5ff;
+  font-weight: 700;
+}
+
+.iss-hud-bar__seg--cyber {
+  color: #67e8f9;
+}
+
+.iss-hud-bar__mono {
+  margin-left: auto;
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.iss-hud-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.35rem;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px #34d399;
+  animation: iss-hud-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes iss-hud-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.92);
+  }
+}
+
+.iss-hero__kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #64748b;
+  margin: 0 0 0.65rem;
+}
+
+.iss-hero__title-pre {
+  display: block;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #22d3ee;
+  margin-bottom: 0.35rem;
+  opacity: 0.95;
+}
+
+.iss-hero__title-main {
+  display: block;
+  font-family: var(--font-heading, 'Outfit', system-ui, sans-serif);
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #f8fafc;
+}
+
+.iss-hero__title-main span:not(.iss-glitch) {
+  background: linear-gradient(135deg, #c4b5fd, #22d3ee, #a5f3fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.iss-glitch {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, #f0abfc, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: iss-glitch-skew 4s infinite linear alternate-reverse;
+}
+
+@keyframes iss-glitch-skew {
+  0% {
+    text-shadow: 1px 0 #a78bfa, -1px 0 #22d3ee;
+  }
+  100% {
+    text-shadow: -1px 0 #22d3ee, 1px 0 #f472b6;
+  }
+}
+
+.iss-hud-frame {
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.15),
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    inset 0 0 60px rgba(34, 211, 238, 0.04);
+}
+
+.iss-hud-frame::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 21px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.45), transparent 40%, rgba(167, 139, 250, 0.35));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.iss-live--hud {
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  background: rgba(3, 7, 18, 0.75);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Ticker */
+.iss-ticker-wrap {
+  padding: 0.65rem 0;
+  overflow: hidden;
+  border-block: 1px solid rgba(34, 211, 238, 0.15);
+  background: rgba(8, 15, 35, 0.55);
+}
+
+.iss-ticker {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.iss-ticker__track {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  align-items: center;
+  white-space: nowrap;
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #94a3b8;
+  animation: iss-ticker 38s linear infinite;
+}
+
+.iss-ticker__track span:nth-child(odd) {
+  color: #67e8f9;
+}
+
+@keyframes iss-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Vision néon */
+.iss-section--vision {
+  position: relative;
+}
+
+.iss-section--vision::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 900px);
+  height: 280px;
+  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.12), transparent 65%);
+  pointer-events: none;
+}
+
+.iss-neo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.75rem;
+}
+
+.iss-neo-card {
+  position: relative;
+  padding: 1.35rem 1.25rem;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 27, 75, 0.35));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.iss-neo-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(34, 211, 238, 0.35);
+  box-shadow: 0 28px 60px rgba(34, 211, 238, 0.12);
+}
+
+.iss-neo-card__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  font-size: 1.15rem;
+  color: #22d3ee;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(167, 139, 250, 0.12));
+  border: 1px solid rgba(34, 211, 238, 0.25);
+}
+
+.iss-neo-card h3 {
+  font-size: 1.08rem;
+  color: #f1f5f9;
+  margin: 0 0 0.5rem;
+}
+
+.iss-neo-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+/* Anneaux décoratifs */
+.iss-orbit-showcase {
+  position: relative;
+  margin-top: 2.5rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iss-orbit-showcase__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.iss-orbit-showcase__ring--a {
+  width: 180px;
+  height: 52px;
+  border-color: rgba(34, 211, 238, 0.35);
+  animation: iss-orbit-spin 14s linear infinite;
+}
+
+.iss-orbit-showcase__ring--b {
+  width: 240px;
+  height: 68px;
+  border-color: rgba(167, 139, 250, 0.25);
+  animation: iss-orbit-spin 22s linear infinite reverse;
+}
+
+@keyframes iss-orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.iss-orbit-showcase__core {
+  position: relative;
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #e9d5ff;
+  background: radial-gradient(circle at 30% 30%, rgba(167, 139, 250, 0.4), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.25);
+}
+
+.iss-orbit-showcase__cap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: #64748b;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Terminal */
+.iss-terminal {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  background: #030712;
+  box-shadow: 0 0 40px rgba(52, 211, 153, 0.08);
+}
+
+.iss-terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  background: #0f172a;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.iss-terminal__bar span:first-child,
+.iss-terminal__bar span:nth-child(2),
+.iss-terminal__bar span:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.iss-terminal__bar span:nth-child(2) {
+  background: #eab308;
+}
+
+.iss-terminal__bar span:nth-child(3) {
+  background: #22c55e;
+}
+
+.iss-terminal__title {
+  flex: 1;
+  text-align: center;
+  font-size: 0.72rem;
+  font-family: monospace;
+  color: #64748b;
+}
+
+.iss-terminal__body {
+  margin: 0;
+  padding: 1.15rem 1.25rem;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: #86efac;
+  white-space: pre-wrap;
+}
+
+.iss-terminal__prompt {
+  color: #22d3ee;
+}
+
+.iss-terminal__cmd {
+  color: #f472b6;
+  font-weight: 700;
+}
+
+.iss-terminal__muted {
+  color: #64748b;
+}
+
+.iss-terminal__json {
+  color: #c4b5fd;
+}
+
+.iss-terminal__accent {
+  color: #fde047;
+}
+
+/* Stats façon panneau */
+.iss-future .iss-stat {
+  position: relative;
+  overflow: hidden;
+}
+
+.iss-future .iss-stat::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.6), transparent);
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iss-hero__stars {
+    animation: none;
+  }
+
+  .iss-hero__visual--tilt {
+    transition: none;
+  }
+
+  .iss-ticker__track {
+    animation: none;
+  }
+
+  .iss-orbit-showcase__ring--a,
+  .iss-orbit-showcase__ring--b {
+    animation: none;
+  }
+
+  .iss-glitch {
+    animation: none;
+    text-shadow: none;
+  }
+
+  .iss-hud-pulse {
+    animation: none;
+  }
+
+  .iss-cosmos {
+    display: none;
+  }
+
+  .iss-scanlines {
+    opacity: 0.15;
+  }
+}

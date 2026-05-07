@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Entrep�ts de donn�es et mod�lisation">
+  <defs>
+    <linearGradient id="dw-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1028"/>
+      <stop offset="100%" stop-color="#161036"/>
+    </linearGradient>
+    <linearGradient id="dw-tier" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#dw-bg)"/>
+  <ellipse cx="1180" cy="180" rx="240" ry="130" fill="#6366f1" opacity="0.1"/>
+  <!-- Couches lakehouse -->
+  <g transform="translate(520 280)">
+    <ellipse cx="280" cy="260" rx="260" ry="52" fill="#1e1b4b" stroke="#a5b4fc" stroke-width="3"/>
+    <ellipse cx="280" cy="200" rx="220" ry="46" fill="#312e81" stroke="#c7d2fe" stroke-width="3"/>
+    <ellipse cx="280" cy="140" rx="180" ry="40" fill="#4338ca" stroke="#e0e7ff" stroke-width="3"/>
+    <ellipse cx="280" cy="85" rx="140" ry="34" fill="#6366f1" stroke="#eef2ff" stroke-width="3"/>
+  </g>
+  <!-- Liens �toile stylis�s -->
+  <g stroke="#c4b5fd" stroke-width="2" opacity="0.5" fill="none">
+    <path d="M900 520 L1040 380"/><path d="M900 520 L780 400"/><path d="M900 520 L1120 520"/>
+  </g>
+</svg>

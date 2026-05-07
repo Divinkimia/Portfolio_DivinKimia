@@ -361,6 +361,11 @@ body.portfolio-light.lt-page-projets .project-overlay {
   background: linear-gradient(180deg, transparent 0%, rgba(27, 31, 38, 0.88) 100%);
 }
 
+body.portfolio-light.lt-page-projets .project-wip-badge {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  box-shadow: var(--lt-shadow-sm);
+}
+
 body.portfolio-light.lt-page-projets .project-link {
   background: rgba(255, 252, 247, 0.96);
   color: var(--lt-text);

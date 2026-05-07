@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestion du personnel — application web PHP en architecture MVC, authentification, CRUD employés et services, base MySQL.">
+    <title>Gestion du personnel — Présentation</title>
+    <link rel="stylesheet" href="../../../assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssGestionPersonnel/presentation-gestion-personnel.css">
+    <link rel="stylesheet" href="../../../assets/css/Projets/cssMachineLearning/presentation-ml5-portfolio-chrome.css">
+    <link rel="stylesheet" href="../../../assets/css/fonts-offline.css">
+</head>
+<body class="presentation-gp-page">
+    <div class="page-frame" aria-hidden="true"></div>
+
+    <div class="kim-nav-stack" id="kimNavStack">
+        <div class="nav-island-shell">
+            <nav class="nav-island" aria-label="Navigation présentation Gestion du personnel">
+                <div class="nav-island-left">
+                    <a href="../../Accueil.html" class="nav-island-link nav-island-link--muted" title="Page d'accueil du portfolio">Accueil portfolio</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../../Projets/index.html" class="nav-island-link nav-island-link--muted">Projets</a>
+                    <span class="nav-island-dot" aria-hidden="true"></span>
+                    <a href="../../Projets/index.html" class="nav-island-link nav-island-link--strong">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Retour aux projets
+                    </a>
+                </div>
+                <a href="#hero" class="nav-island-brand">
+                    <span class="nav-island-brand-kicker">Portfolio</span>
+                    <span class="nav-island-brand-mark" aria-hidden="true"><i class="fas fa-users-cog"></i></span>
+                    <span class="nav-island-brand-name">RH · MVC</span>
+                </a>
+                <div class="nav-island-right">
+                    <span class="nav-island-pill">
+                        <i class="fas fa-database" aria-hidden="true"></i>
+                        PHP · MVC · MySQL
+                    </span>
+                    <a href="http://localhost:8765" class="nav-island-link nav-island-link--muted nav-island-link--icon"
+                        target="_blank" rel="noopener noreferrer" title="Application locale (serveur PHP requis)">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="gp-hero" id="hero">
+            <div class="gp-hero__glow" aria-hidden="true"></div>
+            <div class="gp-hero__mesh" aria-hidden="true"></div>
+            <div class="gp-hero__grid">
+                <div>
+                    <div class="gp-hero__badges">
+                        <span class="gp-badge"><i class="fab fa-php" aria-hidden="true"></i> PHP 8</span>
+                        <span class="gp-badge"><i class="fas fa-layer-group" aria-hidden="true"></i> MVC</span>
+                        <span class="gp-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> Sessions</span>
+                    </div>
+                    <h1 class="gp-hero__title">
+                        Gestion du <span>personnel</span>
+                    </h1>
+                    <p class="gp-hero__lead">
+                        Application de démonstration pour centraliser employés, services et accès : tableaux de bord, formulaires validés et requêtes préparées côté modèle, le tout dans une structure MVC claire héritée d’un socle pédagogique.
+                    </p>
+                    <div class="gp-hero__cta">
+                        <a href="#features" class="gp-btn gp-btn--primary">
+                            <i class="fas fa-list-check" aria-hidden="true"></i> Fonctionnalités
+                        </a>
+                        <a href="../GestionDuPersonnel-MVC-main/S2-MVC/README.md" class="gp-btn gp-btn--ghost" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book" aria-hidden="true"></i> README du projet
+                        </a>
+                    </div>
+                    <nav class="gp-hero__quick gp-reveal" aria-label="Accès rapide">
+                        <a href="#parcours" class="gp-quick-link"><i class="fas fa-route" aria-hidden="true"></i> Parcours</a>
+                        <a href="#couches" class="gp-quick-link"><i class="fas fa-code-branch" aria-hidden="true"></i> Code</a>
+                        <a href="#local" class="gp-quick-link"><i class="fas fa-terminal" aria-hidden="true"></i> Local</a>
+                    </nav>
+                </div>
+                <figure class="gp-hero__visual gp-hero__visual--interactive gp-reveal" id="gpHeroVisual">
+                    <div class="gp-hero__sparkles" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" class="gp-hero__svg" width="480" height="300" role="img" aria-labelledby="gpin-title gpin-desc">
+                        <title id="gpin-title">Tableau de bord RH stylisé</title>
+                        <desc id="gpin-desc">Aperçu graphique : navigation, liste employés et fiches.</desc>
+                        <defs>
+                            <linearGradient id="gpin-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0f172a"/><stop offset="50%" stop-color="#134e4a"/><stop offset="100%" stop-color="#0e7490"/>
+                            </linearGradient>
+                            <linearGradient id="gpin-shine" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+                                <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.35"/>
+                                <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+                            </linearGradient>
+                            <filter id="gpin-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="4" result="b"/>
+                                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+                        <rect class="gp-hero__svg-bg" width="640" height="400" rx="24" fill="url(#gpin-bg)"/>
+                        <rect x="32" y="32" width="576" height="48" rx="12" fill="rgba(15,23,42,0.65)" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+                        <rect x="48" y="46" width="120" height="20" rx="6" fill="rgba(34,211,238,0.35)"/>
+                        <rect x="180" y="46" width="80" height="20" rx="6" fill="rgba(148,163,184,0.25)"/>
+                        <circle cx="560" cy="56" r="14" fill="rgba(34,211,238,0.5)"/>
+                        <rect x="32" y="96" width="200" height="272" rx="16" fill="rgba(15,23,42,0.55)" stroke="rgba(34,211,238,0.2)"/>
+                        <text x="52" y="132" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Dashboard</text>
+                        <rect class="gp-hero__bar" x="52" y="148" width="160" height="8" rx="4" fill="rgba(34,211,238,0.45)"/>
+                        <rect x="52" y="168" width="120" height="8" rx="4" fill="rgba(148,163,184,0.2)"/>
+                        <rect x="52" y="192" width="160" height="56" rx="10" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.35)"/>
+                        <rect x="52" y="264" width="160" height="56" rx="10" fill="rgba(148,163,184,0.08)" stroke="rgba(148,163,184,0.2)"/>
+                        <rect x="248" y="96" width="360" height="272" rx="16" fill="rgba(15,23,42,0.45)" stroke="rgba(34,211,238,0.18)"/>
+                        <rect x="268" y="116" width="320" height="36" rx="8" fill="rgba(34,211,238,0.08)"/>
+                        <rect x="288" y="128" width="60" height="12" rx="4" fill="rgba(148,163,184,0.35)"/>
+                        <rect x="360" y="128" width="80" height="12" rx="4" fill="rgba(148,163,184,0.25)"/>
+                        <rect x="452" y="128" width="100" height="12" rx="4" fill="rgba(148,163,184,0.25)"/>
+                        <g transform="translate(268 172)" filter="url(#gpin-glow)">
+                            <rect y="0" width="72" height="72" rx="14" fill="rgba(34,211,238,0.2)" stroke="rgba(34,211,238,0.45)"/>
+                            <circle cx="36" cy="28" r="12" fill="#22d3ee"/>
+                            <path d="M14 62c6-12 16-18 22-18h20c6 0 16 6 22 18" fill="none" stroke="#67e8f9" stroke-width="4" stroke-linecap="round"/>
+                        </g>
+                        <g transform="translate(356 172)">
+                            <rect y="0" width="72" height="72" rx="14" fill="rgba(148,163,184,0.12)" stroke="rgba(148,163,184,0.3)"/>
+                            <circle cx="36" cy="28" r="12" fill="#94a3b8"/>
+                            <path d="M14 62c6-12 16-18 22-18h20c6 0 16 6 22 18" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+                        </g>
+                        <g transform="translate(444 172)">
+                            <rect y="0" width="72" height="72" rx="14" fill="rgba(148,163,184,0.12)" stroke="rgba(148,163,184,0.3)"/>
+                            <circle cx="36" cy="28" r="12" fill="#94a3b8"/>
+                            <path d="M14 62c6-12 16-18 22-18h20c6 0 16 6 22 18" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+                        </g>
+                        <rect x="268" y="268" width="320" height="84" rx="12" fill="rgba(34,211,238,0.06)" stroke="rgba(34,211,238,0.15)"/>
+                        <rect x="288" y="292" width="200" height="10" rx="4" fill="rgba(148,163,184,0.2)"/>
+                        <rect x="288" y="312" width="140" height="10" rx="4" fill="rgba(148,163,184,0.15)"/>
+                        <rect class="gp-hero__shine-line" y="360" width="640" height="40" fill="url(#gpin-shine)" opacity="0.65"/>
+                    </svg>
+                    <figcaption class="gp-hero__caption">Aperçu interactif · déplacez la souris sur la carte</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="gp-section gp-metrics gp-reveal" id="metrics">
+            <div class="gp-section__inner gp-section__inner--wide">
+                <p class="gp-eyebrow">Structure du dépôt</p>
+                <h2>Une base de code découpée et lisible</h2>
+                <p class="gp-lead gp-lead--center">Les chiffres reflètent le périmètre réel du dossier S2-MVC : séparation MVC, entrées HTTP par contrôleur et vues réutilisables entre les écrans.</p>
+                <div class="gp-stats" role="list">
+                    <div class="gp-stat gp-reveal" role="listitem">
+                        <span class="gp-stat__num" data-target="3">0</span>
+                        <span class="gp-stat__label">couches MVC</span>
+                        <span class="gp-stat__hint">Modèle · Vue · Contrôleur</span>
+                    </div>
+                    <div class="gp-stat gp-reveal" role="listitem">
+                        <span class="gp-stat__num" data-target="9">0</span>
+                        <span class="gp-stat__label">contrôleurs PHP</span>
+                        <span class="gp-stat__hint">Un flux par besoin métier</span>
+                    </div>
+                    <div class="gp-stat gp-reveal" role="listitem">
+                        <span class="gp-stat__num" data-target="11">0</span>
+                        <span class="gp-stat__label">vues modulaires</span>
+                        <span class="gp-stat__hint">Entête, listes, formulaires…</span>
+                    </div>
+                    <div class="gp-stat gp-stat--static gp-reveal" role="listitem">
+                        <span class="gp-stat__num gp-stat__num--text">PDO</span>
+                        <span class="gp-stat__label">accès données</span>
+                        <span class="gp-stat__hint">Requêtes préparées côté modèles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gp-section gp-reveal" id="parcours">
+            <div class="gp-section__inner gp-section__inner--wide">
+                <p class="gp-eyebrow">Expérience utilisateur</p>
+                <h2>Parcours dans l’application</h2>
+                <p class="gp-lead">Cliquez sur une étape pour afficher le détail — du login aux actions sur les fiches employés.</p>
+                <ol class="gp-flow" role="list">
+                    <li class="gp-flow__step is-open" data-step="0">
+                        <button type="button" class="gp-flow__btn" aria-expanded="true">
+                            <span class="gp-flow__idx">1</span>
+                            <span class="gp-flow__title">Authentification</span>
+                            <i class="fas fa-chevron-down gp-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="gp-flow__panel">
+                            <p>L’utilisateur arrive sur <code>v_login.php</code> ; le contrôleur d’authentification vérifie les identifiants et initialise la session avant toute page sensible.</p>
+                        </div>
+                    </li>
+                    <li class="gp-flow__step" data-step="1">
+                        <button type="button" class="gp-flow__btn" aria-expanded="false">
+                            <span class="gp-flow__idx">2</span>
+                            <span class="gp-flow__title">Tableau de bord</span>
+                            <i class="fas fa-chevron-down gp-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="gp-flow__panel" hidden>
+                            <p>Le <code>C_dashboard</code> agrège les informations utiles et charge <code>v_dashboard.php</code> pour orienter vers la liste, la recherche ou la saisie.</p>
+                        </div>
+                    </li>
+                    <li class="gp-flow__step" data-step="2">
+                        <button type="button" class="gp-flow__btn" aria-expanded="false">
+                            <span class="gp-flow__idx">3</span>
+                            <span class="gp-flow__title">Gestion des employés</span>
+                            <i class="fas fa-chevron-down gp-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="gp-flow__panel" hidden>
+                            <p>Consultation, recherche, ajout, modification ou suppression passent par des contrôleurs dédiés qui délèguent aux modèles <code>M_employe</code> et aux vues <code>v_*Employe*</code>.</p>
+                        </div>
+                    </li>
+                    <li class="gp-flow__step" data-step="3">
+                        <button type="button" class="gp-flow__btn" aria-expanded="false">
+                            <span class="gp-flow__idx">4</span>
+                            <span class="gp-flow__title">Persistance &amp; services</span>
+                            <i class="fas fa-chevron-down gp-flow__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="gp-flow__panel" hidden>
+                            <p>Les services et employés restent cohérents grâce au schéma SQL et aux classes métier dans <code>metiers/</code>, avec traçabilité des opérations côté MySQL.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="gp-section gp-reveal" id="apercu">
+            <div class="gp-section__inner">
+                <p class="gp-eyebrow">Contexte</p>
+                <h2>Vue d’ensemble</h2>
+                <p class="gp-lead">
+                    Le dépôt <code>pages/Projets/GestionDuPersonnel-MVC-main/S2-MVC</code> contient le point d’entrée <code>index.php</code>, des contrôleurs par cas d’usage, des vues PHP et des modèles qui encapsulent l’accès MySQL. L’objectif est de montrer une chaîne complète : authentification, navigation protégée, puis opérations métier sur les employés et les services.
+                </p>
+                <div class="gp-card">
+                    <p class="gp-card__muted">
+                        Les écrans couvrent l’accueil, le tableau de bord, la liste et le détail des employés, l’ajout et la modification, la recherche, ainsi que la gestion des comptes utilisateur selon les scripts fournis. La base est décrite par les fichiers SQL du dossier (schéma employés / services, migrations documentées).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gp-section gp-reveal" id="features">
+            <div class="gp-section__inner gp-section__inner--wide">
+                <p class="gp-eyebrow">Produit</p>
+                <h2>Fonctionnalités principales</h2>
+                <p class="gp-lead">Parcours types d’un administrateur ou d’un utilisateur autorisé : connexion, consultation des indicateurs, puis maintenance des fiches.</p>
+                <div class="gp-features">
+                    <article class="gp-feature">
+                        <div class="gp-feature__icon" aria-hidden="true"><i class="fas fa-sign-in-alt"></i></div>
+                        <h3>Authentification</h3>
+                        <p>Connexion par session, contrôleurs d’authentification et vues de login / enregistrement alignés sur le modèle de données.</p>
+                    </article>
+                    <article class="gp-feature">
+                        <div class="gp-feature__icon" aria-hidden="true"><i class="fas fa-chart-pie"></i></div>
+                        <h3>Tableau de bord</h3>
+                        <p>Vue synthétique après connexion pour accéder rapidement aux listes et aux actions fréquentes.</p>
+                    </article>
+                    <article class="gp-feature">
+                        <div class="gp-feature__icon" aria-hidden="true"><i class="fas fa-address-book"></i></div>
+                        <h3>CRUD employés</h3>
+                        <p>Création, lecture, mise à jour et suppression avec vues dédiées et validation côté serveur.</p>
+                    </article>
+                    <article class="gp-feature">
+                        <div class="gp-feature__icon" aria-hidden="true"><i class="fas fa-search"></i></div>
+                        <h3>Recherche</h3>
+                        <p>Filtrage et recherche d’employés pour faciliter la navigation dans de plus grands effectifs.</p>
+                    </article>
+                    <article class="gp-feature">
+                        <div class="gp-feature__icon" aria-hidden="true"><i class="fas fa-sitemap"></i></div>
+                        <h3>Services</h3>
+                        <p>Liaison employés / services via les modèles et la base normalisée (scripts SQL et migrations).</p>
+                    </article>
+                    <article class="gp-feature">
+                        <div class="gp-feature__icon" aria-hidden="true"><i class="fas fa-file-code"></i></div>
+                        <h3>Documentation</h3>
+                        <p>README, instructions de migration et documentation complète dans le dossier S2-MVC pour reproduire l’environnement.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gp-section gp-reveal" id="mvc">
+            <div class="gp-section__inner">
+                <p class="gp-eyebrow">Technique</p>
+                <h2>Architecture MVC (PHP)</h2>
+                <p class="gp-lead">Chaque requête HTTP est routée vers un contrôleur qui orchestre les modèles (accès BDD) et choisit la vue à inclure. Les classes métier dans <code>metiers/</code> portent la logique métier, tandis que <code>modeles/</code> concentre PDO et requêtes.</p>
+                <div class="gp-mvc" role="list">
+                    <div class="gp-mvc__col" role="listitem">
+                        <strong>MODELE</strong>
+                        <span>Requêtes SQL, accès employés / services / auth, classes <code>M_*</code></span>
+                    </div>
+                    <div class="gp-mvc__col" role="listitem">
+                        <strong>VUE</strong>
+                        <span>Fichiers <code>v_*.php</code> : HTML, messages, formulaires</span>
+                    </div>
+                    <div class="gp-mvc__col" role="listitem">
+                        <strong>CONTROLEUR</strong>
+                        <span><code>C_*.php</code> : actions, validation, redirections</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gp-section gp-reveal" id="couches">
+            <div class="gp-section__inner gp-section__inner--wide">
+                <p class="gp-eyebrow">Zoom code</p>
+                <h2>Organisation des fichiers</h2>
+                <p class="gp-lead">Sélectionnez une couche pour voir des exemples concrets de fichiers dans S2-MVC.</p>
+                <div class="gp-tabs" data-gp-tabs>
+                    <div class="gp-tabs__list" role="tablist" aria-label="Couches MVC">
+                        <button type="button" class="gp-tabs__tab is-active" role="tab" aria-selected="true" id="gp-tab-c" aria-controls="gp-panel-c" data-tab="c">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i> Contrôleurs
+                        </button>
+                        <button type="button" class="gp-tabs__tab" role="tab" aria-selected="false" id="gp-tab-m" aria-controls="gp-panel-m" data-tab="m">
+                            <i class="fas fa-database" aria-hidden="true"></i> Modèles
+                        </button>
+                        <button type="button" class="gp-tabs__tab" role="tab" aria-selected="false" id="gp-tab-v" aria-controls="gp-panel-v" data-tab="v">
+                            <i class="fas fa-desktop" aria-hidden="true"></i> Vues
+                        </button>
+                    </div>
+                    <div class="gp-tabs__panels">
+                        <div class="gp-tabs__panel is-active" role="tabpanel" id="gp-panel-c" aria-labelledby="gp-tab-c">
+                            <ul class="gp-file-list">
+                                <li><code>C_authentificate.php</code> — login et session</li>
+                                <li><code>C_dashboard.php</code> — entrée après connexion</li>
+                                <li><code>C_consulterEmployes.php</code> · <code>C_rechercherEmployes.php</code></li>
+                                <li><code>C_ajouterEmployes.php</code> · <code>C_modifierEmploye.php</code> · <code>C_supprimerEmploye.php</code></li>
+                            </ul>
+                        </div>
+                        <div class="gp-tabs__panel" role="tabpanel" id="gp-panel-m" aria-labelledby="gp-tab-m" hidden>
+                            <ul class="gp-file-list">
+                                <li><code>M_authentificate.php</code> — vérification des comptes</li>
+                                <li><code>M_employe.php</code> — CRUD et requêtes employés</li>
+                                <li><code>M_service.php</code> — périmètre services</li>
+                                <li><code>M_generique.php</code> — socle PDO réutilisable</li>
+                            </ul>
+                        </div>
+                        <div class="gp-tabs__panel" role="tabpanel" id="gp-panel-v" aria-labelledby="gp-tab-v" hidden>
+                            <ul class="gp-file-list">
+                                <li><code>v_entete.php</code> · <code>v_piedPage.php</code> — gabarit</li>
+                                <li><code>v_dashboard.php</code> · <code>v_listeEmployes.php</code></li>
+                                <li><code>v_saisieEmploye.php</code> · <code>v_modifierEmploye.php</code></li>
+                                <li><code>v_login.php</code> · <code>v_message.php</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gp-section gp-reveal" id="securite">
+            <div class="gp-section__inner">
+                <p class="gp-eyebrow">Données &amp; sécurité</p>
+                <h2>Base MySQL et bonnes pratiques</h2>
+                <p class="gp-lead">La cohérence des données repose sur le schéma fourni (<code>empsce.sql</code>, variantes et migrations). Côté application, l’usage de requêtes paramétrées dans les modèles limite le risque d’injection SQL.</p>
+                <ul class="gp-list">
+                    <li>Scripts de migration et guides dans <code>INSTRUCTIONS_MIGRATION.md</code> et <code>DOCUMENTATION_COMPLETE.md</code></li>
+                    <li>Sessions PHP pour l’état de connexion et protection des pages sensibles</li>
+                    <li>Séparation stricte des rôles fichiers (vues sans logique SQL lourde)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gp-section gp-reveal" id="local">
+            <div class="gp-section__inner">
+                <p class="gp-eyebrow">Développement</p>
+                <h2>Lancer l’application en local</h2>
+                <p class="gp-lead">PHP intégré suffit pour servir le dossier <code>S2-MVC</code> une fois la base importée et les paramètres de connexion renseignés (voir README).</p>
+                <div class="gp-code-block">
+<pre><code>cd pages/Projets/GestionDuPersonnel-MVC-main/S2-MVC
+php -S localhost:8765</code></pre>
+                </div>
+                <p class="gp-note">Ouvrez ensuite <a href="http://localhost:8765" target="_blank" rel="noopener noreferrer">http://localhost:8765</a> dans le navigateur. Adaptez le port si celui-ci est déjà utilisé.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer presentation-footer">
+        <div class="footer-accent" aria-hidden="true"></div>
+        <div class="container">
+            <div class="row g-4 footer-content">
+                <div class="col-12 col-lg-4 footer-brand">
+                    <div class="brand-info flex-column flex-sm-row align-items-sm-center">
+                        <div class="footer-logo-wrap">
+                            <div class="footer-logo-placeholder" aria-hidden="true"><i class="fas fa-users-cog"></i></div>
+                            <span class="footer-logo-glow" aria-hidden="true"></span>
+                        </div>
+                        <div class="brand-text">
+                            <h3>Gestion du personnel</h3>
+                            <p class="brand-tagline">Présentation projet</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Application PHP MVC pour la gestion des employés et des services, avec authentification et base MySQL.
+                    </p>
+                    <div class="footer-tech-badges" aria-hidden="false">
+                        <span class="ft-badge" title="PHP"><i class="fab fa-php"></i></span>
+                        <span class="ft-badge" title="MySQL"><i class="fas fa-database"></i></span>
+                        <span class="ft-badge" title="MVC"><i class="fas fa-layer-group"></i></span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/divin-kimia" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="../../../Cv%20+%20Motivation%20+%20Rapports/CV-DIVIN_KIMIA.pdf" class="social-link" aria-label="Télécharger le CV (PDF)">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        </a>
+                        <a href="http://localhost:8765" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir l’app locale">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                        <a href="../../Projets/index.html" class="social-link" aria-label="Tous les projets">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 footer-links">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li><a href="../../Accueil.html">Accueil portfolio</a></li>
+                                <li><a href="../../Projets/index.html">Projets</a></li>
+                                <li><a href="#hero">Haut de page</a></li>
+                                <li><a href="#metrics">Chiffres</a></li>
+                                <li><a href="#parcours">Parcours</a></li>
+                                <li><a href="#features">Fonctionnalités</a></li>
+                                <li><a href="#mvc">Architecture</a></li>
+                                <li><a href="#couches">Fichiers</a></li>
+                                <li><a href="#local">Lancement local</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Ressources</h4>
+                            <ul>
+                                <li><a href="../GestionDuPersonnel-MVC-main/S2-MVC/README.md" target="_blank" rel="noopener noreferrer">README S2-MVC</a></li>
+                                <li><a href="presentation-gestion-personnel-light.html">Version thème clair</a></li>
+                                <li><a href="../../Contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 link-group">
+                            <h4>Légal</h4>
+                            <ul>
+                                <li><a href="#">Mentions légales</a></li>
+                                <li><a href="#">Politique de confidentialité</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom flex-column flex-sm-row justify-content-center justify-content-sm-between text-center text-sm-start">
+                <p class="mb-0">© <span id="footer-year">2026</span> <strong>Gestion du personnel</strong> — Présentation portfolio ·
+                    <a href="https://www.linkedin.com/in/divin-kimia" target="_blank" rel="noopener noreferrer">Divin Kimia</a>
+                </p>
+                <a href="#hero" class="back-to-top" aria-label="Retour en haut de la page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m18 15-6-6-6 6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../../../assets/js/Projets/jsGestionPersonnel/presentation-gestion-personnel.js" defer></script>
+    <script src="../../../assets/js/Projets/project-scroll-progress.js" defer></script>
+</body>
+</html>

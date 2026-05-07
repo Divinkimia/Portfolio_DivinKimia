@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="SBOM et d�pendances transitives">
+  <defs>
+    <linearGradient id="sb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160808"/>
+      <stop offset="100%" stop-color="#241010"/>
+    </linearGradient>
+    <linearGradient id="sb-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fca5a5"/><stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sb-bg)"/>
+  <ellipse cx="1220" cy="680" rx="260" ry="140" fill="#991b1b" opacity="0.12"/>
+  <!-- Packages -->
+  <g stroke="url(#sb-line)" stroke-width="2.5" fill="#3f1010">
+    <rect x="620" y="340" width="130" height="88" rx="12"/><rect x="780" y="420" width="130" height="88" rx="12"/><rect x="940" y="340" width="130" height="88" rx="12"/>
+    <rect x="780" y="560" width="130" height="88" rx="12"/><rect x="1100" y="480" width="130" height="88" rx="12"/>
+  </g>
+  <g stroke="#fecaca" stroke-width="2" fill="none" opacity="0.65">
+    <path d="M685 428 L710 420"/><path d="M810 428 L845 420"/><path d="M1005 428 L970 420"/><path d="M845 508 L845 560"/><path d="M970 428 L1045 480"/><path d="M905 508 L1045 520"/>
+  </g>
+</svg>

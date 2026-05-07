@@ -34,6 +34,15 @@ def href_to(html_path: Path, dest_under_pages: str) -> str:
     return os.path.relpath(dest, html_path.parent).replace("\\", "/")
 
 
+def cv_href(html_path: Path) -> str:
+    """Chemin relatif vers CV-DIVIN_KIMIA.pdf (hors dossier pages/)."""
+    from urllib.parse import quote
+
+    cv = PROJECT / "Cv + Motivation + Rapports" / "CV-DIVIN_KIMIA.pdf"
+    rel = Path(os.path.relpath(cv, html_path.parent))
+    return "/".join(quote(p, safe="+") for p in rel.parts)
+
+
 def dark_page_href(html_light_path: Path) -> str:
     """Fichier .html sombre correspondant (meme dossier)."""
     if not html_light_path.name.endswith("-light.html"):
@@ -134,7 +143,7 @@ def hashlib_md5_short(p: Path) -> str:
 def build_footer(html_path: Path) -> str:
     ap_img = asset_prefix(html_path) + "assets/img/ProfileAccueil.jpeg"
     h = lambda dest: href_to(html_path, dest)
-    pdf = h("CV_Divin_Kimia.pdf")
+    pdf = cv_href(html_path)
     ml_light = h("MentionsLegales-light.html")
     ml_dark = h("MentionsLegales.html")
     return f"""  <footer class="lt-footer">
@@ -311,7 +320,7 @@ def map_href_to_light(html: str, current: Path, light_names: set[str]) -> str:
             rel = target_resolved.relative_to(PAGES.resolve())
         except Exception:
             return m.group(0)
-        # Ne pas reecrire le lien vers la page sombre jumelle (toggle ù Theme sombre ù)
+        # Ne pas reecrire le lien vers la page sombre jumelle (toggle ÔøΩ Theme sombre ÔøΩ)
         if current_rel is not None and current_rel.name.endswith("-light.html"):
             dark_rel = current_rel.with_name(
                 current_rel.name.replace("-light.html", ".html")

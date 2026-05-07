@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Discovery produit et roadmap agile">
+  <defs>
+    <linearGradient id="pd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052e1a"/>
+      <stop offset="100%" stop-color="#0a3324"/>
+    </linearGradient>
+    <linearGradient id="pd-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#pd-bg)"/>
+  <ellipse cx="1180" cy="200" rx="260" ry="130" fill="#22c55e" opacity="0.09"/>
+  <!-- Timeline -->
+  <path d="M340 520 C520 360 700 680 880 480 S1220 320 1380 460" fill="none" stroke="url(#pd-line)" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="520" cy="460" r="14" fill="#bbf7d0"/><circle cx="760" cy="520" r="14" fill="#86efac"/><circle cx="1040" cy="420" r="14" fill="#4ade80"/><circle cx="1260" cy="480" r="14" fill="#22c55e"/>
+  <!-- Ampoule -->
+  <path d="M780 240 Q780 180 840 180 Q900 180 900 240 Q900 290 860 310 L820 310 Q780 290 780 240 Z" fill="#14532d" stroke="#86efac" stroke-width="3"/>
+  <rect x="810" y="312" width="60" height="36" rx="6" fill="#166534" stroke="#bbf7d0" stroke-width="2"/>
+</svg>

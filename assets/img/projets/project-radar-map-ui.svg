@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="rad-t rad-d">
+  <title id="rad-t">RadarPF - carte interactive</title>
+  <desc id="rad-d">Carte Leaflet et marqueurs radars.</desc>
+  <defs>
+    <linearGradient id="rad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="24" fill="url(#rad-bg)"/>
+  <rect x="32" y="32" width="576" height="48" rx="12" fill="rgba(15,23,42,0.75)" stroke="rgba(52,211,153,0.35)" stroke-width="1"/>
+  <rect x="48" y="46" width="100" height="20" rx="6" fill="rgba(52,211,153,0.4)"/>
+  <rect x="32" y="96" width="576" height="272" rx="16" fill="rgba(6,78,59,0.35)" stroke="rgba(34,211,238,0.2)"/>
+  <path d="M80 300 L200 140 L340 220 L480 100 L560 180" fill="none" stroke="rgba(52,211,153,0.25)" stroke-width="2"/>
+  <circle cx="320" cy="220" r="100" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1" stroke-dasharray="4 8"/>
+  <circle cx="320" cy="220" r="60" fill="none" stroke="rgba(52,211,153,0.2)" stroke-width="1"/>
+  <path d="M320 220 L380 160" stroke="rgba(52,211,153,0.5)" stroke-width="2"/>
+  <circle cx="200" cy="180" r="8" fill="#ef4444" opacity="0.9"/>
+  <circle cx="420" cy="200" r="8" fill="#ef4444" opacity="0.9"/>
+  <circle cx="340" cy="280" r="8" fill="#f97316" opacity="0.85"/>
+  <rect x="52" y="320" width="200" height="32" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(34,211,238,0.25)"/>
+  <text x="68" y="342" fill="#86efac" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Leaflet · Node · SQLite</text>
+</svg>

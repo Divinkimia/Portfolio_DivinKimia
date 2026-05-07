@@ -517,15 +517,15 @@
               <li><a href="../index-light.html">Projets</a></li>
               <li><a href="../../Parcours_HTML/CertificationPage-light.html">Certification</a></li>
               <li><a href="../../Veilles/Veilles-light.html">Veilles</a></li>
-              <li><a href="../../MeDecouvrir-light.html">Me d&eacute;couvrir</a></li>
-              <li><a href="../../Blog-light.html">Blog</a></li>
+              <li><a href="../../EnDeveloppement.html">Me d&eacute;couvrir</a></li>
+              <li><a href="../../EnDeveloppement.html">Blog</a></li>
             </ul>
           </div>
           <div class="lt-footer-col">
             <h4>Contact</h4>
             <ul>
               <li><a href="mailto:divinkimia@protonmail.com">Email</a></li>
-              <li><a href="../../CV_Divin_Kimia.pdf" download>CV</a></li>
+              <li><a href="../../../Cv%20+%20Motivation%20+%20Rapports/CV-DIVIN_KIMIA.pdf" download>CV</a></li>
               <li><a href="../../Contact-light.html">Formulaire (clair)</a></li>
             </ul>
           </div>
@@ -559,6 +559,11 @@
     <script src="../../../assets/js/Projets/jsMAUICoach/presentation-maui-coach-img-calculator.js" defer></script>
     <script src="../../../assets/js/Projets/jsMAUICoach/presentation-maui-coach-scroll-animations.js" defer></script>
     <script src="../../../assets/js/Projets/project-scroll-progress.js" defer></script>
+
+    <link rel="stylesheet" href="../../../assets/css/recap-presentation.css">
+    <div id="recap-presentation"></div>
+    <script type="application/json" id="recap-presentation-data">{"pitch":"J'ai développé une application mobile de santé qui calcule l'Indice de Masse Grasse (IMG) en quelques secondes. L'utilisateur entre son poids, sa taille, son âge et son sexe, et l'appli lui donne un diagnostic visuel instantané avec un smiley adapté.","probleme":"Les gens veulent connaître leur composition corporelle (pas juste leur poids), mais les outils existants sont soit trop complexes, soit peu fiables. Il fallait une appli simple, rapide et visuellement parlante, utilisable sur téléphone Android.","solution":"J'ai créé une application mobile avec .NET MAUI (un framework Microsoft qui permet de coder une seule fois pour plusieurs plateformes). L'appli prend 4 infos (poids, taille, âge, sexe), applique une formule médicale reconnue, et affiche le résultat avec un code visuel (smiley + message).","technologies":["C# : C'est un langage orienté objet robuste développé par Microsoft. Dans MAUICoach, il est le cœur du code métier (backend local). Il fonctionne en définissant des classes strictement typées et en implémentant les algorithmes complexes de l'Indice de Masse Grasse (IMG). Lors de l'appui sur le bouton, le C# récupère les données, exécute la formule mathématique en tenant compte du sexe et de l'âge, et détermine le diagnostic approprié.",".NET MAUI : C'est le framework multiplateforme de Microsoft. Son rôle est de générer une véritable application native pour mobile (Android, iOS) à partir d'un seul code. Techniquement, il agit comme un traducteur : il compile les instructions génériques de l'application en instructions spécifiques à l'OS cible, s'assurant que les boutons ou les menus utilisent les vrais composants visuels d'Android ou d'iOS pour des performances optimales.","XAML : C'est un langage de balisage basé sur XML. Il est utilisé exclusivement pour structurer et dessiner l'interface graphique de l'application. Concrètement, chaque écran est décrit par un fichier XAML organisant les composants visuels (StackLayout, Entry, Button). Il utilise le mécanisme de \"Data Binding\" pour lier automatiquement la valeur d'un champ texte (comme le poids) directement à une variable en C#, sans code supplémentaire.","Pattern MVVM (Modèle-Vue-VueModèle) : C'est une architecture logicielle professionnelle. Son but est de séparer le design visuel de la logique de calcul. Dans ce projet, le Modèle contient les données brutes, la Vue (le XAML) affiche l'interface, et le VueModèle (en C#) fait le lien. Ce découplage garantit que si l'on souhaite changer totalement le design demain, aucune ligne du code de calcul n'aura besoin d'être modifiée."],"role":"Développeur mobile unique. J'ai conçu l'interface, codé la logique de calcul, implémenté la gestion des erreurs, et structuré le projet selon les bonnes pratiques MVVM.","difficultes":"1) .NET MAUI est un framework relativement récent, donc peu de ressources/tutoriels disponibles. 2) Le pattern MVVM impose une séparation stricte : l'écran ne doit jamais calculer, et le calcul ne doit jamais toucher à l'écran — ça demande de la rigueur. 3) Gérer les erreurs de saisie sans que l'appli plante (champs vides, valeurs négatives, lettres au lieu de chiffres).","solutions_trouvees":"1) J'ai étudié la documentation officielle Microsoft en profondeur + forums de la communauté .NET. 2) J'ai créé une classe « Profil » dédiée au calcul, totalement indépendante de l'interface — si le calcul change, l'écran n'est pas impacté. 3) Chaque champ est validé avant le calcul : si une donnée est incorrecte, un message clair s'affiche sans plantage.","resultat":"Application fonctionnelle sur Android : l'utilisateur remplit 4 champs, appuie sur « Calculer », et obtient instantanément son IMG en pourcentage + un diagnostic visuel (trop maigre / parfait / surpoids) avec un smiley correspondant. Interface fluide et professionnelle.","ameliorations":"Ajout d'un historique pour suivre l'évolution dans le temps, graphiques de progression, compatibilité iOS, ajout d'autres indices de santé (IMC, métabolisme), conseils nutritionnels personnalisés.","conclusion":"Ce projet prouve que je maîtrise le développement mobile avec les technologies Microsoft modernes. J'ai su prendre en main un framework récent, respecter une architecture professionnelle (MVVM), et livrer une appli fonctionnelle avec une vraie utilité santé."}</script>
+    <script src="../../../assets/js/recap-presentation.js" defer></script>
 </body>
 
 </html>

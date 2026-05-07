@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Documentation et partage des apprentissages">
+  <defs>
+    <linearGradient id="doc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="doc-acc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#doc-bg)"/>
+  <circle cx="280" cy="240" r="180" fill="#3b82f6" opacity="0.08"/>
+  <!-- Pages empil�es -->
+  <g transform="translate(620 280)" stroke="url(#doc-acc)" stroke-width="3" fill="#1e3a8a">
+    <rect x="40" y="40" width="360" height="480" rx="12" opacity="0.9"/><rect x="20" y="20" width="360" height="480" rx="12" fill="#1e40af"/><rect x="0" y="0" width="360" height="480" rx="12" fill="#172554"/>
+  </g>
+  <g stroke="#bfdbfe" stroke-width="3" stroke-linecap="round" opacity="0.75">
+    <path d="M680 380 H940"/><path d="M680 430 H900"/><path d="M680 480 H920"/><path d="M680 530 H880"/>
+  </g>
+  <!-- Git branch sur doc -->
+  <path d="M1040 340 Q1160 280 1240 360 Q1320 440 1200 540" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,15 @@
+.DS_Store
+**/.DS_Store
+._*
+**/._*
+.AppleDouble
+.LSOverride
+
+# Python / venv
+.venv/
+__pycache__/
+*.pyc
+
+# OS / editors
+.idea/
+.vscode/

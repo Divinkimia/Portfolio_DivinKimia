@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="shoe-t shoe-d">
+  <title id="shoe-t">Kim Shoes - boutique</title>
+  <desc id="shoe-d">Grille produits e-commerce Symfony.</desc>
+  <defs>
+    <linearGradient id="shoe-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="45%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="24" fill="url(#shoe-bg)"/>
+  <rect x="32" y="32" width="576" height="48" rx="12" fill="rgba(15,23,42,0.72)" stroke="rgba(167,139,250,0.35)" stroke-width="1"/>
+  <rect x="48" y="46" width="110" height="20" rx="6" fill="rgba(167,139,250,0.4)"/>
+  <rect x="170" y="46" width="200" height="20" rx="10" fill="rgba(30,27,75,0.8)" stroke="rgba(167,139,250,0.2)"/>
+  <rect x="32" y="96" width="576" height="272" rx="16" fill="rgba(15,23,42,0.45)" stroke="rgba(34,211,238,0.15)"/>
+  <rect x="52" y="116" width="168" height="120" rx="12" fill="rgba(167,139,250,0.12)" stroke="rgba(167,139,250,0.3)"/>
+  <rect x="236" y="116" width="168" height="120" rx="12" fill="rgba(34,211,238,0.1)" stroke="rgba(34,211,238,0.28)"/>
+  <rect x="420" y="116" width="168" height="120" rx="12" fill="rgba(148,163,184,0.08)" stroke="rgba(148,163,184,0.22)"/>
+  <path d="M88 210 Q120 180 150 200 L165 215 Q140 230 95 225 Z" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="52" y="252" width="536" height="10" rx="4" fill="rgba(148,163,184,0.2)"/>
+  <rect x="52" y="274" width="400" height="10" rx="4" fill="rgba(148,163,184,0.12)"/>
+  <rect x="52" y="310" width="120" height="40" rx="10" fill="rgba(34,211,238,0.25)"/>
+  <text x="200" y="338" fill="#e9d5ff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Symfony 7 · Stripe</text>
+</svg>

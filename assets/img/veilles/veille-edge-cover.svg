@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Edge computing et CDN">
+  <defs>
+    <linearGradient id="ed-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071828"/>
+      <stop offset="100%" stop-color="#0c2438"/>
+    </linearGradient>
+    <linearGradient id="ed-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#ed-bg)"/>
+  <!-- Globe -->
+  <circle cx="820" cy="450" r="220" fill="#0c4a6e" stroke="url(#ed-ring)" stroke-width="4" opacity="0.95"/>
+  <ellipse cx="820" cy="450" rx="220" ry="90" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.35"/>
+  <path d="M600 450 H1040 M820 230 V670" stroke="#7dd3fc" stroke-width="2" opacity="0.25"/>
+  <!-- Points edge -->
+  <g fill="#164e63" stroke="#22d3ee" stroke-width="3">
+    <circle cx="560" cy="280" r="22"/><circle cx="1080" cy="300" r="22"/><circle cx="520" cy="560" r="22"/><circle cx="1120" cy="580" r="22"/><circle cx="1240" cy="440" r="22"/>
+  </g>
+  <g stroke="#67e8f9" stroke-width="2" opacity="0.5" fill="none">
+    <path d="M580 298 Q700 380 780 380"/><path d="M1062 318 Q940 380 860 380"/><path d="M540 542 Q660 460 780 460"/>
+  </g>
+</svg>

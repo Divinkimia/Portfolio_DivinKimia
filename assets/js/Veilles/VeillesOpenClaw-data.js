@@ -11,7 +11,7 @@ window.VEILLE_DATA = {
         {
           id: 'oc-l1',
           title: '1 · Présentation rapide de la veille',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'OpenClaw est un projet d’intelligence artificielle open source qui permet de créer un assistant personnel sur ses propres appareils. L’intérêt principal est qu’il ne se limite pas à consommer une IA toute faite : on peut construire, personnaliser et améliorer son propre assistant selon ses besoins.',
           body: [
             'Cette veille technologique porte sur un outil moderne, évolutif et adapté à un profil informatique : il relie IA, automatisation, personnalisation et culture open source.',
@@ -32,7 +32,7 @@ window.VEILLE_DATA = {
         {
           id: 'oc-l2',
           title: '2 · QUI ?',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'OpenClaw est développé par une communauté open source active, avec un dépôt GitHub suivi et régulièrement mis à jour. Des contributeurs font évoluer le code, corrigent les bugs et ajoutent des fonctionnalités.',
           body: [
             'Les utilisateurs ont aussi un rôle central : tester, signaler des problèmes, proposer des améliorations ou développer des modules. Ce fonctionnement collaboratif fait évoluer le projet au-delà d’une feuille de route fermée.',
@@ -53,7 +53,7 @@ window.VEILLE_DATA = {
         {
           id: 'oc-l3',
           title: '3 · QUAND ?',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'OpenClaw est un projet récent et en évolution rapide : le dépôt montre une activité soutenue, avec des commits récents — ce qui indique une maintenance active.',
           body: [
             'La documentation d’installation est mise à jour régulièrement ; une actualisation fréquente est indispensable dans le domaine de l’IA, où une solution peut vite être dépassée sans maintenance.',
@@ -74,7 +74,7 @@ window.VEILLE_DATA = {
         {
           id: 'oc-l4',
           title: '4 · COMMENT ?',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'OpenClaw fonctionne comme un assistant IA personnel installable sur une machine ou un serveur. L’architecture est modulaire : une partie centrale gère sessions, outils, canaux et actions ; des composants ajoutent chat, voix, canvas ou gestion de tâches.',
           body: [
             'Un point fort est la capacité à créer son propre assistant : choix ou paramétrage du modèle de langage, ajout de compétences (« skills »), branchement d’outils et adaptation du comportement à un usage personnel ou professionnel.',
@@ -119,7 +119,7 @@ openclaw gateway status</code></pre>
         {
           id: 'oc-l5',
           title: '5 · POURQUOI ?',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'OpenClaw est intéressant parce qu’il rend l’IA à la fois plus accessible et plus personnalisable : on n’est pas réduit à une solution fermée unique ; on peut façonner un assistant aligné avec ses usages puis le faire évoluer.',
           body: [
             'L’enjeu principal est la personnalisation : partir d’un socle générique pour concevoir un outil plus spécialisé et mieux intégré à son environnement — automatisation, développement, gestion de tâches, communication ou organisation.',
@@ -141,7 +141,7 @@ openclaw gateway status</code></pre>
         {
           id: 'oc-l6',
           title: '6 · Problématique',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'Comment OpenClaw permet-il de créer un assistant IA personnel, de le personnaliser et de l’améliorer progressivement grâce à une approche open source ?',
           body: [
             'La question relie directement la promesse du projet à une mise en œuvre concrète : ce n’est pas seulement « utiliser » une IA toute faite, mais comprendre comment la construire et la faire vivre dans la durée.',
@@ -162,7 +162,7 @@ openclaw gateway status</code></pre>
         {
           id: 'oc-l7',
           title: '7 · Réponse à la problématique',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'OpenClaw permet de créer un assistant personnel parce qu’il fournit une base technique ouverte, configurable avec un modèle de langage et adaptable au comportement souhaité — ce qui le rend plus flexible qu’une solution figée.',
           body: [
             'La modularité est un avantage décisif : l’assistant peut recevoir de nouveaux outils, skills et intégrations ; on peut commencer simple puis enrichir selon les besoins réels.',
@@ -185,7 +185,7 @@ openclaw gateway status</code></pre>
         {
           id: 'oc-l8',
           title: '8 · Skills personnalisés et spécialisation',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'Dans OpenClaw, les skills personnalisés servent à spécialiser l’assistant IA selon ce que l’on veut qu’il fasse : on peut lui ajouter des compétences concrètes pour qu’il soit plus utile et mieux adapté à un usage personnel ou à un projet professionnel.',
           body: [
             'Un skill encapsule une fonction : résumé de messages, lien avec GitHub, veille techno, recherche web ciblée, etc. L’assistant cesse d’être uniquement généraliste pour devenir orienté productivité et automatisation.',
@@ -234,7 +234,7 @@ openclaw gateway status</code></pre>
         {
           id: 'oc-l9',
           title: '9 · Conclusion',
-          hero: '../../assets/img/offline-gallery-placeholder.svg',
+          hero: '../../assets/img/veilles/veille-openclaw-cover.svg',
           lead: 'OpenClaw dépasse l’usage passif d’une IA : il permet de créer son assistant, de le personnaliser et de l’améliorer dans la durée. Le projet reste actif, documenté et pensé pour évoluer avec ses utilisateurs.',
           body: [
             'Pour un profil BTS SIO, cette veille relie intelligence artificielle, installation technique, culture open source et personnalisation d’outils — des compétences directement transférables.',

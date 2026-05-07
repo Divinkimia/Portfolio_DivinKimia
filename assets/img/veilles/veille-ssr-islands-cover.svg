@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="SSR, architectures islands et performance web">
+  <defs>
+    <linearGradient id="ssr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1220"/>
+      <stop offset="100%" stop-color="#0c1a2e"/>
+    </linearGradient>
+    <linearGradient id="ssr-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#ssr-bg)"/>
+  <circle cx="1280" cy="160" r="200" fill="#38bdf8" opacity="0.07"/>
+  <circle cx="320" cy="720" r="160" fill="#0ea5e9" opacity="0.08"/>
+  <!-- Serveur central -->
+  <rect x="720" y="340" width="160" height="240" rx="14" fill="#0f172a" stroke="url(#ssr-accent)" stroke-width="3"/>
+  <rect x="748" y="378" width="104" height="28" rx="6" fill="#1e293b"/>
+  <rect x="748" y="418" width="104" height="28" rx="6" fill="#1e293b"/>
+  <rect x="748" y="458" width="104" height="28" rx="6" fill="#1e293b"/>
+  <!-- Islands -->
+  <g stroke="#7dd3fc" stroke-width="2.5" fill="#082f49" opacity="0.95">
+    <circle cx="520" cy="280" r="44"/>
+    <circle cx="1080" cy="300" r="44"/>
+    <circle cx="480" cy="560" r="44"/>
+    <circle cx="1120" cy="560" r="44"/>
+  </g>
+  <g stroke="url(#ssr-accent)" stroke-width="2" fill="none" opacity="0.65">
+    <path d="M564 300 L720 400"/><path d="M1036 324 L880 400"/><path d="M524 524 L720 500"/><path d="M1076 536 L880 500"/>
+  </g>
+</svg>

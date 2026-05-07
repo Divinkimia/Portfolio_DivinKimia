@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Cryptographie post-quantique">
+  <defs>
+    <linearGradient id="pq-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="pq-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/><stop offset="50%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#pq-bg)"/>
+  <path d="M340 420 Q500 300 660 420 T980 420 T1300 420" fill="none" stroke="url(#pq-wave)" stroke-width="3" opacity="0.55"/>
+  <path d="M340 460 Q500 580 660 460 T980 460 T1300 460" fill="none" stroke="#6366f1" stroke-width="3" opacity="0.4"/>
+  <rect x="740" y="460" width="160" height="140" rx="18" fill="#1e293b" stroke="#93c5fd" stroke-width="4"/>
+  <path d="M760 460 V400 Q820 340 880 400 V460" fill="none" stroke="#cbd5e1" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="820" cy="540" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="4"/>
+  <text x="1040" y="520" fill="#94a3fb" font-family="ui-monospace,Menlo,monospace" font-size="28" opacity="0.85">PQC</text>
+</svg>

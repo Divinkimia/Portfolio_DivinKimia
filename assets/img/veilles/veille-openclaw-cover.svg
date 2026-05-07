@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Veille OpenClaw &#8211; automatisation et agents">
+  <defs>
+    <linearGradient id="oc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1512"/>
+      <stop offset="100%" stop-color="#061018"/>
+    </linearGradient>
+    <linearGradient id="oc-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#oc-bg)"/>
+  <circle cx="1320" cy="160" r="220" fill="#34d399" opacity="0.06"/>
+  <circle cx="280" cy="720" r="180" fill="#059669" opacity="0.08"/>
+  <g stroke="url(#oc-accent)" stroke-width="2.5" fill="none" opacity="0.85">
+    <path d="M420 420 L620 320 L820 420 L1020 280"/>
+    <circle cx="420" cy="420" r="14" fill="#34d399" stroke="none"/>
+    <circle cx="620" cy="320" r="14" fill="#34d399" stroke="none"/>
+    <circle cx="820" cy="420" r="14" fill="#34d399" stroke="none"/>
+    <circle cx="1020" cy="280" r="14" fill="#34d399" stroke="none"/>
+  </g>
+  <g transform="translate(720 340)" fill="none" stroke="#a7f3d0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M80 280 C40 200 40 120 80 60"/>
+    <path d="M140 280 C180 200 180 120 140 60"/>
+    <path d="M80 60 Q110 20 140 60"/>
+    <path d="M110 280 L110 420"/>
+  </g>
+  <text x="80" y="120" fill="#ecfdf5" font-family="system-ui,Segoe UI,sans-serif" font-size="42" font-weight="700" letter-spacing="-0.02em">OpenClaw</text>
+  <text x="80" y="178" fill="#6ee7b7" font-family="system-ui,Segoe UI,sans-serif" font-size="22" opacity="0.9">Veille &#183; IA et automatisation</text>
+</svg>

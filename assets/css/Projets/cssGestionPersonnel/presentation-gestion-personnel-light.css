@@ -1,0 +1,94 @@
+/* Variante claire — surcharge minimale (avec styles-light.css) */
+
+body.presentation-gp-page.portfolio-light .page-frame {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+body.presentation-gp-page.portfolio-light .gp-hero__title {
+  color: #0f172a;
+}
+
+body.presentation-gp-page.portfolio-light .gp-section h2,
+body.presentation-gp-page.portfolio-light .gp-feature h3 {
+  color: #0f172a;
+}
+
+body.presentation-gp-page.portfolio-light .gp-hero__lead,
+body.presentation-gp-page.portfolio-light .gp-lead,
+body.presentation-gp-page.portfolio-light .gp-feature p,
+body.presentation-gp-page.portfolio-light .gp-list {
+  color: #475569;
+}
+
+body.presentation-gp-page.portfolio-light .gp-card,
+body.presentation-gp-page.portfolio-light .gp-feature {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.presentation-gp-page.portfolio-light .gp-mvc__col {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(8, 145, 178, 0.35);
+}
+
+body.presentation-gp-page.portfolio-light .gp-code-block {
+  background: #f1f5f9;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.presentation-gp-page.portfolio-light .gp-code-block pre {
+  color: #1e293b;
+}
+
+body.presentation-gp-page.portfolio-light .gp-card__muted {
+  color: #475569 !important;
+}
+
+body.presentation-gp-page.portfolio-light .gp-hero__caption {
+  color: #64748b;
+}
+
+body.presentation-gp-page.portfolio-light .gp-quick-link {
+  color: #475569;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.presentation-gp-page.portfolio-light .gp-quick-link:hover {
+  color: #0f172a;
+  border-color: rgba(8, 145, 178, 0.45);
+}
+
+body.presentation-gp-page.portfolio-light .gp-stat,
+body.presentation-gp-page.portfolio-light .gp-flow__step,
+body.presentation-gp-page.portfolio-light .gp-tabs__panels {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+body.presentation-gp-page.portfolio-light .gp-stat__label,
+body.presentation-gp-page.portfolio-light .gp-flow__btn {
+  color: #0f172a;
+}
+
+body.presentation-gp-page.portfolio-light .gp-flow__panel {
+  color: #475569;
+}
+
+body.presentation-gp-page.portfolio-light .gp-tabs__tab {
+  background: rgba(255, 255, 255, 0.9);
+  color: #475569;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.presentation-gp-page.portfolio-light .gp-tabs__tab.is-active {
+  color: #042f2e;
+}
+
+body.presentation-gp-page.portfolio-light .gp-file-list {
+  color: #334155;
+}
+
+body.presentation-gp-page.portfolio-light .gp-file-list code {
+  color: #0e7490;
+}
