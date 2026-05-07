@@ -11,7 +11,7 @@ window.VEILLE_DATA = {
         {
           id: 'cl-l1',
           title: '1 · Présentation rapide de la veille',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
+          hero: '../../assets/img/Claude.webp',
           lead: 'Claude est une gamme d’outils d’intelligence artificielle développée pour aider à rédiger, analyser, programmer et automatiser certaines tâches. L’écosystème comprend plusieurs environnements complémentaires : Claude pour l’assistance générale, Claude Work pour un usage plus organisé en contexte professionnel, et Claude Code pour le développement informatique.',
           body: [
             'Cette veille est intéressante car elle montre que l’IA ne se limite plus à un simple chatbot. Elle devient un véritable environnement de travail, capable d’accompagner la rédaction, la gestion de projets et l’aide au code.',
@@ -27,33 +27,33 @@ window.VEILLE_DATA = {
     },
     {
       id: 'cl-m2',
-      title: '2 · QUI ?',
+      title: '2 · Éditeur, développeurs et usages métiers (QUI ?)',
       lessons: [
         {
           id: 'cl-l2',
-          title: '2 · QUI ?',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
-          lead: 'Claude est développé par une entreprise spécialisée dans l’intelligence artificielle. Son objectif est de proposer des modèles capables de comprendre le langage naturel, de raisonner sur des documents, de générer du contenu et d’aider les utilisateurs dans leurs tâches quotidiennes ou techniques.',
+          title: '2 · Éditeur, développeurs et usages métiers (QUI ?)',
+          hero: '../../assets/img/Claude.webp',
+          lead: 'La famille de produits **Claude** (modèles, assistant, **Claude Code**) est développée par **Anthropic**, société américaine d’IA cofondée notamment par **Dario Amodei** et **Daniela Amodei** (anciennement chez OpenAI). Anthropic publie les modèles Claude et les interfaces associées ; **Claude Code** en est une offre orientée développement.',
           body: [
-            'Plusieurs acteurs interviennent autour de cet écosystème : l’entreprise qui développe les modèles et les interfaces ; les développeurs, qui utilisent Claude Code pour accélérer leur travail ; les équipes métiers, qui s’appuient sur les espaces de travail pour structurer échanges et documents ; les étudiants et particuliers, qui emploient Claude comme assistant pour apprendre, rédiger ou mieux organiser leur travail.',
-            'Le rôle de chacun est différent, mais l’idée reste la même : utiliser l’IA comme un outil d’assistance plus intelligent et plus spécialisé.'
+            'Écosystème : **Anthropic** assure recherche, entraînement et distribution via ses canaux officiels ; les **développeurs** adoptent Claude Code dans leurs workflows ; les **métiers** utilisent les espaces collaboratifs ; **étudiants et grand public** s’appuient sur Claude comme assistant.',
+            'Pour la veille : privilégier **anthropic.com**, les communiqués d’Anthropic et la documentation produit — les capacités et politiques évoluent vite.'
           ],
           bullets: [
-            'Éditeur · développeurs · métiers · éducation / grand public.',
-            'Veille : annonces officielles et retours d’usage (communauté, presse).',
-            'Relier à vos projets : rédaction, organisation, maintenance de code.'
+            'Éditeur : **Anthropic** · famille **Claude** incluant **Claude Code**.',
+            'Contexte fondateur public : **Dario Amodei**, **Daniela Amodei** (entre autres cofondateurs).',
+            'Veille : site officiel Anthropic + retours développeurs (presse, communautés).'
           ]
         }
       ]
     },
     {
       id: 'cl-m3',
-      title: '3 · QUAND ?',
+      title: '3 · Historique des LLM et maturité de l’offre (QUAND ?)',
       lessons: [
         {
           id: 'cl-l3',
-          title: '3 · QUAND ?',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
+          title: '3 · Historique des LLM et maturité de l’offre (QUAND ?)',
+          hero: '../../assets/img/Claude.webp',
           lead: 'L’écosystème Claude s’est développé progressivement avec l’évolution rapide des modèles de langage. D’abord centré sur un assistant conversationnel, il a ensuite été enrichi par des usages plus avancés, notamment pour le travail collaboratif et le développement.',
           body: [
             'Claude Code est apparu plus récemment pour répondre à un besoin concret : aider les développeurs à travailler plus efficacement directement sur du code. Cette évolution montre une tendance forte de l’IA moderne : passer d’un outil généraliste à un ensemble de solutions adaptées à des contextes précis.',
@@ -69,12 +69,12 @@ window.VEILLE_DATA = {
     },
     {
       id: 'cl-m4',
-      title: '4 · COMMENT ?',
+      title: '4 · Modalités d’usage — chat, travail, Claude Code (COMMENT ?)',
       lessons: [
         {
           id: 'cl-l4',
-          title: '4 · COMMENT ?',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
+          title: '4 · Modalités d’usage — chat, travail, Claude Code (COMMENT ?)',
+          hero: '../../assets/img/Claude.webp',
           lead: 'Claude fonctionne grâce à des modèles de langage capables de comprendre le texte, d’analyser des documents et de générer des réponses cohérentes. L’utilisateur peut dialoguer avec l’assistant, lui demander de résumer, reformuler, comparer, expliquer ou rédiger.',
           body: [
             'Chaque brique de l’écosystème répond à un besoin : Claude pour l’assistance générale et les documents ; les espaces de travail pour structurer projets et collaboration ; Claude Code pour lire, modifier et sécuriser le travail sur une base de code.',
@@ -106,22 +106,26 @@ window.VEILLE_DATA = {
     },
     {
       id: 'cl-m5',
-      title: '5 · POURQUOI ?',
+      title: '5 · Enjeux pour la productivité et le métier développeur (POURQUOI ?)',
       lessons: [
         {
           id: 'cl-l5',
-          title: '5 · POURQUOI ?',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
+          title: '5 · Enjeux pour la productivité et le métier développeur (POURQUOI ?)',
+          hero: '../../assets/img/Claude.webp',
           lead: 'L’écosystème Claude est intéressant car il montre comment l’intelligence artificielle peut devenir un véritable assistant de travail : au lieu d’être seulement un outil de discussion, elle peut s’intégrer dans des activités précises comme la rédaction, l’organisation ou le développement.',
           body: [
             'Les enjeux incluent le gain de temps sur les tâches répétitives, l’amélioration de la qualité des productions écrites, la facilitation de la compréhension de sujets complexes, l’assistance aux développeurs dans leur travail quotidien, et un accompagnement plus intelligent selon le contexte.',
             'Pour un étudiant en BTS SIO, Claude peut aider à rédiger des comptes rendus, à reformuler des explications techniques, à comprendre du code ou à préparer des projets ; Claude Code est particulièrement pertinent pour le développement, la lecture de scripts, la résolution de bugs ou l’apprentissage de bonnes pratiques.',
-            'Cette veille permet aussi de comprendre l’évolution du métier de développeur : l’IA ne remplace pas les compétences humaines, mais elle devient un outil de soutien de plus en plus présent.'
+            'Cette veille permet aussi de comprendre l’évolution du métier de développeur : l’IA ne remplace pas les compétences humaines, mais elle devient un outil de soutien de plus en plus présent.',
+            'Un usage abusif ou non maîtrisé a des contreparties collectives : multiplication des requêtes et des modèles les plus lourds alimente la demande en GPU et en datacenters — avec impact énergétique, empreinte carbone et tension sur l’eau de refroidissement ou les métaux liés au matériel. À nuancer selon les régions et le mix électrique, mais la tendance « toujours plus d’inférence » pose question pour une sobriété numérique responsable.',
+            'Côté marché du travail dans la tech, l’IA généraliste assiste déjà la documentation, les revues de code, les tests boilerplate ou les premières passes de debug : certaines tâches juniors peuvent être compressées ou transformées, ce qui fait évoluer les attendus vers plus de validation, d’architecture, de sécurité et de compréhension métier. Les organisations distinguent de plus en plus « qui sait piloter l’outil » vs « qui dépend de l’outil sans contrôle ».'
           ],
           bullets: [
             'Productivité et clarté sans se passer du jugement critique.',
             'Liens directs avec compétences SIO (dev, veille, communication).',
-            'Responsabilité : vérifier, citer les sources, respecter les chartes d’usage.'
+            'Responsabilité : vérifier, citer les sources, respecter les chartes d’usage.',
+            'Écologie numérique : modération des usages, choix de modèles/contextes, éviter la « boucle » de re-génération inutile.',
+            'Emploi tech : montée en compétences sur revue humaine, sécurité, conception — l’IA comme levier, pas comme substitut au raisonnement.'
           ]
         }
       ]
@@ -133,7 +137,7 @@ window.VEILLE_DATA = {
         {
           id: 'cl-l6',
           title: '6 · Problématique',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
+          hero: '../../assets/img/Claude.webp',
           lead: 'En quoi l’écosystème Claude, à travers ses différents environnements, transforme-t-il l’usage de l’intelligence artificielle dans la rédaction, l’organisation du travail et le développement informatique ?',
           body: [
             'Cette problématique est adaptée car elle met en avant la diversité des usages et l’intérêt concret de l’outil dans un contexte professionnel et scolaire.',
@@ -154,7 +158,7 @@ window.VEILLE_DATA = {
         {
           id: 'cl-l7',
           title: '7 · Réponse à la problématique',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
+          hero: '../../assets/img/Claude.webp',
           lead: 'L’écosystème Claude transforme l’usage de l’intelligence artificielle en proposant plusieurs environnements adaptés à des besoins différents. Claude sert d’assistant polyvalent, les espaces de travail répondent à une logique de productivité et d’organisation, et Claude Code accompagne directement les développeurs dans leurs tâches techniques.',
           body: [
             'Cette spécialisation est importante : l’IA n’est plus seulement un outil généraliste, elle devient un ensemble de solutions capables de s’adapter à des métiers et à des usages spécifiques, ce qui améliore son efficacité dans le travail quotidien.',
@@ -177,7 +181,7 @@ window.VEILLE_DATA = {
         {
           id: 'cl-l8',
           title: '8 · Conclusion',
-          hero: '../../assets/img/veilles/veille-claude-code-cover.svg',
+          hero: '../../assets/img/Claude.webp',
           lead: 'L’écosystème Claude illustre la nouvelle génération d’outils d’intelligence artificielle : plus spécialisés, plus utiles et plus proches des besoins concrets des utilisateurs. Claude, les espaces de travail et Claude Code montrent que l’IA peut s’adapter à différents contextes — rédiger, organiser ou développer.',
           body: [
             'Cette veille est pertinente pour un BTS SIO car elle touche à la productivité, à la programmation et à la compréhension des usages professionnels de l’IA.',

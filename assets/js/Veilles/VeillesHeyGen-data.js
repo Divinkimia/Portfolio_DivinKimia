@@ -1,6 +1,6 @@
 /**
  * Veille HeyGen — structure portfolio BTS SIO (8 parties)
- * appendHtml : tableau tarifs + exemples API Video Agent dans « COMMENT ? »
+ * appendHtml : tableau tarifs + exemples API Video Agent dans « Fonctionnement technique, tarifs et API (COMMENT ?) »
  */
 window.VEILLE_DATA = {
   modules: [
@@ -11,7 +11,7 @@ window.VEILLE_DATA = {
         {
           id: 'hg-l1',
           title: '1 · Présentation rapide de la veille',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
+          hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'HeyGen est une plateforme d’intelligence artificielle spécialisée dans la création de vidéos à partir de texte. Elle permet de générer des contenus vidéo avec des avatars numériques, des voix synthétiques et des traductions automatiques, sans tourner une vidéo classique.',
           body: [
             'Cette veille est intéressante car elle montre comment l’IA transforme la production audiovisuelle : au lieu de mobiliser du matériel, du temps de montage et des compétences avancées en vidéo, HeyGen propose une solution plus rapide, plus accessible et plus simple à prendre en main.',
@@ -27,33 +27,33 @@ window.VEILLE_DATA = {
     },
     {
       id: 'hg-m2',
-      title: '2 · QUI ?',
+      title: '2 · Éditeur, publics cibles et communauté (QUI ?)',
       lessons: [
         {
           id: 'hg-l2',
-          title: '2 · QUI ?',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
-          lead: 'HeyGen est développé par une entreprise spécialisée dans les technologies d’intelligence artificielle appliquées à la vidéo. Son but est de simplifier la création de contenus multimédias pour les entreprises, les formateurs, les créateurs de contenu et les étudiants.',
+          title: '2 · Éditeur, publics cibles et communauté (QUI ?)',
+          hero: '../../assets/img/HeygenIMG.jpg',
+          lead: 'HeyGen est édité par la société **HeyGen** (startup américaine spécialisée dans la **vidéo par IA**). Sur la page officielle « About », le fondateur cité est **Joshua Xu** ; l’entreprise dispose de bureaux notamment à **Los Angeles**, **San Francisco**, **Palo Alto** et **Toronto**, et annonce des financements auprès de fonds reconnus (Benchmark, Conviction, Thrive Capital, Bond, selon leur communication).',
           body: [
-            'Plusieurs acteurs gravitent autour de la plateforme : l’équipe de développement (fonctionnalités, corrections), les utilisateurs professionnels (marketing, présentations, formations), les enseignants et étudiants (supports pédagogiques dynamiques), et la communauté d’utilisateurs qui partage retours et usages.',
-            'C’est l’ensemble de cet écosystème qui fait évoluer l’outil et permet d’adapter les usages à différents besoins.'
+            'Autour du produit : équipes HeyGen (développement et sécurité des contenus), clients entreprises et créateurs, monde éducatif, et utilisateurs qui partagent retours — la **marque et la roadmap** restent pilotées par **HeyGen** en tant qu’éditeur.',
+            'Pour la veille : comparer toujours avec les **annonces sur heygen.com** et la presse spécialisée lors des levées de fonds ou des évolutions produit.'
           ],
           bullets: [
-            'Éditeur produit · clients · monde éducatif · communauté.',
-            'Veille : suivre aussi les annonces officielles et les retours terrain.',
-            'Relier à votre cas d’usage (projet web, communication, formation).'
+            'Éditeur : société **HeyGen** · fondateur documenté : **Joshua Xu**.',
+            'Siège / présence US et Canada ; suivre le blog et la page About officiels.',
+            'Relier à votre cas d’usage : communication, formation, projet web.'
           ]
         }
       ]
     },
     {
       id: 'hg-m3',
-      title: '3 · QUAND ?',
+      title: '3 · Contexte récent et évolution du produit (QUAND ?)',
       lessons: [
         {
           id: 'hg-l3',
-          title: '3 · QUAND ?',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
+          title: '3 · Contexte récent et évolution du produit (QUAND ?)',
+          hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'HeyGen s’inscrit dans la période récente de forte progression des IA génératives, avec un essor marqué depuis 2022. La plateforme a évolué rapidement : avatars plus réalistes, voix synthétique plus naturelle, traduction vidéo automatisée.',
           body: [
             'Cette évolution rapide montre que HeyGen est un outil actif et toujours en développement — un point essentiel dans l’IA, où les solutions doivent être régulièrement améliorées pour rester compétitives.',
@@ -69,12 +69,12 @@ window.VEILLE_DATA = {
     },
     {
       id: 'hg-m4',
-      title: '4 · COMMENT ?',
+      title: '4 · Fonctionnement technique, tarifs et API (COMMENT ?)',
       lessons: [
         {
           id: 'hg-l4',
-          title: '4 · COMMENT ?',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
+          title: '4 · Fonctionnement technique, tarifs et API (COMMENT ?)',
+          hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'HeyGen fonctionne en combinant plusieurs briques d’IA : l’utilisateur saisit un texte, choisit un avatar, une voix et un format ; la plateforme génère un contenu visuel et sonore cohérent.',
           body: [
             'Le principe repose notamment sur la synthèse vocale, la génération d’avatars animés, le traitement automatique du langage, ainsi que la traduction et le doublage pour adapter la vidéo à plusieurs langues.',
@@ -116,12 +116,12 @@ print(r.json())</code></pre>
     },
     {
       id: 'hg-m5',
-      title: '5 · POURQUOI ?',
+      title: '5 · Intérêt métier et usage responsable (POURQUOI ?)',
       lessons: [
         {
           id: 'hg-l5',
-          title: '5 · POURQUOI ?',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
+          title: '5 · Intérêt métier et usage responsable (POURQUOI ?)',
+          hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'L’intérêt principal de HeyGen est de simplifier et d’accélérer la création vidéo : là où une production classique demande tournage, montage et parfois plusieurs intervenants, l’IA permet de partir d’un simple script.',
           body: [
             'Les enjeux incluent le gain de temps, la réduction des coûts techniques, l’accessibilité pour les débutants, la communication multilingue, et la possibilité de produire des contenus plus régulièrement.',
@@ -131,8 +131,29 @@ print(r.json())</code></pre>
           bullets: [
             'Productivité et démocratisation de la vidéo.',
             'Liens avec compétences métiers et projets du diplôme.',
-            'Responsabilité : vérifier avant diffusion publique.'
-          ]
+            'Responsabilité : vérifier avant diffusion publique.',
+            'Deepfakes & impersonation : avec des avatars hyperréalistes et la traduction labiale, le risque de contenus trompeurs augmente (arnaque au président, fausses interviews, harcèlement par mimicry). Cadres : signature de contenu (C2PA), mentions légales, modération plateforme, sensibilisation utilisateurs.',
+            'Concurrence & « effet HeyGen » : plusieurs éditeurs proposent avatar + TTS + pipeline vidéo orienté entreprise — à citer en veille pour situer le marché.'
+          ],
+          appendHtml: `
+<div class="veille-lesson-rich mt-2">
+  <h3 class="h6 text-white mb-2">Risques liés aux deepfakes et à la confiance</h3>
+  <ul class="veille-objectives-list mb-4">
+    <li><strong>Usurpation</strong> — faire dire ou faire faire à un avatar des propos jamais tenus par la personne réelle.</li>
+    <li><strong>Fraude</strong> — faux messages vidéo « internes » pour obtenir des virements ou des identifiants.</li>
+    <li><strong>Désinformation</strong> — campagnes massives à faible coût de production.</li>
+    <li><strong>Réponses possibles</strong> — filigranes / provenance (ex. initiatives type <a href="https://c2pa.org/" target="_blank" rel="noopener noreferrer">C2PA</a>), politiques éditoriales HeyGen, traçabilité API, sensibilisation des équipes communication.</li>
+  </ul>
+  <h3 class="h6 text-white mb-2">Acteurs proches sur le créneau « vidéo IA / avatar » (exemples concrets)</h3>
+  <p class="small text-muted mb-2">Marché en rapprochement fonctionnel ; tarifs et offres à recouper sur les sites officiels au moment de la soutenance.</p>
+  <div class="veille-heygen-table-wrap mb-0"><table class="veille-heygen-table"><thead><tr><th>Solution</th><th>Positionnement court</th></tr></thead><tbody>
+    <tr><td><strong>Synthesia</strong></td><td>Avatar vidéo B2B, forte présence formation &amp; corporate.</td></tr>
+    <tr><td><strong>D-ID</strong></td><td>Talking heads / Creative Reality Studio, API orientée « face animée ».</td></tr>
+    <tr><td><strong>Colossyan</strong></td><td>Vidéos pédagogiques avec avatars et scénarios prêts à l’emploi.</td></tr>
+    <tr><td><strong>Arcads</strong></td><td>Génération vidéo marketing / UGC synthétique (positionnement ads).</td></tr>
+    <tr><td><strong>Runway</strong></td><td>Génération et montage vidéo par IA (Gen série), angle créatif plutôt que seulement avatar parlant.</td></tr>
+  </tbody></table></div>
+</div>`
         }
       ]
     },
@@ -143,7 +164,7 @@ print(r.json())</code></pre>
         {
           id: 'hg-l6',
           title: '6 · Problématique',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
+          hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'Comment HeyGen modifie-t-il la création de vidéos grâce à l’intelligence artificielle, et quels sont les avantages de cet outil pour un usage scolaire, professionnel ou numérique ?',
           body: [
             'Cette problématique relie la dimension technique (automatisation du pipeline vidéo), l’impact sur les usages et l’intérêt concret pour différents publics.',
@@ -164,7 +185,7 @@ print(r.json())</code></pre>
         {
           id: 'hg-l7',
           title: '7 · Réponse à la problématique',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
+          hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'HeyGen modifie la création vidéo en automatisant une grande partie du processus : au lieu de filmer, monter et synchroniser manuellement, on peut rédiger un texte et laisser l’outil générer le contenu.',
           body: [
             'La production devient plus rapide et l’accès à la vidéo plus simple, même sans maîtriser la prise de vue ou le montage avancé.',
@@ -187,7 +208,7 @@ print(r.json())</code></pre>
         {
           id: 'hg-l8',
           title: '8 · Conclusion',
-          hero: '../../assets/img/veilles/veille-heygen-cover.svg',
+          hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'HeyGen est représentatif de l’évolution actuelle de l’IA dans la vidéo : produire plus vite, avec moins de contraintes techniques, tout en restant vigilant sur la qualité et l’usage responsable.',
           body: [
             'Pour un étudiant en BTS SIO, cette veille met en lumière un outil innovant, concret et exploitable dans des projets de communication ou de formation.',

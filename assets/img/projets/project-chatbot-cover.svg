@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="chatbot-cover-title">
+  <title id="chatbot-cover-title">Interface de conversation type chatbot</title>
+  <defs>
+    <linearGradient id="chatbot-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419"/>
+      <stop offset="100%" style="stop-color:#1a2332"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#chatbot-bg)"/>
+  <!-- Fenêtre application -->
+  <rect x="48" y="40" width="704" height="400" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <!-- Barre titre -->
+  <rect x="48" y="40" width="704" height="44" rx="14" fill="#252f3f"/>
+  <circle cx="76" cy="62" r="6" fill="#64748b"/>
+  <circle cx="98" cy="62" r="6" fill="#64748b"/>
+  <circle cx="120" cy="62" r="6" fill="#64748b"/>
+  <text x="400" y="68" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600">Assistant conversationnel</text>
+  <!-- Zone messages -->
+  <g transform="translate(72 108)">
+    <!-- Message assistant -->
+    <circle cx="18" cy="22" r="16" fill="#475569"/>
+    <path d="M10 22 L14 26 L22 18" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="44" y="6" width="280" height="56" rx="10" fill="#334155"/>
+    <rect x="60" y="22" width="200" height="8" rx="3" fill="#64748b" opacity=".85"/>
+    <rect x="60" y="38" width="160" height="8" rx="3" fill="#64748b" opacity=".55"/>
+    <!-- Message utilisateur -->
+    <rect x="380" y="78" width="268" height="44" rx="10" fill="#1e40af" opacity=".92"/>
+    <rect x="396" y="94" width="180" height="8" rx="3" fill="#bfdbfe" opacity=".9"/>
+    <rect x="396" y="106" width="120" height="8" rx="3" fill="#bfdbfe" opacity=".65"/>
+    <!-- Réponse assistant -->
+    <circle cx="18" cy="174" r="16" fill="#475569"/>
+    <rect x="44" y="146" width="340" height="72" rx="10" fill="#334155"/>
+    <rect x="60" y="162" width="260" height="8" rx="3" fill="#64748b" opacity=".85"/>
+    <rect x="60" y="178" width="220" height="8" rx="3" fill="#64748b" opacity=".65"/>
+    <rect x="60" y="194" width="240" height="8" rx="3" fill="#64748b" opacity=".45"/>
+  </g>
+  <!-- Zone saisie -->
+  <rect x="92" y="378" width="616" height="44" rx="22" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <rect x="116" y="394" width="220" height="10" rx="4" fill="#475569" opacity=".6"/>
+  <rect x="612" y="382" width="84" height="36" rx="18" fill="#2563eb"/>
+  <text x="654" y="406" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Envoyer</text>
+</svg>
