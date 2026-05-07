@@ -68,6 +68,26 @@
   white-space: pre;
 }
 
+/* Intégrations YouTube (embed 16:9, appendHtml des veilles) */
+.veille-youtube-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0.75rem 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
+}
+
+.veille-youtube-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 @media (max-width: 575.98px) {
   .veille-heygen-table-wrap {
     font-size: 0.78rem;

@@ -21,7 +21,18 @@ window.VEILLE_DATA = {
             'Objet : écosystème Claude (chat, travail structuré, développement).',
             'Angle portfolio : IA appliquée au quotidien numérique et au code.',
             'À croiser avec le panneau Ressources (Anthropic, documentation Claude Code).'
-          ]
+          ],
+          appendHtml: `
+<h3 class="h6 text-white mb-2 mt-1">Vidéo — veille Claude</h3>
+<p class="small text-muted mb-2">Ressource YouTube associée à l’écosystème Claude / usages.</p>
+<div class="veille-youtube-wrap">
+  <iframe src="https://www.youtube.com/embed/Vcuq8UWdaUU"
+    title="Vidéo veille Claude"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+<p class="small mt-2 mb-0"><a href="https://youtu.be/Vcuq8UWdaUU" target="_blank" rel="noopener noreferrer">Ouvrir sur YouTube</a></p>`
         }
       ]
     },

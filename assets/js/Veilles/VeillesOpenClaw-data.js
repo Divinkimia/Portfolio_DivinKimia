@@ -21,7 +21,18 @@ window.VEILLE_DATA = {
             'Assistant personnel — pas seulement un chat générique.',
             'Approche technique + communautaire (GitHub, contributions).',
             'Alignée avec une présentation type oral / portfolio BTS SIO.'
-          ]
+          ],
+          appendHtml: `
+<h3 class="h6 text-white mb-2 mt-1">Vidéo — veille OpenClaw</h3>
+<p class="small text-muted mb-2">Démonstration / présentation liée au projet (YouTube).</p>
+<div class="veille-youtube-wrap">
+  <iframe src="https://www.youtube.com/embed/MPB1H9cMh8A"
+    title="Vidéo veille OpenClaw"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+<p class="small mt-2 mb-0"><a href="https://youtu.be/MPB1H9cMh8A" target="_blank" rel="noopener noreferrer">Ouvrir sur YouTube</a></p>`
         }
       ]
     },

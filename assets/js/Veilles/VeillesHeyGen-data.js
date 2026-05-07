@@ -21,7 +21,18 @@ window.VEILLE_DATA = {
             'Objet : vidéo générique à partir de texte + avatar + voix.',
             'Angle portfolio : IA générative, médias, démarche de veille.',
             'À croiser avec les sources du panneau Ressources (site officiel, help center).'
-          ]
+          ],
+          appendHtml: `
+<h3 class="h6 text-white mb-2 mt-1">Vidéo — veille HeyGen</h3>
+<p class="small text-muted mb-2">Format Short YouTube intégré pour illustration rapide.</p>
+<div class="veille-youtube-wrap">
+  <iframe src="https://www.youtube.com/embed/7-zdnT82gaw"
+    title="Vidéo veille HeyGen"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+<p class="small mt-2 mb-0"><a href="https://www.youtube.com/shorts/7-zdnT82gaw" target="_blank" rel="noopener noreferrer">Ouvrir sur YouTube</a></p>`
         }
       ]
     },
