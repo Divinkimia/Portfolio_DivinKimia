@@ -221,6 +221,16 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  /* Colonne mobile : aligner à gauche (comme desktop), pas centrer sous le logo */
+  .site-footer .brand-info {
+    align-items: flex-start !important;
+  }
+
+  .site-footer .footer-brand .brand-text,
+  .site-footer .footer-desc {
+    text-align: left !important;
+  }
 }
 
 /* =============================================================================

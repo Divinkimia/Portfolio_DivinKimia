@@ -228,27 +228,34 @@
         </header>
 
         <div class="lt-projects-grid">
-          <article class="lt-project lt-project--featured" data-lt-reveal>
-            <div class="lt-project__media">
-              <div class="lt-project__tagrow">
+          <article class="lt-project lt-project--icon lt-project--featured" data-lt-reveal>
+            <div class="lt-project__icon lt-project__icon--featured" aria-hidden="true">💈</div>
+            <div class="lt-project__caption">
+              <div class="lt-project__caption-kicker">
                 <span class="lt-badge">Web</span>
                 <span class="lt-badge">E-commerce</span>
               </div>
-              <img src="../assets/img/logos/fs-barber.png" alt="FS Barber é site e-commerce salon de coiffure" width="800" height="500" loading="lazy" decoding="async" />
-              <div class="lt-project__overlay-tags">
-                <span>PHP</span><span>JavaScript</span><span>MySQL</span>
-              </div>
-            </div>
-            <div class="lt-project__caption">
               <h3>FS Barber</h3>
               <p>Site e-commerce pour salon de coiffure : parcours client, rendez-vous et back-office structuré.</p>
-              <a class="lt-project__link" href="Projets/Presentation%20FS%20Barber/presentation-fs-barber.html">Dossier projet</a>
+              <ul class="lt-project__highlights" aria-label="Points forts du projet">
+                <li>Catalogue, panier et paiement en ligne (Stripe)</li>
+                <li>Réservations, galerie et rôles utilisateur (client / salon)</li>
+                <li>Dashboard pour commandes, planning et indicateurs clés</li>
+              </ul>
+              <div class="project-tool-icons" role="group" aria-label="Technologies et outils utilisés sur FS Barber">
+                <img src="../assets/img/icons/tech/php.svg" alt="PHP" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/javascript.svg" alt="JavaScript" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/mysql.svg" alt="MySQL" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/html5.svg" alt="HTML5" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/stripe.svg" alt="Stripe" width="46" height="46" loading="lazy" decoding="async" />
+              </div>
+              <a class="lt-project__link" href="Projets/Presentation%20FS%20Barber/presentation-fs-barber-light.html">Dossier projet</a>
             </div>
           </article>
 
           <div class="lt-projects-stack">
             <article class="lt-project lt-project--icon" data-lt-reveal data-lt-delay="1">
-              <div class="lt-project__icon" aria-hidden="true">??</div>
+              <div class="lt-project__icon" aria-hidden="true">📱</div>
               <div class="lt-project__caption">
                 <h3>Application Coach</h3>
                 <p>Application Android en .NET MAUI é stockage local, filtres et interface réactive.</p>
@@ -256,7 +263,7 @@
               </div>
             </article>
             <article class="lt-project lt-project--icon" data-lt-reveal data-lt-delay="2">
-              <div class="lt-project__icon" aria-hidden="true">??</div>
+              <div class="lt-project__icon" aria-hidden="true">🎮</div>
               <div class="lt-project__caption">
                 <h3>Puissance 4</h3>
                 <p>Version Python et démo web jouable é logique de jeu et interface soignée.</p>

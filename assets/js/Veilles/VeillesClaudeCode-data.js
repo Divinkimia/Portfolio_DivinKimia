@@ -1,5 +1,5 @@
 /**
- * Veille écosystème Claude — structure portfolio BTS SIO (8 parties, alignée HeyGen)
+ * Veille écosystème Claude — parcours en 8 parties, aligné HeyGen (BTS, université, entreprise ou passionné(e)s de tech)
  * Claude · Claude Work / Workspaces · Claude Code
  */
 window.VEILLE_DATA = {
@@ -15,7 +15,7 @@ window.VEILLE_DATA = {
           lead: 'Claude est une gamme d’outils d’intelligence artificielle développée pour aider à rédiger, analyser, programmer et automatiser certaines tâches. L’écosystème comprend plusieurs environnements complémentaires : Claude pour l’assistance générale, Claude Work pour un usage plus organisé en contexte professionnel, et Claude Code pour le développement informatique.',
           body: [
             'Cette veille est intéressante car elle montre que l’IA ne se limite plus à un simple chatbot. Elle devient un véritable environnement de travail, capable d’accompagner la rédaction, la gestion de projets et l’aide au code.',
-            'Pour un étudiant en BTS SIO, c’est un sujet pertinent car il touche directement à la productivité, au développement logiciel et à l’usage professionnel de l’intelligence artificielle.'
+            'C’est un sujet pertinent pour tout parcours informatique : il touche à la productivité, au développement logiciel et à l’usage professionnel de l’intelligence artificielle — en BTS, licence, master, en entreprise ou en veille personnelle.'
           ],
           bullets: [
             'Objet : écosystème Claude (chat, travail structuré, développement).',
@@ -126,14 +126,14 @@ window.VEILLE_DATA = {
           lead: 'L’écosystème Claude est intéressant car il montre comment l’intelligence artificielle peut devenir un véritable assistant de travail : au lieu d’être seulement un outil de discussion, elle peut s’intégrer dans des activités précises comme la rédaction, l’organisation ou le développement.',
           body: [
             'Les enjeux incluent le gain de temps sur les tâches répétitives, l’amélioration de la qualité des productions écrites, la facilitation de la compréhension de sujets complexes, l’assistance aux développeurs dans leur travail quotidien, et un accompagnement plus intelligent selon le contexte.',
-            'Pour un étudiant en BTS SIO, Claude peut aider à rédiger des comptes rendus, à reformuler des explications techniques, à comprendre du code ou à préparer des projets ; Claude Code est particulièrement pertinent pour le développement, la lecture de scripts, la résolution de bugs ou l’apprentissage de bonnes pratiques.',
+            'Claude peut aider à rédiger des comptes rendus, à reformuler des explications techniques, à comprendre du code ou à préparer des projets ; Claude Code est particulièrement pertinent pour le développement, la lecture de scripts, la résolution de bugs ou l’apprentissage de bonnes pratiques — utile en formation comme en activité pro.',
             'Cette veille permet aussi de comprendre l’évolution du métier de développeur : l’IA ne remplace pas les compétences humaines, mais elle devient un outil de soutien de plus en plus présent.',
             'Un usage abusif ou non maîtrisé a des contreparties collectives : multiplication des requêtes et des modèles les plus lourds alimente la demande en GPU et en datacenters — avec impact énergétique, empreinte carbone et tension sur l’eau de refroidissement ou les métaux liés au matériel. À nuancer selon les régions et le mix électrique, mais la tendance « toujours plus d’inférence » pose question pour une sobriété numérique responsable.',
             'Côté marché du travail dans la tech, l’IA généraliste assiste déjà la documentation, les revues de code, les tests boilerplate ou les premières passes de debug : certaines tâches juniors peuvent être compressées ou transformées, ce qui fait évoluer les attendus vers plus de validation, d’architecture, de sécurité et de compréhension métier. Les organisations distinguent de plus en plus « qui sait piloter l’outil » vs « qui dépend de l’outil sans contrôle ».'
           ],
           bullets: [
             'Productivité et clarté sans se passer du jugement critique.',
-            'Liens directs avec compétences SIO (dev, veille, communication).',
+            'Liens directs avec le développement, la veille et la communication technique.',
             'Responsabilité : vérifier, citer les sources, respecter les chartes d’usage.',
             'Écologie numérique : modération des usages, choix de modèles/contextes, éviter la « boucle » de re-génération inutile.',
             'Emploi tech : montée en compétences sur revue humaine, sécurité, conception — l’IA comme levier, pas comme substitut au raisonnement.'
@@ -152,7 +152,7 @@ window.VEILLE_DATA = {
           lead: 'En quoi l’écosystème Claude, à travers ses différents environnements, transforme-t-il l’usage de l’intelligence artificielle dans la rédaction, l’organisation du travail et le développement informatique ?',
           body: [
             'Cette problématique est adaptée car elle met en avant la diversité des usages et l’intérêt concret de l’outil dans un contexte professionnel et scolaire.',
-            'Elle permet de structurer le dossier et l’oral autour de promesses produit, limites et bonnes pratiques — comme pour une veille de niveau BTS SIO.'
+            'Elle permet de structurer le dossier et l’oral autour de promesses produit, limites et bonnes pratiques — comme pour une veille de niveau BTS, licence, master ou professionnelle.'
           ],
           bullets: [
             'Spécialisation des usages vs chatbot générique.',
@@ -175,7 +175,7 @@ window.VEILLE_DATA = {
             'Cette spécialisation est importante : l’IA n’est plus seulement un outil généraliste, elle devient un ensemble de solutions capables de s’adapter à des métiers et à des usages spécifiques, ce qui améliore son efficacité dans le travail quotidien.',
             'Dans un cadre informatique, Claude Code peut aider à relire du code, détecter certaines erreurs, expliquer une logique de programme ou proposer des pistes d’amélioration — sans se substituer à l’analyse du développeur, mais en accélérant certaines étapes.',
             'Dans un cadre plus large, les usages « travail » peuvent améliorer la gestion de l’information et des projets : structuration des documents, clarté des échanges, production de contenus plus lisibles.',
-            'Pour un étudiant en BTS SIO, cet écosystème a une valeur pédagogique : il montre comment l’IA s’intègre dans des environnements professionnels réels et comment elle peut soutenir le travail sans le remplacer.'
+            'Cet écosystème a une valeur pédagogique pour tout public numérique : il montre comment l’IA s’intègre dans des environnements professionnels réels et comment elle peut soutenir le travail sans le remplacer.'
           ],
           bullets: [
             'Spécialisation ≠ abandon du contrôle humain.',
@@ -195,7 +195,7 @@ window.VEILLE_DATA = {
           hero: '../../assets/img/Claude.webp',
           lead: 'L’écosystème Claude illustre la nouvelle génération d’outils d’intelligence artificielle : plus spécialisés, plus utiles et plus proches des besoins concrets des utilisateurs. Claude, les espaces de travail et Claude Code montrent que l’IA peut s’adapter à différents contextes — rédiger, organiser ou développer.',
           body: [
-            'Cette veille est pertinente pour un BTS SIO car elle touche à la productivité, à la programmation et à la compréhension des usages professionnels de l’IA.',
+            'Cette veille est pertinente pour tout profil informatique (BTS, université, entreprise ou passionné(e) de nouvelles technologies) car elle touche à la productivité, à la programmation et à la compréhension des usages professionnels de l’IA.',
             'À l’avenir, on peut s’attendre à une intégration encore plus poussée dans les environnements de travail, les plateformes collaboratives et les outils de développement. Les liens regroupés sous l’onglet Ressources de cette page (Anthropic, documentation Claude Code, référentiels emploi et éducation) servent de base pour prolonger la veille.'
           ],
           bullets: [

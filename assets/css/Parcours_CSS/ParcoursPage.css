@@ -118,6 +118,7 @@ body {
   color: var(--accent);
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 30px rgba(0,180,255,0.3);
 }
@@ -197,6 +198,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   cursor: pointer;
 }
@@ -246,6 +248,7 @@ body {
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #fff, var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -285,6 +288,7 @@ body {
   margin-bottom: 1rem;
   background: linear-gradient(90deg, #fff, var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -300,23 +304,26 @@ body {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+  /* Même axe pour le trait de fond et l’indicateur de scroll (évite 2 lignes décalées en mobile) */
+  --timeline-rail-x: 30px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: var(--timeline-rail-x);
   top: 0;
   bottom: 0;
   width: 2px;
   background: linear-gradient(to bottom, var(--accent), var(--accent-2));
   opacity: 0.3;
+  transform: translateX(-50%);
 }
 
 /* Indicateur lumineux qui suit le scroll */
 .timeline-progress-indicator {
   position: absolute;
-  left: 30px;
+  left: var(--timeline-rail-x);
   top: 0;
   width: 4px;
   height: 0;
@@ -772,6 +779,7 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(124, 199, 255, 0.15);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
   border: 1px solid rgba(124, 199, 255, 0.2);
@@ -1001,6 +1009,7 @@ body {
   text-align: center;
   border: 2px solid rgba(0,180,255,0.3);
   box-shadow: 0 10px 30px rgba(0,180,255,0.2);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   min-width: 200px;
 }
@@ -1054,6 +1063,7 @@ body {
   text-align: center;
   min-width: 140px;
   transition: var(--transition);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -1078,6 +1088,66 @@ body {
 .orbit-content p {
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+/* Orbit : le rayon fixe (200px) dépasse la largeur mobile — empiler les cartes */
+@media (max-width: 991.98px) {
+  .skill-orbit {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding-inline: 0.25rem;
+  }
+
+  .orbit-center {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    order: -1;
+  }
+
+  .core-tech {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .orbit-items {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .orbit-item {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .skill-orbit.animate-in .orbit-item {
+    opacity: 1;
+  }
+
+  .orbit-content {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .orbit-content:hover {
+    transform: none;
+  }
 }
 
 /* Grille moderne des compétences */
@@ -1137,6 +1207,7 @@ body {
   font-size: 2.5rem;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1170,6 +1241,7 @@ body {
   margin-bottom: 1.2rem;
   background: linear-gradient(90deg, #fff, var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1305,6 +1377,7 @@ body {
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #fff, var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1485,9 +1558,9 @@ body {
   .formation-hero {
     padding: 10rem 0 4rem;
   }
-  
-  .timeline::before {
-    left: 20px;
+
+  .timeline {
+    --timeline-rail-x: 20px;
   }
   
   .timeline-marker {

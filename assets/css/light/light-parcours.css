@@ -1,5 +1,5 @@
 /**
- * Parcours (expùriences, formations, stages, dùtail formation) ù thùme clair.
+ * Parcours (exp?riences, formations, stages, d?tail formation) ? th?me clair.
  * body.portfolio-light.lt-page-parcours
  */
 
@@ -11,7 +11,7 @@ body.portfolio-light.lt-page-parcours .lt-main {
   padding-top: 0;
 }
 
-/* Variables partagùes ParcoursPage / ExperiencesProfessionnels */
+/* Variables partag?es ParcoursPage / ExperiencesProfessionnels */
 body.portfolio-light.lt-page-parcours {
   --bg: var(--lt-bg);
   --card: var(--lt-surface-elevated);
@@ -275,7 +275,7 @@ body.portfolio-light.lt-page-parcours.stage-ics-page {
   color: var(--lt-text) !important;
 }
 
-/* Stage Crùdit Agricole */
+/* Stage Cr?dit Agricole */
 body.portfolio-light.lt-page-parcours.stage-ca-page {
   --ca-bg: var(--lt-bg);
   --ca-surface: var(--lt-surface);
@@ -423,7 +423,7 @@ body.portfolio-light.lt-page-parcours.xc-page {
   color: var(--lt-text) !important;
 }
 
-/* Pages formation dùtail (.formation-page) */
+/* Pages formation d?tail (.formation-page) */
 body.portfolio-light.lt-page-parcours .formation-page .formation-title,
 body.portfolio-light.lt-page-parcours .formation-page .formation-desc,
 body.portfolio-light.lt-page-parcours .formation-page h2,
@@ -492,4 +492,48 @@ body.portfolio-light.lt-page-parcours .formation-page .admission-cta {
 
 body.portfolio-light.lt-page-parcours .formation-page .admission-cta h4 {
   color: var(--lt-accent-hover);
+}
+
+/* Exp?riences pro (light) : timeline + CTA mobile ? apr?s le reste du fichier pour gagner la cascade */
+@media (max-width: 1024px) {
+  body.portfolio-light.exp-pro-page.lt-page-parcours .professional-exp-timeline::before {
+    left: calc(1rem + 30px);
+    transform: translateX(-50%);
+  }
+
+  body.portfolio-light.exp-pro-page.lt-page-parcours .pro-exp-timeline-item.pro-exp-left .pro-exp-timeline-marker,
+  body.portfolio-light.exp-pro-page.lt-page-parcours .pro-exp-timeline-item.pro-exp-right .pro-exp-timeline-marker {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+
+  body.portfolio-light.exp-pro-page.lt-page-parcours .pro-exp-timeline-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body.portfolio-light.exp-pro-page.lt-page-parcours .pro-exp-company-info {
+    align-items: center;
+  }
+
+  body.portfolio-light.exp-pro-page.lt-page-parcours .pro-exp-view-btn {
+    width: auto;
+    max-width: 100%;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  body.portfolio-light.exp-pro-page.lt-page-parcours .pro-exp-timeline-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  body.portfolio-light.exp-pro-page.lt-page-parcours .pro-exp-marker-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }

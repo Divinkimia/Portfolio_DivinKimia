@@ -7,7 +7,7 @@
     </linearGradient>
   </defs>
   <rect width="800" height="480" fill="url(#chatbot-bg)"/>
-  <!-- Fenêtre application -->
+  <!-- Fenï¿½tre application -->
   <rect x="48" y="40" width="704" height="400" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
   <!-- Barre titre -->
   <rect x="48" y="40" width="704" height="44" rx="14" fill="#252f3f"/>
@@ -27,7 +27,7 @@
     <rect x="380" y="78" width="268" height="44" rx="10" fill="#1e40af" opacity=".92"/>
     <rect x="396" y="94" width="180" height="8" rx="3" fill="#bfdbfe" opacity=".9"/>
     <rect x="396" y="106" width="120" height="8" rx="3" fill="#bfdbfe" opacity=".65"/>
-    <!-- Réponse assistant -->
+    <!-- Rï¿½ponse assistant -->
     <circle cx="18" cy="174" r="16" fill="#475569"/>
     <rect x="44" y="146" width="340" height="72" rx="10" fill="#334155"/>
     <rect x="60" y="162" width="260" height="8" rx="3" fill="#64748b" opacity=".85"/>

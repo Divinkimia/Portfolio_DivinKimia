@@ -1,5 +1,5 @@
 /**
- * Veille HeyGen — structure portfolio BTS SIO (8 parties)
+ * Veille HeyGen — parcours modulaire en 8 parties (BTS, université, entreprise ou veille personnelle)
  * appendHtml : tableau tarifs + exemples API Video Agent dans « Fonctionnement technique, tarifs et API (COMMENT ?) »
  */
 window.VEILLE_DATA = {
@@ -136,12 +136,12 @@ print(r.json())</code></pre>
           lead: 'L’intérêt principal de HeyGen est de simplifier et d’accélérer la création vidéo : là où une production classique demande tournage, montage et parfois plusieurs intervenants, l’IA permet de partir d’un simple script.',
           body: [
             'Les enjeux incluent le gain de temps, la réduction des coûts techniques, l’accessibilité pour les débutants, la communication multilingue, et la possibilité de produire des contenus plus régulièrement.',
-            'Pour un étudiant en BTS SIO, HeyGen illustre un usage professionnel concret de l’IA et aide à développer une culture numérique actuelle, y compris dans des projets web, de communication ou de formation.',
+            'Que vous soyez en BTS, en licence ou en master, déjà en poste ou passionné(e) d’informatique et de nouvelles technologies, HeyGen illustre un usage professionnel concret de l’IA et aide à développer une culture numérique actuelle, y compris dans des projets web, de communication ou de formation.',
             'La veille invite aussi à garder un esprit critique sur la qualité des contenus, la vérification et l’éthique.'
           ],
           bullets: [
             'Productivité et démocratisation de la vidéo.',
-            'Liens avec compétences métiers et projets du diplôme.',
+            'Liens avec une formation (BTS, licence, master), un poste ou des projets personnels.',
             'Responsabilité : vérifier avant diffusion publique.',
             'Deepfakes & impersonation : avec des avatars hyperréalistes et la traduction labiale, le risque de contenus trompeurs augmente (arnaque au président, fausses interviews, harcèlement par mimicry). Cadres : signature de contenu (C2PA), mentions légales, modération plateforme, sensibilisation utilisateurs.',
             'Concurrence & « effet HeyGen » : plusieurs éditeurs proposent avatar + TTS + pipeline vidéo orienté entreprise — à citer en veille pour situer le marché.'
@@ -222,7 +222,7 @@ print(r.json())</code></pre>
           hero: '../../assets/img/HeygenIMG.jpg',
           lead: 'HeyGen est représentatif de l’évolution actuelle de l’IA dans la vidéo : produire plus vite, avec moins de contraintes techniques, tout en restant vigilant sur la qualité et l’usage responsable.',
           body: [
-            'Pour un étudiant en BTS SIO, cette veille met en lumière un outil innovant, concret et exploitable dans des projets de communication ou de formation.',
+            'Pour tout profil numérique (études, reconversion, entreprise ou veille personnelle), cette veille met en lumière un outil innovant, concret et exploitable dans des projets de communication ou de formation.',
             'À l’avenir, ce type de solution devrait encore progresser (avatars, voix, fonctionnalités). Les sources suivantes — conservées dans la page sous l’onglet Ressources — restent les références pour prolonger la veille : heygen.com, Help Center, blog produit, politique de modération, conformité AI Act (UE), customer stories et littérature scientifique type arXiv cs.CV.'
           ],
           bullets: [

@@ -112,24 +112,6 @@
   border-color: var(--lt-border-strong);
 }
 
-.portfolio-light .lt-project__media {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--lt-bg-subtle);
-}
-
-.portfolio-light .lt-project__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s var(--lt-ease-out);
-}
-
-.portfolio-light .lt-project:hover .lt-project__media img {
-  transform: scale(1.03);
-}
-
 .portfolio-light .lt-project__caption {
   padding: 1.35rem 1.35rem 1.25rem;
   flex: 1;
@@ -164,41 +146,139 @@
   color: var(--lt-accent-hover);
 }
 
-.portfolio-light .lt-project--featured .lt-project__media {
-  aspect-ratio: 16 / 11;
+.portfolio-light .lt-project--featured .lt-project__caption {
+  gap: clamp(0.55rem, 1.5vw, 0.75rem);
 }
 
-.portfolio-light .lt-project__tagrow {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
+.portfolio-light .lt-project--featured .lt-project__caption h3 {
+  font-size: 1.22rem;
+  letter-spacing: -0.03em;
+}
+
+.portfolio-light .lt-project--featured .lt-project__link {
+  margin-top: auto;
+  margin-bottom: 0;
+  align-self: flex-start;
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  font-family: var(--lt-font-body), system-ui, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  background: rgba(21, 108, 101, 0.1);
+  border: 1px solid rgba(21, 108, 101, 0.32);
+  color: var(--lt-accent);
+}
+
+.portfolio-light .lt-project--featured .lt-project__link:hover {
+  background: rgba(21, 108, 101, 0.16);
+  border-color: var(--lt-accent);
+  color: var(--lt-accent-hover);
+}
+
+.portfolio-light .lt-project--icon.lt-project--featured .lt-project__icon--featured {
+  width: 100%;
+  min-height: 5.6rem;
+  height: auto;
+  font-size: 2.6rem;
+  border-bottom: 1px solid var(--lt-border);
+  border-radius: var(--lt-radius-lg) var(--lt-radius-lg) 0 0;
+  background:
+    radial-gradient(ellipse 70% 85% at 50% 40%, rgba(21, 108, 101, 0.12) 0%, transparent 58%),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.9) 0%, var(--lt-bg-subtle) 100%);
+}
+
+.portfolio-light .lt-project__caption-kicker {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
+  margin-bottom: 0.15rem;
 }
 
-.portfolio-light .lt-project__overlay-tags {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
+.portfolio-light .lt-project__chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
-  background: linear-gradient(to top, rgba(27, 31, 38, 0.72), transparent);
+  gap: 0.4rem;
 }
 
-.portfolio-light .lt-project__overlay-tags span {
+.portfolio-light .lt-project__chips span {
   font-family: var(--lt-font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.05em;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #f4f1ea;
-  background: rgba(255, 252, 247, 0.12);
-  border: 1px solid rgba(255, 252, 247, 0.2);
-  padding: 0.2rem 0.45rem;
+  color: var(--lt-text-secondary);
+  background: var(--lt-bg-subtle);
+  border: 1px solid var(--lt-border);
+  padding: 0.22rem 0.48rem;
   border-radius: var(--lt-radius-sm);
+}
+
+.portfolio-light .lt-project--featured .lt-project__caption p {
+  flex: 0 1 auto;
+}
+
+.portfolio-light .lt-project__highlights {
+  margin: 0;
+  padding: 0.4rem 0 0.45rem 0.85rem;
+  border-left: 2px solid rgba(21, 108, 101, 0.42);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+}
+
+.portfolio-light .lt-project__highlights li {
+  position: relative;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--lt-text-secondary);
+  padding-left: 0.55rem;
+}
+
+.portfolio-light .lt-project__highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lt-accent);
+  box-shadow: 0 0 0 2px rgba(21, 108, 101, 0.18);
+}
+
+.portfolio-light .lt-project--featured .lt-project__highlights {
+  border-left-width: 3px;
+  border-radius: 0 var(--lt-radius-sm) var(--lt-radius-sm) 0;
+  padding: 0.5rem 0 0.5rem 0.95rem;
+  background: linear-gradient(90deg, rgba(21, 108, 101, 0.08) 0%, transparent 100%);
+}
+
+.portfolio-light .lt-project--featured .project-tool-icons {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.4rem 0.35rem;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin: 0.95rem 0 0.35rem;
+  padding: 0.6rem 0.5rem;
+  border-radius: var(--lt-radius-md);
+  background: transparent;
+  border: none;
+}
+
+.portfolio-light .lt-project--featured .project-tool-icons img {
+  width: auto;
+  height: clamp(1.65rem, 3.4vw, 2.1rem);
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 0.35rem 0.28rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--lt-border);
 }
 
 /* Petite carte icone (sans image) */

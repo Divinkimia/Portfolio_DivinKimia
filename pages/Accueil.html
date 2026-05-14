@@ -82,7 +82,7 @@
           <span class="title-line-2">Divin Kimia</span>
         </h1>
         <p class="hero-subtitle">Développeur Web Full-Stack passionné par l'innovation et la création d'expériences digitales</p>
-        <div class="hero-actions d-flex flex-column flex-sm-row gap-2 justify-content-center align-items-stretch align-items-sm-center">
+        <div class="hero-actions d-flex flex-wrap gap-2 justify-content-center align-items-center">
           <a href="Projets/index.html" class="btn btn-primary">Voir mes projets</a>
           <a href="EnDeveloppement.html" class="btn btn-secondary">En savoir plus</a>
         </div>
@@ -294,24 +294,28 @@
       <div class="projects-showcase-grid">
         <div class="project-main">
           <div class="project-card featured h-100">
-            <div class="project-image">
+            <div class="project-icon project-icon--featured">
               <div class="project-featured-badge">
                 <span class="project-featured-badge-icon" aria-hidden="true">🌐</span>
                 <span>Portfolio personnel</span>
               </div>
-              <img src="../assets/img/logos/fs-barber.png"
-                alt="FS Barber — site e-commerce salon de coiffure" class="img-fluid w-100 h-100 object-fit-cover" />
-              <div class="project-overlay">
-                <div class="project-tech">
-                  <span>PHP/CSS</span>
-                  <span>JavaScript</span>
-                  <span>My SQL</span>
-                </div>
-              </div>
+              <span class="project-icon-emoji" aria-hidden="true">💈</span>
             </div>
             <div class="project-content">
               <h3>FS Barber</h3>
-              <p>Site e-commerce Barber Shop avec dashboard performant et gestion des rendez-vous.</p>
+              <p>Site e-commerce pour salon de coiffure : parcours d’achat, réservations et pilotage côté salon.</p>
+              <ul class="project-highlights" aria-label="Points forts du projet">
+                <li>Catalogue, panier et paiement en ligne (Stripe)</li>
+                <li>Prise de rendez-vous, galerie et comptes client / administrateur</li>
+                <li>Dashboard pour suivre les commandes, le planning et l’activité</li>
+              </ul>
+              <div class="project-tool-icons" role="group" aria-label="Technologies et outils utilisés sur FS Barber">
+                <img src="../assets/img/icons/tech/php.svg" alt="PHP" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/javascript.svg" alt="JavaScript" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/mysql.svg" alt="MySQL" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/html5.svg" alt="HTML5" width="46" height="46" loading="lazy" decoding="async" />
+                <img src="../assets/img/icons/tech/stripe.svg" alt="Stripe" width="46" height="46" loading="lazy" decoding="async" />
+              </div>
               <a href="Projets/Presentation FS Barber/presentation-fs-barber.html" class="project-link">Voir le projet →</a>
             </div>
           </div>

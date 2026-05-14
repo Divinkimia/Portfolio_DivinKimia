@@ -109,6 +109,7 @@ body.portfolio-light.lt-page-projets .code-box {
   background: var(--lt-surface-elevated);
   border: 1px solid var(--lt-border);
   box-shadow: var(--lt-shadow-xs);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 
@@ -160,7 +161,7 @@ body.portfolio-light.lt-page-projets .hero-description {
   font-weight: 400;
 }
 
-/* Fentres dcoratives hero */
+/* Fenï¿½tres dï¿½coratives hero */
 body.portfolio-light.lt-page-projets .code-window {
   background: var(--lt-surface-elevated);
   border: 1px solid var(--lt-border);
@@ -205,7 +206,7 @@ body.portfolio-light.lt-page-projets .horizontal-track {
   gap: clamp(2rem, 4vw, 3.5rem);
 }
 
-/* Cartes mises en avant  bords daccent assourdis, ombre papier */
+/* Cartes mises en avant ï¿½ bords dï¿½accent assourdis, ombre papier */
 body.portfolio-light.lt-page-projets .featured-card {
   background: var(--lt-surface-elevated);
   border: 1px solid var(--lt-border);
@@ -391,7 +392,7 @@ body.portfolio-light.lt-page-projets .project-tech span {
   font-weight: 500;
 }
 
-/* Ancien footer .site-footer si prsent  harmonis clair */
+/* Ancien footer .site-footer si prï¿½sent ï¿½ harmonisï¿½ clair */
 body.portfolio-light.lt-page-projets .site-footer {
   background: var(--lt-bg-subtle);
   border-top: 1px solid var(--lt-border);

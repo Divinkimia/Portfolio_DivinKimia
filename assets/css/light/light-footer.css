@@ -154,3 +154,20 @@
 .portfolio-light .lt-back-top:hover {
   background: rgba(255, 255, 255, 0.14);
 }
+
+/* Mobile : bloc identité aligné à gauche (comme desktop), pas centré dans la grille */
+@media (max-width: 575.98px) {
+  .portfolio-light .lt-footer-top {
+    justify-items: start;
+  }
+
+  .portfolio-light .lt-footer-brand {
+    max-width: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .portfolio-light .lt-footer-brand-row {
+    align-items: flex-start;
+  }
+}

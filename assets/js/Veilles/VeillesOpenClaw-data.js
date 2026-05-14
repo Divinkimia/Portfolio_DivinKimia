@@ -20,7 +20,7 @@ window.VEILLE_DATA = {
           bullets: [
             'Assistant personnel — pas seulement un chat générique.',
             'Approche technique + communautaire (GitHub, contributions).',
-            'Alignée avec une présentation type oral / portfolio BTS SIO.'
+            'Alignée avec une présentation type oral, mémoire ou portfolio (BTS, université, entreprise ou veille personnelle).'
           ],
           appendHtml: `
 <h3 class="h6 text-white mb-2 mt-1">Vidéo — veille OpenClaw</h3>
@@ -145,13 +145,13 @@ openclaw gateway status</code></pre>
           lead: 'OpenClaw est intéressant parce qu’il rend l’IA à la fois plus accessible et plus personnalisable : on n’est pas réduit à une solution fermée unique ; on peut façonner un assistant aligné avec ses usages puis le faire évoluer.',
           body: [
             'L’enjeu principal est la personnalisation : partir d’un socle générique pour concevoir un outil plus spécialisé et mieux intégré à son environnement — automatisation, développement, gestion de tâches, communication ou organisation.',
-            'Pour un étudiant en BTS SIO, la démarche fait travailler installation d’environnement, lecture de projet open source, usage d’outils modernes et réflexion sur l’intégration responsable de l’IA.',
+            'La démarche fait travailler installation d’environnement, lecture de projet open source, usage d’outils modernes et réflexion sur l’intégration responsable de l’IA — que vous soyez en formation (BTS, licence, master), en poste ou passionné(e) de tech.',
             'La veille montre aussi le passage possible d’un « utilisateur » d’IA vers un acteur qui configure, adapte et améliore un assistant — une posture proche du développement et de la maintenance logicielle.'
           ],
           bullets: [
             'Personnalisation vs dépendance à un SaaS opaque.',
             'Usages variés — productivity, dev, communication.',
-            'Compétences BTS : technique + méthode + analyse critique.'
+            'Compétences mises en avant : technique, méthode et analyse critique.'
           ]
         }
       ]
@@ -211,7 +211,7 @@ openclaw gateway status</code></pre>
           lead: 'Dans OpenClaw, les skills personnalisés servent à spécialiser l’assistant IA selon ce que l’on veut qu’il fasse : on peut lui ajouter des compétences concrètes pour qu’il soit plus utile et mieux adapté à un usage personnel ou à un projet professionnel.',
           body: [
             'Un skill encapsule une fonction : résumé de messages, lien avec GitHub, veille techno, recherche web ciblée, etc. L’assistant cesse d’être uniquement généraliste pour devenir orienté productivité et automatisation.',
-            'Pour un portfolio BTS SIO, cette couche montre bien qu’une IA peut être configurée comme un véritable outil métier — pas seulement comme une conversation.'
+            'Pour un portfolio ou une présentation (formation ou professionnelle), cette couche montre bien qu’une IA peut être configurée comme un véritable outil métier — pas seulement comme une conversation.'
           ],
           bullets: [
             'Skills = fonctions ajoutées pour des tâches précises.',
@@ -232,7 +232,7 @@ openclaw gateway status</code></pre>
     <li class="mb-3"><strong>Support technique</strong> — guider un diagnostic, proposer des étapes de résolution ou une procédure d’installation.</li>
     <li class="mb-3"><strong>Sécurité</strong> — rappeler de bonnes pratiques ou aider à repérer des risques simples sur une configuration.</li>
   </ol>
-  <h4 class="h6 text-white mb-2">Idées adaptées au BTS SIO</h4>
+  <h4 class="h6 text-white mb-2">Idées à adapter à votre parcours</h4>
   <ul class="veille-objectives-list mb-4">
     <li>Skill pour résumer automatiquement des cours ou supports.</li>
     <li>Skill pour organiser les tâches d’un projet web.</li>
@@ -262,7 +262,7 @@ openclaw gateway status</code></pre>
             'Les risques courants incluent : fuites de secrets (clés API, jetons OAuth, fichiers .env) dans les configs ou les journaux ; accès trop larges donnés à un skill ou à un outil tiers ; dépendances npm compromises ou plugins malveillants ; prompts indirects qui poussent l’assistant à exfiltrer des données.',
             'Une Gateway ou un daemon qui écoute sur le réseau doit être correctement isolée (pare-feu, TLS, authentification), mise à jour et observée — comme tout composant d’infra qui traverse les périmètres « personnel » et « professionnel ».',
             'Sur le plan usage : méfiance vis-à-vis du contenu généré pour les actions destructrices (suppression, transferts financiers, modifications massives de dépôt) sans validation humaine ; principe du moindre privilège pour les comptes liés.',
-            'Pour une veille BTS SIO, cette partie montre la continuité entre développement, exploitation et cybersécurité : analyser les docs « security » du projet, tester `openclaw doctor`, et documenter son périmètre dans la synthèse.'
+            'Pour une veille en informatique (BTS, université, entreprise ou personnelle), cette partie montre la continuité entre développement, exploitation et cybersécurité : analyser les docs « security » du projet, tester `openclaw doctor`, et documenter son périmètre dans la synthèse.'
           ],
           bullets: [
             'Secrets : rotation, coffres-forts, jamais de clés dans le dépôt public.',
@@ -283,7 +283,7 @@ openclaw gateway status</code></pre>
           hero: '../../assets/img/IMG-Openclaw.webp',
           lead: 'OpenClaw dépasse l’usage passif d’une IA : il permet de créer son assistant, de le personnaliser et de l’améliorer dans la durée. Le projet reste actif, documenté et pensé pour évoluer avec ses utilisateurs.',
           body: [
-            'Pour un profil BTS SIO, cette veille relie intelligence artificielle, installation technique, culture open source et personnalisation d’outils — des compétences directement transférables.',
+            'Pour tout profil numérique (BTS, licence, master, professionnel ou passionné(e) d’informatique et de nouvelles technologies), cette veille relie intelligence artificielle, installation technique, culture open source et personnalisation d’outils — des compétences directement transférables.',
             'À l’avenir, ce type de solution peut prendre encore plus de place là où les organisations cherchent des assistants adaptables, auditables et intégrés à leur SI — à condition d’intégrer dès le départ une analyse sécurité proportionnée.'
           ],
           bullets: [

@@ -60,6 +60,7 @@ body {
   border-radius: 50px;
   border: 1px solid rgba(255,255,255,0.06);
   z-index: 1000;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 .parcours-navbar .navbar-toggler { border-color: rgba(255,255,255,0.2); }
@@ -141,6 +142,7 @@ body {
   transform: translateX(-50%) translateY(10px);
   min-width: 220px;
   background: rgba(15, 20, 25, 0.98);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -185,13 +187,8 @@ body {
   padding-left: 2rem;
 }
 
-.nav-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 0.5rem;
-}
+/* Ne pas appliquer display:none à .nav-toggle : le bouton burger utilise aussi cette classe
+   avec .navbar-toggler — Bootstrap affiche le toggler sous lg uniquement. */
 
 .hamburger, .hamburger::before, .hamburger::after {
   display: block;
@@ -242,6 +239,7 @@ body {
     gap: 1rem;
     z-index: 1300;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255,255,255,0.08);
   }
@@ -265,6 +263,7 @@ body {
   color: var(--accent);
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -302,6 +301,7 @@ body {
   margin-bottom: 1rem;
   background: linear-gradient(90deg, #fff, var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -343,6 +343,7 @@ body {
   margin: 0;
   background: linear-gradient(90deg, #fff, var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -426,6 +427,9 @@ body {
   flex-shrink: 0;
   width: 50px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pro-exp-marker-icon {
@@ -988,6 +992,7 @@ body {
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #fff, var(--accent-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1090,10 +1095,16 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
+  .pro-exp-company-info {
+    align-items: center;
+  }
+
   .pro-exp-view-btn {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    align-self: flex-start;
+    justify-content: flex-start;
   }
   
   /* Timeline responsive - ligne à gauche, toutes les cartes à droite */
@@ -1101,9 +1112,10 @@ body {
     padding: 2rem 1rem 0;
   }
   
+  /* Ligne : même axe que le marqueur (le marqueur est dans le flux contenu après padding-left 1rem) */
   .professional-exp-timeline::before {
-    left: 30px;
-    transform: none;
+    left: calc(1rem + 30px);
+    transform: translateX(-50%);
   }
   
   .pro-exp-timeline-item {
@@ -1200,6 +1212,12 @@ body {
     height: 40px;
     font-size: 1.2rem;
   }
+
+  /* Même boîte que l’icône : le centre visuel coïncide avec translateX(-50%) du marqueur */
+  .pro-exp-timeline-marker {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* Optimisation pour grands écrans (1920px+) */
@@ -1211,7 +1229,6 @@ body {
   
   body {
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1225,6 +1242,7 @@ body {
   .navbar {
     max-width: 1400px;
     padding: 1rem 2rem;
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
   }
   
@@ -1361,6 +1379,53 @@ body {
   body.exp-pro-page .contact-preview .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+}
+
+/*
+ * Renfort mobile : body.exp-pro-page est présent sur les pages dark et light.
+ * Placé en fin de fichier pour passer après les autres @media du même fichier.
+ */
+@media (max-width: 1024px) {
+  body.exp-pro-page .professional-exp-timeline::before {
+    left: calc(1rem + 30px);
+    transform: translateX(-50%);
+  }
+
+  body.exp-pro-page .pro-exp-timeline-item.pro-exp-left .pro-exp-timeline-marker,
+  body.exp-pro-page .pro-exp-timeline-item.pro-exp-right .pro-exp-timeline-marker {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+
+  body.exp-pro-page .pro-exp-timeline-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body.exp-pro-page .pro-exp-company-info {
+    align-items: center;
+  }
+
+  body.exp-pro-page .pro-exp-view-btn {
+    width: auto;
+    max-width: 100%;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  body.exp-pro-page .pro-exp-timeline-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  body.exp-pro-page .pro-exp-marker-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
 

@@ -1,8 +1,8 @@
 # Divin Kimia — Portfolio développeur
 
-> Site vitrine statique : parcours, projets et veille tech — pensé pour être lisible, rapide à servir, et représentatif de la façon dont je structure mon travail.
+> Site vitrine statique : parcours, projets, certifications, veille tech et pages « à propos » — pensé pour être lisible, rapide à servir, et aligné avec un hébergement statique type **GitHub Pages**.
 
-Bonjour — je suis **Divin Kimia**, développeur orienté **web** et **applications**. Ce dépôt est mon **portfolio personnel** : une vitrine en français qui regroupe expériences, formations, certifications, une sélection de **projets** (dont démos et présentations dédiées) et une **veille technologique** structurée. J’y documente aussi les choix techniques et l’organisation du code, parce qu’un bon README, c’est déjà une compétence pro.
+Bonjour — je suis **Divin Kimia**, développeur orienté **web** et **applications**. Ce dépôt est mon **portfolio personnel** (français) : accueil, expériences et formations, catalogue de **projets** avec présentations dédiées, **certifications**, **veilles** thématiques, **blog**, **contact**, **mentions légales**, plus des documents (CV, rapports) hors arborescence web classique.
 
 ---
 
@@ -10,99 +10,151 @@ Bonjour — je suis **Divin Kimia**, développeur orienté **web** et **applicat
 
 | | |
 |---|---|
-| **Type** | Site statique HTML · CSS · JavaScript |
-| **Objectif** | Présenter mon profil, mes réalisations et ma curiosité technique |
-| **Point fort** | Beaucoup de **assets en local** (`assets/vendor/`) pour limiter la dépendance au réseau et faciliter l’hébergement type **GitHub Pages** |
-| **Thèmes** | **Sombre** (référence, le plus abouti) · variantes **`-light.html`** (en cours de consolidation) |
+| **Type** | Site statique **HTML5 · CSS3 · JavaScript** (pas de framework unique sur tout le site) |
+| **Entrées** | `index.html` (écran de chargement, thème sombre forcé, redirection vers l’accueil) · `index-light.html` (entrée **thème clair**) |
+| **Objectif** | Présenter le profil, les réalisations et la veille technique |
+| **Point fort** | Beaucoup de dépendances en **local** sous `assets/vendor/` (Bootstrap, GSAP, Highlight.js, ml5.js, Three.js, Font Awesome, Feather, etc.) + `fonts-offline.css` pour limiter la dépendance réseau |
+| **Thèmes** | **Sombre** (référence) et **clair** : pages jumelles `*-light.html` à côté des pages principales, avec feuilles sous `assets/css/light/` et scripts `theme-init.js` / `light-theme-init.js` |
 
 ---
 
-## Stack & outils
+## Stack & bibliothèques (selon les pages)
 
-**Cœur :** HTML5, CSS3, JavaScript (pas un seul framework sur tout le site — volonté de maîtriser le fondamental).
+**Cœur :** HTML, CSS, JavaScript.
 
-**Au fil des pages :** Bootstrap 5, icônes (Feather, Font Awesome selon les écrans), GSAP / ScrollTrigger, Highlight.js, ml5.js, Three.js, Leaflet (selon les projets) — **copies locales** dans `assets/vendor/` quand c’est embarqué.
+**Souvent utilisées (souvent en local) :** Bootstrap 5, GSAP + ScrollTrigger, Highlight.js, **ml5.js** (projet classifieur), **Three.js** (effets type canvas accueil), Font Awesome, Feather Icons, **Tailwind** (fichier vendor pour certaines pages).
 
-**Qualité & perf :** polices utilisables hors ligne (`fonts-offline.css`), SVG **XML valides** pour les vignettes, souci d’**accessibilité** de base (`alt`, ARIA sur les composants interactifs).
+**Cartes & géo :** **Leaflet** (ex. suivi ISS, radars — parfois chargé en **CDN** sur une démo, voir la page concernée).
+
+**Qualité & accessibilité :** `alt` sur les médias, ARIA sur les composants interactifs, SVG utilisés en `<img>` avec soin d’encodage UTF-8.
 
 ---
 
-## Arborescence (où trouver quoi)
+## Arborescence
 
 ```
 Portfolio_DivinKimia/
-├── index.html              → entrée + redirection vers l’accueil
+├── index.html                 → chargement + thème sombre + redirection vers pages/Accueil.html
+├── index-light.html           → entrée thème clair (préférences + navigation vers l’accueil clair)
 ├── pages/
-│   ├── Accueil.html        → page d’accueil principale
-│   ├── Projets/            → catalogue + présentations par projet
-│   ├── Parcours_HTML/      → expériences, formations, certifications
-│   ├── Veilles/            → veille tech (cartes, parcours thématiques)
-│   └── …                   → contact, blog, etc.
+│   ├── Accueil.html | Accueil-light.html
+│   ├── Contact.html | Contact-light.html
+│   ├── Blog.html | Blog-light.html
+│   ├── MeDecouvrir.html | MeDecouvrir-light.html    → page « me découvrir » aboutie
+│   ├── EnDeveloppement.html                         → placeholder « en cours » (utilisé par certains liens du menu)
+│   ├── MentionsLegales.html | MentionsLegales-light.html
+│   ├── ElementEnModification.html                  → page technique / brouillon si besoin
+│   ├── Parcours_HTML/
+│   │   ├── ExperiencesPro/                         → liste + stages (CA Pau, iConnected, FS Barber, Xceed Maroc, …)
+│   │   ├── Formations/                             → hub + fiches (BTS SIO, CS SNO, DAEU, BT Gestion info, …)
+│   │   ├── CertificationPage.html | …-light.html   → hub certifications
+│   │   └── Certification-*.html                    → CCNA, CEH, SAA, Scrum Master (+ variantes light)
+│   ├── Projets/
+│   │   ├── index.html | index-light.html           → grille « projets phares » + catalogue
+│   │   ├── Presentation FS Barber/ …
+│   │   ├── PresentationKim-shoes/ …
+│   │   ├── Presentation RadarPF/ …
+│   │   ├── Presentation MAUICoach/ …
+│   │   ├── PresentationMeteo/ …
+│   │   ├── PresentationMachineLearning/ …          → classifieur ml5 + démos
+│   │   ├── PresentationGestionPersonnel/ …
+│   │   ├── PresentationISS/ …
+│   │   ├── PresentationPuissance4/ … (+ demo-puissance4)
+│   │   ├── Iconnected-SiteWeb-Beta/ …
+│   │   └── iss.js-main/                            → démo / bundle ISS (Leaflet, etc.)
+│   └── Veilles/
+│       ├── Veilles.html | Veilles-light.html       → hub veille
+│       ├── VeillesClaudeCode.html | …-light.html
+│       ├── VeillesHeyGen.html | …-light.html
+│       └── VeillesOpenClaw.html | …-light.html
 ├── assets/
-│   ├── css/                → styles par zone + thème global
-│   ├── js/                 → navigation, thème, veilles, animations
-│   ├── img/                → visuels, illustrations projets, veilles
-│   └── vendor/             → bibliothèques tierces en local
-└── Cv + Motivation + Rapports/   → documents hors pages web
+│   ├── css/                    → styles globaux (navbar, thème, footer, Accueil, Parcours, Projets, Veilles, Blog…)
+│   ├── css/light/              → surcharges thème clair
+│   ├── js/                     → Accueil, Contact, veilles, présentations projets, parcours, thème…
+│   ├── img/                    → photos, logos, couvertures projets / veilles
+│   ├── vendor/                 → bibliothèques tierces en copie locale
+│   ├── data/                   → données JSON (ex. récaps démo)
+│   └── Apercus MP4 Ameliorees/ → médias intégrés aux cartes projets
+├── scripts/                    → ex. generate_all_light_pages.py (génération / maintenance des pages light)
+├── tools/                      → scripts utilitaires (ex. correctifs HTML hors ligne)
+├── data/                       → exports texte (ex. CV en .txt)
+└── Cv + Motivation + Rapports/ → PDF, rapports, pièces jointes (liens depuis le footer / contact)
 ```
 
-Les chemins relatifs sont pensés pour **`pages/...` → `../assets/`**. À la racine servie, tout doit rester cohérent pour un déploiement statique.
+**Chemins relatifs :** depuis `pages/…`, les assets passent par `../assets/`. Depuis `pages/Projets/…`, souvent `../../assets/`. À servir à la racine du dépôt pour garder les liens valides.
 
 ---
 
 ## Démarrage rapide
 
-La plupart des pages s’ouvrent en local sans serveur. Pour un rendu fidèle (certains scripts, chemins, appels réseau ou démos) :
+Beaucoup de pages fonctionnent en ouvrant le fichier directement ; pour des chemins uniformes, modules ou démos sensibles au **file://** :
 
 ```bash
 cd Portfolio_DivinKimia
 python3 -m http.server 8080
 ```
 
-Puis : **http://localhost:8080/**
+Puis ouvrir **http://localhost:8080/** (racine → `index.html`) ou **http://localhost:8080/pages/Accueil.html**.
 
-Les **présentations projets** et certaines **démos** précisent dans leur page si un `localhost` ou une stack annexe (PHP, Node, etc.) est nécessaire.
-
----
-
-## Projets (aperçu)
-
-Le détail vit dans **`pages/Projets/`** (grille « Tous mes projets », cartes « Projets phares »). Exemples de thèmes couverts :
-
-- **Web** : e-commerce (Symfony, PHP), salons / réservations, cartes & APIs (Radar, météo)  
-- **Mobile** : .NET MAUI  
-- **Front & data viz** : ISS en temps quasi réel (API + Leaflet), classifieur navigateur (ML5)  
-- **Autres** : jeux (Puissance 4), gestion RH (PHP MVC), chatbot (parcours documenté), etc.
-
-Chaque ajout = entrée dans le catalogue + assets propres + README ou section « lancement local » quand c’est pertinent.
+Les pages de **présentation projet** indiquent en général si une stack annexe (PHP, Node, build) est nécessaire pour reproduire une démo à l’identique.
 
 ---
 
-## Thème clair (`*-light.html`)
+## Projets (aligné avec `pages/Projets/index.html`)
 
-Les variantes **light** existent pour plusieurs sections ; elles sont **encore peaufinées** (contrastes, parité avec le sombre). Pour une **démo ou une embauche**, je recommande les pages **sans** suffixe `-light`, sauf test volontaire du thème clair.
+Présentations et démos principales :
+
+| Thème | Exemples dans le repo |
+|--------|------------------------|
+| **Web / UI** | FS Barber (barber shop + dashboard), Kim Shoes (e-commerce), site beta **Iconnected**, appli météo (SQLite / stack décrite sur la page) |
+| **Carto & APIs** | **Radar PF** (carte radars), **ISS** (API + Leaflet + dossier `iss.js-main`) |
+| **Mobile** | **MAUI Coach** (.NET MAUI) |
+| **ML / navigateur** | Classifieur **ml5.js** (+ pages démo / images) |
+| **Jeux / outils** | **Puissance 4** (présentation + démo jouable) |
+| **RH / gestion** | **Gestion du personnel** (MVC PHP — lien GitHub depuis le catalogue) |
+
+D’autres entrées du catalogue peuvent renvoyer vers **EnDeveloppement.html** (placeholder) le temps d’intégrer le contenu ; les pages **MeDecouvrir** et **Blog** existent déjà en parallèle (`MeDecouvrir.html`, `Blog.html`).
 
 ---
 
-## Bonnes pratiques que je suis sur ce repo
+## Parcours & certifications
 
-- **UTF-8**, pas de caractères parasites dans les SVG utilisés en `<img>`.  
-- **`.gitignore`** adapté (macOS, venv, caches, IDE).  
-- Documentation **à jour** quand j’ajoute une section ou un projet.
+- **Parcours :** `ExperiencesProfessionnels.html` + fiches de stage / expérience ; `FormationsPage.html` + fiches par diplôme ou parcours.
+- **Certifications (fiches dédiées) :** CCNA, CEH, **SAA** (AWS), Scrum Master — toutes listées depuis `CertificationPage.html`.
 
 ---
 
-## Évolutions en tête
+## Veille technologique
 
-- Stabiliser les pages **light** et homogénéiser la navigation.  
-- Continuer à enrichir la **veille** (cartes + contenus sourcés).  
-- Nouveaux projets → même schéma : présentation, visuel, lien démo si possible.
+Hub : `pages/Veilles/Veilles.html`. Fiches actuelles : **Claude Code**, **HeyGen**, **OpenClaw** (chacune avec variante `*-light.html` si présente).
+
+---
+
+## Thème clair
+
+Les paires `page.html` / `page-light.html` et les styles `assets/css/light/` visent la **parité** avec le thème sombre. Pour une **démo courte**, l’accueil sombre reste la référence visuelle la plus aboutie ; le thème clair est utilisable via `index-light.html` ou les URLs `-light.html`.
+
+---
+
+## Maintenance du dépôt
+
+- **UTF-8** partout ; attention aux SVG et aux noms de dossiers avec espaces (`Presentation FS Barber`, `Presentation MAUICoach`).
+- **`.gitignore`** : macOS, caches, venv, IDE, etc.
+- Mise à jour du **README** lors de l’ajout d’une section majeure (nouvelle veille, nouveau projet, nouveau hub).
+
+---
+
+## Pistes d’évolution
+
+- Raccorder tous les liens du menu vers **MeDecouvrir** et **Blog** lorsque le contenu final remplace le placeholder **EnDeveloppement**.
+- Poursuivre l’homogénéisation **light** / sombre et la navigation.
+- Nouveaux projets : même schéma (carte sur `Projets/index.html`, présentation, visuels, lien démo ou GitHub).
 
 ---
 
 ## Contact
 
-Les coordonnées et le formulaire sont sur les pages **Contact** du site (`pages/`). Vous pouvez aussi ouvrir une **issue** ou me contacter via le canal indiqué sur mon profil professionnel (LinkedIn, etc.) selon le contexte.
+Formulaire et infos : **`pages/Contact.html`**. Le footer du site peut proposer **email**, **CV PDF** (`Cv + Motivation + Rapports/`) et liens réseaux selon les pages.
 
 ---
 
