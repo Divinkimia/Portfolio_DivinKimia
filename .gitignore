@@ -13,3 +13,9 @@ __pycache__/
 # OS / editors
 .idea/
 .vscode/
+
+# Données locales / extraits (non versionnés sur GitHub)
+/data/
+
+# Rapports et PDF corrigés (hors dépôt public)
+Cv + Motivation + Rapports/corriges/
